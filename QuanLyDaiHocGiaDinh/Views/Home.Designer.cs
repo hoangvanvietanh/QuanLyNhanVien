@@ -1,6 +1,6 @@
 ﻿namespace QuanLyDaiHocGiaDinh
 {
-    partial class Home
+    partial class UserHome
     {
         /// <summary>
         /// Required designer variable.

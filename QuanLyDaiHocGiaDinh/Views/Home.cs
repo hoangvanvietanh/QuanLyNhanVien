@@ -17,11 +17,11 @@ using System.Windows.Forms;
 
 namespace QuanLyDaiHocGiaDinh
 {
-    public partial class Home : DevExpress.XtraEditors.XtraForm
+    public partial class UserHome : DevExpress.XtraEditors.XtraForm
     {
         private string userName = "My friend";
         HomeController homeController = new HomeController();
-        public Home()
+        public UserHome()
         {
             InitializeComponent();
             txtUserName.Select();
@@ -103,7 +103,7 @@ namespace QuanLyDaiHocGiaDinh
         {
             if (String.Compare(role.Trim(), "employee", true) == 0)
             {
-                UserHome userHome = new UserHome(homeController.getAccountLoggedIn());
+                Views.UserHome userHome = new Views.UserHome(homeController.getAccountLoggedIn());
                 userHome.ShowDialog();
                 isLoginAdready(true, userName);
             }

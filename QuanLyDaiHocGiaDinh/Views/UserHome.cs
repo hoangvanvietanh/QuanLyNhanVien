@@ -18,24 +18,29 @@ namespace QuanLyDaiHocGiaDinh.Views
     public partial class UserHome : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private Account _account;
+        EmployeeService employeeService;
 
         public UserHome(Account account)
         {
+            InitializeComponent();
+
+            this._account = account;
+
+            setVisibleScheduleRibbonPage(false);
+            this.scheduleTableAdapter.Fill(this.giaDinhUniversityDataSet.Schedule, this._account.AccountId);
+
             //Ví dụ để lấy employee đang đăng nhập
-            EmployeeService employeeService = new EmployeeService(account);
+            employeeService = new EmployeeService(account);
             Employee employee = new Employee();
             employee = employeeService.getEmployeeByAccountId();//lấy employee đang đăng nhập
-            employee.FullName = "Việt Anh Update 3";
-            employee.FirstName = "Việt Nè";
-            employeeService.updateEmployee(employee);//ví dụ về cập nhật
+            showEmployee(employeeService.getEmployeeByAccountId());
+            //employee.FullName = "Việt Anh Update 3";
+            //employee.FirstName = "Việt Nè";
+            //employeeService.updateEmployee(employee);//ví dụ về cập nhật
 
 
             Console.WriteLine(employeeService.getEmployeeByAccountId().FullName);
             ////////////
-            this._account = account;
-            InitializeComponent();
-            setVisibleScheduleRibbonPage(false);
-            this.scheduleTableAdapter.Fill(this.giaDinhUniversityDataSet.Schedule, this._account.AccountId);
         }
 
         void navBarControl_ActiveGroupChanged(object sender, DevExpress.XtraNavBar.NavBarGroupEventArgs e)
@@ -79,6 +84,24 @@ namespace QuanLyDaiHocGiaDinh.Views
         private void setVisibleHomeRibbonPage(bool status)
         {
             homeRibbonPage.Visible = status;
+        }
+
+        public void showEmployee(Employee employee)
+        {
+            Console.WriteLine(employee.FullName);
+          //  txtName.Text = employee.FullName;
+        }
+
+        private void btnUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            UserHomeUpdate userHomeUpdate = new UserHomeUpdate();
+            userHomeUpdate.ShowDialog();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            UserHomeChangePassword userHomeChangePassword = new UserHomeChangePassword();
+            userHomeChangePassword.ShowDialog();
         }
     }
 }
