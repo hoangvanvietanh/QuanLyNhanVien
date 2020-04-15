@@ -9,7 +9,7 @@ namespace QuanLyDaiHocGiaDinh.Interface
 {
     interface IAccount
     {
-        void CreateAccount(Account account);
+        Account CreateAccount(Account account);
         void DeleteAccount(Account account);
         void UpdateAccount(Account account);
         Account getAccountByEmployeeId(int employeeId);

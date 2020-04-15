@@ -26,9 +26,9 @@ namespace QuanLyDaiHocGiaDinh.Services
         }
 
         //Tạo tài khoản
-        public void createAccount(Account account)
+        public Account createAccount(Account account)
         {
-            accountDao.CreateAccount(account);
+            return accountDao.CreateAccount(account);
         }
 
         //Cập nhật tài khoản
@@ -42,5 +42,7 @@ namespace QuanLyDaiHocGiaDinh.Services
         {
             accountDao.DeleteAccount(account);
         }
+
+        
     }
 }

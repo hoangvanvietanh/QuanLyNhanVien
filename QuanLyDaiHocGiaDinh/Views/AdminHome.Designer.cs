@@ -30,27 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminHome));
-            DevExpress.XtraScheduler.TimeRuler timeRuler4 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler5 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler6 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame5 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame6 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement22 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement23 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame7 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement24 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame8 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement25 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement26 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement27 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement28 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame1 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame2 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame3 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame4 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement13 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
             this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.repositoryItemDuration1 = new DevExpress.XtraScheduler.UI.RepositoryItemDuration();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
@@ -185,7 +185,7 @@
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.lblUsername = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lblEmail = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblPassword = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblEmployeeId = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblRole = new DevExpress.XtraLayout.LayoutControlItem();
@@ -220,7 +220,6 @@
             this.tileItem6 = new DevExpress.XtraEditors.TileItem();
             this.p_selectAllEmployeeTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.p_selectAllEmployeeTableAdapter();
             this.schedulerBarController1 = new DevExpress.XtraScheduler.UI.SchedulerBarController(this.components);
-            this.pselectAllEmployeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.navigationPage1 = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.accountsTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.AccountsTableAdapter();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -232,6 +231,8 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.EmployeesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDuration1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
@@ -272,7 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblEmployeeId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblRole)).BeginInit();
@@ -296,11 +297,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.picInfor.Properties)).BeginInit();
             this.navigationPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerBarController1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pselectAllEmployeeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemSpinEdit1
@@ -916,11 +917,11 @@
             this.schedulerControl1.Start = new System.DateTime(2020, 4, 10, 0, 0, 0, 0);
             this.schedulerControl1.TabIndex = 0;
             this.schedulerControl1.Text = "schedulerControl1";
-            this.schedulerControl1.Views.DayView.TimeRulers.Add(timeRuler4);
+            this.schedulerControl1.Views.DayView.TimeRulers.Add(timeRuler1);
             this.schedulerControl1.Views.FullWeekView.Enabled = true;
-            this.schedulerControl1.Views.FullWeekView.TimeRulers.Add(timeRuler5);
+            this.schedulerControl1.Views.FullWeekView.TimeRulers.Add(timeRuler2);
             this.schedulerControl1.Views.WeekView.Enabled = false;
-            this.schedulerControl1.Views.WorkWeekView.TimeRulers.Add(timeRuler6);
+            this.schedulerControl1.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
             // 
             // schedulerDataStorage
             // 
@@ -1089,7 +1090,8 @@
             this.gridView.Name = "gridView";
             this.gridView.OptionsFind.AlwaysVisible = true;
             this.gridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colDepartmentName, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colDepartmentName, DevExpress.Data.ColumnSortOrder.Ascending),
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colPositionName, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // colEmployeeId
             // 
@@ -1104,8 +1106,8 @@
             this.colFullName.MinWidth = 23;
             this.colFullName.Name = "colFullName";
             this.colFullName.Visible = true;
-            this.colFullName.VisibleIndex = 0;
-            this.colFullName.Width = 148;
+            this.colFullName.VisibleIndex = 1;
+            this.colFullName.Width = 166;
             // 
             // colFirstName
             // 
@@ -1127,8 +1129,8 @@
             this.colBirthDate.MinWidth = 23;
             this.colBirthDate.Name = "colBirthDate";
             this.colBirthDate.Visible = true;
-            this.colBirthDate.VisibleIndex = 1;
-            this.colBirthDate.Width = 148;
+            this.colBirthDate.VisibleIndex = 2;
+            this.colBirthDate.Width = 112;
             // 
             // colAddress
             // 
@@ -1136,8 +1138,8 @@
             this.colAddress.MinWidth = 23;
             this.colAddress.Name = "colAddress";
             this.colAddress.Visible = true;
-            this.colAddress.VisibleIndex = 2;
-            this.colAddress.Width = 148;
+            this.colAddress.VisibleIndex = 3;
+            this.colAddress.Width = 100;
             // 
             // colWard
             // 
@@ -1152,8 +1154,8 @@
             this.colDistrict.MinWidth = 23;
             this.colDistrict.Name = "colDistrict";
             this.colDistrict.Visible = true;
-            this.colDistrict.VisibleIndex = 3;
-            this.colDistrict.Width = 92;
+            this.colDistrict.VisibleIndex = 4;
+            this.colDistrict.Width = 64;
             // 
             // colCity
             // 
@@ -1161,8 +1163,8 @@
             this.colCity.MinWidth = 23;
             this.colCity.Name = "colCity";
             this.colCity.Visible = true;
-            this.colCity.VisibleIndex = 4;
-            this.colCity.Width = 162;
+            this.colCity.VisibleIndex = 5;
+            this.colCity.Width = 100;
             // 
             // colPhoneNumber
             // 
@@ -1170,8 +1172,8 @@
             this.colPhoneNumber.MinWidth = 23;
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.Visible = true;
-            this.colPhoneNumber.VisibleIndex = 5;
-            this.colPhoneNumber.Width = 120;
+            this.colPhoneNumber.VisibleIndex = 6;
+            this.colPhoneNumber.Width = 98;
             // 
             // colEmail
             // 
@@ -1179,8 +1181,8 @@
             this.colEmail.MinWidth = 23;
             this.colEmail.Name = "colEmail";
             this.colEmail.Visible = true;
-            this.colEmail.VisibleIndex = 6;
-            this.colEmail.Width = 183;
+            this.colEmail.VisibleIndex = 7;
+            this.colEmail.Width = 118;
             // 
             // colStatus
             // 
@@ -1202,8 +1204,8 @@
             this.colPositionName.MinWidth = 23;
             this.colPositionName.Name = "colPositionName";
             this.colPositionName.Visible = true;
-            this.colPositionName.VisibleIndex = 7;
-            this.colPositionName.Width = 183;
+            this.colPositionName.VisibleIndex = 8;
+            this.colPositionName.Width = 127;
             // 
             // colDepartmentName
             // 
@@ -1217,7 +1219,9 @@
             this.colImage.FieldName = "Image";
             this.colImage.MinWidth = 23;
             this.colImage.Name = "colImage";
-            this.colImage.Width = 87;
+            this.colImage.Visible = true;
+            this.colImage.VisibleIndex = 0;
+            this.colImage.Width = 73;
             // 
             // employeesLabelControl
             // 
@@ -1384,7 +1388,6 @@
             // 
             // txtEmloyeeId
             // 
-            this.txtEmloyeeId.Enabled = false;
             this.txtEmloyeeId.Location = new System.Drawing.Point(381, 47);
             this.txtEmloyeeId.MenuManager = this.ribbonControl;
             this.txtEmloyeeId.Name = "txtEmloyeeId";
@@ -1425,7 +1428,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.btnThem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThem.ImageOptions.SvgImage")));
             this.btnThem.Location = new System.Drawing.Point(193, 111);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(192, 46);
@@ -1459,7 +1462,7 @@
             // layoutControlGroup3
             // 
             this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.lblUsername,
+            this.lblEmail,
             this.lblPassword,
             this.lblEmployeeId,
             this.lblRole});
@@ -1468,14 +1471,14 @@
             this.layoutControlGroup3.Size = new System.Drawing.Size(584, 99);
             this.layoutControlGroup3.Text = "Tài khoản";
             // 
-            // lblUsername
+            // lblEmail
             // 
-            this.lblUsername.Control = this.txtUsername;
-            this.lblUsername.Location = new System.Drawing.Point(0, 0);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(283, 26);
-            this.lblUsername.Text = "Username:";
-            this.lblUsername.TextSize = new System.Drawing.Size(71, 16);
+            this.lblEmail.Control = this.txtUsername;
+            this.lblEmail.Location = new System.Drawing.Point(0, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(283, 26);
+            this.lblEmail.Text = "Email:";
+            this.lblEmail.TextSize = new System.Drawing.Size(71, 16);
             // 
             // lblPassword
             // 
@@ -1749,12 +1752,12 @@
             // 
             // tileItem7
             // 
-            tileItemElement15.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement15.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement15.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement15.ImageOptions.ImageSize = new System.Drawing.Size(248, 200);
-            tileItemElement15.Text = "";
-            this.tileItem7.Elements.Add(tileItemElement15);
+            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement1.ImageOptions.ImageSize = new System.Drawing.Size(248, 200);
+            tileItemElement1.Text = "";
+            this.tileItem7.Elements.Add(tileItemElement1);
             this.tileItem7.Id = 5;
             this.tileItem7.ItemSize = DevExpress.XtraEditors.TileItemSize.Large;
             this.tileItem7.Name = "tileItem7";
@@ -1767,187 +1770,187 @@
             // 
             // tileItem5
             // 
-            tileItemElement16.AnchorIndent = 30;
-            tileItemElement16.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement16.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement16.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement16.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement16.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            tileItemElement16.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement16.Appearance.Normal.Options.UseFont = true;
-            tileItemElement16.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement16.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement16.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            tileItemElement16.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement16.Appearance.Selected.Options.UseFont = true;
-            tileItemElement16.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement16.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement16.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            tileItemElement16.MaxWidth = 160;
-            tileItemElement16.Text = "Gia Định";
-            tileItemElement16.TextLocation = new System.Drawing.Point(75, 0);
-            tileItemElement17.AnchorIndent = 30;
-            tileItemElement17.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement17.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement17.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement17.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement17.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement17.Appearance.Normal.BackColor = System.Drawing.Color.Azure;
-            tileItemElement17.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement17.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            tileItemElement17.Appearance.Normal.Options.UseBackColor = true;
-            tileItemElement17.Appearance.Normal.Options.UseFont = true;
-            tileItemElement17.Appearance.Normal.Options.UseForeColor = true;
-            tileItemElement17.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement17.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement17.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement17.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement17.Appearance.Selected.Options.UseFont = true;
-            tileItemElement17.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement17.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement17.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement17.Height = 20;
-            tileItemElement17.MaxWidth = 160;
-            tileItemElement17.StretchHorizontal = true;
-            tileItemElement17.Text = "Lịch công tác";
-            tileItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement17.TextLocation = new System.Drawing.Point(75, 27);
-            tileItemElement18.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement18.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement18.ImageOptions.ImageLocation = new System.Drawing.Point(4, 8);
-            tileItemElement18.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement18.ImageOptions.ImageSize = new System.Drawing.Size(64, 64);
-            this.tileItem5.Elements.Add(tileItemElement16);
-            this.tileItem5.Elements.Add(tileItemElement17);
-            this.tileItem5.Elements.Add(tileItemElement18);
-            tileItemFrame5.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
-            tileItemElement19.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            tileItemElement19.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement19.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement19.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement19.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
-            tileItemFrame5.Elements.Add(tileItemElement19);
-            tileItemFrame5.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame5.Image")));
-            tileItemFrame6.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollTop;
-            tileItemElement20.AnchorIndent = 30;
-            tileItemElement20.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement20.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement20.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement20.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement20.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            tileItemElement20.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement20.Appearance.Normal.Options.UseFont = true;
-            tileItemElement20.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement20.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement20.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            tileItemElement20.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement20.Appearance.Selected.Options.UseFont = true;
-            tileItemElement20.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement20.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement20.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            tileItemElement20.MaxWidth = 160;
-            tileItemElement20.Text = "Gia Định";
-            tileItemElement20.TextLocation = new System.Drawing.Point(75, 0);
-            tileItemElement21.AnchorIndent = 30;
-            tileItemElement21.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement21.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement21.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement21.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement21.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement21.Appearance.Normal.BackColor = System.Drawing.Color.Azure;
-            tileItemElement21.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement21.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            tileItemElement21.Appearance.Normal.Options.UseBackColor = true;
-            tileItemElement21.Appearance.Normal.Options.UseFont = true;
-            tileItemElement21.Appearance.Normal.Options.UseForeColor = true;
-            tileItemElement21.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement21.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement21.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement21.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement21.Appearance.Selected.Options.UseFont = true;
-            tileItemElement21.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement21.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement21.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement21.Height = 20;
-            tileItemElement21.MaxWidth = 160;
-            tileItemElement21.StretchHorizontal = true;
-            tileItemElement21.Text = "Lịch công tác";
-            tileItemElement21.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement21.TextLocation = new System.Drawing.Point(75, 27);
-            tileItemElement22.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            tileItemElement22.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement22.ImageOptions.ImageLocation = new System.Drawing.Point(4, 8);
-            tileItemElement22.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement22.ImageOptions.ImageSize = new System.Drawing.Size(64, 64);
-            tileItemFrame6.Elements.Add(tileItemElement20);
-            tileItemFrame6.Elements.Add(tileItemElement21);
-            tileItemFrame6.Elements.Add(tileItemElement22);
-            this.tileItem5.Frames.Add(tileItemFrame5);
-            this.tileItem5.Frames.Add(tileItemFrame6);
+            tileItemElement2.AnchorIndent = 30;
+            tileItemElement2.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement2.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement2.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement2.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement2.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            tileItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement2.Appearance.Normal.Options.UseFont = true;
+            tileItemElement2.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement2.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement2.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            tileItemElement2.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement2.Appearance.Selected.Options.UseFont = true;
+            tileItemElement2.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement2.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement2.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            tileItemElement2.MaxWidth = 160;
+            tileItemElement2.Text = "Gia Định";
+            tileItemElement2.TextLocation = new System.Drawing.Point(75, 0);
+            tileItemElement3.AnchorIndent = 30;
+            tileItemElement3.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement3.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement3.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement3.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement3.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement3.Appearance.Normal.BackColor = System.Drawing.Color.Azure;
+            tileItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement3.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            tileItemElement3.Appearance.Normal.Options.UseBackColor = true;
+            tileItemElement3.Appearance.Normal.Options.UseFont = true;
+            tileItemElement3.Appearance.Normal.Options.UseForeColor = true;
+            tileItemElement3.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement3.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement3.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement3.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement3.Appearance.Selected.Options.UseFont = true;
+            tileItemElement3.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement3.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement3.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement3.Height = 20;
+            tileItemElement3.MaxWidth = 160;
+            tileItemElement3.StretchHorizontal = true;
+            tileItemElement3.Text = "Lịch công tác";
+            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement3.TextLocation = new System.Drawing.Point(75, 27);
+            tileItemElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement4.ImageOptions.ImageLocation = new System.Drawing.Point(4, 8);
+            tileItemElement4.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement4.ImageOptions.ImageSize = new System.Drawing.Size(64, 64);
+            this.tileItem5.Elements.Add(tileItemElement2);
+            this.tileItem5.Elements.Add(tileItemElement3);
+            this.tileItem5.Elements.Add(tileItemElement4);
+            tileItemFrame1.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
+            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement5.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
+            tileItemElement5.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement5.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
+            tileItemFrame1.Elements.Add(tileItemElement5);
+            tileItemFrame1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame1.Image")));
+            tileItemFrame2.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollTop;
+            tileItemElement6.AnchorIndent = 30;
+            tileItemElement6.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement6.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement6.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            tileItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement6.Appearance.Normal.Options.UseFont = true;
+            tileItemElement6.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            tileItemElement6.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement6.Appearance.Selected.Options.UseFont = true;
+            tileItemElement6.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement6.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement6.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            tileItemElement6.MaxWidth = 160;
+            tileItemElement6.Text = "Gia Định";
+            tileItemElement6.TextLocation = new System.Drawing.Point(75, 0);
+            tileItemElement7.AnchorIndent = 30;
+            tileItemElement7.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement7.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement7.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement7.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement7.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement7.Appearance.Normal.BackColor = System.Drawing.Color.Azure;
+            tileItemElement7.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement7.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            tileItemElement7.Appearance.Normal.Options.UseBackColor = true;
+            tileItemElement7.Appearance.Normal.Options.UseFont = true;
+            tileItemElement7.Appearance.Normal.Options.UseForeColor = true;
+            tileItemElement7.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement7.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement7.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement7.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement7.Appearance.Selected.Options.UseFont = true;
+            tileItemElement7.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement7.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement7.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement7.Height = 20;
+            tileItemElement7.MaxWidth = 160;
+            tileItemElement7.StretchHorizontal = true;
+            tileItemElement7.Text = "Lịch công tác";
+            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement7.TextLocation = new System.Drawing.Point(75, 27);
+            tileItemElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            tileItemElement8.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement8.ImageOptions.ImageLocation = new System.Drawing.Point(4, 8);
+            tileItemElement8.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement8.ImageOptions.ImageSize = new System.Drawing.Size(64, 64);
+            tileItemFrame2.Elements.Add(tileItemElement6);
+            tileItemFrame2.Elements.Add(tileItemElement7);
+            tileItemFrame2.Elements.Add(tileItemElement8);
+            this.tileItem5.Frames.Add(tileItemFrame1);
+            this.tileItem5.Frames.Add(tileItemFrame2);
             this.tileItem5.Id = 3;
             this.tileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem5.Name = "tileItem5";
             // 
             // tileItem6
             // 
-            tileItemElement23.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement23.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement23.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement23.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement23.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement23.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement23.Appearance.Normal.Options.UseFont = true;
-            tileItemElement23.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement23.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement23.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement23.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement23.Appearance.Selected.Options.UseFont = true;
-            tileItemElement23.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement23.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement23.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement23.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
-            tileItemElement23.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
-            tileItemElement23.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement23.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
-            tileItemElement23.Text = "";
-            tileItemElement23.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement23.TextLocation = new System.Drawing.Point(4, 0);
-            this.tileItem6.Elements.Add(tileItemElement23);
-            tileItemFrame7.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.RandomSegmentedFade;
-            tileItemElement24.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
-            tileItemElement24.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
-            tileItemElement24.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement24.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
-            tileItemElement24.Text = "element2";
-            tileItemFrame7.Elements.Add(tileItemElement24);
-            tileItemFrame7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame7.Image")));
-            tileItemFrame8.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollTop;
-            tileItemElement25.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement25.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement25.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement25.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement25.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement25.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement25.Appearance.Normal.Options.UseFont = true;
-            tileItemElement25.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement25.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement25.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement25.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement25.Appearance.Selected.Options.UseFont = true;
-            tileItemElement25.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement25.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement25.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement25.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
-            tileItemElement25.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
-            tileItemElement25.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement25.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
-            tileItemElement25.Text = "";
-            tileItemElement25.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement25.TextLocation = new System.Drawing.Point(4, 0);
-            tileItemFrame8.Elements.Add(tileItemElement25);
-            tileItemFrame8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame8.Image")));
-            this.tileItem6.Frames.Add(tileItemFrame7);
-            this.tileItem6.Frames.Add(tileItemFrame8);
+            tileItemElement9.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement9.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement9.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement9.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement9.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement9.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement9.Appearance.Normal.Options.UseFont = true;
+            tileItemElement9.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement9.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement9.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement9.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement9.Appearance.Selected.Options.UseFont = true;
+            tileItemElement9.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement9.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement9.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            tileItemElement9.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
+            tileItemElement9.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement9.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
+            tileItemElement9.Text = "";
+            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement9.TextLocation = new System.Drawing.Point(4, 0);
+            this.tileItem6.Elements.Add(tileItemElement9);
+            tileItemFrame3.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.RandomSegmentedFade;
+            tileItemElement10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            tileItemElement10.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
+            tileItemElement10.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement10.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
+            tileItemElement10.Text = "element2";
+            tileItemFrame3.Elements.Add(tileItemElement10);
+            tileItemFrame3.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame3.Image")));
+            tileItemFrame4.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollTop;
+            tileItemElement11.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement11.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement11.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement11.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement11.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement11.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement11.Appearance.Normal.Options.UseFont = true;
+            tileItemElement11.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement11.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement11.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement11.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement11.Appearance.Selected.Options.UseFont = true;
+            tileItemElement11.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement11.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement11.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            tileItemElement11.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
+            tileItemElement11.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement11.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
+            tileItemElement11.Text = "";
+            tileItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement11.TextLocation = new System.Drawing.Point(4, 0);
+            tileItemFrame4.Elements.Add(tileItemElement11);
+            tileItemFrame4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame4.Image")));
+            this.tileItem6.Frames.Add(tileItemFrame3);
+            this.tileItem6.Frames.Add(tileItemFrame4);
             this.tileItem6.Id = 4;
             this.tileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem6.Name = "tileItem6";
@@ -2001,11 +2004,6 @@
             this.schedulerBarController1.BarItems.Add(this.changeAppointmentReminderItem1);
             this.schedulerBarController1.Control = this.schedulerControl1;
             // 
-            // pselectAllEmployeeBindingSource1
-            // 
-            this.pselectAllEmployeeBindingSource1.DataMember = "p_selectAllEmployee";
-            this.pselectAllEmployeeBindingSource1.DataSource = this.giaDinhUniversityDataSet;
-            // 
             // navigationPage1
             // 
             this.navigationPage1.Caption = "navigationPage1";
@@ -2027,20 +2025,20 @@
             // 
             // tileItem3
             // 
-            tileItemElement26.Text = "tileItem3";
-            this.tileItem3.Elements.Add(tileItemElement26);
+            tileItemElement12.Text = "tileItem3";
+            this.tileItem3.Elements.Add(tileItemElement12);
             this.tileItem3.Id = 10;
             this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem3.Name = "tileItem3";
             // 
             // tileItem1
             // 
-            tileItemElement27.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
-            tileItemElement27.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement27.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement27.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement27.ImageOptions.ImageSize = new System.Drawing.Size(120, 120);
-            this.tileItem1.Elements.Add(tileItemElement27);
+            tileItemElement13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            tileItemElement13.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement13.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
+            tileItemElement13.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement13.ImageOptions.ImageSize = new System.Drawing.Size(120, 120);
+            this.tileItem1.Elements.Add(tileItemElement13);
             this.tileItem1.Id = 5;
             this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem1.Name = "tileItem1";
@@ -2051,8 +2049,8 @@
             // 
             // tileItem2
             // 
-            tileItemElement28.Text = "tileItem2";
-            this.tileItem2.Elements.Add(tileItemElement28);
+            tileItemElement14.Text = "tileItem2";
+            this.tileItem2.Elements.Add(tileItemElement14);
             this.tileItem2.Id = 7;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem2.Name = "tileItem2";
@@ -2079,6 +2077,15 @@
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "Root";
             this.layoutControlGroup1.Size = new System.Drawing.Size(20, 20);
+            // 
+            // employeesBindingSource
+            // 
+            this.employeesBindingSource.DataMember = "Employees";
+            this.employeesBindingSource.DataSource = this.giaDinhUniversityDataSet;
+            // 
+            // employeesTableAdapter
+            // 
+            this.employeesTableAdapter.ClearBeforeFill = true;
             // 
             // AdminHome
             // 
@@ -2137,7 +2144,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblEmployeeId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblRole)).EndInit();
@@ -2161,11 +2168,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.picInfor.Properties)).EndInit();
             this.navigationPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.schedulerBarController1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pselectAllEmployeeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2196,7 +2203,6 @@
         private DevExpress.XtraGrid.GridControl gridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView;
         private Model.GiaDinhUniversityDataSet giaDinhUniversityDataSet;
-        private System.Windows.Forms.BindingSource pselectAllEmployeeBindingSource;
         private Model.GiaDinhUniversityDataSetTableAdapters.p_selectAllEmployeeTableAdapter p_selectAllEmployeeTableAdapter;
         private DevExpress.XtraGrid.Columns.GridColumn colEmployeeId;
         private DevExpress.XtraGrid.Columns.GridColumn colFullName;
@@ -2274,7 +2280,6 @@
         private DevExpress.XtraScheduler.UI.SchedulerBarController schedulerBarController1;
         private DevExpress.XtraBars.Ribbon.RibbonPage employeeHomeRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupHeThong;
-        private System.Windows.Forms.BindingSource pselectAllEmployeeBindingSource1;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
@@ -2328,7 +2333,7 @@
         private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
-        private DevExpress.XtraLayout.LayoutControlItem lblUsername;
+        private DevExpress.XtraLayout.LayoutControlItem lblEmail;
         private DevExpress.XtraLayout.LayoutControlItem lblPassword;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraEditors.TextEdit txtFullName;
@@ -2353,5 +2358,8 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private System.Windows.Forms.BindingSource pselectAllEmployeeBindingSource;
+        private System.Windows.Forms.BindingSource employeesBindingSource;
+        private Model.GiaDinhUniversityDataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
     }
 }

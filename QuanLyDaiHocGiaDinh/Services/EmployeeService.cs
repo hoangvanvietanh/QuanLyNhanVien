@@ -11,9 +11,12 @@ namespace QuanLyDaiHocGiaDinh.Services
 {
     class EmployeeService 
     {
+
+        
         IEmployee employeeDao = new EmployeeDaoImpl();
         private Account _account;
 
+        public EmployeeService() { }
         public EmployeeService(Account account)
         {
             this._account = account;
