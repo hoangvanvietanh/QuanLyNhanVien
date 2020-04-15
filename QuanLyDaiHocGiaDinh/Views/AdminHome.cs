@@ -56,6 +56,8 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void AdminHome_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'giaDinhUniversityDataSet.Employees' table. You can move, or remove it, as needed.
+            this.employeesTableAdapter.Fill(this.giaDinhUniversityDataSet.Employees);
             form_load(sender,e);
             // TODO: This line of code loads data into the 'giaDinhUniversityDataSet.Accounts' table. You can move, or remove it, as needed.
             this.accountsTableAdapter.Fill(this.giaDinhUniversityDataSet.Accounts);
@@ -158,8 +160,10 @@ namespace QuanLyDaiHocGiaDinh.Views
         {
             LinQDataContext db = new LinQDataContext();
             string id = gridViewAccount.Columns.View.GetFocusedRowCellValue("AccountId").ToString();
-            Account acc = db.Accounts.Where(p => p.AccountId.Equals(id)).SingleOrDefault();
-            accountServices.deleteAccount(acc);            
+            //acc = accountServices.getAccountByEmployeeId(Int32.Parse(id));
+           Account acc = db.Accounts.Where(p => p.AccountId.Equals(id)).SingleOrDefault();
+           //accountServices.deleteAccount(Int32.Parse(id));
+           accountServices.deleteAccount(acc);
             XtraMessageBox.Show("Xóa thành công !!!"); 
             form_load(sender, e);
         }

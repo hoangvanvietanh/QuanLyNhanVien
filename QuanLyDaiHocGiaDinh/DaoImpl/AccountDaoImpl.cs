@@ -25,13 +25,14 @@ namespace QuanLyDaiHocGiaDinh.Dao
         }
 
         //Tạo tài khoản
-        public void CreateAccount(Account account)
+        public Account CreateAccount(Account account)
         {
             db = new LinQDataContext();
             Account ac = new Account();
             ac = account;
             db.Accounts.InsertOnSubmit(ac);
             db.SubmitChanges();
+            return ac;
         }
 
         //Xóa tài khoản
