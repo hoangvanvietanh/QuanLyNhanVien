@@ -12,7 +12,7 @@ namespace QuanLyDaiHocGiaDinh.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.5.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,11 +26,22 @@ namespace QuanLyDaiHocGiaDinh.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-MALEMT7\\SUNSHINE;Initial Catalog=GiaDinhUniversity;Integrated" +
-            " Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-97M8LEM;Initial Catalog=GiaDinhUniversity;Integrated Security" +
+            "=True")]
         public string GiaDinhUniversityConnectionString {
             get {
                 return ((string)(this["GiaDinhUniversityConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-9H7FQ59;Initial Catalog=GiaDinhUniversity;Integrated Security" +
+            "=True")]
+        public string GiaDinhUniversityConnectionString1 {
+            get {
+                return ((string)(this["GiaDinhUniversityConnectionString1"]));
             }
         }
     }

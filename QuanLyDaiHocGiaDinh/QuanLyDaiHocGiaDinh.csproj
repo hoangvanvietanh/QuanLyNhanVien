@@ -48,12 +48,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="DevExpress.BonusSkins.v19.1" />
     <Reference Include="DevExpress.Data.v19.1" />
+    <Reference Include="DevExpress.Dialogs.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v19.1" />
     <Reference Include="DevExpress.Sparkline.v19.1.Core" />
     <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.1" />
     <Reference Include="DevExpress.Printing.v19.1.Core" />
     <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -63,6 +66,7 @@
     <Reference Include="DevExpress.XtraScheduler.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v19.1.Extensions, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -71,8 +75,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -88,6 +95,24 @@
     <Compile Include="DaoImpl\AccountDaoImpl.cs" />
     <Compile Include="DaoImpl\EmployeeDaoImpl.cs" />
     <Compile Include="Services\EmployeeService.cs" />
+    <Compile Include="Views\AdminChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminChangePassword.Designer.cs">
+      <DependentUpon>AdminChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminCreateTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminCreateTeachers.Designer.cs">
+      <DependentUpon>AdminCreateTeachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminInforTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminInforTeachers.Designer.cs">
+      <DependentUpon>AdminInforTeachers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +165,15 @@
     <Compile Include="Views\UserHomeUpdate.Designer.cs">
       <DependentUpon>UserHomeUpdate.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\AdminChangePassword.resx">
+      <DependentUpon>AdminChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminCreateTeachers.resx">
+      <DependentUpon>AdminCreateTeachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminInforTeachers.resx">
+      <DependentUpon>AdminInforTeachers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +189,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\OutlookAppointmentForm.de.resx">
       <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
@@ -229,6 +264,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundGDU.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-dai-hoc-gia-dinh.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
