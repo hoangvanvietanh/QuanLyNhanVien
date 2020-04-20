@@ -2,12 +2,6 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.5" name="LinQ">
   <DataContextMoniker Name="/LinQDataContext" />
   <nestedChildShapes>
-    <classShape Id="0536bcc4-c41c-4928-a27f-d851da513c83" absoluteBounds="1.625, 4.125, 2, 1.7708968098958327">
-      <DataClassMoniker Name="/LinQDataContext/Account" />
-      <nestedChildShapes>
-        <elementListCompartment Id="2b5e1a9a-799e-4e58-9a89-02804065a628" absoluteBounds="1.6400000000000001, 4.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="4c934fa0-e683-41cb-b8c1-3f9980a72e3c" absoluteBounds="8.5, 0.5, 2, 1.9631982421875003">
       <DataClassMoniker Name="/LinQDataContext/Resource" />
       <nestedChildShapes>
@@ -38,31 +32,37 @@
         <elementListCompartment Id="8be87f87-6780-42e1-bd49-d284fca4178d" absoluteBounds="5.015, 5.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.625 : 4.40625); (6.125 : 4.40625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/LinQDataContext/Account/Account_Employee" />
-      <nodes>
-        <classShapeMoniker Id="0536bcc4-c41c-4928-a27f-d851da513c83" />
-        <classShapeMoniker Id="e1c7005c-b959-4cc8-8789-1df79134a367" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(5 : 1.94314697265625); (6.125 : 1.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5 : 1.94314697265625); (6.125 : 1.94314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinQDataContext/Position/Position_Employee" />
       <nodes>
         <classShapeMoniker Id="5b212794-5081-4f11-97c8-61535eb1517d" />
         <classShapeMoniker Id="e1c7005c-b959-4cc8-8789-1df79134a367" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.5 : 2.38064697265625); (3 : 2.38064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.5 : 2.38064697265625); (3 : 2.38064697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinQDataContext/Department/Department_Position" />
       <nodes>
         <classShapeMoniker Id="606cfc1f-2e20-48c2-bb4a-027908680441" />
         <classShapeMoniker Id="5b212794-5081-4f11-97c8-61535eb1517d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(3.625 : 5.32294840494792); (5 : 5.32294840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <classShape Id="5e8f81a3-fda2-4ebc-805f-cd54b8a4f413" absoluteBounds="1.375, 4.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LinQDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d116cd30-0bcd-461c-894c-cd650545e285" absoluteBounds="1.3900000000000001, 4.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 4.53125); (6.125 : 4.53125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LinQDataContext/Account/Account_Employee" />
+      <nodes>
+        <classShapeMoniker Id="5e8f81a3-fda2-4ebc-805f-cd54b8a4f413" />
+        <classShapeMoniker Id="e1c7005c-b959-4cc8-8789-1df79134a367" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.375 : 5.35179768880208); (5 : 5.35179768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinQDataContext/Account/Account_Schedule" />
       <nodes>
-        <classShapeMoniker Id="0536bcc4-c41c-4928-a27f-d851da513c83" />
+        <classShapeMoniker Id="5e8f81a3-fda2-4ebc-805f-cd54b8a4f413" />
         <classShapeMoniker Id="4c20932d-5f7b-4580-9f65-712af6d2039f" />
       </nodes>
     </associationConnector>

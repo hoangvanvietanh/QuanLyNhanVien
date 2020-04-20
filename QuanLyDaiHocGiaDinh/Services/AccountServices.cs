@@ -43,6 +43,11 @@ namespace QuanLyDaiHocGiaDinh.Services
             accountDao.DeleteAccount(account);
         }
 
+        public String getRoleByAccountId(int accountId)
+        {
+            return accountDao.getRoleAccount(accountId);
+        }
+
         
     }
 }

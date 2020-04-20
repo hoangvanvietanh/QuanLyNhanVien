@@ -1,4 +1,5 @@
-﻿using QuanLyDaiHocGiaDinh.Dao;
+﻿using QuanLyDaiHocGiaDinh.ConnectWithNodejs.Services;
+using QuanLyDaiHocGiaDinh.Dao;
 using QuanLyDaiHocGiaDinh.Interface;
 using QuanLyDaiHocGiaDinh.Model;
 using System;
@@ -11,8 +12,7 @@ namespace QuanLyDaiHocGiaDinh.Services
 {
     class EmployeeService 
     {
-
-        
+        NodeJSServices nodeJSServices = new NodeJSServices();
         IEmployee employeeDao = new EmployeeDaoImpl();
         private Account _account;
 
@@ -50,6 +50,7 @@ namespace QuanLyDaiHocGiaDinh.Services
         public void createEmployee(Employee employee)
         {
             employeeDao.CreateEmployee(employee);
+            nodeJSServices.addEmployeeToNodejs(employee);
         }
 
         //Xóa nhân viên

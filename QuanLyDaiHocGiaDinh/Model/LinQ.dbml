@@ -1,16 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GiaDinhUniversity" Class="LinQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-97M8LEM;Initial Catalog=GiaDinhUniversity;Integrated Security=True" SettingsObjectName="QuanLyDaiHocGiaDinh.Properties.Settings" SettingsPropertyName="GiaDinhUniversityConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Accounts" Member="Accounts">
-    <Type Name="Account">
-      <Column Name="AccountId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="UserName" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
-      <Column Name="Password" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
-      <Column Name="EmployeeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Role" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Association Name="Account_Employee" Member="Employees" ThisKey="AccountId" OtherKey="AccountId" Type="Employee" />
-      <Association Name="Account_Schedule" Member="Schedules" ThisKey="AccountId" OtherKey="AccountId" Type="Schedule" />
-    </Type>
-  </Table>
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-MALEMT7\SUNSHINE;Initial Catalog=GiaDinhUniversity;Integrated Security=True" SettingsObjectName="QuanLyDaiHocGiaDinh.Properties.Settings" SettingsPropertyName="GiaDinhUniversityConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Resources" Member="Resources">
     <Type Name="Resource">
       <Column Name="UniqueID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -46,8 +35,8 @@
       <Column Name="PositionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="AccountId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
-      <Association Name="Account_Employee" Member="Account" ThisKey="AccountId" OtherKey="AccountId" Type="Account" IsForeignKey="true" />
       <Association Name="Position_Employee" Member="Position" ThisKey="PositionId" OtherKey="PositionId" Type="Position" IsForeignKey="true" />
+      <Association Name="Account_Employee" Member="Account" ThisKey="AccountId" OtherKey="AccountId" Type="Account" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Position" Member="Positions">
@@ -83,6 +72,16 @@
       <Association Name="Account_Schedule" Member="Account" ThisKey="AccountId" OtherKey="AccountId" Type="Account" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Accounts" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="AccountId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Role" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Account_Employee" Member="Employees" ThisKey="AccountId" OtherKey="AccountId" Type="Employee" />
+      <Association Name="Account_Schedule" Member="Schedules" ThisKey="AccountId" OtherKey="AccountId" Type="Schedule" />
+    </Type>
+  </Table>
   <Function Name="dbo.p_selectAllEmployee" Method="p_selectAllEmployee">
     <ElementType Name="p_selectAllEmployeeResult">
       <Column Name="EmployeeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -103,10 +102,6 @@
       <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.p_selectSchedulePersonal" Method="p_selectSchedulePersonal" IsComposable="true">
-    <Parameter Name="AccountId" Parameter="accountId" Type="System.Int32" DbType="Int" />
-    <Return Type="object" />
-  </Function>
   <Function Name="dbo.p_selectEmployee" Method="p_selectEmployee">
     <Parameter Name="EmployeeId" Parameter="employeeId" Type="System.Int32" DbType="Int" />
     <ElementType Name="p_selectEmployeeResult">
@@ -126,6 +121,51 @@
       <Column Name="PositionName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="DepartmentName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_selectSchedulePersonal" Method="p_selectSchedulePersonal">
+    <Parameter Name="AccountId" Parameter="accountId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="p_selectSchedulePersonalResult">
+      <Column Name="UniqueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="AllDay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Label" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResourceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResourceIDs" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReminderInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RecurrenceInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TimeZoneId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CustomField1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AccountId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DepartmentsList" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PositionList" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.p_selectEmployeeByAccountId" Method="p_selectEmployeeByAccountId">
+    <Parameter Name="AccountId" Parameter="accountId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="p_selectEmployeeByAccountIdResult">
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Ward" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="District" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="PositionName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Role" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="AccountId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EmployeeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
 </Database>
