@@ -15,11 +15,12 @@ namespace QuanLyDaiHocGiaDinh.Dao
 
         //Lấy databse từ cơ sở dữ liệu
         public EmployeeDaoImpl()
-        {
+        {   
             db = new LinQDataContext();
             using (db)
             {
-                var employee = from x in db.Employees select x;
+                var employee = from x in  db.Employees select x;
+                db.DeferredLoadingEnabled = false;
                 employees = employee.ToList();
             }
         }
@@ -67,13 +68,14 @@ namespace QuanLyDaiHocGiaDinh.Dao
             Employee employee = new Employee();
             employees.ForEach(emp =>
             {
+               // Console.WriteLine(emp.Position.PositionName);
                 if (emp.AccountId == accountId)
                 {
-                    employee = emp;
+                    employee = emp;                
                 }
             });
-
             return employee;
+            
         }
 
         //Lấy list nhân viên theo phòng ban

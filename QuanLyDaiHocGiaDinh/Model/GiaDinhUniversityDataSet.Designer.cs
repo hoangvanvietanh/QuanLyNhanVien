@@ -5942,7 +5942,7 @@ SELECT AccountId, UserName, Password, EmployeeId, Role FROM Accounts WHERE (Acco
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyDaiHocGiaDinh.Properties.Settings.Default.GiaDinhUniversityConnectionString1;
+            this._connection.ConnectionString = global::QuanLyDaiHocGiaDinh.Properties.Settings.Default.GiaDinhUniversityConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
