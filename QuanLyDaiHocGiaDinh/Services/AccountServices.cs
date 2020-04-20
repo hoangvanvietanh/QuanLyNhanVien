@@ -38,7 +38,7 @@ namespace QuanLyDaiHocGiaDinh.Services
         }
 
         //Xóa tài khoản
-        public void deleteAccount(Account account)
+        public void deleteAccount(int account)
         {
             accountDao.DeleteAccount(account);
         }

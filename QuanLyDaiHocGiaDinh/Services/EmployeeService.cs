@@ -39,6 +39,7 @@ namespace QuanLyDaiHocGiaDinh.Services
             return employeeDao.getAllEmployees();
         }
 
+
         //Cập nhật thông tin nhân viên
         public void updateEmployee(Employee employee)
         {
@@ -52,7 +53,7 @@ namespace QuanLyDaiHocGiaDinh.Services
         }
 
         //Xóa nhân viên
-        public void deleteEmployee(Employee employee)
+        public void deleteEmployee(int employee)
         {
             employeeDao.DeleteEmployee(employee);
         }

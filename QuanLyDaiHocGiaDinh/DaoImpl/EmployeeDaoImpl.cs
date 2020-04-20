@@ -35,11 +35,11 @@ namespace QuanLyDaiHocGiaDinh.Dao
         }
 
         //Xóa nhân viên
-        public void DeleteEmployee(Employee employee)
+        public void DeleteEmployee(int employeeId)
         {
             db = new LinQDataContext();
             Employee emp = new Employee();
-            emp = db.Employees.Single(x => x.EmployeeId == employee.EmployeeId);
+            emp = db.Employees.Single(x => x.EmployeeId == employeeId);
             db.Employees.DeleteOnSubmit(emp);
             db.SubmitChanges();
         }
@@ -50,6 +50,7 @@ namespace QuanLyDaiHocGiaDinh.Dao
             db = new LinQDataContext();
             Employee emp = new Employee();
             emp = db.Employees.Single(x => x.EmployeeId == employee.EmployeeId);
+
             setEmployeeUpdate(emp, employee);
             db.SubmitChanges();
         }
@@ -121,7 +122,7 @@ namespace QuanLyDaiHocGiaDinh.Dao
             employeeDB.PositionId = employeeUpdate.PositionId;
             employeeDB.Email = employeeUpdate.Email;
             employeeDB.Image = employeeUpdate.Image;
-
+            
             return employeeDB;
         }
     }

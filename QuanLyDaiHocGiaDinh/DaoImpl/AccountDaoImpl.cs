@@ -36,11 +36,11 @@ namespace QuanLyDaiHocGiaDinh.Dao
         }
 
         //Xóa tài khoản
-        public void DeleteAccount(Account account)
+        public void DeleteAccount(int accountId)
         {
             db = new LinQDataContext();
             Account ac = new Account();
-            ac = db.Accounts.Single(x => x.AccountId == account.AccountId);
+            ac = db.Accounts.Single(x => x.AccountId == accountId);
             db.Accounts.DeleteOnSubmit(ac);
             db.SubmitChanges();
         }

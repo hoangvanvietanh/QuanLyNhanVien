@@ -10,7 +10,7 @@ namespace QuanLyDaiHocGiaDinh.Interface
     interface IEmployee
     {
         void CreateEmployee(Employee employee);
-        void DeleteEmployee(Employee employee);
+        void DeleteEmployee(int employee);
         void UpdateEmployee(Employee employee);
         Employee getEmployeeByAccountId(int accountId);
         List<Employee> getEmployeesByPosition(int positionId);

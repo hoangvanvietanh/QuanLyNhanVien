@@ -32,6 +32,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnDong = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.txtPasswordNewChangeComfirm = new DevExpress.XtraEditors.TextEdit();
@@ -42,7 +43,6 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -84,6 +84,18 @@
             this.panelControl2.Size = new System.Drawing.Size(590, 98);
             this.panelControl2.TabIndex = 1;
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.btnLuu.Appearance.Options.UseFont = true;
+            this.btnLuu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLuu.ImageOptions.SvgImage")));
+            this.btnLuu.Location = new System.Drawing.Point(127, 31);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(101, 42);
+            this.btnLuu.TabIndex = 2;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // btnDong
             // 
             this.btnDong.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -116,6 +128,7 @@
             // 
             this.txtPasswordNewChangeComfirm.Location = new System.Drawing.Point(294, 200);
             this.txtPasswordNewChangeComfirm.Name = "txtPasswordNewChangeComfirm";
+            this.txtPasswordNewChangeComfirm.Properties.UseSystemPasswordChar = true;
             this.txtPasswordNewChangeComfirm.Size = new System.Drawing.Size(206, 22);
             this.txtPasswordNewChangeComfirm.TabIndex = 8;
             // 
@@ -123,6 +136,7 @@
             // 
             this.txtPasswordNewChange.Location = new System.Drawing.Point(294, 150);
             this.txtPasswordNewChange.Name = "txtPasswordNewChange";
+            this.txtPasswordNewChange.Properties.UseSystemPasswordChar = true;
             this.txtPasswordNewChange.Size = new System.Drawing.Size(206, 22);
             this.txtPasswordNewChange.TabIndex = 7;
             // 
@@ -130,14 +144,15 @@
             // 
             this.txtPasswordOldChange.Location = new System.Drawing.Point(294, 93);
             this.txtPasswordOldChange.Name = "txtPasswordOldChange";
+            this.txtPasswordOldChange.Properties.UseSystemPasswordChar = true;
             this.txtPasswordOldChange.Size = new System.Drawing.Size(206, 22);
             this.txtPasswordOldChange.TabIndex = 6;
             // 
             // txtUsernameChange
             // 
-            this.txtUsernameChange.Enabled = false;
             this.txtUsernameChange.Location = new System.Drawing.Point(294, 42);
             this.txtUsernameChange.Name = "txtUsernameChange";
+            this.txtUsernameChange.Properties.ReadOnly = true;
             this.txtUsernameChange.Size = new System.Drawing.Size(206, 22);
             this.txtUsernameChange.TabIndex = 5;
             // 
@@ -180,17 +195,6 @@
             this.labelControl2.Size = new System.Drawing.Size(92, 21);
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Username:";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.btnLuu.Location = new System.Drawing.Point(127, 31);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(101, 42);
-            this.btnLuu.TabIndex = 2;
-            this.btnLuu.Text = "Lưu";
             // 
             // AdminChangePassword
             // 

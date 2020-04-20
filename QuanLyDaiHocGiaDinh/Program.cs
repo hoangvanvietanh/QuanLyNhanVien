@@ -21,7 +21,7 @@ namespace QuanLyDaiHocGiaDinh
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new AdminHome());
+            Application.Run(new UserHome());
         }
     }
 }

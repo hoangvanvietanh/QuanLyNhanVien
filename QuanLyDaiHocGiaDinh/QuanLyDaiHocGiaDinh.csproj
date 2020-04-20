@@ -94,6 +94,9 @@
     <Compile Include="Controller\HomeController.cs" />
     <Compile Include="DaoImpl\AccountDaoImpl.cs" />
     <Compile Include="DaoImpl\EmployeeDaoImpl.cs" />
+    <Compile Include="Model\GiaDinhUniversityDataSet.cs">
+      <DependentUpon>GiaDinhUniversityDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Views\AdminChangePassword.cs">
       <SubType>Form</SubType>
@@ -118,6 +121,12 @@
     </Compile>
     <Compile Include="Views\AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminUpdateTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminUpdateTeachers.Designer.cs">
+      <DependentUpon>AdminUpdateTeachers.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.cs">
       <SubType>Form</SubType>
@@ -176,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminUpdateTeachers.resx">
+      <DependentUpon>AdminUpdateTeachers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

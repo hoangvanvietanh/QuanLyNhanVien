@@ -10,7 +10,7 @@ namespace QuanLyDaiHocGiaDinh.Interface
     interface IAccount
     {
         Account CreateAccount(Account account);
-        void DeleteAccount(Account account);
+        void DeleteAccount(int account);
         void UpdateAccount(Account account);
         Account getAccountByEmployeeId(int employeeId);
         List<Account> GetAllAccounts();
