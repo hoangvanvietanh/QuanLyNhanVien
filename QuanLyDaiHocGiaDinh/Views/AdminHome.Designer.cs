@@ -30,25 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminHome));
-            DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame1 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame2 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame3 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemFrame tileItemFrame4 = new DevExpress.XtraEditors.TileItemFrame();
-            DevExpress.XtraEditors.TileItemElement tileItemElement9 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement10 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraScheduler.TimeRuler timeRuler4 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler5 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler6 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraEditors.TileItemElement tileItemElement13 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement14 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame5 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement15 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame6 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement16 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement17 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement18 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement19 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame7 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement20 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemFrame tileItemFrame8 = new DevExpress.XtraEditors.TileItemFrame();
+            DevExpress.XtraEditors.TileItemElement tileItemElement21 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement22 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement23 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement24 = new DevExpress.XtraEditors.TileItemElement();
             this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.repositoryItemDuration1 = new DevExpress.XtraScheduler.UI.RepositoryItemDuration();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
@@ -204,6 +204,7 @@
             this.lblEmployeeId = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblRole = new DevExpress.XtraLayout.LayoutControlItem();
             this.gridControlAccount = new DevExpress.XtraGrid.GridControl();
+            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridViewAccount = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colAccountId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -229,7 +230,6 @@
             this.tileGroup4 = new DevExpress.XtraEditors.TileGroup();
             this.tileItem5 = new DevExpress.XtraEditors.TileItem();
             this.tileItem6 = new DevExpress.XtraEditors.TileItem();
-            this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.p_selectAllEmployeeTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.p_selectAllEmployeeTableAdapter();
             this.schedulerBarController1 = new DevExpress.XtraScheduler.UI.SchedulerBarController(this.components);
@@ -310,6 +310,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lblEmployeeId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblRole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAccount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -325,7 +326,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfor.Properties)).BeginInit();
             this.navigationPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerBarController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
@@ -428,7 +428,6 @@
             this.btnSuaGiangVien,
             this.btnXoaGiangVien});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl.MaxItemId = 145;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
@@ -441,7 +440,7 @@
             this.employeeAboutRibbonPage});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(1174, 178);
+            this.ribbonControl.Size = new System.Drawing.Size(1006, 143);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -942,11 +941,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 701);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 569);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1174, 37);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1006, 31);
             // 
             // calendarToolsRibbonPageCategory1
             // 
@@ -961,19 +959,18 @@
             this.schedulerControl1.DataStorage = this.schedulerDataStorage;
             this.schedulerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.schedulerControl1.Location = new System.Drawing.Point(0, 0);
-            this.schedulerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.schedulerControl1.MenuManager = this.ribbonControl;
             this.schedulerControl1.Name = "schedulerControl1";
             this.schedulerControl1.OptionsBehavior.TimeRegionValidationInterval = System.TimeSpan.Parse("00:00:01");
-            this.schedulerControl1.Size = new System.Drawing.Size(700, 471);
+            this.schedulerControl1.Size = new System.Drawing.Size(599, 380);
             this.schedulerControl1.Start = new System.DateTime(2020, 4, 10, 0, 0, 0, 0);
             this.schedulerControl1.TabIndex = 0;
             this.schedulerControl1.Text = "schedulerControl1";
-            this.schedulerControl1.Views.DayView.TimeRulers.Add(timeRuler1);
+            this.schedulerControl1.Views.DayView.TimeRulers.Add(timeRuler4);
             this.schedulerControl1.Views.FullWeekView.Enabled = true;
-            this.schedulerControl1.Views.FullWeekView.TimeRulers.Add(timeRuler2);
+            this.schedulerControl1.Views.FullWeekView.TimeRulers.Add(timeRuler5);
             this.schedulerControl1.Views.WeekView.Enabled = false;
-            this.schedulerControl1.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
+            this.schedulerControl1.Views.WorkWeekView.TimeRulers.Add(timeRuler6);
             // 
             // schedulerDataStorage
             // 
@@ -1010,11 +1007,10 @@
             // officeNavigationBar
             // 
             this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar.Location = new System.Drawing.Point(0, 649);
-            this.officeNavigationBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.officeNavigationBar.Location = new System.Drawing.Point(0, 523);
             this.officeNavigationBar.Name = "officeNavigationBar";
             this.officeNavigationBar.NavigationClient = this.navBarControl;
-            this.officeNavigationBar.Size = new System.Drawing.Size(1174, 52);
+            this.officeNavigationBar.Size = new System.Drawing.Size(1006, 46);
             this.officeNavigationBar.TabIndex = 1;
             this.officeNavigationBar.Text = "officeNavigationBar";
             // 
@@ -1025,12 +1021,11 @@
             this.navBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.employeesNavBarGroup,
             this.scheduleNavBarGroup});
-            this.navBarControl.Location = new System.Drawing.Point(0, 178);
-            this.navBarControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.navBarControl.Location = new System.Drawing.Point(0, 143);
             this.navBarControl.Name = "navBarControl";
-            this.navBarControl.OptionsNavPane.ExpandedWidth = 192;
+            this.navBarControl.OptionsNavPane.ExpandedWidth = 165;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(192, 471);
+            this.navBarControl.Size = new System.Drawing.Size(165, 380);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
             this.navBarControl.ActiveGroupChanged += new DevExpress.XtraNavBar.NavBarGroupEventHandler(this.navBarControl_ActiveGroupChanged);
@@ -1055,8 +1050,7 @@
             this.navigationFrame.Controls.Add(this.navigationPage2);
             this.navigationFrame.Controls.Add(this.navigationPage3);
             this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationFrame.Location = new System.Drawing.Point(192, 178);
-            this.navigationFrame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.navigationFrame.Location = new System.Drawing.Point(165, 143);
             this.navigationFrame.Name = "navigationFrame";
             this.navigationFrame.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.employeesNavigationPage,
@@ -1065,7 +1059,7 @@
             this.navigationPage3});
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.SelectedPage = this.employeesNavigationPage;
-            this.navigationFrame.Size = new System.Drawing.Size(982, 471);
+            this.navigationFrame.Size = new System.Drawing.Size(841, 380);
             this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame";
             // 
@@ -1073,34 +1067,34 @@
             // 
             this.employeesNavigationPage.Controls.Add(this.splitContainerControl2);
             this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
-            this.employeesNavigationPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
-            this.employeesNavigationPage.Size = new System.Drawing.Size(982, 471);
+            this.employeesNavigationPage.Size = new System.Drawing.Size(841, 380);
             // 
             // splitContainerControl2
             // 
             this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl2.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
             this.splitContainerControl2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl2.Name = "splitContainerControl2";
             this.splitContainerControl2.Panel1.Controls.Add(this.gridControlEmployee);
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.panelControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(982, 471);
-            this.splitContainerControl2.SplitterPosition = 452;
+            this.splitContainerControl2.Size = new System.Drawing.Size(841, 380);
+            this.splitContainerControl2.SplitterPosition = 387;
             this.splitContainerControl2.TabIndex = 1;
             // 
             // gridControlEmployee
             // 
             this.gridControlEmployee.DataSource = this.pselectAllEmployeeBindingSource;
             this.gridControlEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlEmployee.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControlEmployee.Location = new System.Drawing.Point(0, 0);
             this.gridControlEmployee.MainView = this.gridViewEmployee;
+            this.gridControlEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControlEmployee.MenuManager = this.ribbonControl;
             this.gridControlEmployee.Name = "gridControlEmployee";
-            this.gridControlEmployee.Size = new System.Drawing.Size(524, 471);
+            this.gridControlEmployee.Size = new System.Drawing.Size(449, 380);
             this.gridControlEmployee.TabIndex = 0;
             this.gridControlEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewEmployee});
@@ -1135,6 +1129,7 @@
             this.colDepartmentName,
             this.colImage,
             this.colAccountId1});
+            this.gridViewEmployee.DetailHeight = 284;
             this.gridViewEmployee.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.None;
             this.gridViewEmployee.GridControl = this.gridControlEmployee;
             this.gridViewEmployee.GroupCount = 1;
@@ -1148,162 +1143,162 @@
             // colEmployeeId
             // 
             this.colEmployeeId.FieldName = "EmployeeId";
-            this.colEmployeeId.MinWidth = 25;
+            this.colEmployeeId.MinWidth = 21;
             this.colEmployeeId.Name = "colEmployeeId";
             this.colEmployeeId.OptionsColumn.AllowFocus = false;
-            this.colEmployeeId.Width = 94;
+            this.colEmployeeId.Width = 81;
             // 
             // colFullName
             // 
             this.colFullName.FieldName = "FullName";
-            this.colFullName.MinWidth = 25;
+            this.colFullName.MinWidth = 21;
             this.colFullName.Name = "colFullName";
             this.colFullName.OptionsColumn.AllowFocus = false;
             this.colFullName.Visible = true;
             this.colFullName.VisibleIndex = 1;
-            this.colFullName.Width = 94;
+            this.colFullName.Width = 81;
             // 
             // colFirstName
             // 
             this.colFirstName.FieldName = "FirstName";
-            this.colFirstName.MinWidth = 25;
+            this.colFirstName.MinWidth = 21;
             this.colFirstName.Name = "colFirstName";
             this.colFirstName.OptionsColumn.AllowFocus = false;
             this.colFirstName.Visible = true;
             this.colFirstName.VisibleIndex = 2;
-            this.colFirstName.Width = 94;
+            this.colFirstName.Width = 81;
             // 
             // colLastName
             // 
             this.colLastName.FieldName = "LastName";
-            this.colLastName.MinWidth = 25;
+            this.colLastName.MinWidth = 21;
             this.colLastName.Name = "colLastName";
             this.colLastName.OptionsColumn.AllowFocus = false;
             this.colLastName.Visible = true;
             this.colLastName.VisibleIndex = 3;
-            this.colLastName.Width = 94;
+            this.colLastName.Width = 81;
             // 
             // colBirthDate
             // 
             this.colBirthDate.FieldName = "BirthDate";
-            this.colBirthDate.MinWidth = 25;
+            this.colBirthDate.MinWidth = 21;
             this.colBirthDate.Name = "colBirthDate";
             this.colBirthDate.OptionsColumn.AllowFocus = false;
             this.colBirthDate.Visible = true;
             this.colBirthDate.VisibleIndex = 4;
-            this.colBirthDate.Width = 94;
+            this.colBirthDate.Width = 81;
             // 
             // colAddress
             // 
             this.colAddress.FieldName = "Address";
-            this.colAddress.MinWidth = 25;
+            this.colAddress.MinWidth = 21;
             this.colAddress.Name = "colAddress";
             this.colAddress.OptionsColumn.AllowFocus = false;
-            this.colAddress.Width = 94;
+            this.colAddress.Width = 81;
             // 
             // colWard
             // 
             this.colWard.FieldName = "Ward";
-            this.colWard.MinWidth = 25;
+            this.colWard.MinWidth = 21;
             this.colWard.Name = "colWard";
             this.colWard.OptionsColumn.AllowFocus = false;
-            this.colWard.Width = 94;
+            this.colWard.Width = 81;
             // 
             // colDistrict
             // 
             this.colDistrict.FieldName = "District";
-            this.colDistrict.MinWidth = 25;
+            this.colDistrict.MinWidth = 21;
             this.colDistrict.Name = "colDistrict";
             this.colDistrict.OptionsColumn.AllowFocus = false;
-            this.colDistrict.Width = 94;
+            this.colDistrict.Width = 81;
             // 
             // colCity
             // 
             this.colCity.FieldName = "City";
-            this.colCity.MinWidth = 25;
+            this.colCity.MinWidth = 21;
             this.colCity.Name = "colCity";
             this.colCity.OptionsColumn.AllowFocus = false;
-            this.colCity.Width = 94;
+            this.colCity.Width = 81;
             // 
             // colPhoneNumber
             // 
             this.colPhoneNumber.FieldName = "PhoneNumber";
-            this.colPhoneNumber.MinWidth = 25;
+            this.colPhoneNumber.MinWidth = 21;
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.OptionsColumn.AllowFocus = false;
             this.colPhoneNumber.Visible = true;
             this.colPhoneNumber.VisibleIndex = 5;
-            this.colPhoneNumber.Width = 94;
+            this.colPhoneNumber.Width = 81;
             // 
             // colEmail
             // 
             this.colEmail.FieldName = "Email";
-            this.colEmail.MinWidth = 25;
+            this.colEmail.MinWidth = 21;
             this.colEmail.Name = "colEmail";
             this.colEmail.OptionsColumn.AllowFocus = false;
             this.colEmail.Visible = true;
             this.colEmail.VisibleIndex = 6;
-            this.colEmail.Width = 94;
+            this.colEmail.Width = 81;
             // 
             // colStatus
             // 
             this.colStatus.FieldName = "Status";
-            this.colStatus.MinWidth = 25;
+            this.colStatus.MinWidth = 21;
             this.colStatus.Name = "colStatus";
             this.colStatus.OptionsColumn.AllowFocus = false;
             this.colStatus.Visible = true;
             this.colStatus.VisibleIndex = 7;
-            this.colStatus.Width = 94;
+            this.colStatus.Width = 81;
             // 
             // colHireDate
             // 
             this.colHireDate.FieldName = "HireDate";
-            this.colHireDate.MinWidth = 25;
+            this.colHireDate.MinWidth = 21;
             this.colHireDate.Name = "colHireDate";
             this.colHireDate.OptionsColumn.AllowFocus = false;
             this.colHireDate.Visible = true;
             this.colHireDate.VisibleIndex = 8;
-            this.colHireDate.Width = 94;
+            this.colHireDate.Width = 81;
             // 
             // colPositionName
             // 
             this.colPositionName.FieldName = "PositionName";
-            this.colPositionName.MinWidth = 25;
+            this.colPositionName.MinWidth = 21;
             this.colPositionName.Name = "colPositionName";
             this.colPositionName.OptionsColumn.AllowFocus = false;
             this.colPositionName.Visible = true;
             this.colPositionName.VisibleIndex = 9;
-            this.colPositionName.Width = 94;
+            this.colPositionName.Width = 81;
             // 
             // colDepartmentName
             // 
             this.colDepartmentName.FieldName = "DepartmentName";
-            this.colDepartmentName.MinWidth = 25;
+            this.colDepartmentName.MinWidth = 21;
             this.colDepartmentName.Name = "colDepartmentName";
             this.colDepartmentName.OptionsColumn.AllowFocus = false;
             this.colDepartmentName.Visible = true;
             this.colDepartmentName.VisibleIndex = 13;
-            this.colDepartmentName.Width = 94;
+            this.colDepartmentName.Width = 81;
             // 
             // colImage
             // 
             this.colImage.FieldName = "Image";
-            this.colImage.MinWidth = 25;
+            this.colImage.MinWidth = 21;
             this.colImage.Name = "colImage";
             this.colImage.OptionsColumn.AllowFocus = false;
             this.colImage.Visible = true;
             this.colImage.VisibleIndex = 0;
-            this.colImage.Width = 94;
+            this.colImage.Width = 81;
             // 
             // colAccountId1
             // 
             this.colAccountId1.FieldName = "AccountId";
-            this.colAccountId1.MinWidth = 25;
+            this.colAccountId1.MinWidth = 21;
             this.colAccountId1.Name = "colAccountId1";
             this.colAccountId1.OptionsColumn.AllowFocus = false;
             this.colAccountId1.Visible = true;
             this.colAccountId1.VisibleIndex = 10;
-            this.colAccountId1.Width = 94;
+            this.colAccountId1.Width = 81;
             // 
             // panelControl3
             // 
@@ -1312,8 +1307,9 @@
             this.panelControl3.Controls.Add(this.pictureEditShow);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(452, 471);
+            this.panelControl3.Size = new System.Drawing.Size(387, 380);
             this.panelControl3.TabIndex = 4;
             // 
             // layoutControl3
@@ -1325,70 +1321,77 @@
             this.layoutControl3.Controls.Add(this.txtDepartmentNameShow);
             this.layoutControl3.Controls.Add(this.txtStatusShow);
             this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl3.Location = new System.Drawing.Point(2, 261);
+            this.layoutControl3.Location = new System.Drawing.Point(2, 213);
+            this.layoutControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.Root = this.layoutControlGroup4;
-            this.layoutControl3.Size = new System.Drawing.Size(448, 208);
+            this.layoutControl3.Size = new System.Drawing.Size(383, 165);
             this.layoutControl3.TabIndex = 2;
             this.layoutControl3.Text = "layoutControl3";
             // 
             // txtFullNameShow
             // 
-            this.txtFullNameShow.Location = new System.Drawing.Point(124, 12);
+            this.txtFullNameShow.Location = new System.Drawing.Point(105, 10);
+            this.txtFullNameShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullNameShow.MenuManager = this.ribbonControl;
             this.txtFullNameShow.Name = "txtFullNameShow";
             this.txtFullNameShow.Properties.ReadOnly = true;
-            this.txtFullNameShow.Size = new System.Drawing.Size(312, 22);
+            this.txtFullNameShow.Size = new System.Drawing.Size(267, 20);
             this.txtFullNameShow.StyleController = this.layoutControl3;
             this.txtFullNameShow.TabIndex = 4;
             // 
             // txtEmailShow
             // 
-            this.txtEmailShow.Location = new System.Drawing.Point(124, 38);
+            this.txtEmailShow.Location = new System.Drawing.Point(105, 34);
+            this.txtEmailShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmailShow.MenuManager = this.ribbonControl;
             this.txtEmailShow.Name = "txtEmailShow";
             this.txtEmailShow.Properties.ReadOnly = true;
-            this.txtEmailShow.Size = new System.Drawing.Size(312, 22);
+            this.txtEmailShow.Size = new System.Drawing.Size(267, 20);
             this.txtEmailShow.StyleController = this.layoutControl3;
             this.txtEmailShow.TabIndex = 5;
             // 
             // txtPhoneShow
             // 
-            this.txtPhoneShow.Location = new System.Drawing.Point(124, 64);
+            this.txtPhoneShow.Location = new System.Drawing.Point(105, 58);
+            this.txtPhoneShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneShow.MenuManager = this.ribbonControl;
             this.txtPhoneShow.Name = "txtPhoneShow";
             this.txtPhoneShow.Properties.ReadOnly = true;
-            this.txtPhoneShow.Size = new System.Drawing.Size(312, 22);
+            this.txtPhoneShow.Size = new System.Drawing.Size(267, 20);
             this.txtPhoneShow.StyleController = this.layoutControl3;
             this.txtPhoneShow.TabIndex = 6;
             // 
             // txtPositionNameShow
             // 
-            this.txtPositionNameShow.Location = new System.Drawing.Point(124, 90);
+            this.txtPositionNameShow.Location = new System.Drawing.Point(105, 82);
+            this.txtPositionNameShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPositionNameShow.MenuManager = this.ribbonControl;
             this.txtPositionNameShow.Name = "txtPositionNameShow";
             this.txtPositionNameShow.Properties.ReadOnly = true;
-            this.txtPositionNameShow.Size = new System.Drawing.Size(312, 22);
+            this.txtPositionNameShow.Size = new System.Drawing.Size(267, 20);
             this.txtPositionNameShow.StyleController = this.layoutControl3;
             this.txtPositionNameShow.TabIndex = 7;
             // 
             // txtDepartmentNameShow
             // 
-            this.txtDepartmentNameShow.Location = new System.Drawing.Point(124, 116);
+            this.txtDepartmentNameShow.Location = new System.Drawing.Point(105, 106);
+            this.txtDepartmentNameShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDepartmentNameShow.MenuManager = this.ribbonControl;
             this.txtDepartmentNameShow.Name = "txtDepartmentNameShow";
             this.txtDepartmentNameShow.Properties.ReadOnly = true;
-            this.txtDepartmentNameShow.Size = new System.Drawing.Size(312, 22);
+            this.txtDepartmentNameShow.Size = new System.Drawing.Size(267, 20);
             this.txtDepartmentNameShow.StyleController = this.layoutControl3;
             this.txtDepartmentNameShow.TabIndex = 8;
             // 
             // txtStatusShow
             // 
-            this.txtStatusShow.Location = new System.Drawing.Point(124, 142);
+            this.txtStatusShow.Location = new System.Drawing.Point(105, 130);
+            this.txtStatusShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStatusShow.MenuManager = this.ribbonControl;
             this.txtStatusShow.Name = "txtStatusShow";
             this.txtStatusShow.Properties.ReadOnly = true;
-            this.txtStatusShow.Size = new System.Drawing.Size(312, 22);
+            this.txtStatusShow.Size = new System.Drawing.Size(267, 20);
             this.txtStatusShow.StyleController = this.layoutControl3;
             this.txtStatusShow.TabIndex = 9;
             // 
@@ -1404,7 +1407,7 @@
             this.lblDepartmentName,
             this.layoutControlItem13});
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(448, 208);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(383, 165);
             this.layoutControlGroup4.TextVisible = false;
             // 
             // layoutControlItem7
@@ -1412,73 +1415,76 @@
             this.layoutControlItem7.Control = this.txtFullNameShow;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(428, 26);
+            this.layoutControlItem7.Size = new System.Drawing.Size(365, 24);
             this.layoutControlItem7.Text = "Full Name:";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(109, 16);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(91, 13);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.txtEmailShow;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 26);
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(428, 26);
+            this.layoutControlItem9.Size = new System.Drawing.Size(365, 24);
             this.layoutControlItem9.Text = "Email:";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(109, 16);
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(91, 13);
             // 
             // lblPhone
             // 
             this.lblPhone.Control = this.txtPhoneShow;
-            this.lblPhone.Location = new System.Drawing.Point(0, 52);
+            this.lblPhone.Location = new System.Drawing.Point(0, 48);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(428, 26);
+            this.lblPhone.Size = new System.Drawing.Size(365, 24);
             this.lblPhone.Text = "Phone:";
-            this.lblPhone.TextSize = new System.Drawing.Size(109, 16);
+            this.lblPhone.TextSize = new System.Drawing.Size(91, 13);
             // 
             // txtPositionShow
             // 
             this.txtPositionShow.Control = this.txtPositionNameShow;
-            this.txtPositionShow.Location = new System.Drawing.Point(0, 78);
+            this.txtPositionShow.Location = new System.Drawing.Point(0, 72);
             this.txtPositionShow.Name = "txtPositionShow";
-            this.txtPositionShow.Size = new System.Drawing.Size(428, 26);
+            this.txtPositionShow.Size = new System.Drawing.Size(365, 24);
             this.txtPositionShow.Text = "Position Name:";
-            this.txtPositionShow.TextSize = new System.Drawing.Size(109, 16);
+            this.txtPositionShow.TextSize = new System.Drawing.Size(91, 13);
             // 
             // lblDepartmentName
             // 
             this.lblDepartmentName.Control = this.txtDepartmentNameShow;
-            this.lblDepartmentName.Location = new System.Drawing.Point(0, 104);
+            this.lblDepartmentName.Location = new System.Drawing.Point(0, 96);
             this.lblDepartmentName.Name = "lblDepartmentName";
-            this.lblDepartmentName.Size = new System.Drawing.Size(428, 26);
+            this.lblDepartmentName.Size = new System.Drawing.Size(365, 24);
             this.lblDepartmentName.Text = "Department Name:";
-            this.lblDepartmentName.TextSize = new System.Drawing.Size(109, 16);
+            this.lblDepartmentName.TextSize = new System.Drawing.Size(91, 13);
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.txtStatusShow;
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 130);
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 120);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(428, 58);
+            this.layoutControlItem13.Size = new System.Drawing.Size(365, 29);
             this.layoutControlItem13.Text = "Status:";
-            this.layoutControlItem13.TextSize = new System.Drawing.Size(109, 16);
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(91, 13);
             // 
             // separatorControl1
             // 
             this.separatorControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.separatorControl1.Location = new System.Drawing.Point(2, 238);
+            this.separatorControl1.Location = new System.Drawing.Point(2, 194);
+            this.separatorControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(448, 23);
+            this.separatorControl1.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.separatorControl1.Size = new System.Drawing.Size(383, 19);
             this.separatorControl1.TabIndex = 1;
             // 
             // pictureEditShow
             // 
             this.pictureEditShow.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureEditShow.Location = new System.Drawing.Point(2, 2);
+            this.pictureEditShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureEditShow.MenuManager = this.ribbonControl;
             this.pictureEditShow.Name = "pictureEditShow";
             this.pictureEditShow.Properties.ReadOnly = true;
             this.pictureEditShow.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEditShow.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.pictureEditShow.Size = new System.Drawing.Size(448, 236);
+            this.pictureEditShow.Size = new System.Drawing.Size(383, 192);
             this.pictureEditShow.TabIndex = 0;
             // 
             // employeesLabelControl
@@ -1493,9 +1499,8 @@
             this.employeesLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.employeesLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeesLabelControl.Location = new System.Drawing.Point(0, 0);
-            this.employeesLabelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(982, 471);
+            this.employeesLabelControl.Size = new System.Drawing.Size(841, 380);
             this.employeesLabelControl.TabIndex = 0;
             this.employeesLabelControl.Text = "Nhân viên";
             // 
@@ -1503,23 +1508,21 @@
             // 
             this.customersNavigationPage.Controls.Add(this.splitContainerControl1);
             this.customersNavigationPage.Controls.Add(this.customersLabelControl);
-            this.customersNavigationPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customersNavigationPage.Name = "customersNavigationPage";
-            this.customersNavigationPage.Size = new System.Drawing.Size(982, 471);
+            this.customersNavigationPage.Size = new System.Drawing.Size(841, 380);
             // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.schedulerControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.dateNavigator1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(982, 471);
-            this.splitContainerControl1.SplitterPosition = 276;
+            this.splitContainerControl1.Size = new System.Drawing.Size(841, 380);
+            this.splitContainerControl1.SplitterPosition = 237;
             this.splitContainerControl1.TabIndex = 2;
             // 
             // dateNavigator1
@@ -1531,12 +1534,11 @@
             this.dateNavigator1.DateTime = new System.DateTime(2020, 4, 10, 0, 0, 0, 0);
             this.dateNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateNavigator1.EditValue = new System.DateTime(2020, 4, 10, 0, 0, 0, 0);
-            this.dateNavigator1.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.dateNavigator1.FirstDayOfWeek = System.DayOfWeek.Sunday;
             this.dateNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.dateNavigator1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateNavigator1.Name = "dateNavigator1";
             this.dateNavigator1.SchedulerControl = this.schedulerControl1;
-            this.dateNavigator1.Size = new System.Drawing.Size(276, 471);
+            this.dateNavigator1.Size = new System.Drawing.Size(237, 380);
             this.dateNavigator1.TabIndex = 0;
             // 
             // customersLabelControl
@@ -1551,17 +1553,17 @@
             this.customersLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
-            this.customersLabelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(982, 471);
+            this.customersLabelControl.Size = new System.Drawing.Size(841, 380);
             this.customersLabelControl.TabIndex = 1;
             this.customersLabelControl.Text = "Lịch trình";
             // 
             // navigationPage2
             // 
             this.navigationPage2.Controls.Add(this.splitContainerControlAccount);
+            this.navigationPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.navigationPage2.Name = "navigationPage2";
-            this.navigationPage2.Size = new System.Drawing.Size(982, 471);
+            this.navigationPage2.Size = new System.Drawing.Size(841, 380);
             // 
             // splitContainerControlAccount
             // 
@@ -1570,14 +1572,15 @@
             this.splitContainerControlAccount.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControlAccount.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
             this.splitContainerControlAccount.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControlAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainerControlAccount.Name = "splitContainerControlAccount";
             this.splitContainerControlAccount.Panel1.Controls.Add(this.panelControl1);
             this.splitContainerControlAccount.Panel1.Text = "Panel1";
             this.splitContainerControlAccount.Panel2.Controls.Add(this.layoutControl1);
             this.splitContainerControlAccount.Panel2.Controls.Add(this.picInfor);
             this.splitContainerControlAccount.Panel2.Text = "Panel2";
-            this.splitContainerControlAccount.Size = new System.Drawing.Size(982, 471);
-            this.splitContainerControlAccount.SplitterPosition = 368;
+            this.splitContainerControlAccount.Size = new System.Drawing.Size(841, 380);
+            this.splitContainerControlAccount.SplitterPosition = 315;
             this.splitContainerControlAccount.TabIndex = 0;
             // 
             // panelControl1
@@ -1585,14 +1588,16 @@
             this.panelControl1.Controls.Add(this.splitContainer1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(608, 471);
+            this.panelControl1.Size = new System.Drawing.Size(521, 380);
             this.panelControl1.TabIndex = 0;
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -1605,8 +1610,9 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gridControlAccount);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer1.Size = new System.Drawing.Size(604, 467);
-            this.splitContainer1.SplitterDistance = 181;
+            this.splitContainer1.Size = new System.Drawing.Size(517, 376);
+            this.splitContainer1.SplitterDistance = 145;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
             // layoutControl2
@@ -1617,49 +1623,54 @@
             this.layoutControl2.Controls.Add(this.txtRole);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(604, 181);
+            this.layoutControl2.Size = new System.Drawing.Size(517, 145);
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(98, 47);
+            this.txtUsername.Location = new System.Drawing.Point(85, 38);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.MenuManager = this.ribbonControl;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Properties.ReadOnly = true;
-            this.txtUsername.Size = new System.Drawing.Size(205, 22);
+            this.txtUsername.Size = new System.Drawing.Size(174, 20);
             this.txtUsername.StyleController = this.layoutControl2;
             this.txtUsername.TabIndex = 4;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(98, 73);
+            this.txtPassword.Location = new System.Drawing.Point(85, 62);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.MenuManager = this.ribbonControl;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(205, 22);
+            this.txtPassword.Size = new System.Drawing.Size(174, 20);
             this.txtPassword.StyleController = this.layoutControl2;
             this.txtPassword.TabIndex = 5;
             // 
             // txtEmloyeeId
             // 
-            this.txtEmloyeeId.Location = new System.Drawing.Point(381, 47);
+            this.txtEmloyeeId.Location = new System.Drawing.Point(326, 38);
+            this.txtEmloyeeId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmloyeeId.MenuManager = this.ribbonControl;
             this.txtEmloyeeId.Name = "txtEmloyeeId";
             this.txtEmloyeeId.Properties.ReadOnly = true;
-            this.txtEmloyeeId.Size = new System.Drawing.Size(199, 22);
+            this.txtEmloyeeId.Size = new System.Drawing.Size(169, 20);
             this.txtEmloyeeId.StyleController = this.layoutControl2;
             this.txtEmloyeeId.TabIndex = 9;
             // 
             // txtRole
             // 
-            this.txtRole.Location = new System.Drawing.Point(381, 73);
+            this.txtRole.Location = new System.Drawing.Point(326, 62);
+            this.txtRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRole.MenuManager = this.ribbonControl;
             this.txtRole.Name = "txtRole";
             this.txtRole.Properties.ReadOnly = true;
-            this.txtRole.Size = new System.Drawing.Size(199, 22);
+            this.txtRole.Size = new System.Drawing.Size(169, 20);
             this.txtRole.StyleController = this.layoutControl2;
             this.txtRole.TabIndex = 10;
             // 
@@ -1670,7 +1681,7 @@
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(604, 181);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(517, 145);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlGroup3
@@ -1682,7 +1693,7 @@
             this.lblRole});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(584, 161);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(499, 129);
             this.layoutControlGroup3.Text = "Tài khoản";
             // 
             // lblUsername
@@ -1690,49 +1701,56 @@
             this.lblUsername.Control = this.txtUsername;
             this.lblUsername.Location = new System.Drawing.Point(0, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(283, 26);
+            this.lblUsername.Size = new System.Drawing.Size(241, 24);
             this.lblUsername.Text = "Username:";
-            this.lblUsername.TextSize = new System.Drawing.Size(71, 16);
+            this.lblUsername.TextSize = new System.Drawing.Size(60, 13);
             // 
             // lblPassword
             // 
             this.lblPassword.Control = this.txtPassword;
-            this.lblPassword.Location = new System.Drawing.Point(0, 26);
+            this.lblPassword.Location = new System.Drawing.Point(0, 24);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(283, 88);
+            this.lblPassword.Size = new System.Drawing.Size(241, 67);
             this.lblPassword.Text = "Password:";
-            this.lblPassword.TextSize = new System.Drawing.Size(71, 16);
+            this.lblPassword.TextSize = new System.Drawing.Size(60, 13);
             // 
             // lblEmployeeId
             // 
             this.lblEmployeeId.Control = this.txtEmloyeeId;
-            this.lblEmployeeId.Location = new System.Drawing.Point(283, 0);
+            this.lblEmployeeId.Location = new System.Drawing.Point(241, 0);
             this.lblEmployeeId.Name = "lblEmployeeId";
-            this.lblEmployeeId.Size = new System.Drawing.Size(277, 26);
+            this.lblEmployeeId.Size = new System.Drawing.Size(236, 24);
             this.lblEmployeeId.Text = "EmployeeId:";
-            this.lblEmployeeId.TextSize = new System.Drawing.Size(71, 16);
+            this.lblEmployeeId.TextSize = new System.Drawing.Size(60, 13);
             // 
             // lblRole
             // 
             this.lblRole.Control = this.txtRole;
-            this.lblRole.Location = new System.Drawing.Point(283, 26);
+            this.lblRole.Location = new System.Drawing.Point(241, 24);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(277, 88);
+            this.lblRole.Size = new System.Drawing.Size(236, 67);
             this.lblRole.Text = "Role:";
-            this.lblRole.TextSize = new System.Drawing.Size(71, 16);
+            this.lblRole.TextSize = new System.Drawing.Size(60, 13);
             // 
             // gridControlAccount
             // 
             this.gridControlAccount.DataSource = this.accountsBindingSource;
             this.gridControlAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlAccount.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControlAccount.Location = new System.Drawing.Point(0, 0);
             this.gridControlAccount.MainView = this.gridViewAccount;
+            this.gridControlAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControlAccount.MenuManager = this.ribbonControl;
             this.gridControlAccount.Name = "gridControlAccount";
-            this.gridControlAccount.Size = new System.Drawing.Size(604, 282);
+            this.gridControlAccount.Size = new System.Drawing.Size(517, 228);
             this.gridControlAccount.TabIndex = 0;
             this.gridControlAccount.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewAccount});
+            // 
+            // accountsBindingSource
+            // 
+            this.accountsBindingSource.DataMember = "Accounts";
+            this.accountsBindingSource.DataSource = this.giaDinhUniversityDataSet;
             // 
             // gridViewAccount
             // 
@@ -1742,6 +1760,7 @@
             this.colPassword,
             this.colEmployeeId1,
             this.colRole});
+            this.gridViewAccount.DetailHeight = 284;
             this.gridViewAccount.GridControl = this.gridControlAccount;
             this.gridViewAccount.GroupCount = 1;
             this.gridViewAccount.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -1755,52 +1774,52 @@
             // colAccountId
             // 
             this.colAccountId.FieldName = "AccountId";
-            this.colAccountId.MinWidth = 25;
+            this.colAccountId.MinWidth = 21;
             this.colAccountId.Name = "colAccountId";
             this.colAccountId.OptionsColumn.AllowFocus = false;
             this.colAccountId.Visible = true;
             this.colAccountId.VisibleIndex = 0;
-            this.colAccountId.Width = 128;
+            this.colAccountId.Width = 110;
             // 
             // colUserName
             // 
             this.colUserName.FieldName = "UserName";
-            this.colUserName.MinWidth = 25;
+            this.colUserName.MinWidth = 21;
             this.colUserName.Name = "colUserName";
             this.colUserName.OptionsColumn.AllowFocus = false;
             this.colUserName.Visible = true;
             this.colUserName.VisibleIndex = 1;
-            this.colUserName.Width = 169;
+            this.colUserName.Width = 145;
             // 
             // colPassword
             // 
             this.colPassword.FieldName = "Password";
-            this.colPassword.MinWidth = 25;
+            this.colPassword.MinWidth = 21;
             this.colPassword.Name = "colPassword";
             this.colPassword.OptionsColumn.AllowFocus = false;
             this.colPassword.Visible = true;
             this.colPassword.VisibleIndex = 2;
-            this.colPassword.Width = 169;
+            this.colPassword.Width = 145;
             // 
             // colEmployeeId1
             // 
             this.colEmployeeId1.FieldName = "EmployeeId";
-            this.colEmployeeId1.MinWidth = 25;
+            this.colEmployeeId1.MinWidth = 21;
             this.colEmployeeId1.Name = "colEmployeeId1";
             this.colEmployeeId1.OptionsColumn.AllowFocus = false;
             this.colEmployeeId1.Visible = true;
             this.colEmployeeId1.VisibleIndex = 3;
-            this.colEmployeeId1.Width = 169;
+            this.colEmployeeId1.Width = 145;
             // 
             // colRole
             // 
             this.colRole.FieldName = "Role";
-            this.colRole.MinWidth = 25;
+            this.colRole.MinWidth = 21;
             this.colRole.Name = "colRole";
             this.colRole.OptionsColumn.AllowFocus = false;
             this.colRole.Visible = true;
             this.colRole.VisibleIndex = 4;
-            this.colRole.Width = 174;
+            this.colRole.Width = 149;
             // 
             // layoutControl1
             // 
@@ -1809,51 +1828,56 @@
             this.layoutControl1.Controls.Add(this.txtPhone);
             this.layoutControl1.Controls.Add(this.txtStatus);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 208);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 169);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(380, 300, 812, 500);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(368, 263);
+            this.layoutControl1.Size = new System.Drawing.Size(315, 211);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(77, 14);
+            this.txtFullName.Location = new System.Drawing.Point(64, 12);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullName.MenuManager = this.ribbonControl;
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Properties.ReadOnly = true;
-            this.txtFullName.Size = new System.Drawing.Size(279, 22);
+            this.txtFullName.Size = new System.Drawing.Size(240, 20);
             this.txtFullName.StyleController = this.layoutControl1;
             this.txtFullName.TabIndex = 4;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(77, 40);
+            this.txtEmail.Location = new System.Drawing.Point(64, 36);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.MenuManager = this.ribbonControl;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(279, 22);
+            this.txtEmail.Size = new System.Drawing.Size(240, 20);
             this.txtEmail.StyleController = this.layoutControl1;
             this.txtEmail.TabIndex = 5;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(77, 66);
+            this.txtPhone.Location = new System.Drawing.Point(64, 60);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.MenuManager = this.ribbonControl;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Properties.ReadOnly = true;
-            this.txtPhone.Size = new System.Drawing.Size(279, 22);
+            this.txtPhone.Size = new System.Drawing.Size(240, 20);
             this.txtPhone.StyleController = this.layoutControl1;
             this.txtPhone.TabIndex = 6;
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(77, 92);
+            this.txtStatus.Location = new System.Drawing.Point(64, 84);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStatus.MenuManager = this.ribbonControl;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Properties.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(279, 22);
+            this.txtStatus.Size = new System.Drawing.Size(240, 20);
             this.txtStatus.StyleController = this.layoutControl1;
             this.txtStatus.TabIndex = 7;
             // 
@@ -1868,7 +1892,7 @@
             this.layoutControlItem4,
             this.simpleSeparator1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(368, 263);
+            this.Root.Size = new System.Drawing.Size(315, 211);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -1876,60 +1900,62 @@
             this.layoutControlItem1.Control = this.txtFullName;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 2);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(348, 26);
+            this.layoutControlItem1.Size = new System.Drawing.Size(297, 24);
             this.layoutControlItem1.Text = "Full Name:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(62, 16);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(50, 13);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtEmail;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(348, 26);
+            this.layoutControlItem2.Size = new System.Drawing.Size(297, 24);
             this.layoutControlItem2.Text = "Email:";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(62, 16);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(50, 13);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtPhone;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 54);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(348, 26);
+            this.layoutControlItem3.Size = new System.Drawing.Size(297, 24);
             this.layoutControlItem3.Text = "Phone:";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(62, 16);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(50, 13);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txtStatus;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 80);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 74);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(348, 163);
+            this.layoutControlItem4.Size = new System.Drawing.Size(297, 121);
             this.layoutControlItem4.Text = "Status:";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(62, 16);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(50, 13);
             // 
             // simpleSeparator1
             // 
             this.simpleSeparator1.AllowHotTrack = false;
             this.simpleSeparator1.Location = new System.Drawing.Point(0, 0);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(348, 2);
+            this.simpleSeparator1.Size = new System.Drawing.Size(297, 2);
             // 
             // picInfor
             // 
             this.picInfor.Dock = System.Windows.Forms.DockStyle.Top;
             this.picInfor.Location = new System.Drawing.Point(0, 0);
+            this.picInfor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picInfor.MenuManager = this.ribbonControl;
             this.picInfor.Name = "picInfor";
             this.picInfor.Properties.ReadOnly = true;
             this.picInfor.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picInfor.Size = new System.Drawing.Size(368, 208);
+            this.picInfor.Size = new System.Drawing.Size(315, 169);
             this.picInfor.TabIndex = 0;
             // 
             // navigationPage3
             // 
             this.navigationPage3.Controls.Add(this.tileControl1);
+            this.navigationPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.navigationPage3.Name = "navigationPage3";
-            this.navigationPage3.Size = new System.Drawing.Size(982, 471);
+            this.navigationPage3.Size = new System.Drawing.Size(841, 380);
             // 
             // tileControl1
             // 
@@ -1938,11 +1964,13 @@
             this.tileControl1.Groups.Add(this.tileGroup3);
             this.tileControl1.Groups.Add(this.tileGroup4);
             this.tileControl1.Location = new System.Drawing.Point(0, 0);
+            this.tileControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tileControl1.MaxId = 7;
             this.tileControl1.Name = "tileControl1";
+            this.tileControl1.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.tileControl1.ShowGroupText = true;
             this.tileControl1.ShowText = true;
-            this.tileControl1.Size = new System.Drawing.Size(982, 471);
+            this.tileControl1.Size = new System.Drawing.Size(841, 380);
             this.tileControl1.TabIndex = 0;
             this.tileControl1.Text = "Welcome Gia DInh University";
             // 
@@ -1954,12 +1982,12 @@
             // 
             // tileItem7
             // 
-            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement1.ImageOptions.ImageSize = new System.Drawing.Size(248, 200);
-            tileItemElement1.Text = "";
-            this.tileItem7.Elements.Add(tileItemElement1);
+            tileItemElement13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement13.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement13.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement13.ImageOptions.ImageSize = new System.Drawing.Size(248, 200);
+            tileItemElement13.Text = "";
+            this.tileItem7.Elements.Add(tileItemElement13);
             this.tileItem7.Id = 5;
             this.tileItem7.ItemSize = DevExpress.XtraEditors.TileItemSize.Large;
             this.tileItem7.Name = "tileItem7";
@@ -1972,148 +2000,143 @@
             // 
             // tileItem5
             // 
-            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement2.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement2.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement2.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
-            this.tileItem5.Elements.Add(tileItemElement2);
-            tileItemFrame1.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
-            tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            tileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement3.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement3.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement3.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
-            tileItemFrame1.Elements.Add(tileItemElement3);
-            tileItemFrame1.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame1.Image")));
-            tileItemFrame2.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollTop;
-            tileItemElement4.AnchorIndent = 30;
-            tileItemElement4.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement4.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement4.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement4.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement4.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            tileItemElement4.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement4.Appearance.Normal.Options.UseFont = true;
-            tileItemElement4.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement4.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement4.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            tileItemElement4.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement4.Appearance.Selected.Options.UseFont = true;
-            tileItemElement4.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement4.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement4.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            tileItemElement4.MaxWidth = 160;
-            tileItemElement4.Text = "Gia Định";
-            tileItemElement4.TextLocation = new System.Drawing.Point(75, 0);
-            tileItemElement5.AnchorIndent = 30;
-            tileItemElement5.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement5.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement5.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement5.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement5.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement5.Appearance.Normal.BackColor = System.Drawing.Color.Azure;
-            tileItemElement5.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement5.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            tileItemElement5.Appearance.Normal.Options.UseBackColor = true;
-            tileItemElement5.Appearance.Normal.Options.UseFont = true;
-            tileItemElement5.Appearance.Normal.Options.UseForeColor = true;
-            tileItemElement5.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement5.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement5.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement5.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
-            tileItemElement5.Appearance.Selected.Options.UseFont = true;
-            tileItemElement5.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement5.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement5.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement5.Height = 20;
-            tileItemElement5.MaxWidth = 160;
-            tileItemElement5.StretchHorizontal = true;
-            tileItemElement5.Text = "Lịch công tác";
-            tileItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement5.TextLocation = new System.Drawing.Point(75, 27);
-            tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            tileItemElement6.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement6.ImageOptions.ImageLocation = new System.Drawing.Point(4, 8);
-            tileItemElement6.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement6.ImageOptions.ImageSize = new System.Drawing.Size(64, 64);
-            tileItemFrame2.Elements.Add(tileItemElement4);
-            tileItemFrame2.Elements.Add(tileItemElement5);
-            tileItemFrame2.Elements.Add(tileItemElement6);
-            this.tileItem5.Frames.Add(tileItemFrame1);
-            this.tileItem5.Frames.Add(tileItemFrame2);
+            tileItemElement14.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement14.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement14.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
+            tileItemElement14.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement14.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
+            this.tileItem5.Elements.Add(tileItemElement14);
+            tileItemFrame5.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollDown;
+            tileItemElement15.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            tileItemElement15.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement15.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
+            tileItemElement15.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement15.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
+            tileItemFrame5.Elements.Add(tileItemElement15);
+            tileItemFrame5.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame5.Image")));
+            tileItemFrame6.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollTop;
+            tileItemElement16.AnchorIndent = 30;
+            tileItemElement16.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement16.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement16.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement16.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement16.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            tileItemElement16.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement16.Appearance.Normal.Options.UseFont = true;
+            tileItemElement16.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement16.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement16.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            tileItemElement16.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement16.Appearance.Selected.Options.UseFont = true;
+            tileItemElement16.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement16.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement16.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
+            tileItemElement16.MaxWidth = 160;
+            tileItemElement16.Text = "Gia Định";
+            tileItemElement16.TextLocation = new System.Drawing.Point(75, 0);
+            tileItemElement17.AnchorIndent = 30;
+            tileItemElement17.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement17.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement17.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement17.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement17.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement17.Appearance.Normal.BackColor = System.Drawing.Color.Azure;
+            tileItemElement17.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement17.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            tileItemElement17.Appearance.Normal.Options.UseBackColor = true;
+            tileItemElement17.Appearance.Normal.Options.UseFont = true;
+            tileItemElement17.Appearance.Normal.Options.UseForeColor = true;
+            tileItemElement17.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement17.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement17.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement17.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI", 9F);
+            tileItemElement17.Appearance.Selected.Options.UseFont = true;
+            tileItemElement17.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement17.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement17.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement17.Height = 20;
+            tileItemElement17.MaxWidth = 160;
+            tileItemElement17.StretchHorizontal = true;
+            tileItemElement17.Text = "Lịch công tác";
+            tileItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement17.TextLocation = new System.Drawing.Point(75, 27);
+            tileItemElement18.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            tileItemElement18.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement18.ImageOptions.ImageLocation = new System.Drawing.Point(4, 8);
+            tileItemElement18.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement18.ImageOptions.ImageSize = new System.Drawing.Size(64, 64);
+            tileItemFrame6.Elements.Add(tileItemElement16);
+            tileItemFrame6.Elements.Add(tileItemElement17);
+            tileItemFrame6.Elements.Add(tileItemElement18);
+            this.tileItem5.Frames.Add(tileItemFrame5);
+            this.tileItem5.Frames.Add(tileItemFrame6);
             this.tileItem5.Id = 3;
             this.tileItem5.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem5.Name = "tileItem5";
             // 
             // tileItem6
             // 
-            tileItemElement7.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement7.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement7.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement7.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement7.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement7.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement7.Appearance.Normal.Options.UseFont = true;
-            tileItemElement7.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement7.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement7.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement7.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement7.Appearance.Selected.Options.UseFont = true;
-            tileItemElement7.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement7.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement7.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
-            tileItemElement7.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
-            tileItemElement7.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement7.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
-            tileItemElement7.Text = "";
-            tileItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement7.TextLocation = new System.Drawing.Point(4, 0);
-            this.tileItem6.Elements.Add(tileItemElement7);
-            tileItemFrame3.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.RandomSegmentedFade;
-            tileItemElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
-            tileItemElement8.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
-            tileItemElement8.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement8.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
-            tileItemElement8.Text = "element2";
-            tileItemFrame3.Elements.Add(tileItemElement8);
-            tileItemFrame3.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame3.Image")));
-            tileItemFrame4.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollTop;
-            tileItemElement9.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement9.Appearance.Hovered.Options.UseFont = true;
-            tileItemElement9.Appearance.Hovered.Options.UseTextOptions = true;
-            tileItemElement9.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement9.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement9.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement9.Appearance.Normal.Options.UseFont = true;
-            tileItemElement9.Appearance.Normal.Options.UseTextOptions = true;
-            tileItemElement9.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement9.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement9.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
-            tileItemElement9.Appearance.Selected.Options.UseFont = true;
-            tileItemElement9.Appearance.Selected.Options.UseTextOptions = true;
-            tileItemElement9.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
-            tileItemElement9.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            tileItemElement9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
-            tileItemElement9.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
-            tileItemElement9.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement9.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
-            tileItemElement9.Text = "";
-            tileItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement9.TextLocation = new System.Drawing.Point(4, 0);
-            tileItemFrame4.Elements.Add(tileItemElement9);
-            tileItemFrame4.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame4.Image")));
-            this.tileItem6.Frames.Add(tileItemFrame3);
-            this.tileItem6.Frames.Add(tileItemFrame4);
+            tileItemElement19.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement19.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement19.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement19.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement19.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement19.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement19.Appearance.Normal.Options.UseFont = true;
+            tileItemElement19.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement19.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement19.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement19.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement19.Appearance.Selected.Options.UseFont = true;
+            tileItemElement19.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement19.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement19.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement19.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            tileItemElement19.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
+            tileItemElement19.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement19.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
+            tileItemElement19.Text = "";
+            tileItemElement19.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement19.TextLocation = new System.Drawing.Point(4, 0);
+            this.tileItem6.Elements.Add(tileItemElement19);
+            tileItemFrame7.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.RandomSegmentedFade;
+            tileItemElement20.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            tileItemElement20.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
+            tileItemElement20.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement20.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
+            tileItemElement20.Text = "element2";
+            tileItemFrame7.Elements.Add(tileItemElement20);
+            tileItemFrame7.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame7.Image")));
+            tileItemFrame8.Animation = DevExpress.XtraEditors.TileItemContentAnimationType.ScrollTop;
+            tileItemElement21.Appearance.Hovered.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement21.Appearance.Hovered.Options.UseFont = true;
+            tileItemElement21.Appearance.Hovered.Options.UseTextOptions = true;
+            tileItemElement21.Appearance.Hovered.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement21.Appearance.Hovered.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement21.Appearance.Normal.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement21.Appearance.Normal.Options.UseFont = true;
+            tileItemElement21.Appearance.Normal.Options.UseTextOptions = true;
+            tileItemElement21.Appearance.Normal.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement21.Appearance.Normal.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement21.Appearance.Selected.Font = new System.Drawing.Font("Segoe UI Light", 17F);
+            tileItemElement21.Appearance.Selected.Options.UseFont = true;
+            tileItemElement21.Appearance.Selected.Options.UseTextOptions = true;
+            tileItemElement21.Appearance.Selected.TextOptions.Trimming = DevExpress.Utils.Trimming.EllipsisCharacter;
+            tileItemElement21.Appearance.Selected.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            tileItemElement21.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            tileItemElement21.ImageOptions.ImageLocation = new System.Drawing.Point(-12, 7);
+            tileItemElement21.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement21.ImageOptions.ImageSize = new System.Drawing.Size(248, 120);
+            tileItemElement21.Text = "";
+            tileItemElement21.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement21.TextLocation = new System.Drawing.Point(4, 0);
+            tileItemFrame8.Elements.Add(tileItemElement21);
+            tileItemFrame8.Image = ((System.Drawing.Image)(resources.GetObject("tileItemFrame8.Image")));
+            this.tileItem6.Frames.Add(tileItemFrame7);
+            this.tileItem6.Frames.Add(tileItemFrame8);
             this.tileItem6.Id = 4;
             this.tileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem6.Name = "tileItem6";
-            // 
-            // accountsBindingSource
-            // 
-            this.accountsBindingSource.DataMember = "Accounts";
-            this.accountsBindingSource.DataSource = this.giaDinhUniversityDataSet;
             // 
             // employeesBindingSource
             // 
@@ -2190,20 +2213,20 @@
             // 
             // tileItem3
             // 
-            tileItemElement10.Text = "tileItem3";
-            this.tileItem3.Elements.Add(tileItemElement10);
+            tileItemElement22.Text = "tileItem3";
+            this.tileItem3.Elements.Add(tileItemElement22);
             this.tileItem3.Id = 10;
             this.tileItem3.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem3.Name = "tileItem3";
             // 
             // tileItem1
             // 
-            tileItemElement11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
-            tileItemElement11.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileItemElement11.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
-            tileItemElement11.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
-            tileItemElement11.ImageOptions.ImageSize = new System.Drawing.Size(120, 120);
-            this.tileItem1.Elements.Add(tileItemElement11);
+            tileItemElement23.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            tileItemElement23.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
+            tileItemElement23.ImageOptions.ImageLocation = new System.Drawing.Point(-12, -8);
+            tileItemElement23.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomOutside;
+            tileItemElement23.ImageOptions.ImageSize = new System.Drawing.Size(120, 120);
+            this.tileItem1.Elements.Add(tileItemElement23);
             this.tileItem1.Id = 5;
             this.tileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium;
             this.tileItem1.Name = "tileItem1";
@@ -2214,8 +2237,8 @@
             // 
             // tileItem2
             // 
-            tileItemElement12.Text = "tileItem2";
-            this.tileItem2.Elements.Add(tileItemElement12);
+            tileItemElement24.Text = "tileItem2";
+            this.tileItem2.Elements.Add(tileItemElement24);
             this.tileItem2.Id = 7;
             this.tileItem2.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide;
             this.tileItem2.Name = "tileItem2";
@@ -2267,15 +2290,14 @@
             // 
             // AdminHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 738);
+            this.ClientSize = new System.Drawing.Size(1006, 600);
             this.Controls.Add(this.navigationFrame);
             this.Controls.Add(this.navBarControl);
             this.Controls.Add(this.officeNavigationBar);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AdminHome";
             this.Ribbon = this.ribbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2345,6 +2367,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lblEmployeeId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblRole)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewAccount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -2360,7 +2383,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.simpleSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInfor.Properties)).EndInit();
             this.navigationPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerBarController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();

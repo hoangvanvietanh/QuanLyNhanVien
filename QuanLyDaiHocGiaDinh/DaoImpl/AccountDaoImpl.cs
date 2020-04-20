@@ -1,5 +1,6 @@
 ﻿using QuanLyDaiHocGiaDinh.Interface;
 using QuanLyDaiHocGiaDinh.Model;
+using QuanLyDaiHocGiaDinh.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,9 +62,23 @@ namespace QuanLyDaiHocGiaDinh.Dao
             return accounts;
         }
 
+        public String getRoleAccount(int id)
+        {
+            String role = "";
+            accounts.ForEach(ac => {
+
+                if (ac.AccountId == id)
+                {
+                    role = ac.Role;
+                }
+            });
+            return role;
+        }
+
         //Lấy account bằng employeeId
         public Account getAccountByEmployeeId(int employeeId)
         {
+            /*EmployeeService employeeService = new EmployeeService();
             Account account = new Account();
             accounts.ForEach(ac =>
             {
@@ -71,9 +86,9 @@ namespace QuanLyDaiHocGiaDinh.Dao
                 {
                     account = ac;
                 }
-            });
+            });*/
 
-            return account;
+            return null;
         }
 
         //Ánh xạ account update qua account trên linq để update

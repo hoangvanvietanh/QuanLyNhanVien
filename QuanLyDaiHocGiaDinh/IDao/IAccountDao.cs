@@ -12,6 +12,7 @@ namespace QuanLyDaiHocGiaDinh.Interface
         Account CreateAccount(Account account);
         void DeleteAccount(int account);
         void UpdateAccount(Account account);
+        String getRoleAccount(int id);
         Account getAccountByEmployeeId(int employeeId);
         List<Account> GetAllAccounts();
     }
