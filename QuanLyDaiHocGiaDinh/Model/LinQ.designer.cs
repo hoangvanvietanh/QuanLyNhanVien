@@ -51,7 +51,7 @@ namespace QuanLyDaiHocGiaDinh.Model
     #endregion
 		
 		public LinQDataContext() : 
-				base(global::QuanLyDaiHocGiaDinh.Properties.Settings.Default.GiaDinhUniversityConnectionString1, mappingSource)
+				base(global::QuanLyDaiHocGiaDinh.Properties.Settings.Default.GiaDinhUniversityConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserHome));
+            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
@@ -84,6 +85,15 @@
             this.repositoryItemDuration1 = new DevExpress.XtraScheduler.UI.RepositoryItemDuration();
             this.btnUpdate = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.skinPaletteRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem();
+            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.barListItem1 = new DevExpress.XtraBars.BarListItem();
+            this.barWorkspaceMenuItem1 = new DevExpress.XtraBars.BarWorkspaceMenuItem();
+            this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
             this.calendarToolsRibbonPageCategory1 = new DevExpress.XtraScheduler.UI.CalendarToolsRibbonPageCategory();
             this.schedulerControl = new DevExpress.XtraScheduler.SchedulerControl();
             this.schedulerDataStorage = new DevExpress.XtraScheduler.SchedulerDataStorage(this.components);
@@ -94,7 +104,7 @@
             this.optionsRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.OptionsRibbonPageGroup();
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.fileScheduleRibbonPage = new DevExpress.XtraScheduler.UI.FileRibbonPage();
             this.commonRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.CommonRibbonPageGroup();
             this.printRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.PrintRibbonPageGroup();
@@ -115,39 +125,54 @@
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
             this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.txtStatus = new DevExpress.XtraEditors.MemoEdit();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.txtFullName = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
-            this.txtHireDate = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCity = new DevExpress.XtraEditors.TextEdit();
-            this.txtDistrict = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.txtWard = new DevExpress.XtraEditors.TextEdit();
-            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.txtPhoneNumber = new DevExpress.XtraEditors.TextEdit();
-            this.txtLastName = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtEmployeeID = new DevExpress.XtraEditors.TextEdit();
-            this.txtFirstName = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.groupImployee = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.dataLayoutControl4 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.StatusTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup7 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup8 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForStatus = new DevExpress.XtraLayout.LayoutControlItem();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.dataLayoutControl3 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.PhoneNumberTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.EmailTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForPhoneNumber = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.dataLayoutControl2 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.AddressTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.WardTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.DistrictTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.CityTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForAddress = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForWard = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForDistrict = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForCity = new DevExpress.XtraLayout.LayoutControlItem();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.FirstNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.LastNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.FullNameTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.BirthDateDateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.HireDateDateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForFirstName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForLastName = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForHireDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForBirthDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForFullName = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.lblEmployeeId = new DevExpress.XtraEditors.LabelControl();
+            this.lblPositition = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.lblPosititon = new DevExpress.XtraEditors.LabelControl();
+            this.label = new DevExpress.XtraEditors.LabelControl();
             this.lblEmloyee = new DevExpress.XtraEditors.LabelControl();
             this.picEmployee = new DevExpress.XtraEditors.PictureEdit();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
@@ -158,6 +183,9 @@
             this.customersLabelControl = new DevExpress.XtraEditors.LabelControl();
             this.schedulerBarController = new DevExpress.XtraScheduler.UI.SchedulerBarController(this.components);
             this.scheduleTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.ScheduleTableAdapter();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.Root1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
@@ -173,25 +201,58 @@
             this.employeesNavigationPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFullName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHireDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDistrict.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWard.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhoneNumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLastName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFirstName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
-            this.panelControl5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupImployee)).BeginInit();
+            this.groupImployee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl4)).BeginInit();
+            this.dataLayoutControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl3)).BeginInit();
+            this.dataLayoutControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl2)).BeginInit();
+            this.dataLayoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddressTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WardTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DistrictTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CityTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForWard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForDistrict)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
+            this.dataLayoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FirstNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LastNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FullNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDateDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HireDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HireDateDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForFirstName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForLastName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForHireDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForFullName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).BeginInit();
             this.splitContainerControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -204,6 +265,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerBarController)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -258,10 +322,17 @@
             this.toggleRecurrenceItem1,
             this.changeAppointmentReminderItem1,
             this.btnUpdate,
-            this.barButtonItem1});
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.skinDropDownButtonItem1,
+            this.skinPaletteDropDownButtonItem1,
+            this.skinRibbonGalleryBarItem1,
+            this.skinPaletteRibbonGalleryBarItem1,
+            this.ribbonGalleryBarItem1,
+            this.barListItem1,
+            this.barWorkspaceMenuItem1});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 89;
+            this.ribbonControl.MaxItemId = 97;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -276,7 +347,7 @@
             this.repositoryItemDuration1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(1153, 191);
+            this.ribbonControl.Size = new System.Drawing.Size(997, 143);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -571,6 +642,59 @@
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "barButtonItem2";
+            this.barButtonItem2.Id = 89;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // skinDropDownButtonItem1
+            // 
+            this.skinDropDownButtonItem1.Id = 90;
+            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
+            // 
+            // skinPaletteDropDownButtonItem1
+            // 
+            this.skinPaletteDropDownButtonItem1.Enabled = false;
+            this.skinPaletteDropDownButtonItem1.Id = 91;
+            this.skinPaletteDropDownButtonItem1.Name = "skinPaletteDropDownButtonItem1";
+            // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 92;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            // 
+            // skinPaletteRibbonGalleryBarItem1
+            // 
+            this.skinPaletteRibbonGalleryBarItem1.Caption = "skinPaletteRibbonGalleryBarItem1";
+            this.skinPaletteRibbonGalleryBarItem1.Id = 93;
+            this.skinPaletteRibbonGalleryBarItem1.Name = "skinPaletteRibbonGalleryBarItem1";
+            // 
+            // ribbonGalleryBarItem1
+            // 
+            this.ribbonGalleryBarItem1.Caption = "ribbonGalleryBarItem1";
+            this.ribbonGalleryBarItem1.Id = 94;
+            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+            // 
+            // barListItem1
+            // 
+            this.barListItem1.Caption = "barListItem1";
+            this.barListItem1.Id = 95;
+            this.barListItem1.Name = "barListItem1";
+            // 
+            // barWorkspaceMenuItem1
+            // 
+            this.barWorkspaceMenuItem1.Caption = "barWorkspaceMenuItem1";
+            this.barWorkspaceMenuItem1.Id = 96;
+            this.barWorkspaceMenuItem1.Name = "barWorkspaceMenuItem1";
+            this.barWorkspaceMenuItem1.WorkspaceManager = this.workspaceManager1;
+            // 
+            // workspaceManager1
+            // 
+            this.workspaceManager1.TargetControl = this;
+            this.workspaceManager1.TransitionType = pushTransition1;
+            // 
             // calendarToolsRibbonPageCategory1
             // 
             this.calendarToolsRibbonPageCategory1.Control = this.schedulerControl;
@@ -584,11 +708,10 @@
             this.schedulerControl.DataStorage = this.schedulerDataStorage;
             this.schedulerControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.schedulerControl.Location = new System.Drawing.Point(0, 0);
-            this.schedulerControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.schedulerControl.MenuManager = this.ribbonControl;
             this.schedulerControl.Name = "schedulerControl";
             this.schedulerControl.OptionsBehavior.TimeRegionValidationInterval = System.TimeSpan.Parse("00:00:01");
-            this.schedulerControl.Size = new System.Drawing.Size(658, 620);
+            this.schedulerControl.Size = new System.Drawing.Size(580, 567);
             this.schedulerControl.Start = new System.DateTime(2020, 4, 10, 0, 0, 0, 0);
             this.schedulerControl.TabIndex = 0;
             this.schedulerControl.Text = "schedulerControl1";
@@ -664,19 +787,23 @@
             // 
             this.homeRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup3});
             this.homeRibbonPage.Name = "homeRibbonPage";
             this.homeRibbonPage.Text = "Home";
             // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnUpdate);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "System";
             // 
-            // ribbonPageGroup2
+            // ribbonPageGroup3
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup3.ItemLinks.Add(this.skinPaletteDropDownButtonItem1);
+            this.ribbonPageGroup3.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "View";
             // 
             // fileScheduleRibbonPage
             // 
@@ -778,20 +905,18 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 867);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 756);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1153, 28);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(997, 31);
             // 
             // officeNavigationBar
             // 
             this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar.Location = new System.Drawing.Point(0, 811);
-            this.officeNavigationBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.officeNavigationBar.Location = new System.Drawing.Point(0, 710);
             this.officeNavigationBar.Name = "officeNavigationBar";
             this.officeNavigationBar.NavigationClient = this.navBarControl;
-            this.officeNavigationBar.Size = new System.Drawing.Size(1153, 56);
+            this.officeNavigationBar.Size = new System.Drawing.Size(997, 46);
             this.officeNavigationBar.TabIndex = 1;
             this.officeNavigationBar.Text = "officeNavigationBar";
             // 
@@ -802,12 +927,11 @@
             this.navBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.employeesNavBarGroup,
             this.customersNavBarGroup});
-            this.navBarControl.Location = new System.Drawing.Point(0, 191);
-            this.navBarControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.navBarControl.Location = new System.Drawing.Point(0, 143);
             this.navBarControl.Name = "navBarControl";
-            this.navBarControl.OptionsNavPane.ExpandedWidth = 192;
+            this.navBarControl.OptionsNavPane.ExpandedWidth = 165;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(192, 620);
+            this.navBarControl.Size = new System.Drawing.Size(165, 567);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
             this.navBarControl.ActiveGroupChanged += new DevExpress.XtraNavBar.NavBarGroupEventHandler(this.navBarControl_ActiveGroupChanged);
@@ -830,15 +954,14 @@
             this.navigationFrame.Controls.Add(this.employeesNavigationPage);
             this.navigationFrame.Controls.Add(this.customersNavigationPage);
             this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationFrame.Location = new System.Drawing.Point(192, 191);
-            this.navigationFrame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.navigationFrame.Location = new System.Drawing.Point(165, 143);
             this.navigationFrame.Name = "navigationFrame";
             this.navigationFrame.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.employeesNavigationPage,
             this.customersNavigationPage});
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.SelectedPage = this.employeesNavigationPage;
-            this.navigationFrame.Size = new System.Drawing.Size(961, 620);
+            this.navigationFrame.Size = new System.Drawing.Size(832, 567);
             this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame";
             // 
@@ -846,9 +969,8 @@
             // 
             this.employeesNavigationPage.Controls.Add(this.splitContainerControl2);
             this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
-            this.employeesNavigationPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
-            this.employeesNavigationPage.Size = new System.Drawing.Size(961, 620);
+            this.employeesNavigationPage.Size = new System.Drawing.Size(832, 567);
             // 
             // splitContainerControl2
             // 
@@ -856,409 +978,489 @@
             this.splitContainerControl2.Appearance.Options.UseBackColor = true;
             this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl2.Name = "splitContainerControl2";
-            this.splitContainerControl2.Panel1.Controls.Add(this.panelControl1);
+            this.splitContainerControl2.Panel1.Controls.Add(this.groupImployee);
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(961, 620);
-            this.splitContainerControl2.SplitterPosition = 745;
+            this.splitContainerControl2.Size = new System.Drawing.Size(832, 567);
+            this.splitContainerControl2.SplitterPosition = 718;
             this.splitContainerControl2.TabIndex = 1;
             // 
-            // panelControl1
+            // groupImployee
             // 
-            this.panelControl1.Controls.Add(this.txtStatus);
-            this.panelControl1.Controls.Add(this.labelControl13);
-            this.panelControl1.Controls.Add(this.txtFullName);
-            this.panelControl1.Controls.Add(this.labelControl12);
-            this.panelControl1.Controls.Add(this.txtEmail);
-            this.panelControl1.Controls.Add(this.txtHireDate);
-            this.panelControl1.Controls.Add(this.labelControl10);
-            this.panelControl1.Controls.Add(this.labelControl11);
-            this.panelControl1.Controls.Add(this.txtCity);
-            this.panelControl1.Controls.Add(this.txtDistrict);
-            this.panelControl1.Controls.Add(this.labelControl8);
-            this.panelControl1.Controls.Add(this.labelControl9);
-            this.panelControl1.Controls.Add(this.txtWard);
-            this.panelControl1.Controls.Add(this.txtAddress);
-            this.panelControl1.Controls.Add(this.labelControl6);
-            this.panelControl1.Controls.Add(this.labelControl7);
-            this.panelControl1.Controls.Add(this.txtPhoneNumber);
-            this.panelControl1.Controls.Add(this.txtLastName);
-            this.panelControl1.Controls.Add(this.labelControl4);
-            this.panelControl1.Controls.Add(this.labelControl5);
-            this.panelControl1.Controls.Add(this.txtEmployeeID);
-            this.panelControl1.Controls.Add(this.txtFirstName);
-            this.panelControl1.Controls.Add(this.labelControl3);
-            this.panelControl1.Controls.Add(this.labelControl2);
-            this.panelControl1.Controls.Add(this.panelControl4);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(745, 620);
-            this.panelControl1.TabIndex = 0;
+            this.groupImployee.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.groupImployee.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupImployee.CaptionImageOptions.SvgImage")));
+            this.groupImployee.Controls.Add(this.groupControl4);
+            this.groupImployee.Controls.Add(this.groupControl3);
+            this.groupImployee.Controls.Add(this.groupControl2);
+            this.groupImployee.Controls.Add(this.groupControl1);
+            this.groupImployee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupImployee.Location = new System.Drawing.Point(0, 0);
+            this.groupImployee.Margin = new System.Windows.Forms.Padding(0);
+            this.groupImployee.Name = "groupImployee";
+            this.groupImployee.Size = new System.Drawing.Size(718, 567);
+            this.groupImployee.TabIndex = 0;
+            this.groupImployee.Text = "IMPLOYEE IMFORMATION";
+            this.groupImployee.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
-            // txtStatus
+            // groupControl4
             // 
-            this.txtStatus.Location = new System.Drawing.Point(594, 484);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtStatus.MenuManager = this.ribbonControl;
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtStatus.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtStatus.Properties.Appearance.Options.UseBackColor = true;
-            this.txtStatus.Properties.Appearance.Options.UseForeColor = true;
-            this.txtStatus.Size = new System.Drawing.Size(232, 74);
-            this.txtStatus.TabIndex = 47;
+            this.groupControl4.Controls.Add(this.dataLayoutControl4);
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl4.Location = new System.Drawing.Point(2, 432);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(714, 133);
+            this.groupControl4.TabIndex = 3;
+            this.groupControl4.Text = "Diff";
             // 
-            // labelControl13
+            // dataLayoutControl4
             // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(449, 485);
-            this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(59, 19);
-            this.labelControl13.TabIndex = 46;
-            this.labelControl13.Text = "Status : ";
+            this.dataLayoutControl4.Controls.Add(this.StatusTextEdit);
+            this.dataLayoutControl4.DataMember = "Employees";
+            this.dataLayoutControl4.DataSource = this.giaDinhUniversityDataSet;
+            this.dataLayoutControl4.Location = new System.Drawing.Point(14, 39);
+            this.dataLayoutControl4.Name = "dataLayoutControl4";
+            this.dataLayoutControl4.Root = this.layoutControlGroup7;
+            this.dataLayoutControl4.Size = new System.Drawing.Size(645, 49);
+            this.dataLayoutControl4.TabIndex = 0;
+            this.dataLayoutControl4.Text = "dataLayoutControl4";
             // 
-            // txtFullName
+            // StatusTextEdit
             // 
-            this.txtFullName.Location = new System.Drawing.Point(181, 212);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtFullName.MenuManager = this.ribbonControl;
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtFullName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFullName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtFullName.Properties.Appearance.Options.UseBackColor = true;
-            this.txtFullName.Properties.Appearance.Options.UseFont = true;
-            this.txtFullName.Properties.Appearance.Options.UseForeColor = true;
-            this.txtFullName.Size = new System.Drawing.Size(645, 26);
-            this.txtFullName.TabIndex = 45;
+            this.StatusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.Status", true));
+            this.StatusTextEdit.Enabled = false;
+            this.StatusTextEdit.Location = new System.Drawing.Point(46, 12);
+            this.StatusTextEdit.MenuManager = this.ribbonControl;
+            this.StatusTextEdit.Name = "StatusTextEdit";
+            this.StatusTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.StatusTextEdit.Size = new System.Drawing.Size(587, 20);
+            this.StatusTextEdit.StyleController = this.dataLayoutControl4;
+            this.StatusTextEdit.TabIndex = 20;
             // 
-            // labelControl12
+            // layoutControlGroup7
             // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(42, 215);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(71, 19);
-            this.labelControl12.TabIndex = 44;
-            this.labelControl12.Text = "Full Name";
+            this.layoutControlGroup7.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup7.GroupBordersVisible = false;
+            this.layoutControlGroup7.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup8});
+            this.layoutControlGroup7.Name = "layoutControlGroup7";
+            this.layoutControlGroup7.Size = new System.Drawing.Size(645, 49);
+            this.layoutControlGroup7.TextVisible = false;
             // 
-            // txtEmail
+            // layoutControlGroup8
             // 
-            this.txtEmail.Location = new System.Drawing.Point(181, 425);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmail.MenuManager = this.ribbonControl;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.Properties.Appearance.Options.UseBackColor = true;
-            this.txtEmail.Properties.Appearance.Options.UseFont = true;
-            this.txtEmail.Properties.Appearance.Options.UseForeColor = true;
-            this.txtEmail.Size = new System.Drawing.Size(645, 26);
-            this.txtEmail.TabIndex = 43;
+            this.layoutControlGroup8.AllowDrawBackground = false;
+            this.layoutControlGroup8.GroupBordersVisible = false;
+            this.layoutControlGroup8.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForStatus});
+            this.layoutControlGroup8.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup8.Name = "autoGeneratedGroup0";
+            this.layoutControlGroup8.Size = new System.Drawing.Size(625, 29);
             // 
-            // txtHireDate
+            // ItemForStatus
             // 
-            this.txtHireDate.Location = new System.Drawing.Point(181, 481);
-            this.txtHireDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtHireDate.MenuManager = this.ribbonControl;
-            this.txtHireDate.Name = "txtHireDate";
-            this.txtHireDate.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtHireDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHireDate.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtHireDate.Properties.Appearance.Options.UseBackColor = true;
-            this.txtHireDate.Properties.Appearance.Options.UseFont = true;
-            this.txtHireDate.Properties.Appearance.Options.UseForeColor = true;
-            this.txtHireDate.Size = new System.Drawing.Size(232, 26);
-            this.txtHireDate.TabIndex = 42;
+            this.ItemForStatus.Control = this.StatusTextEdit;
+            this.ItemForStatus.Location = new System.Drawing.Point(0, 0);
+            this.ItemForStatus.Name = "ItemForStatus";
+            this.ItemForStatus.Size = new System.Drawing.Size(625, 29);
+            this.ItemForStatus.Text = "Status";
+            this.ItemForStatus.TextSize = new System.Drawing.Size(31, 13);
             // 
-            // labelControl10
+            // groupControl3
             // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(42, 428);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(55, 19);
-            this.labelControl10.TabIndex = 41;
-            this.labelControl10.Text = "Email : ";
+            this.groupControl3.Controls.Add(this.dataLayoutControl3);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl3.Location = new System.Drawing.Point(2, 301);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(714, 131);
+            this.groupControl3.TabIndex = 2;
+            this.groupControl3.Text = "Contact";
             // 
-            // labelControl11
+            // dataLayoutControl3
             // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(42, 489);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(82, 19);
-            this.labelControl11.TabIndex = 40;
-            this.labelControl11.Text = "Hire Date : ";
+            this.dataLayoutControl3.Controls.Add(this.PhoneNumberTextEdit);
+            this.dataLayoutControl3.Controls.Add(this.EmailTextEdit);
+            this.dataLayoutControl3.DataMember = "Employees";
+            this.dataLayoutControl3.DataSource = this.giaDinhUniversityDataSet;
+            this.dataLayoutControl3.Location = new System.Drawing.Point(14, 40);
+            this.dataLayoutControl3.Name = "dataLayoutControl3";
+            this.dataLayoutControl3.Root = this.layoutControlGroup5;
+            this.dataLayoutControl3.Size = new System.Drawing.Size(646, 76);
+            this.dataLayoutControl3.TabIndex = 0;
+            this.dataLayoutControl3.Text = "dataLayoutControl3";
             // 
-            // txtCity
+            // PhoneNumberTextEdit
             // 
-            this.txtCity.Location = new System.Drawing.Point(594, 348);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCity.MenuManager = this.ribbonControl;
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCity.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtCity.Properties.Appearance.Options.UseBackColor = true;
-            this.txtCity.Properties.Appearance.Options.UseFont = true;
-            this.txtCity.Properties.Appearance.Options.UseForeColor = true;
-            this.txtCity.Size = new System.Drawing.Size(232, 26);
-            this.txtCity.TabIndex = 39;
+            this.PhoneNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.PhoneNumber", true));
+            this.PhoneNumberTextEdit.Enabled = false;
+            this.PhoneNumberTextEdit.Location = new System.Drawing.Point(85, 12);
+            this.PhoneNumberTextEdit.MenuManager = this.ribbonControl;
+            this.PhoneNumberTextEdit.Name = "PhoneNumberTextEdit";
+            this.PhoneNumberTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumberTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.PhoneNumberTextEdit.Size = new System.Drawing.Size(549, 20);
+            this.PhoneNumberTextEdit.StyleController = this.dataLayoutControl3;
+            this.PhoneNumberTextEdit.TabIndex = 18;
             // 
-            // txtDistrict
+            // EmailTextEdit
             // 
-            this.txtDistrict.Location = new System.Drawing.Point(181, 348);
-            this.txtDistrict.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDistrict.MenuManager = this.ribbonControl;
-            this.txtDistrict.Name = "txtDistrict";
-            this.txtDistrict.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDistrict.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDistrict.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtDistrict.Properties.Appearance.Options.UseBackColor = true;
-            this.txtDistrict.Properties.Appearance.Options.UseFont = true;
-            this.txtDistrict.Properties.Appearance.Options.UseForeColor = true;
-            this.txtDistrict.Size = new System.Drawing.Size(232, 26);
-            this.txtDistrict.TabIndex = 38;
+            this.EmailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.Email", true));
+            this.EmailTextEdit.Enabled = false;
+            this.EmailTextEdit.Location = new System.Drawing.Point(85, 36);
+            this.EmailTextEdit.MenuManager = this.ribbonControl;
+            this.EmailTextEdit.Name = "EmailTextEdit";
+            this.EmailTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.EmailTextEdit.Size = new System.Drawing.Size(549, 20);
+            this.EmailTextEdit.StyleController = this.dataLayoutControl3;
+            this.EmailTextEdit.TabIndex = 19;
             // 
-            // labelControl8
+            // layoutControlGroup5
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(457, 352);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(43, 19);
-            this.labelControl8.TabIndex = 37;
-            this.labelControl8.Text = "City : ";
+            this.layoutControlGroup5.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup5.GroupBordersVisible = false;
+            this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup6});
+            this.layoutControlGroup5.Name = "layoutControlGroup5";
+            this.layoutControlGroup5.Size = new System.Drawing.Size(646, 76);
+            this.layoutControlGroup5.TextVisible = false;
             // 
-            // labelControl9
+            // layoutControlGroup6
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(42, 352);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(60, 19);
-            this.labelControl9.TabIndex = 36;
-            this.labelControl9.Text = "District :";
+            this.layoutControlGroup6.AllowDrawBackground = false;
+            this.layoutControlGroup6.GroupBordersVisible = false;
+            this.layoutControlGroup6.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForPhoneNumber,
+            this.ItemForEmail});
+            this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup6.Name = "autoGeneratedGroup0";
+            this.layoutControlGroup6.Size = new System.Drawing.Size(626, 56);
             // 
-            // txtWard
+            // ItemForPhoneNumber
             // 
-            this.txtWard.Location = new System.Drawing.Point(594, 286);
-            this.txtWard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtWard.MenuManager = this.ribbonControl;
-            this.txtWard.Name = "txtWard";
-            this.txtWard.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtWard.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWard.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtWard.Properties.Appearance.Options.UseBackColor = true;
-            this.txtWard.Properties.Appearance.Options.UseFont = true;
-            this.txtWard.Properties.Appearance.Options.UseForeColor = true;
-            this.txtWard.Size = new System.Drawing.Size(232, 26);
-            this.txtWard.TabIndex = 35;
+            this.ItemForPhoneNumber.Control = this.PhoneNumberTextEdit;
+            this.ItemForPhoneNumber.Location = new System.Drawing.Point(0, 0);
+            this.ItemForPhoneNumber.Name = "ItemForPhoneNumber";
+            this.ItemForPhoneNumber.Size = new System.Drawing.Size(626, 24);
+            this.ItemForPhoneNumber.Text = "Phone Number";
+            this.ItemForPhoneNumber.TextSize = new System.Drawing.Size(70, 13);
             // 
-            // txtAddress
+            // ItemForEmail
             // 
-            this.txtAddress.Location = new System.Drawing.Point(181, 286);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAddress.MenuManager = this.ribbonControl;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtAddress.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtAddress.Properties.Appearance.Options.UseBackColor = true;
-            this.txtAddress.Properties.Appearance.Options.UseFont = true;
-            this.txtAddress.Properties.Appearance.Options.UseForeColor = true;
-            this.txtAddress.Size = new System.Drawing.Size(232, 26);
-            this.txtAddress.TabIndex = 34;
+            this.ItemForEmail.Control = this.EmailTextEdit;
+            this.ItemForEmail.Location = new System.Drawing.Point(0, 24);
+            this.ItemForEmail.Name = "ItemForEmail";
+            this.ItemForEmail.Size = new System.Drawing.Size(626, 32);
+            this.ItemForEmail.Text = "Email";
+            this.ItemForEmail.TextSize = new System.Drawing.Size(70, 13);
             // 
-            // labelControl6
+            // groupControl2
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(457, 289);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(53, 19);
-            this.labelControl6.TabIndex = 33;
-            this.labelControl6.Text = "Ward : ";
+            this.groupControl2.Controls.Add(this.dataLayoutControl2);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl2.Location = new System.Drawing.Point(2, 178);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(714, 123);
+            this.groupControl2.TabIndex = 1;
+            this.groupControl2.Text = "Address";
             // 
-            // labelControl7
+            // dataLayoutControl2
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(42, 289);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(73, 19);
-            this.labelControl7.TabIndex = 32;
-            this.labelControl7.Text = "Address : ";
+            this.dataLayoutControl2.Controls.Add(this.AddressTextEdit);
+            this.dataLayoutControl2.Controls.Add(this.WardTextEdit);
+            this.dataLayoutControl2.Controls.Add(this.DistrictTextEdit);
+            this.dataLayoutControl2.Controls.Add(this.CityTextEdit);
+            this.dataLayoutControl2.DataMember = "Employees";
+            this.dataLayoutControl2.DataSource = this.giaDinhUniversityDataSet;
+            this.dataLayoutControl2.Location = new System.Drawing.Point(14, 34);
+            this.dataLayoutControl2.Name = "dataLayoutControl2";
+            this.dataLayoutControl2.Root = this.layoutControlGroup3;
+            this.dataLayoutControl2.Size = new System.Drawing.Size(644, 83);
+            this.dataLayoutControl2.TabIndex = 0;
+            this.dataLayoutControl2.Text = "dataLayoutControl2";
             // 
-            // txtPhoneNumber
+            // AddressTextEdit
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(594, 154);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPhoneNumber.MenuManager = this.ribbonControl;
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtPhoneNumber.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtPhoneNumber.Properties.Appearance.Options.UseBackColor = true;
-            this.txtPhoneNumber.Properties.Appearance.Options.UseFont = true;
-            this.txtPhoneNumber.Properties.Appearance.Options.UseForeColor = true;
-            this.txtPhoneNumber.Size = new System.Drawing.Size(232, 26);
-            this.txtPhoneNumber.TabIndex = 31;
+            this.AddressTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.Address", true));
+            this.AddressTextEdit.Enabled = false;
+            this.AddressTextEdit.Location = new System.Drawing.Point(54, 12);
+            this.AddressTextEdit.MenuManager = this.ribbonControl;
+            this.AddressTextEdit.Name = "AddressTextEdit";
+            this.AddressTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.AddressTextEdit.Size = new System.Drawing.Size(266, 20);
+            this.AddressTextEdit.StyleController = this.dataLayoutControl2;
+            this.AddressTextEdit.TabIndex = 15;
             // 
-            // txtLastName
+            // WardTextEdit
             // 
-            this.txtLastName.Location = new System.Drawing.Point(181, 154);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtLastName.MenuManager = this.ribbonControl;
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtLastName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtLastName.Properties.Appearance.Options.UseBackColor = true;
-            this.txtLastName.Properties.Appearance.Options.UseFont = true;
-            this.txtLastName.Properties.Appearance.Options.UseForeColor = true;
-            this.txtLastName.Size = new System.Drawing.Size(232, 26);
-            this.txtLastName.TabIndex = 30;
+            this.WardTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.Ward", true));
+            this.WardTextEdit.Enabled = false;
+            this.WardTextEdit.Location = new System.Drawing.Point(366, 12);
+            this.WardTextEdit.MenuManager = this.ribbonControl;
+            this.WardTextEdit.Name = "WardTextEdit";
+            this.WardTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WardTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.WardTextEdit.Size = new System.Drawing.Size(266, 20);
+            this.WardTextEdit.StyleController = this.dataLayoutControl2;
+            this.WardTextEdit.TabIndex = 16;
             // 
-            // labelControl4
+            // DistrictTextEdit
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(457, 158);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(117, 19);
-            this.labelControl4.TabIndex = 29;
-            this.labelControl4.Text = "Phone Number :";
+            this.DistrictTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.District", true));
+            this.DistrictTextEdit.Enabled = false;
+            this.DistrictTextEdit.Location = new System.Drawing.Point(54, 36);
+            this.DistrictTextEdit.MenuManager = this.ribbonControl;
+            this.DistrictTextEdit.Name = "DistrictTextEdit";
+            this.DistrictTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DistrictTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.DistrictTextEdit.Size = new System.Drawing.Size(266, 20);
+            this.DistrictTextEdit.StyleController = this.dataLayoutControl2;
+            this.DistrictTextEdit.TabIndex = 17;
             // 
-            // labelControl5
+            // CityTextEdit
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(42, 161);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(90, 19);
-            this.labelControl5.TabIndex = 28;
-            this.labelControl5.Text = "Last Name : ";
+            this.CityTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.City", true));
+            this.CityTextEdit.Enabled = false;
+            this.CityTextEdit.Location = new System.Drawing.Point(366, 36);
+            this.CityTextEdit.MenuManager = this.ribbonControl;
+            this.CityTextEdit.Name = "CityTextEdit";
+            this.CityTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CityTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.CityTextEdit.Size = new System.Drawing.Size(266, 20);
+            this.CityTextEdit.StyleController = this.dataLayoutControl2;
+            this.CityTextEdit.TabIndex = 18;
             // 
-            // txtEmployeeID
+            // layoutControlGroup3
             // 
-            this.txtEmployeeID.Location = new System.Drawing.Point(594, 95);
-            this.txtEmployeeID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmployeeID.MenuManager = this.ribbonControl;
-            this.txtEmployeeID.Name = "txtEmployeeID";
-            this.txtEmployeeID.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtEmployeeID.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeID.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeID.Properties.Appearance.Options.UseBackColor = true;
-            this.txtEmployeeID.Properties.Appearance.Options.UseFont = true;
-            this.txtEmployeeID.Properties.Appearance.Options.UseForeColor = true;
-            this.txtEmployeeID.Size = new System.Drawing.Size(232, 26);
-            this.txtEmployeeID.TabIndex = 27;
+            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup3.GroupBordersVisible = false;
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup4});
+            this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(644, 83);
+            this.layoutControlGroup3.TextVisible = false;
             // 
-            // txtFirstName
+            // layoutControlGroup4
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(181, 95);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtFirstName.MenuManager = this.ribbonControl;
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtFirstName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtFirstName.Properties.Appearance.Options.UseBackColor = true;
-            this.txtFirstName.Properties.Appearance.Options.UseFont = true;
-            this.txtFirstName.Properties.Appearance.Options.UseForeColor = true;
-            this.txtFirstName.Size = new System.Drawing.Size(232, 26);
-            this.txtFirstName.TabIndex = 6;
+            this.layoutControlGroup4.AllowDrawBackground = false;
+            this.layoutControlGroup4.GroupBordersVisible = false;
+            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForAddress,
+            this.ItemForWard,
+            this.ItemForDistrict,
+            this.ItemForCity});
+            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup4.Name = "autoGeneratedGroup0";
+            this.layoutControlGroup4.Size = new System.Drawing.Size(624, 63);
             // 
-            // labelControl3
+            // ItemForAddress
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(457, 98);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(107, 19);
-            this.labelControl3.TabIndex = 4;
-            this.labelControl3.Text = "Employee ID : ";
+            this.ItemForAddress.Control = this.AddressTextEdit;
+            this.ItemForAddress.Location = new System.Drawing.Point(0, 0);
+            this.ItemForAddress.Name = "ItemForAddress";
+            this.ItemForAddress.Size = new System.Drawing.Size(312, 24);
+            this.ItemForAddress.Text = "Address";
+            this.ItemForAddress.TextSize = new System.Drawing.Size(39, 13);
             // 
-            // labelControl2
+            // ItemForWard
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(42, 98);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(92, 19);
-            this.labelControl2.TabIndex = 2;
-            this.labelControl2.Text = "First Name : ";
+            this.ItemForWard.Control = this.WardTextEdit;
+            this.ItemForWard.Location = new System.Drawing.Point(312, 0);
+            this.ItemForWard.Name = "ItemForWard";
+            this.ItemForWard.Size = new System.Drawing.Size(312, 24);
+            this.ItemForWard.Text = "Ward";
+            this.ItemForWard.TextSize = new System.Drawing.Size(39, 13);
             // 
-            // panelControl4
+            // ItemForDistrict
             // 
-            this.panelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.panelControl4.Controls.Add(this.panelControl5);
-            this.panelControl4.Controls.Add(this.labelControl1);
-            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl4.Location = new System.Drawing.Point(2, 2);
-            this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(741, 50);
-            this.panelControl4.TabIndex = 1;
+            this.ItemForDistrict.Control = this.DistrictTextEdit;
+            this.ItemForDistrict.Location = new System.Drawing.Point(0, 24);
+            this.ItemForDistrict.Name = "ItemForDistrict";
+            this.ItemForDistrict.Size = new System.Drawing.Size(312, 39);
+            this.ItemForDistrict.Text = "District";
+            this.ItemForDistrict.TextSize = new System.Drawing.Size(39, 13);
             // 
-            // panelControl5
+            // ItemForCity
             // 
-            this.panelControl5.Controls.Add(this.pictureEdit1);
-            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl5.Location = new System.Drawing.Point(638, 2);
-            this.panelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(101, 46);
-            this.panelControl5.TabIndex = 1;
+            this.ItemForCity.Control = this.CityTextEdit;
+            this.ItemForCity.Location = new System.Drawing.Point(312, 24);
+            this.ItemForCity.Name = "ItemForCity";
+            this.ItemForCity.Size = new System.Drawing.Size(312, 39);
+            this.ItemForCity.Text = "City";
+            this.ItemForCity.TextSize = new System.Drawing.Size(39, 13);
             // 
-            // pictureEdit1
+            // groupControl1
             // 
-            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureEdit1.MenuManager = this.ribbonControl;
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.pictureEdit1.Size = new System.Drawing.Size(103, 48);
-            this.pictureEdit1.TabIndex = 0;
+            this.groupControl1.Controls.Add(this.dataLayoutControl1);
+            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl1.Location = new System.Drawing.Point(2, 39);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(714, 139);
+            this.groupControl1.TabIndex = 0;
+            this.groupControl1.Text = "Info";
             // 
-            // labelControl1
+            // dataLayoutControl1
             // 
-            this.labelControl1.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl1.Appearance.Options.UseBackColor = true;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(22, 11);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Padding = new System.Windows.Forms.Padding(35, 0, 35, 0);
-            this.labelControl1.Size = new System.Drawing.Size(390, 29);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "EMPLOYEE IMFORMATION";
+            this.dataLayoutControl1.Controls.Add(this.FirstNameTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.LastNameTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.FullNameTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.BirthDateDateEdit);
+            this.dataLayoutControl1.Controls.Add(this.HireDateDateEdit);
+            this.dataLayoutControl1.DataMember = "Employees";
+            this.dataLayoutControl1.DataSource = this.giaDinhUniversityDataSet;
+            this.dataLayoutControl1.Location = new System.Drawing.Point(14, 34);
+            this.dataLayoutControl1.Name = "dataLayoutControl1";
+            this.dataLayoutControl1.Root = this.Root;
+            this.dataLayoutControl1.Size = new System.Drawing.Size(643, 96);
+            this.dataLayoutControl1.TabIndex = 0;
+            this.dataLayoutControl1.Text = "dataLayoutControl1";
+            // 
+            // FirstNameTextEdit
+            // 
+            this.FirstNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.FirstName", true));
+            this.FirstNameTextEdit.Enabled = false;
+            this.FirstNameTextEdit.Location = new System.Drawing.Point(66, 12);
+            this.FirstNameTextEdit.MenuManager = this.ribbonControl;
+            this.FirstNameTextEdit.Name = "FirstNameTextEdit";
+            this.FirstNameTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.FirstNameTextEdit.Size = new System.Drawing.Size(253, 20);
+            this.FirstNameTextEdit.StyleController = this.dataLayoutControl1;
+            this.FirstNameTextEdit.TabIndex = 10;
+            // 
+            // LastNameTextEdit
+            // 
+            this.LastNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.LastName", true));
+            this.LastNameTextEdit.Enabled = false;
+            this.LastNameTextEdit.Location = new System.Drawing.Point(377, 12);
+            this.LastNameTextEdit.MenuManager = this.ribbonControl;
+            this.LastNameTextEdit.Name = "LastNameTextEdit";
+            this.LastNameTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.LastNameTextEdit.Size = new System.Drawing.Size(254, 20);
+            this.LastNameTextEdit.StyleController = this.dataLayoutControl1;
+            this.LastNameTextEdit.TabIndex = 11;
+            // 
+            // FullNameTextEdit
+            // 
+            this.FullNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.FullName", true));
+            this.FullNameTextEdit.Enabled = false;
+            this.FullNameTextEdit.Location = new System.Drawing.Point(66, 36);
+            this.FullNameTextEdit.MenuManager = this.ribbonControl;
+            this.FullNameTextEdit.Name = "FullNameTextEdit";
+            this.FullNameTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullNameTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.FullNameTextEdit.Size = new System.Drawing.Size(565, 20);
+            this.FullNameTextEdit.StyleController = this.dataLayoutControl1;
+            this.FullNameTextEdit.TabIndex = 12;
+            // 
+            // BirthDateDateEdit
+            // 
+            this.BirthDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.BirthDate", true));
+            this.BirthDateDateEdit.EditValue = null;
+            this.BirthDateDateEdit.Enabled = false;
+            this.BirthDateDateEdit.Location = new System.Drawing.Point(377, 60);
+            this.BirthDateDateEdit.MenuManager = this.ribbonControl;
+            this.BirthDateDateEdit.Name = "BirthDateDateEdit";
+            this.BirthDateDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthDateDateEdit.Properties.Appearance.Options.UseFont = true;
+            this.BirthDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.BirthDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.BirthDateDateEdit.Size = new System.Drawing.Size(254, 20);
+            this.BirthDateDateEdit.StyleController = this.dataLayoutControl1;
+            this.BirthDateDateEdit.TabIndex = 14;
+            // 
+            // HireDateDateEdit
+            // 
+            this.HireDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaDinhUniversityDataSet, "Employees.HireDate", true));
+            this.HireDateDateEdit.EditValue = null;
+            this.HireDateDateEdit.Enabled = false;
+            this.HireDateDateEdit.Location = new System.Drawing.Point(66, 60);
+            this.HireDateDateEdit.MenuManager = this.ribbonControl;
+            this.HireDateDateEdit.Name = "HireDateDateEdit";
+            this.HireDateDateEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HireDateDateEdit.Properties.Appearance.Options.UseFont = true;
+            this.HireDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.HireDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.HireDateDateEdit.Size = new System.Drawing.Size(253, 20);
+            this.HireDateDateEdit.StyleController = this.dataLayoutControl1;
+            this.HireDateDateEdit.TabIndex = 13;
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(643, 96);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.AllowDrawBackground = false;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForFirstName,
+            this.ItemForLastName,
+            this.ItemForHireDate,
+            this.ItemForBirthDate,
+            this.ItemForFullName});
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "autoGeneratedGroup0";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(623, 76);
+            // 
+            // ItemForFirstName
+            // 
+            this.ItemForFirstName.Control = this.FirstNameTextEdit;
+            this.ItemForFirstName.Location = new System.Drawing.Point(0, 0);
+            this.ItemForFirstName.Name = "ItemForFirstName";
+            this.ItemForFirstName.Size = new System.Drawing.Size(311, 24);
+            this.ItemForFirstName.Text = "First Name";
+            this.ItemForFirstName.TextSize = new System.Drawing.Size(51, 13);
+            // 
+            // ItemForLastName
+            // 
+            this.ItemForLastName.Control = this.LastNameTextEdit;
+            this.ItemForLastName.Location = new System.Drawing.Point(311, 0);
+            this.ItemForLastName.Name = "ItemForLastName";
+            this.ItemForLastName.Size = new System.Drawing.Size(312, 24);
+            this.ItemForLastName.Text = "Last Name";
+            this.ItemForLastName.TextSize = new System.Drawing.Size(51, 13);
+            // 
+            // ItemForHireDate
+            // 
+            this.ItemForHireDate.Control = this.HireDateDateEdit;
+            this.ItemForHireDate.Location = new System.Drawing.Point(0, 48);
+            this.ItemForHireDate.Name = "ItemForHireDate";
+            this.ItemForHireDate.Size = new System.Drawing.Size(311, 28);
+            this.ItemForHireDate.Text = "Hire Date";
+            this.ItemForHireDate.TextSize = new System.Drawing.Size(51, 13);
+            // 
+            // ItemForBirthDate
+            // 
+            this.ItemForBirthDate.Control = this.BirthDateDateEdit;
+            this.ItemForBirthDate.Location = new System.Drawing.Point(311, 48);
+            this.ItemForBirthDate.Name = "ItemForBirthDate";
+            this.ItemForBirthDate.Size = new System.Drawing.Size(312, 28);
+            this.ItemForBirthDate.Text = "Birth Date";
+            this.ItemForBirthDate.TextSize = new System.Drawing.Size(51, 13);
+            // 
+            // ItemForFullName
+            // 
+            this.ItemForFullName.Control = this.FullNameTextEdit;
+            this.ItemForFullName.Location = new System.Drawing.Point(0, 24);
+            this.ItemForFullName.Name = "ItemForFullName";
+            this.ItemForFullName.Size = new System.Drawing.Size(623, 24);
+            this.ItemForFullName.Text = "Full Name";
+            this.ItemForFullName.TextSize = new System.Drawing.Size(51, 13);
             // 
             // splitContainerControl3
             // 
@@ -1267,84 +1469,116 @@
             this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl3.Horizontal = false;
             this.splitContainerControl3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl3.Name = "splitContainerControl3";
             this.splitContainerControl3.Panel1.Controls.Add(this.panelControl2);
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl3);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(201, 620);
-            this.splitContainerControl3.SplitterPosition = 274;
+            this.splitContainerControl3.Size = new System.Drawing.Size(109, 567);
+            this.splitContainerControl3.SplitterPosition = 282;
             this.splitContainerControl3.TabIndex = 0;
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.lblEmployeeId);
+            this.panelControl2.Controls.Add(this.lblPositition);
+            this.panelControl2.Controls.Add(this.labelControl1);
             this.panelControl2.Controls.Add(this.btnLogout);
-            this.panelControl2.Controls.Add(this.lblPosititon);
+            this.panelControl2.Controls.Add(this.label);
             this.panelControl2.Controls.Add(this.lblEmloyee);
             this.panelControl2.Controls.Add(this.picEmployee);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(201, 274);
+            this.panelControl2.Size = new System.Drawing.Size(109, 282);
             this.panelControl2.TabIndex = 0;
+            // 
+            // lblEmployeeId
+            // 
+            this.lblEmployeeId.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeId.Appearance.Options.UseFont = true;
+            this.lblEmployeeId.Location = new System.Drawing.Point(306, 101);
+            this.lblEmployeeId.Name = "lblEmployeeId";
+            this.lblEmployeeId.Size = new System.Drawing.Size(18, 16);
+            this.lblEmployeeId.TabIndex = 53;
+            this.lblEmployeeId.Text = "ID ";
+            // 
+            // lblPositition
+            // 
+            this.lblPositition.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPositition.Appearance.Options.UseFont = true;
+            this.lblPositition.Location = new System.Drawing.Point(283, 122);
+            this.lblPositition.Name = "lblPositition";
+            this.lblPositition.Size = new System.Drawing.Size(60, 16);
+            this.lblPositition.TabIndex = 52;
+            this.lblPositition.Text = "Positition";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(207, 101);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(88, 16);
+            this.labelControl1.TabIndex = 51;
+            this.labelControl1.Text = "Employee ID :";
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.Firebrick;
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLogout.BackColor = System.Drawing.Color.DimGray;
             this.btnLogout.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.Location = new System.Drawing.Point(205, 194);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogout.Location = new System.Drawing.Point(209, 216);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(135, 41);
-            this.btnLogout.TabIndex = 50;
-            this.btnLogout.Text = "logout";
+            this.btnLogout.Size = new System.Drawing.Size(116, 37);
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.Text = "log out";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // lblPosititon
+            // label
             // 
-            this.lblPosititon.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosititon.Appearance.Options.UseFont = true;
-            this.lblPosititon.Location = new System.Drawing.Point(205, 113);
-            this.lblPosititon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lblPosititon.Name = "lblPosititon";
-            this.lblPosititon.Size = new System.Drawing.Size(92, 23);
-            this.lblPosititon.TabIndex = 49;
-            this.lblPosititon.Text = "Positition";
+            this.label.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Appearance.Options.UseFont = true;
+            this.label.Location = new System.Drawing.Point(207, 122);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(73, 16);
+            this.label.TabIndex = 49;
+            this.label.Text = "Positition : ";
             // 
             // lblEmloyee
             // 
             this.lblEmloyee.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmloyee.Appearance.Options.UseFont = true;
-            this.lblEmloyee.Location = new System.Drawing.Point(205, 59);
-            this.lblEmloyee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblEmloyee.Location = new System.Drawing.Point(209, 57);
             this.lblEmloyee.Name = "lblEmloyee";
-            this.lblEmloyee.Size = new System.Drawing.Size(177, 29);
+            this.lblEmloyee.Size = new System.Drawing.Size(105, 23);
             this.lblEmloyee.TabIndex = 48;
-            this.lblEmloyee.Text = "Employee ID : ";
+            this.lblEmloyee.Text = "Employee  ";
             // 
             // picEmployee
             // 
             this.picEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.picEmployee.Location = new System.Drawing.Point(34, 32);
-            this.picEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picEmployee.Location = new System.Drawing.Point(18, 39);
             this.picEmployee.MenuManager = this.ribbonControl;
             this.picEmployee.Name = "picEmployee";
+            this.picEmployee.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.picEmployee.Properties.Appearance.Options.UseBackColor = true;
+            this.picEmployee.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.picEmployee.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.picEmployee.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
-            this.picEmployee.Size = new System.Drawing.Size(150, 203);
-            this.picEmployee.TabIndex = 0;
+            this.picEmployee.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.picEmployee.Size = new System.Drawing.Size(174, 230);
+            this.picEmployee.TabIndex = 1;
             // 
             // panelControl3
             // 
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
-            this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(201, 331);
+            this.panelControl3.Size = new System.Drawing.Size(109, 280);
             this.panelControl3.TabIndex = 0;
             // 
             // employeesLabelControl
@@ -1359,9 +1593,8 @@
             this.employeesLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.employeesLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeesLabelControl.Location = new System.Drawing.Point(0, 0);
-            this.employeesLabelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(961, 620);
+            this.employeesLabelControl.Size = new System.Drawing.Size(832, 567);
             this.employeesLabelControl.TabIndex = 0;
             this.employeesLabelControl.Text = "Trang chủ";
             // 
@@ -1369,23 +1602,21 @@
             // 
             this.customersNavigationPage.Controls.Add(this.splitContainerControl1);
             this.customersNavigationPage.Controls.Add(this.customersLabelControl);
-            this.customersNavigationPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customersNavigationPage.Name = "customersNavigationPage";
-            this.customersNavigationPage.Size = new System.Drawing.Size(961, 620);
+            this.customersNavigationPage.Size = new System.Drawing.Size(832, 567);
             // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.FixedPanel = DevExpress.XtraEditors.SplitFixedPanel.Panel2;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Controls.Add(this.schedulerControl);
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.dateNavigator1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(961, 620);
-            this.splitContainerControl1.SplitterPosition = 288;
+            this.splitContainerControl1.Size = new System.Drawing.Size(832, 567);
+            this.splitContainerControl1.SplitterPosition = 247;
             this.splitContainerControl1.TabIndex = 2;
             // 
             // dateNavigator1
@@ -1397,12 +1628,11 @@
             this.dateNavigator1.DateTime = new System.DateTime(2020, 4, 10, 0, 0, 0, 0);
             this.dateNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateNavigator1.EditValue = new System.DateTime(2020, 4, 10, 0, 0, 0, 0);
-            this.dateNavigator1.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.dateNavigator1.FirstDayOfWeek = System.DayOfWeek.Sunday;
             this.dateNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.dateNavigator1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateNavigator1.Name = "dateNavigator1";
             this.dateNavigator1.SchedulerControl = this.schedulerControl;
-            this.dateNavigator1.Size = new System.Drawing.Size(288, 620);
+            this.dateNavigator1.Size = new System.Drawing.Size(247, 567);
             this.dateNavigator1.TabIndex = 0;
             // 
             // customersLabelControl
@@ -1417,9 +1647,8 @@
             this.customersLabelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
-            this.customersLabelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(961, 620);
+            this.customersLabelControl.Size = new System.Drawing.Size(832, 567);
             this.customersLabelControl.TabIndex = 1;
             this.customersLabelControl.Text = "Lịch trình";
             // 
@@ -1472,21 +1701,51 @@
             // 
             this.scheduleTableAdapter.ClearBeforeFill = true;
             // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.AllowDrawBackground = false;
+            this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "autoGeneratedGroup0";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(582, 120);
+            // 
+            // Root1
+            // 
+            this.Root1.CustomizationFormText = "Root";
+            this.Root1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root1.GroupBordersVisible = false;
+            this.Root1.Location = new System.Drawing.Point(0, 0);
+            this.Root1.Name = "Root1";
+            this.Root1.Size = new System.Drawing.Size(565, 20);
+            this.Root1.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.Root1.Text = "Root";
+            this.Root1.TextVisible = false;
+            // 
+            // layoutControlGroup10
+            // 
+            this.layoutControlGroup10.AllowDrawBackground = false;
+            this.layoutControlGroup10.GroupBordersVisible = false;
+            this.layoutControlGroup10.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup10.Name = "autoGeneratedGroup0";
+            this.layoutControlGroup10.Size = new System.Drawing.Size(112, 76);
+            // 
             // UserHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1153, 895);
+            this.ClientSize = new System.Drawing.Size(997, 787);
             this.Controls.Add(this.navigationFrame);
             this.Controls.Add(this.navBarControl);
             this.Controls.Add(this.officeNavigationBar);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "UserHome";
             this.Ribbon = this.ribbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
+            this.Text = "User Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
@@ -1503,27 +1762,58 @@
             this.employeesNavigationPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
             this.splitContainerControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFullName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHireDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDistrict.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWard.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPhoneNumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLastName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFirstName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
-            this.panelControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
-            this.panelControl5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupImployee)).EndInit();
+            this.groupImployee.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl4)).EndInit();
+            this.dataLayoutControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl3)).EndInit();
+            this.dataLayoutControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PhoneNumberTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhoneNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl2)).EndInit();
+            this.dataLayoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AddressTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WardTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DistrictTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CityTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForWard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForDistrict)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForCity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
+            this.dataLayoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FirstNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LastNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FullNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BirthDateDateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HireDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HireDateDateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForFirstName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForLastName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForHireDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForBirthDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForFullName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).EndInit();
             this.splitContainerControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -1537,6 +1827,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNavigator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerBarController)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1629,44 +1922,71 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage homeRibbonPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.PanelControl panelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl3;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.MemoEdit txtStatus;
-        private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.TextEdit txtFullName;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.TextEdit txtEmail;
-        private DevExpress.XtraEditors.TextEdit txtHireDate;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
-        private DevExpress.XtraEditors.LabelControl labelControl11;
-        private DevExpress.XtraEditors.TextEdit txtCity;
-        private DevExpress.XtraEditors.TextEdit txtDistrict;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.TextEdit txtWard;
-        private DevExpress.XtraEditors.TextEdit txtAddress;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit txtPhoneNumber;
-        private DevExpress.XtraEditors.TextEdit txtLastName;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtEmployeeID;
-        private DevExpress.XtraEditors.TextEdit txtFirstName;
-        private DevExpress.XtraEditors.PanelControl panelControl5;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private System.Windows.Forms.Button btnLogout;
-        private DevExpress.XtraEditors.LabelControl lblPosititon;
-        private DevExpress.XtraEditors.LabelControl lblEmloyee;
-        private DevExpress.XtraEditors.PictureEdit picEmployee;
         private DevExpress.XtraBars.BarButtonItem btnUpdate;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraEditors.GroupControl groupImployee;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlGroup Root1;
+        private DevExpress.XtraEditors.LabelControl label;
+        private DevExpress.XtraEditors.LabelControl lblEmloyee;
+        private DevExpress.XtraEditors.PictureEdit picEmployee;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup10;
+        private DevExpress.XtraEditors.LabelControl lblPositition;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl lblEmployeeId;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
+        private DevExpress.XtraBars.SkinPaletteDropDownButtonItem skinPaletteDropDownButtonItem1;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem skinPaletteRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.RibbonGalleryBarItem ribbonGalleryBarItem1;
+        private DevExpress.XtraBars.BarListItem barListItem1;
+        private DevExpress.XtraBars.BarWorkspaceMenuItem barWorkspaceMenuItem1;
+        private DevExpress.Utils.WorkspaceManager workspaceManager1;
+        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl4;
+        private DevExpress.XtraEditors.TextEdit StatusTextEdit;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup7;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup8;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForStatus;
+        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl3;
+        private DevExpress.XtraEditors.TextEdit PhoneNumberTextEdit;
+        private DevExpress.XtraEditors.TextEdit EmailTextEdit;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup5;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup6;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForPhoneNumber;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForEmail;
+        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl2;
+        private DevExpress.XtraEditors.TextEdit AddressTextEdit;
+        private DevExpress.XtraEditors.TextEdit WardTextEdit;
+        private DevExpress.XtraEditors.TextEdit DistrictTextEdit;
+        private DevExpress.XtraEditors.TextEdit CityTextEdit;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForAddress;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForWard;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForDistrict;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForCity;
+        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
+        private DevExpress.XtraEditors.TextEdit FirstNameTextEdit;
+        private DevExpress.XtraEditors.TextEdit LastNameTextEdit;
+        private DevExpress.XtraEditors.TextEdit FullNameTextEdit;
+        private DevExpress.XtraEditors.DateEdit BirthDateDateEdit;
+        private DevExpress.XtraEditors.DateEdit HireDateDateEdit;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForFirstName;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForLastName;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForHireDate;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForBirthDate;
+        private DevExpress.XtraLayout.LayoutControlItem ItemForFullName;
     }
 }

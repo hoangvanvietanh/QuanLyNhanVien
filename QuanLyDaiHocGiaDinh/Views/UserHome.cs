@@ -12,6 +12,7 @@ using DevExpress.XtraScheduler;
 using QuanLyDaiHocGiaDinh.Services;
 using QuanLyDaiHocGiaDinh.Controller;
 using QuanLyDaiHocGiaDinh.Model;
+using System.IO;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -19,28 +20,41 @@ namespace QuanLyDaiHocGiaDinh.Views
     {
         private Account _account;
         EmployeeService employeeService;
+        
 
         public UserHome(Account account)
         {
             InitializeComponent();
 
             this._account = account;
-
-            setVisibleScheduleRibbonPage(false);
-            this.scheduleTableAdapter.Fill(this.giaDinhUniversityDataSet.Schedule, this._account.AccountId);
-
-            //Ví dụ để lấy employee đang đăng nhập
             employeeService = new EmployeeService(account);
             Employee employee = new Employee();
-            employee = employeeService.getEmployeeByAccountId();//lấy employee đang đăng nhập
-            showEmployee(employeeService.getEmployeeByAccountId());
-            //employee.FullName = "Việt Anh Update 3";
-            //employee.FirstName = "Việt Nè";
-            //employeeService.updateEmployee(employee);//ví dụ về cập nhật
+            employee = employeeService.getEmployeeByAccountId(_account.AccountId); //lấy employee đang đăng nhập
+            showEmployee(employee);
+
+          //  Position position = new Position();
+          //  ShowPosition(position);
 
 
-            Console.WriteLine(employeeService.getEmployeeByAccountId().FullName);
+
+
+            setVisibleScheduleRibbonPage(false);
+            //  this.p_selectAllEmployeeTableAdapter.Fill(this.giaDinhUniversityDataSet.p_selectAllEmployee);
+          //  this.scheduleTableAdapter.Fill(this.giaDinhUniversityDataSet.Schedule, this._account.AccountId);
+
+            //Ví dụ để lấy employee đang đăng nhập
+          
+            // employee.FullName = "Duy Hieu";
+            // employee.FirstName = "Việt Nè";
+            //employeeService.updateEmployee(employee);//ví dụ về cập nhật 
+         //   MessageBox.Show(employee.Position.PositionName);
+            //Position position = new Position();   ///show PositionName
+           // position = employeeService.getEmployeeByAccountId();
+            //ShowPosition(position);
+
+             Console.WriteLine(employeeService.getEmployeeByAccountId().FullName);
             ////////////
+         //   dataLayoutControl1.DataSource = new QuanLyDaiHocGiaDinh.Model.LinQDataContext().Accounts;
         }
 
         void navBarControl_ActiveGroupChanged(object sender, DevExpress.XtraNavBar.NavBarGroupEventArgs e)
@@ -86,22 +100,66 @@ namespace QuanLyDaiHocGiaDinh.Views
             homeRibbonPage.Visible = status;
         }
 
-        public void showEmployee(Employee employee)
-        {
-            Console.WriteLine(employee.FullName);
-          //  txtName.Text = employee.FullName;
-        }
+        
 
         private void btnUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            UserHomeUpdate userHomeUpdate = new UserHomeUpdate();
+            UserHomeUpdate userHomeUpdate = new UserHomeUpdate(_account);
             userHomeUpdate.ShowDialog();
+            this.Close();
+         
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            UserHomeChangePassword userHomeChangePassword = new UserHomeChangePassword();
+            UserHomeChangePassword userHomeChangePassword = new UserHomeChangePassword(_account);
             userHomeChangePassword.ShowDialog();
         }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+      
+            this.Close();
+        }
+        public void showEmployee(Employee employee)
+        {
+            FullNameTextEdit.Text = employee.FullName;
+            lblEmloyee.Text = employee.FullName;
+            AddressTextEdit.Text = employee.Address;
+            CityTextEdit.Text = employee.City;
+            DistrictTextEdit.Text = employee.District;
+            EmailTextEdit.Text = employee.Email;
+            FirstNameTextEdit.Text = employee.FirstName;
+            HireDateDateEdit.Text = employee.HireDate.ToString();
+            LastNameTextEdit.Text = employee.LastName;
+            PhoneNumberTextEdit.Text = employee.PhoneNumber;
+            StatusTextEdit.Text = employee.Status;
+            BirthDateDateEdit.Text = employee.BirthDate.ToString();
+            lblEmployeeId.Text = employee.EmployeeId.ToString();
+            WardTextEdit.Text = employee.Ward;
+
+          //  lblPositition.Text = employee.Position.PositionName;
+            //    picEmployee.Image = employee.Image;
+            //  byte[] ImageArray = (byte[]);
+            // picEmployee.Image = (byte[]) employee.Image.ToArray();
+            //  picEmployee.Image= Image.FromStream(new MemoryStream((byte[])employee.Image.ToArray()));
+
+
+            byte[] Arraybyte = (byte[])employee.Image.ToArray();// load picture từ database
+             MemoryStream memoryStream = new MemoryStream(Arraybyte);
+             picEmployee.Image = Image.FromStream(memoryStream);
+
+
+        }
+        // public void ShowPosition(Position position)
+        // {
+        //     lblPositition.Text = position.PositionName;
+        //}
+
     }
 }
