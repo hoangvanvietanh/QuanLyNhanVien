@@ -58,7 +58,8 @@ namespace QuanLyDaiHocGiaDinh.Views
             EmailTextEdit.Text = email;
             StatusTextEdit.Text = status;
             HireDateDateEdit.Text = hireDate;
-            PositionNameTextEdit.EditValue = positionName;
+            XtraMessageBox.Show(positionName.ToString());
+            PositionNameTextEdit.Text = positionName;
             DepartmentNameComboBoxEdit.Text = deparmentName;
             
             if (ImageArray.Length == 0)
@@ -141,6 +142,9 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         }
 
-        
+        private void PositionNameTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

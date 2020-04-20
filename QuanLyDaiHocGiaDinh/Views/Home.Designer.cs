@@ -72,7 +72,7 @@
             this.panelLogin.Location = new System.Drawing.Point(0, 0);
             this.panelLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(469, 462);
+            this.panelLogin.Size = new System.Drawing.Size(478, 462);
             this.panelLogin.TabIndex = 9;
             // 
             // btnComback

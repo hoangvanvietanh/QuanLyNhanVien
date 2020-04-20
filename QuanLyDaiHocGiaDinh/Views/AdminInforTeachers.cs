@@ -51,24 +51,19 @@ namespace QuanLyDaiHocGiaDinh.Views
             EmailTextEdit.Text = emp.Email;
             StatusTextEdit.Text = emp.Status;
             HireDateDateEdit.Text = emp.HireDate.ToString();
-            
             PositionNameTextEdit.Text = String.Format("{0}", emp.PositionId);
-
-
-            //byte[] ImageByArray = (byte[])emp.Image;
-            //if (ImageByArray.Length == 0)
-            //{
-            //    ImagePictureEdit.Image = null;
-            //}
-            //else
-            //{
-
-            //    ImagePictureEdit.Image = Image.FromStream(new MemoryStream(ImageByArray));
-            //}
-
+            byte[] Arraybyte = (byte[])emp.Image.ToArray();
+            if (Arraybyte.Length == 0)
+            {
+                ImagePictureEdit.Image = null;
+            }
+            else
+            {
+                ImagePictureEdit.Image = Image.FromStream(new MemoryStream(Arraybyte));
+            }
         }
 
-        private void ImagePictureEdit_EditValueChanged(object sender, EventArgs e)
+        private void ImagePictureEdit_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";

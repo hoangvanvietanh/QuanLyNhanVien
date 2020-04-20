@@ -32,6 +32,7 @@
             DevExpress.XtraEditors.DXErrorProvider.CompareAgainstControlValidationRule compareAgainstControlValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.CompareAgainstControlValidationRule();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.EmployeeIdTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.pselectAllEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.giaDinhUniversityDataSet = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSet();
             this.FullNameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.FirstNameTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -71,10 +72,10 @@
             this.ItemForImage = new DevExpress.XtraLayout.LayoutControlItem();
             this.p_selectAllEmployeeTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.p_selectAllEmployeeTableAdapter();
             this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
-            this.pselectAllEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeIdTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pselectAllEmployeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaDinhUniversityDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FullNameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FirstNameTextEdit.Properties)).BeginInit();
@@ -115,7 +116,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pselectAllEmployeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -162,6 +162,11 @@
             this.EmployeeIdTextEdit.Size = new System.Drawing.Size(687, 22);
             this.EmployeeIdTextEdit.StyleController = this.dataLayoutControl1;
             this.EmployeeIdTextEdit.TabIndex = 4;
+            // 
+            // pselectAllEmployeeBindingSource
+            // 
+            this.pselectAllEmployeeBindingSource.DataMember = "p_selectAllEmployee";
+            this.pselectAllEmployeeBindingSource.DataSource = this.giaDinhUniversityDataSet;
             // 
             // giaDinhUniversityDataSet
             // 
@@ -313,7 +318,7 @@
             this.ImagePictureEdit.Size = new System.Drawing.Size(205, 220);
             this.ImagePictureEdit.StyleController = this.dataLayoutControl1;
             this.ImagePictureEdit.TabIndex = 19;
-            this.ImagePictureEdit.EditValueChanged += new System.EventHandler(this.ImagePictureEdit_EditValueChanged);
+            this.ImagePictureEdit.Click += new System.EventHandler(this.ImagePictureEdit_Click);
             // 
             // PositionNameTextEdit
             // 
@@ -548,11 +553,6 @@
             // 
             this.p_selectAllEmployeeTableAdapter.ClearBeforeFill = true;
             // 
-            // pselectAllEmployeeBindingSource
-            // 
-            this.pselectAllEmployeeBindingSource.DataMember = "p_selectAllEmployee";
-            this.pselectAllEmployeeBindingSource.DataSource = this.giaDinhUniversityDataSet;
-            // 
             // AdminInforTeachers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -567,6 +567,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeIdTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pselectAllEmployeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaDinhUniversityDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FullNameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FirstNameTextEdit.Properties)).EndInit();
@@ -607,7 +608,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pselectAllEmployeeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

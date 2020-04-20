@@ -54,6 +54,8 @@
             this.giaDinhUniversityDataSet = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSet();
             this.RoleComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.StatusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.PositionNameTextEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForStatus = new DevExpress.XtraLayout.LayoutControlItem();
@@ -75,12 +77,10 @@
             this.ItemForImage = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForDepartmentName = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForRole = new DevExpress.XtraLayout.LayoutControlItem();
-            this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pselectAllEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.positionTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.PositionTableAdapter();
             this.departmentsTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.DepartmentsTableAdapter();
             this.p_selectAllEmployeeTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.p_selectAllEmployeeTableAdapter();
-            this.PositionNameTextEdit = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControlUpdateTeacher)).BeginInit();
             this.dataLayoutControlUpdateTeacher.SuspendLayout();
@@ -103,6 +103,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.giaDinhUniversityDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoleComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PositionNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).BeginInit();
@@ -124,9 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDepartmentName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForRole)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pselectAllEmployeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PositionNameTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -386,6 +386,31 @@
             this.StatusTextEdit.StyleController = this.dataLayoutControlUpdateTeacher;
             this.StatusTextEdit.TabIndex = 14;
             // 
+            // PositionNameTextEdit
+            // 
+            this.PositionNameTextEdit.Location = new System.Drawing.Point(119, 439);
+            this.PositionNameTextEdit.MenuManager = this.ribbonControl1;
+            this.PositionNameTextEdit.Name = "PositionNameTextEdit";
+            this.PositionNameTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.PositionNameTextEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("PositionId", "Position Id", 82, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("PositionName", "Position Name", 91, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepartmentId", "Department Id", 92, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.PositionNameTextEdit.Properties.DataSource = this.positionBindingSource;
+            this.PositionNameTextEdit.Properties.DisplayMember = "PositionName";
+            this.PositionNameTextEdit.Properties.NullText = "";
+            this.PositionNameTextEdit.Properties.ShowNullValuePromptWhenFocused = true;
+            this.PositionNameTextEdit.Properties.ValueMember = "PositionId";
+            this.PositionNameTextEdit.Size = new System.Drawing.Size(804, 22);
+            this.PositionNameTextEdit.StyleController = this.dataLayoutControlUpdateTeacher;
+            this.PositionNameTextEdit.TabIndex = 16;
+            // 
+            // positionBindingSource
+            // 
+            this.positionBindingSource.DataMember = "Position";
+            this.positionBindingSource.DataSource = this.giaDinhUniversityDataSet;
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -594,11 +619,6 @@
             this.ItemForRole.Text = "Role";
             this.ItemForRole.TextSize = new System.Drawing.Size(104, 16);
             // 
-            // positionBindingSource
-            // 
-            this.positionBindingSource.DataMember = "Position";
-            this.positionBindingSource.DataSource = this.giaDinhUniversityDataSet;
-            // 
             // pselectAllEmployeeBindingSource
             // 
             this.pselectAllEmployeeBindingSource.DataMember = "p_selectAllEmployee";
@@ -615,21 +635,6 @@
             // p_selectAllEmployeeTableAdapter
             // 
             this.p_selectAllEmployeeTableAdapter.ClearBeforeFill = true;
-            // 
-            // PositionNameTextEdit
-            // 
-            this.PositionNameTextEdit.Location = new System.Drawing.Point(119, 439);
-            this.PositionNameTextEdit.MenuManager = this.ribbonControl1;
-            this.PositionNameTextEdit.Name = "PositionNameTextEdit";
-            this.PositionNameTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.PositionNameTextEdit.Properties.DataSource = this.positionBindingSource;
-            this.PositionNameTextEdit.Properties.DisplayMember = "PositionName";
-            this.PositionNameTextEdit.Properties.NullText = "";
-            this.PositionNameTextEdit.Properties.ValueMember = "PositionId";
-            this.PositionNameTextEdit.Size = new System.Drawing.Size(804, 22);
-            this.PositionNameTextEdit.StyleController = this.dataLayoutControlUpdateTeacher;
-            this.PositionNameTextEdit.TabIndex = 16;
             // 
             // AdminUpdateTeachers
             // 
@@ -664,6 +669,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.giaDinhUniversityDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoleComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PositionNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).EndInit();
@@ -685,9 +692,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDepartmentName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForRole)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pselectAllEmployeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PositionNameTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
