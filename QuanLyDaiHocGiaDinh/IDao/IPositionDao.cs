@@ -10,5 +10,8 @@ namespace QuanLyDaiHocGiaDinh.IDao
     interface IPosition
     {
         Position getPositionById(int id);
+        Position CreatePosition(Position position);
+        void DeletePosition(int position);
+        void UpdatePosition(Position position);
     }
 }

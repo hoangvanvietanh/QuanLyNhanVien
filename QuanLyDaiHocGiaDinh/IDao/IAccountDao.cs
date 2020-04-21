@@ -15,5 +15,7 @@ namespace QuanLyDaiHocGiaDinh.Interface
         String getRoleAccount(int id);
         Account getAccountByEmployeeId(int employeeId);
         List<Account> GetAllAccounts();
+
+        Account getAccountById(int id);
     }
 }

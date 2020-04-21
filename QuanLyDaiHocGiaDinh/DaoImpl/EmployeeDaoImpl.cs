@@ -78,6 +78,22 @@ namespace QuanLyDaiHocGiaDinh.Dao
             
         }
 
+        //Lấy nhân viên theo positionId
+        public Employee getEmployeeByPositionId(int positionId)
+        {
+            Employee employee = new Employee();
+            employees.ForEach(emp =>
+            {
+                // Console.WriteLine(emp.Position.PositionName);
+                if (emp.PositionId == positionId)
+                {
+                    employee = emp;
+                }
+            });
+            return employee;
+
+        }
+
         //Lấy list nhân viên theo phòng ban
         public List<Employee> getEmployeesByDepartment(int departmentId)
         {

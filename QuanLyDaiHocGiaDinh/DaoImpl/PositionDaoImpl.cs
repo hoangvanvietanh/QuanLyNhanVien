@@ -36,5 +36,42 @@ namespace QuanLyDaiHocGiaDinh.DaoImpl
             });
             return position;
         }
+
+        //Thêm chức vụ
+        public Position CreatePosition(Position position)
+        {
+            db = new LinQDataContext();
+            Position po = new Position();
+            po = position;
+            db.Positions.InsertOnSubmit(po);
+            db.SubmitChanges();
+            return po;
+        }
+
+        //Xóa chức vụ
+        public void DeletePosition(int positionId)
+        {
+            db = new LinQDataContext();
+            Position po = new Position();
+            po = db.Positions.Single(x => x.PositionId == positionId);
+            db.Positions.DeleteOnSubmit(po);
+            db.SubmitChanges();
+        }
+
+        //Cập nhật chức vụ
+        public void UpdatePosition(Position position)
+        {
+            db = new LinQDataContext();
+            Position po = new Position();
+            po = db.Positions.Single(x => x.PositionId == position.PositionId);
+            setPositionUpdate(po, position);
+            db.SubmitChanges();
+        }
+
+        public Position setPositionUpdate(Position positionDB, Position positionUpdate)
+        {
+            positionDB.PositionName = positionUpdate.PositionName;
+            return positionUpdate;
+        }
     }
 }

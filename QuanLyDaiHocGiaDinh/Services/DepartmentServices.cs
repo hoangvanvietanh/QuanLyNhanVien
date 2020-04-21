@@ -11,11 +11,30 @@ namespace QuanLyDaiHocGiaDinh.Services
 {
     class DepartmentServices
     {
-        IDepartment department = new DepartmentDaoImpl();
+        IDepartment dep = new DepartmentDaoImpl();
 
         public Department getDepartmentById(int id)
         {
-            return department.getDepartmentById(id);
+            return dep.getDepartmentById(id);
+           
+        }
+
+        //Thêm phòng ban
+        public Department createDepartment(Department department)
+        {
+            return dep.CreateDepartment(department);
+        }
+
+        //Cập nhật phòng ban
+        public void updateDepartment(Department department)
+        {
+            dep.UpdateDepartment(department);
+        }
+
+        //Xóa phòng ban
+        public void deleteDepartment(int department)
+        {
+            dep.DeleteDepartment(department);
         }
     }
 }

@@ -35,5 +35,42 @@ namespace QuanLyDaiHocGiaDinh.DaoImpl
             });
             return department;
         }
+
+        //Thêm phòng ban
+        public Department CreateDepartment(Department department)
+        {
+            db = new LinQDataContext();
+            Department dep = new Department();
+            dep = department;
+            db.Departments.InsertOnSubmit(dep);
+            db.SubmitChanges();
+            return dep;
+        }
+
+        //Xóa phòng ban
+        public void DeleteDepartment(int departmentId)
+        {
+            db = new LinQDataContext();
+            Department dep = new Department();
+            dep = db.Departments.Single(x => x.DepartmentId == departmentId);
+            db.Departments.DeleteOnSubmit(dep);
+            db.SubmitChanges();
+        }
+
+        //Cập nhật phòng ban
+        public void UpdateDepartment(Department department)
+        {
+            db = new LinQDataContext();
+            Department dep = new Department();
+            dep = db.Departments.Single(x => x.DepartmentId == department.DepartmentId);
+            setDepartmentUpdate(dep, department);
+            db.SubmitChanges();
+        }
+
+        public Department setDepartmentUpdate(Department departmentDB, Department departmentUpdate)
+        {
+            departmentDB.DepartmentName = departmentUpdate.DepartmentName;
+            return departmentUpdate;
+        }
     }
 }

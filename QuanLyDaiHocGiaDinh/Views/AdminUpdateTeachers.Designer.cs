@@ -49,13 +49,14 @@
             this.EmailTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.HireDateDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.ImagePictureEdit = new DevExpress.XtraEditors.PictureEdit();
-            this.DepartmentNameComboBoxEdit = new DevExpress.XtraEditors.LookUpEdit();
-            this.departmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.giaDinhUniversityDataSet = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSet();
-            this.RoleComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.StatusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.PositionNameTextEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.PositionNameDepartmentNameCheckComboBoxEdit = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.giaDinhUniversityDataSet = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSet();
+            this.DepartmentNameCheckComboBoxEdit = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            this.departmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.RoleComboBoxEdit = new DevExpress.XtraEditors.ImageComboBoxEdit();
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForStatus = new DevExpress.XtraLayout.LayoutControlItem();
@@ -98,13 +99,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.HireDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HireDateDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagePictureEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepartmentNameComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.giaDinhUniversityDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RoleComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PositionNameTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PositionNameDepartmentNameCheckComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giaDinhUniversityDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentNameCheckComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RoleComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).BeginInit();
@@ -194,10 +196,10 @@
             this.dataLayoutControlUpdateTeacher.Controls.Add(this.EmailTextEdit);
             this.dataLayoutControlUpdateTeacher.Controls.Add(this.HireDateDateEdit);
             this.dataLayoutControlUpdateTeacher.Controls.Add(this.ImagePictureEdit);
-            this.dataLayoutControlUpdateTeacher.Controls.Add(this.DepartmentNameComboBoxEdit);
-            this.dataLayoutControlUpdateTeacher.Controls.Add(this.RoleComboBoxEdit);
             this.dataLayoutControlUpdateTeacher.Controls.Add(this.StatusTextEdit);
-            this.dataLayoutControlUpdateTeacher.Controls.Add(this.PositionNameTextEdit);
+            this.dataLayoutControlUpdateTeacher.Controls.Add(this.PositionNameDepartmentNameCheckComboBoxEdit);
+            this.dataLayoutControlUpdateTeacher.Controls.Add(this.DepartmentNameCheckComboBoxEdit);
+            this.dataLayoutControlUpdateTeacher.Controls.Add(this.RoleComboBoxEdit);
             this.dataLayoutControlUpdateTeacher.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControlUpdateTeacher.Location = new System.Drawing.Point(0, 176);
             this.dataLayoutControlUpdateTeacher.Name = "dataLayoutControlUpdateTeacher";
@@ -300,6 +302,7 @@
             this.EmailTextEdit.Location = new System.Drawing.Point(131, 375);
             this.EmailTextEdit.MenuManager = this.ribbonControl1;
             this.EmailTextEdit.Name = "EmailTextEdit";
+            this.EmailTextEdit.Properties.ReadOnly = true;
             this.EmailTextEdit.Size = new System.Drawing.Size(780, 22);
             this.EmailTextEdit.StyleController = this.dataLayoutControlUpdateTeacher;
             this.EmailTextEdit.TabIndex = 13;
@@ -330,47 +333,6 @@
             this.ImagePictureEdit.TabIndex = 17;
             this.ImagePictureEdit.Click += new System.EventHandler(this.ImagePictureEdit_EditValueChanged);
             // 
-            // DepartmentNameComboBoxEdit
-            // 
-            this.DepartmentNameComboBoxEdit.Location = new System.Drawing.Point(119, 465);
-            this.DepartmentNameComboBoxEdit.MenuManager = this.ribbonControl1;
-            this.DepartmentNameComboBoxEdit.Name = "DepartmentNameComboBoxEdit";
-            this.DepartmentNameComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DepartmentNameComboBoxEdit.Properties.DataSource = this.departmentsBindingSource;
-            this.DepartmentNameComboBoxEdit.Properties.DisplayMember = "DepartmentName";
-            this.DepartmentNameComboBoxEdit.Properties.NullText = "";
-            this.DepartmentNameComboBoxEdit.Properties.PopupSizeable = false;
-            this.DepartmentNameComboBoxEdit.Properties.ValueMember = "DepartmentId";
-            this.DepartmentNameComboBoxEdit.Size = new System.Drawing.Size(804, 22);
-            this.DepartmentNameComboBoxEdit.StyleController = this.dataLayoutControlUpdateTeacher;
-            this.DepartmentNameComboBoxEdit.TabIndex = 18;
-            // 
-            // departmentsBindingSource
-            // 
-            this.departmentsBindingSource.DataMember = "Departments";
-            this.departmentsBindingSource.DataSource = this.giaDinhUniversityDataSet;
-            // 
-            // giaDinhUniversityDataSet
-            // 
-            this.giaDinhUniversityDataSet.DataSetName = "GiaDinhUniversityDataSet";
-            this.giaDinhUniversityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // RoleComboBoxEdit
-            // 
-            this.RoleComboBoxEdit.Location = new System.Drawing.Point(119, 491);
-            this.RoleComboBoxEdit.MenuManager = this.ribbonControl1;
-            this.RoleComboBoxEdit.Name = "RoleComboBoxEdit";
-            this.RoleComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.RoleComboBoxEdit.Properties.Items.AddRange(new object[] {
-            "manage",
-            "employee"});
-            this.RoleComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.RoleComboBoxEdit.Size = new System.Drawing.Size(804, 22);
-            this.RoleComboBoxEdit.StyleController = this.dataLayoutControlUpdateTeacher;
-            this.RoleComboBoxEdit.TabIndex = 19;
-            // 
             // StatusTextEdit
             // 
             this.StatusTextEdit.Location = new System.Drawing.Point(119, 413);
@@ -386,30 +348,74 @@
             this.StatusTextEdit.StyleController = this.dataLayoutControlUpdateTeacher;
             this.StatusTextEdit.TabIndex = 14;
             // 
-            // PositionNameTextEdit
+            // PositionNameDepartmentNameCheckComboBoxEdit
             // 
-            this.PositionNameTextEdit.Location = new System.Drawing.Point(119, 439);
-            this.PositionNameTextEdit.MenuManager = this.ribbonControl1;
-            this.PositionNameTextEdit.Name = "PositionNameTextEdit";
-            this.PositionNameTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.PositionNameDepartmentNameCheckComboBoxEdit.Location = new System.Drawing.Point(119, 439);
+            this.PositionNameDepartmentNameCheckComboBoxEdit.MenuManager = this.ribbonControl1;
+            this.PositionNameDepartmentNameCheckComboBoxEdit.Name = "PositionNameDepartmentNameCheckComboBoxEdit";
+            this.PositionNameDepartmentNameCheckComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.PositionNameTextEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("PositionId", "Position Id", 82, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("PositionName", "Position Name", 91, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepartmentId", "Department Id", 92, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.PositionNameTextEdit.Properties.DataSource = this.positionBindingSource;
-            this.PositionNameTextEdit.Properties.DisplayMember = "PositionName";
-            this.PositionNameTextEdit.Properties.NullText = "";
-            this.PositionNameTextEdit.Properties.ShowNullValuePromptWhenFocused = true;
-            this.PositionNameTextEdit.Properties.ValueMember = "PositionId";
-            this.PositionNameTextEdit.Size = new System.Drawing.Size(804, 22);
-            this.PositionNameTextEdit.StyleController = this.dataLayoutControlUpdateTeacher;
-            this.PositionNameTextEdit.TabIndex = 16;
+            this.PositionNameDepartmentNameCheckComboBoxEdit.Properties.DataSource = this.positionBindingSource;
+            this.PositionNameDepartmentNameCheckComboBoxEdit.Properties.DisplayMember = "PositionName";
+            this.PositionNameDepartmentNameCheckComboBoxEdit.Properties.SelectAllItemVisible = false;
+            this.PositionNameDepartmentNameCheckComboBoxEdit.Properties.ShowNullValuePromptWhenFocused = true;
+            this.PositionNameDepartmentNameCheckComboBoxEdit.Properties.ValueMember = "PositionId";
+            this.PositionNameDepartmentNameCheckComboBoxEdit.Size = new System.Drawing.Size(804, 22);
+            this.PositionNameDepartmentNameCheckComboBoxEdit.StyleController = this.dataLayoutControlUpdateTeacher;
+            this.PositionNameDepartmentNameCheckComboBoxEdit.TabIndex = 16;
+            this.PositionNameDepartmentNameCheckComboBoxEdit.Popup += new System.EventHandler(this.PositionNameTextEdit_Popup);
             // 
             // positionBindingSource
             // 
             this.positionBindingSource.DataMember = "Position";
             this.positionBindingSource.DataSource = this.giaDinhUniversityDataSet;
+            // 
+            // giaDinhUniversityDataSet
+            // 
+            this.giaDinhUniversityDataSet.DataSetName = "GiaDinhUniversityDataSet";
+            this.giaDinhUniversityDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DepartmentNameCheckComboBoxEdit
+            // 
+            this.DepartmentNameCheckComboBoxEdit.Location = new System.Drawing.Point(119, 465);
+            this.DepartmentNameCheckComboBoxEdit.MenuManager = this.ribbonControl1;
+            this.DepartmentNameCheckComboBoxEdit.Name = "DepartmentNameCheckComboBoxEdit";
+            this.DepartmentNameCheckComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DepartmentNameCheckComboBoxEdit.Properties.DataSource = this.departmentsBindingSource;
+            this.DepartmentNameCheckComboBoxEdit.Properties.DisplayMember = "DepartmentName";
+            this.DepartmentNameCheckComboBoxEdit.Properties.SelectAllItemVisible = false;
+            this.DepartmentNameCheckComboBoxEdit.Properties.ValueMember = "DepartmentId";
+            this.DepartmentNameCheckComboBoxEdit.Size = new System.Drawing.Size(804, 22);
+            this.DepartmentNameCheckComboBoxEdit.StyleController = this.dataLayoutControlUpdateTeacher;
+            this.DepartmentNameCheckComboBoxEdit.TabIndex = 18;
+            // 
+            // departmentsBindingSource
+            // 
+            this.departmentsBindingSource.DataMember = "Departments";
+            this.departmentsBindingSource.DataSource = this.giaDinhUniversityDataSet;
+            // 
+            // RoleComboBoxEdit
+            // 
+            this.RoleComboBoxEdit.Location = new System.Drawing.Point(119, 491);
+            this.RoleComboBoxEdit.MenuManager = this.ribbonControl1;
+            this.RoleComboBoxEdit.Name = "RoleComboBoxEdit";
+            this.RoleComboBoxEdit.Properties.AllowFocused = false;
+            this.RoleComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.RoleComboBoxEdit.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("manage", "manage", 0),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("employee", "employee", 1)});
+            this.RoleComboBoxEdit.Properties.SmallImages = this.imageCollection1;
+            this.RoleComboBoxEdit.Size = new System.Drawing.Size(804, 22);
+            this.RoleComboBoxEdit.StyleController = this.dataLayoutControlUpdateTeacher;
+            this.RoleComboBoxEdit.TabIndex = 19;
+            // 
+            // imageCollection1
+            // 
+            this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            this.imageCollection1.Images.SetKeyName(0, "Admin-01-512.png");
+            this.imageCollection1.Images.SetKeyName(1, "Employee-512.png");
             // 
             // Root
             // 
@@ -449,7 +455,7 @@
             // 
             // ItemForPositionName
             // 
-            this.ItemForPositionName.Control = this.PositionNameTextEdit;
+            this.ItemForPositionName.Control = this.PositionNameDepartmentNameCheckComboBoxEdit;
             this.ItemForPositionName.Location = new System.Drawing.Point(0, 427);
             this.ItemForPositionName.Name = "ItemForPositionName";
             this.ItemForPositionName.Size = new System.Drawing.Size(915, 26);
@@ -603,7 +609,7 @@
             // 
             // ItemForDepartmentName
             // 
-            this.ItemForDepartmentName.Control = this.DepartmentNameComboBoxEdit;
+            this.ItemForDepartmentName.Control = this.DepartmentNameCheckComboBoxEdit;
             this.ItemForDepartmentName.Location = new System.Drawing.Point(0, 453);
             this.ItemForDepartmentName.Name = "ItemForDepartmentName";
             this.ItemForDepartmentName.Size = new System.Drawing.Size(915, 26);
@@ -664,13 +670,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.HireDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HireDateDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagePictureEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepartmentNameComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.giaDinhUniversityDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RoleComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PositionNameTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PositionNameDepartmentNameCheckComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giaDinhUniversityDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentNameCheckComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RoleComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).EndInit();
@@ -740,9 +747,7 @@
         private DevExpress.XtraLayout.LayoutControlItem ItemForEmail;
         private DevExpress.XtraLayout.LayoutControlItem ItemForImage;
         private System.Windows.Forms.BindingSource positionBindingSource;
-        private DevExpress.XtraEditors.LookUpEdit DepartmentNameComboBoxEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForDepartmentName;
-        private DevExpress.XtraEditors.ComboBoxEdit RoleComboBoxEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForRole;
         private Model.GiaDinhUniversityDataSetTableAdapters.PositionTableAdapter positionTableAdapter;
         private System.Windows.Forms.BindingSource departmentsBindingSource;
@@ -750,6 +755,9 @@
         private System.Windows.Forms.BindingSource pselectAllEmployeeBindingSource;
         private Model.GiaDinhUniversityDataSetTableAdapters.p_selectAllEmployeeTableAdapter p_selectAllEmployeeTableAdapter;
         private DevExpress.XtraEditors.ComboBoxEdit StatusTextEdit;
-        private DevExpress.XtraEditors.LookUpEdit PositionNameTextEdit;
+        private DevExpress.XtraEditors.CheckedComboBoxEdit PositionNameDepartmentNameCheckComboBoxEdit;
+        private DevExpress.XtraEditors.CheckedComboBoxEdit DepartmentNameCheckComboBoxEdit;
+        private DevExpress.Utils.ImageCollection imageCollection1;
+        private DevExpress.XtraEditors.ImageComboBoxEdit RoleComboBoxEdit;
     }
 }

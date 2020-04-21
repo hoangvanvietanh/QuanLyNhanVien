@@ -13,6 +13,7 @@ namespace QuanLyDaiHocGiaDinh.Interface
         void DeleteEmployee(int employee);
         void UpdateEmployee(Employee employee);
         Employee getEmployeeByAccountId(int accountId);
+        Employee getEmployeeByPositionId(int positionId);
         List<Employee> getEmployeesByPosition(int positionId);
         List<Employee> getEmployeesByDepartment(int departmentId);
         List<Employee> getAllEmployees();

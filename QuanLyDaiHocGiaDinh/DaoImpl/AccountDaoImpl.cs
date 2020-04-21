@@ -98,5 +98,18 @@ namespace QuanLyDaiHocGiaDinh.Dao
             accountDB.Role = accountUpdate.Role;
             return accountUpdate;
         }
+
+        public Account getAccountById(int id)
+        {
+            Account account = new Account();
+            accounts.ForEach(ac =>
+            {
+                if (ac.AccountId == id)
+                {
+                    account = ac;
+                }
+            });
+            return account;
+        }
     }
 }

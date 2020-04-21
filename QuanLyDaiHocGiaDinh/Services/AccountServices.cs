@@ -48,6 +48,10 @@ namespace QuanLyDaiHocGiaDinh.Services
             return accountDao.getRoleAccount(accountId);
         }
 
-        
+        public Account getAccountById(int id)
+        {
+            return accountDao.getAccountById(id);
+        }
+
     }
 }

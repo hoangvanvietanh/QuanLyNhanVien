@@ -20,6 +20,8 @@ namespace QuanLyDaiHocGiaDinh.Views
         private Account _account;
         private AccountServices accountServices = new AccountServices();
         private EmployeeService employeeService = new EmployeeService();
+        private PositionServices positionServices = new PositionServices();
+        private DepartmentServices departmentServices = new DepartmentServices();
         Byte[] ImageByArray;
 
         public AdminHome(Account account)
@@ -28,14 +30,19 @@ namespace QuanLyDaiHocGiaDinh.Views
             InitializeComponent();
             navigationFrame.SelectedPageIndex = 3;
             setVisibleScheduleRibbonPage(false);
+            setVisiblePositionRibbonPage(false);
+            setVisibleDepartmentRibbonPage(false);
+            skins();
         }
 
         public AdminHome()
         {
-            skins();
             InitializeComponent();
             navigationFrame.SelectedPageIndex = 3;
             setVisibleScheduleRibbonPage(false);
+            setVisiblePositionRibbonPage(false);
+            setVisibleDepartmentRibbonPage(false);
+            skins();
         }
 
         void navBarControl_ActiveGroupChanged(object sender, DevExpress.XtraNavBar.NavBarGroupEventArgs e)
@@ -45,12 +52,33 @@ namespace QuanLyDaiHocGiaDinh.Views
             {
                 setVisibleScheduleRibbonPage(false);
                 setVisibleEmployeeRibbonPage(true);
+                setVisiblePositionRibbonPage(false);
+                setVisibleDepartmentRibbonPage(false);
             }
             else if (navigationFrame.SelectedPageIndex == 1)
             {
                 setVisibleScheduleRibbonPage(true);
                 setVisibleEmployeeRibbonPage(false);
+                setVisiblePositionRibbonPage(false);
+                setVisibleDepartmentRibbonPage(false);
             }
+            else if (navigationFrame.SelectedPageIndex == 2)
+            {
+                setVisibleScheduleRibbonPage(false);
+                setVisibleEmployeeRibbonPage(false);
+                setVisiblePositionRibbonPage(true);
+                setVisibleDepartmentRibbonPage(false);
+                navigationFrame.SelectedPageIndex = 5;
+            }
+            else if (navigationFrame.SelectedPageIndex == 3)
+            {
+                setVisibleScheduleRibbonPage(false);
+                setVisibleEmployeeRibbonPage(false);
+                setVisiblePositionRibbonPage(false);
+                setVisibleDepartmentRibbonPage(true);
+                navigationFrame.SelectedPageIndex = 6;
+            }
+
         }
         void barButtonNavigation_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -61,6 +89,10 @@ namespace QuanLyDaiHocGiaDinh.Views
         private void AdminHome_Load(object sender, EventArgs e)
         {
             skins();
+            // TODO: This line of code loads data into the 'giaDinhUniversityDataSet.Departments' table. You can move, or remove it, as needed.
+            this.departmentsTableAdapter.Fill(this.giaDinhUniversityDataSet.Departments);
+            // TODO: This line of code loads data into the 'giaDinhUniversityDataSet.Position' table. You can move, or remove it, as needed.
+            this.positionTableAdapter.Fill(this.giaDinhUniversityDataSet.Position);
             // TODO: This line of code loads data into the 'giaDinhUniversityDataSet.Employees' table. You can move, or remove it, as needed.
             this.employeesTableAdapter.Fill(this.giaDinhUniversityDataSet.Employees);
             // TODO: This line of code loads data into the 'giaDinhUniversityDataSet.Accounts' table. You can move, or remove it, as needed.
@@ -86,6 +118,35 @@ namespace QuanLyDaiHocGiaDinh.Views
             this.accountsTableAdapter.Fill(this.giaDinhUniversityDataSet.Accounts);
         }
 
+        public void load_gridCardViewEmployee()
+        {
+            this.employeesTableAdapter.Fill(this.giaDinhUniversityDataSet.Employees);
+        }
+
+        public void load_gridViewPosition()
+        {
+            this.positionTableAdapter.Fill(this.giaDinhUniversityDataSet.Position);
+        }
+
+        public void load_gridViewDepartment()
+        {
+            this.departmentsTableAdapter.Fill(this.giaDinhUniversityDataSet.Departments);
+        }
+
+        public void load_allGridView()
+        {
+            
+            this.departmentsTableAdapter.Fill(this.giaDinhUniversityDataSet.Departments);
+           
+            this.positionTableAdapter.Fill(this.giaDinhUniversityDataSet.Position);
+            
+            this.employeesTableAdapter.Fill(this.giaDinhUniversityDataSet.Employees);
+            
+            this.accountsTableAdapter.Fill(this.giaDinhUniversityDataSet.Accounts);
+            
+            this.p_selectAllEmployeeTableAdapter.Fill(this.giaDinhUniversityDataSet.p_selectAllEmployee);
+        }
+
         //Hiển thị menu của Schedule (lịch trình)
         private void setVisibleScheduleRibbonPage(bool status)
         {
@@ -102,10 +163,27 @@ namespace QuanLyDaiHocGiaDinh.Views
             employeeAboutRibbonPage.Visible = status;
         }
 
+        //Hiển thị menu của Position (Chức vụ)
+        private void setVisiblePositionRibbonPage(bool status)
+        {
+            positionRibbonPageCategory.Visible = status;
+
+        }
+
+        //Hiển thị menu của Department (Phòng ban)
+        private void setVisibleDepartmentRibbonPage(bool status)
+        {
+            departmentRibbonPageCategory.Visible = status;
+        }
+
+        //Show List Employee
         private void btnDanhSachTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            addButtonPage(2);
+            //addButtonPage(2);
+            navigationFrame.SelectedPageIndex = 2;
         }
+
+       
 
         //Phương thức click button chuyển page trong 1 nav
         public void addButtonPage(int index)
@@ -118,6 +196,18 @@ namespace QuanLyDaiHocGiaDinh.Views
         private void btnQuanLyGiangVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {      
             navigationFrame.SelectedPageIndex = 0;
+        }
+
+        //Show listView Employee 
+        private void btnList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            navigationFrame.SelectedPageIndex = 0;
+        }
+
+        //Show cardView Employee
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            navigationFrame.SelectedPageIndex = 4;
         }
 
         private void btnChangePass_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -138,7 +228,7 @@ namespace QuanLyDaiHocGiaDinh.Views
         {
             AdminCreateTeachers adminCreateTeachers = new AdminCreateTeachers();
             adminCreateTeachers.ShowDialog();
-            load_gridViewEmployee();
+            load_allGridView();
         }
 
         //Sửa giảng viên
@@ -163,8 +253,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             AdminUpdateTeachers adminUpdateTeachers = new AdminUpdateTeachers(employeeService.getEmployeeByAccountId(Int32.Parse(id)));
             adminUpdateTeachers.updateTeacher(fullName,firstName,lastName,birthDate,address,ward,district,city,phoneNumber,email,status,hireDate,positionName, departmentName, ImageArray);
             adminUpdateTeachers.ShowDialog();
-
-            load_gridViewEmployee();
+            load_allGridView();
 
         }
 
@@ -178,7 +267,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             accountServices.deleteAccount(Int32.Parse(idAccount));
             
             XtraMessageBox.Show("Xóa thành công !!!");
-            load_gridViewEmployee();
+            load_allGridView();
         }
 
         private void gridViewEmployee_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
@@ -194,7 +283,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                 btnXoaGiangVien.Enabled = true;
                 txtFullNameShow.Text = gridViewEmployee.Columns.View.GetFocusedRowCellValue("FullName").ToString();
                 txtEmailShow.Text = gridViewEmployee.Columns.View.GetFocusedRowCellValue("Email").ToString();
-                txtPhoneShow.Text = gridViewEmployee.Columns.View.GetFocusedRowCellValue("PhoneNumber").ToString();
+                txtPhoneNumberShow.Text = gridViewEmployee.Columns.View.GetFocusedRowCellValue("PhoneNumber").ToString();
                 txtStatusShow.Text = gridViewEmployee.Columns.View.GetFocusedRowCellValue("Status").ToString();
                 txtDepartmentNameShow.Text = gridViewEmployee.Columns.View.GetFocusedRowCellValue("DepartmentName").ToString();
                 txtPositionNameShow.Text = gridViewEmployee.Columns.View.GetFocusedRowCellValue("PositionName").ToString();
@@ -217,14 +306,95 @@ namespace QuanLyDaiHocGiaDinh.Views
             txtUsername.Text = gridViewAccount.Columns.View.GetFocusedRowCellValue("UserName").ToString();
             txtPassword.Text = gridViewAccount.Columns.View.GetFocusedRowCellValue("Password").ToString();
             txtRole.Text = gridViewAccount.Columns.View.GetFocusedRowCellValue("Role").ToString();
-
             Employee emp = new Employee();
             emp = employeeService.getEmployeeByAccountId(Int32.Parse(id));
             txtFullName.Text = emp.FullName;
             txtEmail.Text = emp.Email;
-            txtPhone.Text = emp.PhoneNumber;
+            txtPhoneNumber.Text = emp.PhoneNumber;
             txtStatus.Text = emp.Status;
-            //picInfor.Image = (byte[])emp.Image;
+            byte[] ImageArray = (byte[])emp.Image.ToArray();
+            if (ImageArray.Length == 0)
+            {
+                picInfo.Image = null;
+            }
+            else
+            {
+                picInfo.Image = Image.FromStream(new MemoryStream(ImageArray));
+            }
+        }
+
+        private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDangXuatChucVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDangXuatPhongBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnThemChucVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AdminCreatePosition adminCreatePosition = new AdminCreatePosition();
+            adminCreatePosition.ShowDialog();
+            load_gridViewPosition();
+        }
+
+        private void btnThemPhongBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AdminCreateDepartment adminCreateDepartment = new AdminCreateDepartment();
+            adminCreateDepartment.ShowDialog();
+            load_gridViewDepartment();
+        }
+
+        private void btnSuaChucVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string id = gridViewPositon.Columns.View.GetFocusedRowCellValue("PositionId").ToString();
+            string positionName = gridViewPositon.Columns.View.GetFocusedRowCellValue("PositionName").ToString();
+            AdminUpdatePosition adminUpdatePosition = new AdminUpdatePosition(positionServices.getPositionById(Int32.Parse(id)));
+            adminUpdatePosition.updatePosition(positionName);
+            adminUpdatePosition.ShowDialog();
+            load_allGridView();
+        }
+
+        private void btnXoaChucVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string idPosition = gridViewPositon.Columns.View.GetFocusedRowCellValue("PositionId").ToString();
+
+            positionServices.deletePosition(Int32.Parse(idPosition));
+
+            XtraMessageBox.Show("Xóa thành công");
+            load_allGridView();
+        }
+
+        private void btnSuaPhongBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string id = gridViewDepartment.Columns.View.GetFocusedRowCellValue("DepartmentId").ToString();
+            string departmentName = gridViewDepartment.Columns.View.GetFocusedRowCellValue("DepartmentName").ToString();
+            AdminUpdateDepartment adminUpdateDepartment = new AdminUpdateDepartment(departmentServices.getDepartmentById(Int32.Parse(id)));
+            adminUpdateDepartment.updateDepartment(departmentName);
+            adminUpdateDepartment.ShowDialog();
+            load_allGridView();
+        }
+
+        private void btnXoaPhongBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string idDepartment = gridViewDepartment.Columns.View.GetFocusedRowCellValue("DepartmentId").ToString();
+
+            departmentServices.deleteDepartment(Int32.Parse(idDepartment));
+
+            XtraMessageBox.Show("Xóa thành công");
+            load_allGridView();
+        }
+
+        private void gridViewPositon_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+
         }
     }
 }

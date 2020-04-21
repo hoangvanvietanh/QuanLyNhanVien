@@ -11,6 +11,18 @@ using DevExpress.XtraEditors;
 using QuanLyDaiHocGiaDinh.Model;
 using QuanLyDaiHocGiaDinh.Services;
 using System.IO;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.Utils.Win;
+using DevExpress.XtraTab;
+using DevExpress.Utils.Text;
+using DevExpress.Utils;
+using DevExpress.Skins;
+using DevExpress.XtraEditors.ViewInfo;
+using DevExpress.Internal;
+using DevExpress.XtraEditors.Popup;
+using DevExpress.Utils.Menu;
+using DevExpress.XtraSplashScreen;
+using DevExpress.XtraBars.Ribbon;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -18,14 +30,28 @@ namespace QuanLyDaiHocGiaDinh.Views
     {
         String strFilePath = "";
         Byte[] ImageByArray;
-        private Employee _employee = new Employee();
+        private Employee _employee;
+        private Position _position;
+        private Department _deparment;
+        private Account _account;
         private EmployeeService employeeService = new EmployeeService();
         private AccountServices accountServices = new AccountServices();
+        private PositionServices positionServices = new PositionServices();
+        private DepartmentServices departmentServices = new DepartmentServices();
         public AdminUpdateTeachers(Employee employee)
         {
+            InitializeComponent();
             
             this._employee = employee ;
-            InitializeComponent();
+            this._position =  positionServices.getPositionById((int)_employee.PositionId);
+            this._deparment = departmentServices.getDepartmentById((int)_position.DepartmentId);
+            this._account = accountServices.getAccountById((int)_employee.AccountId);
+            PositionNameDepartmentNameCheckComboBoxEdit.Properties.SelectAllItemVisible = false;
+            PositionNameDepartmentNameCheckComboBoxEdit.LookAndFeel.StyleChanged += LookAndFeel_StyleChanged;
+        }
+        void LookAndFeel_StyleChanged(object sender, EventArgs e)
+        {
+            subscribe = true;
         }
 
         private void AdminUpdateTeachers_Load(object sender, EventArgs e)
@@ -58,9 +84,16 @@ namespace QuanLyDaiHocGiaDinh.Views
             EmailTextEdit.Text = email;
             StatusTextEdit.Text = status;
             HireDateDateEdit.Text = hireDate;
-            XtraMessageBox.Show(positionName.ToString());
-            PositionNameTextEdit.Text = positionName;
-            DepartmentNameComboBoxEdit.Text = deparmentName;
+            DepartmentNameCheckComboBoxEdit.Text = deparmentName;
+            PositionNameDepartmentNameCheckComboBoxEdit.Text = positionName;
+            if(_account.Role.Trim() == "manage")
+            {
+                RoleComboBoxEdit.EditValue = "manage";
+            }
+            else
+            {
+                RoleComboBoxEdit.EditValue = "employee";
+            }
             
             if (ImageArray.Length == 0)
             {
@@ -75,6 +108,17 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void ImagePictureEdit_EditValueChanged(object sender, EventArgs e)
         {
+
+            //DevExpress.XtraEditors.Camera.TakePictureDialog dialog = new DevExpress.XtraEditors.Camera.TakePictureDialog();
+            //if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //{
+            //    System.Drawing.Image image = dialog.Image;
+            //    using (var stream = new MemoryStream())
+            //    {
+            //        image.Save(stream, ImageFormat.Jpeg);
+            //        ImageByArray = stream.ToArray();
+            //    }
+            //}
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -130,21 +174,51 @@ namespace QuanLyDaiHocGiaDinh.Views
             emp.Email = EmailTextEdit.Text;
             emp.Status = StatusTextEdit.Text;
             emp.HireDate = HireDateDateEdit.DateTime;
-            emp.PositionId = Int32.Parse(String.Format("{0}", PositionNameTextEdit.EditValue));
-
-          
-           // emp.Account.Role = RoleComboBoxEdit.Text;
-            //emp.Position.DepartmentId = Int32.Parse(String.Format("{1}", DepartmentNameComboBoxEdit.EditValue));
+            Position po = new Position();
+            po = _position;
+            po.PositionName = PositionNameDepartmentNameCheckComboBoxEdit.Text;
+            Department dep = new Department();
+            dep.DepartmentName = DepartmentNameCheckComboBoxEdit.Text;
+            Account ac = new Account();
+            ac = _account;
+            ac.Role = RoleComboBoxEdit.SelectedItem.ToString();
             emp.Image = ImageByArray;    
             employeeService.updateEmployee(emp);
+            accountServices.updateAccount(ac);
+            
             XtraMessageBox.Show("Sửa thành công !!!");
             this.Close();
 
         }
 
-        private void PositionNameTextEdit_EditValueChanged(object sender, EventArgs e)
+
+        //Check single for toolbox CheckcomboboxEdit
+        bool subscribe = true;
+        private void PositionNameTextEdit_Popup(object sender, EventArgs e)
         {
-           
+            if (subscribe) // 1st approach
+            {
+                CheckedListBoxControl list = (sender as IPopupControl).PopupWindow.Controls.OfType<PopupContainerControl>().First().Controls.OfType<CheckedListBoxControl>().First();
+                list.ItemCheck += list_ItemCheck;
+                subscribe = false;
+            }
+        }
+
+     
+        void list_ItemCheck(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)
+        {
+            if (e.State == CheckState.Checked)
+            {
+                CheckedListBoxControl list = sender as CheckedListBoxControl;
+                List<CheckedListBoxItem> items = new List<CheckedListBoxItem>();
+                foreach (int index in list.CheckedIndices)
+                {
+                    if (index == e.Index) continue;
+                    items.Add(list.Items[index]);
+                }
+                foreach (CheckedListBoxItem item in items)
+                    item.CheckState = CheckState.Unchecked;
+            }
         }
     }
 }
