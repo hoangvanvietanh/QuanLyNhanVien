@@ -11,6 +11,8 @@ using DevExpress.XtraEditors;
 using System.IO;
 using QuanLyDaiHocGiaDinh.Model;
 using QuanLyDaiHocGiaDinh.Services;
+using DevExpress.XtraEditors.Camera;
+using System.Drawing.Imaging;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -42,41 +44,22 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         }
 
-        private void pictureEmployeeEdit_Click(object sender, EventArgs e)//click chuột chọn hình 
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                strFilePath = ofd.FileName;
-                pictureEmployeeEdit.Image = new Bitmap(strFilePath);
-            }
+         // Picture từ camera !!!
+       // private void showCamera()
+          //  {
+            //DevExpress.XtraEditors.Camera.TakePictureDialog dialog = new DevExpress.XtraEditors.Camera.TakePictureDialog();
+            //if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //{
+            //    System.Drawing.Image image = dialog.Image;
+            //    using (var stream = new MemoryStream())
+            //    {
+            //        image.Save(stream, ImageFormat.Jpeg);
+            //        ImageByArray = stream.ToArray();
+            //        pictureEmployeeEdit.EditValue = stream.ToArray();
+            //    }
+            //}
+     //   }
 
-            if (strFilePath == "")
-            {
-                /*if (ImageByArray.Length != 0)
-                    ImageByArray = new byte[] { };*/
-                XtraMessageBox.Show("Vui lòng chọn hình đại diện ^^");
-
-                ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    strFilePath = ofd.FileName;
-                    pictureEmployeeEdit.Image = new Bitmap(strFilePath);
-                }
-                Image temp = new Bitmap(strFilePath);
-                MemoryStream strm = new MemoryStream();
-                temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
-                ImageByArray = strm.ToArray();
-            }
-            else
-            {
-                Image temp = new Bitmap(strFilePath);
-                MemoryStream strm = new MemoryStream();
-                temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
-                ImageByArray = strm.ToArray();
-            }
-        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -105,7 +88,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             this.Close();
        
         }
-        public void showEmployeeUpdate(Employee employee)
+        public void showEmployeeUpdate(Employee employee) ///show thông tin của employee
         {
             FullNameTextEdit.Text = employee.FullName;
             AddressTextEdit.Text = employee.Address;
@@ -139,6 +122,62 @@ namespace QuanLyDaiHocGiaDinh.Views
             userHome.ShowDialog();
         }
 
-      
+
+
+        private void pictureEmployeeEdit_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)  /// click chuột chọn ảnh từ OpenFileDialog
+            {
+
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    strFilePath = ofd.FileName;
+                    pictureEmployeeEdit.Image = new Bitmap(strFilePath);
+                }
+
+
+                if (strFilePath == "")
+                {
+                    /*if (ImageByArray.Length != 0)
+                        ImageByArray = new byte[] { };*/
+                    XtraMessageBox.Show("Vui lòng chọn hình đại diện ^^");
+
+                    ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
+                    if (ofd.ShowDialog() == DialogResult.OK)
+                    {
+                        strFilePath = ofd.FileName;
+                        pictureEmployeeEdit.Image = new Bitmap(strFilePath);
+                    }
+                    Image temp = new Bitmap(strFilePath);
+                    MemoryStream strm = new MemoryStream();
+                    temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    ImageByArray = strm.ToArray();
+                }
+                else
+                {
+                    Image temp = new Bitmap(strFilePath);
+                    MemoryStream strm = new MemoryStream();
+                    temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    ImageByArray = strm.ToArray();
+                }
+            }    
+            else
+            {
+                ///// Chọn ảnh từ Camera
+                DevExpress.XtraEditors.Camera.TakePictureDialog dialog = new DevExpress.XtraEditors.Camera.TakePictureDialog();
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    System.Drawing.Image image = dialog.Image;
+                    using (var stream = new MemoryStream())
+                    {
+                        image.Save(stream, ImageFormat.Jpeg);
+                        ImageByArray = stream.ToArray();
+                        pictureEmployeeEdit.EditValue = stream.ToArray();
+                    }
+                }
+            }    
+        }
     }
 }

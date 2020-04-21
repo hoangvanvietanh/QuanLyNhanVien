@@ -20,23 +20,22 @@ namespace QuanLyDaiHocGiaDinh.Views
     {
         private Account _account;
         EmployeeService employeeService;
+        private Position _position = new Position(); 
+        private PositionServices positionServices = new PositionServices();
+    
         
 
         public UserHome(Account account)
         {
             InitializeComponent();
-
+         
             this._account = account;
             employeeService = new EmployeeService(account);
             Employee employee = new Employee();
             employee = employeeService.getEmployeeByAccountId(_account.AccountId); //lấy employee đang đăng nhập
             showEmployee(employee);
-
-          //  Position position = new Position();
-          //  ShowPosition(position);
-
-
-
+            _position = positionServices.getPositionById((int)employee.PositionId);
+            ShowPosition(_position);
 
             setVisibleScheduleRibbonPage(false);
             //  this.p_selectAllEmployeeTableAdapter.Fill(this.giaDinhUniversityDataSet.p_selectAllEmployee);
@@ -142,8 +141,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             BirthDateDateEdit.Text = employee.BirthDate.ToString();
             lblEmployeeId.Text = employee.EmployeeId.ToString();
             WardTextEdit.Text = employee.Ward;
-
-          //  lblPositition.Text = employee.Position.PositionName;
+        //  lblPositition.Text = employee.Position.PositionName;
             //    picEmployee.Image = employee.Image;
             //  byte[] ImageArray = (byte[]);
             // picEmployee.Image = (byte[]) employee.Image.ToArray();
@@ -154,12 +152,11 @@ namespace QuanLyDaiHocGiaDinh.Views
              MemoryStream memoryStream = new MemoryStream(Arraybyte);
              picEmployee.Image = Image.FromStream(memoryStream);
 
-
         }
-        // public void ShowPosition(Position position)
-        // {
-        //     lblPositition.Text = position.PositionName;
-        //}
+        public void ShowPosition(Position position)
+        {
+             lblPositition.Text = position.PositionName;
+        }
 
     }
 }

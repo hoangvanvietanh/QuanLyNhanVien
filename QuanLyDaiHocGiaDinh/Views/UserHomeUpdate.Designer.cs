@@ -495,6 +495,8 @@
             this.PhoneNumberTextEdit.Name = "PhoneNumberTextEdit";
             this.PhoneNumberTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhoneNumberTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.PhoneNumberTextEdit.Properties.Mask.EditMask = "(999) 000-0000";
+            this.PhoneNumberTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.PhoneNumberTextEdit.Size = new System.Drawing.Size(536, 20);
             this.PhoneNumberTextEdit.StyleController = this.dataLayoutControl3;
             this.PhoneNumberTextEdit.TabIndex = 4;
@@ -655,11 +657,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureEmployeeEdit.Location = new System.Drawing.Point(505, 0);
             this.pictureEmployeeEdit.Name = "pictureEmployeeEdit";
-            this.pictureEmployeeEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEmployeeEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Always;
+            this.pictureEmployeeEdit.Properties.ShowEditMenuItem = DevExpress.Utils.DefaultBoolean.True;
+            this.pictureEmployeeEdit.Properties.ShowMenu = false;
             this.pictureEmployeeEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.pictureEmployeeEdit.Size = new System.Drawing.Size(156, 124);
             this.pictureEmployeeEdit.TabIndex = 78;
-            this.pictureEmployeeEdit.Click += new System.EventHandler(this.pictureEmployeeEdit_Click);
+         //   this.pictureEmployeeEdit.Click += new System.EventHandler(this.pictureEmployeeEdit_Click);
+         //   this.pictureEmployeeEdit.DoubleClick += new System.EventHandler(this.pictureEmployeeEdit_DoubleClick);
+            this.pictureEmployeeEdit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureEmployeeEdit_MouseClick);
             // 
             // giaDinhUniversityDataSetBindingSource
             // 
