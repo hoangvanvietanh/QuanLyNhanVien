@@ -984,7 +984,7 @@
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
             this.splitContainerControl2.Size = new System.Drawing.Size(832, 567);
-            this.splitContainerControl2.SplitterPosition = 718;
+            this.splitContainerControl2.SplitterPosition = 713;
             this.splitContainerControl2.TabIndex = 1;
             // 
             // groupImployee
@@ -999,7 +999,7 @@
             this.groupImployee.Location = new System.Drawing.Point(0, 0);
             this.groupImployee.Margin = new System.Windows.Forms.Padding(0);
             this.groupImployee.Name = "groupImployee";
-            this.groupImployee.Size = new System.Drawing.Size(718, 567);
+            this.groupImployee.Size = new System.Drawing.Size(713, 567);
             this.groupImployee.TabIndex = 0;
             this.groupImployee.Text = "IMPLOYEE IMFORMATION";
             this.groupImployee.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -1010,7 +1010,7 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(2, 432);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(714, 133);
+            this.groupControl4.Size = new System.Drawing.Size(709, 133);
             this.groupControl4.TabIndex = 3;
             this.groupControl4.Text = "Diff";
             // 
@@ -1074,7 +1074,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(2, 301);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(714, 131);
+            this.groupControl3.Size = new System.Drawing.Size(709, 131);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "Contact";
             // 
@@ -1100,6 +1100,8 @@
             this.PhoneNumberTextEdit.Name = "PhoneNumberTextEdit";
             this.PhoneNumberTextEdit.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhoneNumberTextEdit.Properties.Appearance.Options.UseFont = true;
+            this.PhoneNumberTextEdit.Properties.Mask.EditMask = "(999) 000-0000";
+            this.PhoneNumberTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.PhoneNumberTextEdit.Size = new System.Drawing.Size(549, 20);
             this.PhoneNumberTextEdit.StyleController = this.dataLayoutControl3;
             this.PhoneNumberTextEdit.TabIndex = 18;
@@ -1162,7 +1164,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(2, 178);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(714, 123);
+            this.groupControl2.Size = new System.Drawing.Size(709, 123);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Address";
             // 
@@ -1298,7 +1300,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(2, 39);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(714, 139);
+            this.groupControl1.Size = new System.Drawing.Size(709, 139);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Info";
             // 
@@ -1474,7 +1476,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl3);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(109, 567);
+            this.splitContainerControl3.Size = new System.Drawing.Size(114, 567);
             this.splitContainerControl3.SplitterPosition = 282;
             this.splitContainerControl3.TabIndex = 0;
             // 
@@ -1490,7 +1492,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(109, 282);
+            this.panelControl2.Size = new System.Drawing.Size(114, 282);
             this.panelControl2.TabIndex = 0;
             // 
             // lblEmployeeId
@@ -1568,6 +1570,7 @@
             this.picEmployee.Properties.Appearance.Options.UseBackColor = true;
             this.picEmployee.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.picEmployee.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.picEmployee.Properties.ShowMenu = false;
             this.picEmployee.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.picEmployee.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.picEmployee.Size = new System.Drawing.Size(174, 230);
@@ -1578,7 +1581,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(109, 280);
+            this.panelControl3.Size = new System.Drawing.Size(114, 280);
             this.panelControl3.TabIndex = 0;
             // 
             // employeesLabelControl

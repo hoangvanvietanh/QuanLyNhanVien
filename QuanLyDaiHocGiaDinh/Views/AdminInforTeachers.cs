@@ -105,5 +105,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                 ImageByArray = strm.ToArray();
             }
         }
+
+     
     }
 }
