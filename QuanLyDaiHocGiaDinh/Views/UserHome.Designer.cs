@@ -628,7 +628,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Caption = "Update";
+            this.btnUpdate.Caption = "Thay đổi thông tin";
             this.btnUpdate.Id = 87;
             this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
             this.btnUpdate.Name = "btnUpdate";
@@ -636,7 +636,7 @@
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "Change Password";
+            this.barButtonItem1.Caption = "Thay đổi mật khẩu";
             this.barButtonItem1.Id = 88;
             this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
             this.barButtonItem1.Name = "barButtonItem1";
@@ -984,7 +984,7 @@
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
             this.splitContainerControl2.Size = new System.Drawing.Size(832, 567);
-            this.splitContainerControl2.SplitterPosition = 713;
+            this.splitContainerControl2.SplitterPosition = 717;
             this.splitContainerControl2.TabIndex = 1;
             // 
             // groupImployee
@@ -999,7 +999,7 @@
             this.groupImployee.Location = new System.Drawing.Point(0, 0);
             this.groupImployee.Margin = new System.Windows.Forms.Padding(0);
             this.groupImployee.Name = "groupImployee";
-            this.groupImployee.Size = new System.Drawing.Size(713, 567);
+            this.groupImployee.Size = new System.Drawing.Size(717, 567);
             this.groupImployee.TabIndex = 0;
             this.groupImployee.Text = "IMPLOYEE IMFORMATION";
             this.groupImployee.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -1010,7 +1010,7 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(2, 432);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(709, 133);
+            this.groupControl4.Size = new System.Drawing.Size(713, 133);
             this.groupControl4.TabIndex = 3;
             this.groupControl4.Text = "Diff";
             // 
@@ -1074,7 +1074,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(2, 301);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(709, 131);
+            this.groupControl3.Size = new System.Drawing.Size(713, 131);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "Contact";
             // 
@@ -1164,7 +1164,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(2, 178);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(709, 123);
+            this.groupControl2.Size = new System.Drawing.Size(713, 123);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Address";
             // 
@@ -1300,7 +1300,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(2, 39);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(709, 139);
+            this.groupControl1.Size = new System.Drawing.Size(713, 139);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Info";
             // 
@@ -1476,7 +1476,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl3);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(114, 567);
+            this.splitContainerControl3.Size = new System.Drawing.Size(110, 567);
             this.splitContainerControl3.SplitterPosition = 282;
             this.splitContainerControl3.TabIndex = 0;
             // 
@@ -1492,7 +1492,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(114, 282);
+            this.panelControl2.Size = new System.Drawing.Size(110, 282);
             this.panelControl2.TabIndex = 0;
             // 
             // lblEmployeeId
@@ -1521,9 +1521,9 @@
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(207, 101);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(88, 16);
+            this.labelControl1.Size = new System.Drawing.Size(95, 16);
             this.labelControl1.TabIndex = 51;
-            this.labelControl1.Text = "Employee ID :";
+            this.labelControl1.Text = "Mã nhân viên: ";
             // 
             // btnLogout
             // 
@@ -1535,7 +1535,7 @@
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(116, 37);
             this.btnLogout.TabIndex = 0;
-            this.btnLogout.Text = "log out";
+            this.btnLogout.Text = "Thoát";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -1545,9 +1545,9 @@
             this.label.Appearance.Options.UseFont = true;
             this.label.Location = new System.Drawing.Point(207, 122);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(73, 16);
+            this.label.Size = new System.Drawing.Size(65, 16);
             this.label.TabIndex = 49;
-            this.label.Text = "Positition : ";
+            this.label.Text = "Chức vụ : ";
             // 
             // lblEmloyee
             // 
@@ -1581,7 +1581,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(114, 280);
+            this.panelControl3.Size = new System.Drawing.Size(110, 280);
             this.panelControl3.TabIndex = 0;
             // 
             // employeesLabelControl

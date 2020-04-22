@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserHomeUpdate));
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.FirstNameTextEdit = new DevExpress.XtraEditors.TextEdit();
@@ -83,6 +81,8 @@
             this.giaDinhUniversityDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeesTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.EmployeesTableAdapter();
             this.employeesBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
@@ -143,32 +143,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.giaDinhUniversityDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(354, 445);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(170, 45);
-            this.simpleButton4.TabIndex = 76;
-            this.simpleButton4.Text = "Exit";
-            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(121, 445);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(170, 45);
-            this.btnSave.TabIndex = 74;
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupControl1
             // 
@@ -663,8 +637,6 @@
             this.pictureEmployeeEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             this.pictureEmployeeEdit.Size = new System.Drawing.Size(156, 124);
             this.pictureEmployeeEdit.TabIndex = 78;
-         //   this.pictureEmployeeEdit.Click += new System.EventHandler(this.pictureEmployeeEdit_Click);
-         //   this.pictureEmployeeEdit.DoubleClick += new System.EventHandler(this.pictureEmployeeEdit_DoubleClick);
             this.pictureEmployeeEdit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureEmployeeEdit_MouseClick);
             // 
             // giaDinhUniversityDataSetBindingSource
@@ -680,6 +652,32 @@
             // 
             this.employeesBindingSource4.DataMember = "Employees";
             this.employeesBindingSource4.DataSource = this.giaDinhUniversityDataSet;
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton4.Appearance.Options.UseFont = true;
+            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.simpleButton4.Location = new System.Drawing.Point(354, 445);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(170, 45);
+            this.simpleButton4.TabIndex = 76;
+            this.simpleButton4.Text = "Thoát";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Appearance.Options.UseFont = true;
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.Location = new System.Drawing.Point(121, 445);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(170, 45);
+            this.btnSave.TabIndex = 74;
+            this.btnSave.Text = "Lưu ";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // UserHomeUpdate
             // 
