@@ -118,5 +118,12 @@ namespace QuanLyDaiHocGiaDinh
                 laNotice.Text = "Sai tài khoản hoặc mật khẩu";
             }
         }
+
+        private void btnQuenMatKhau_Click(object sender, EventArgs e)
+        {
+            HomeForgotPassword home = new HomeForgotPassword(homeController.getAccountLoggedIn());
+            home.ShowDialog();
+        }
+
     }
 }
