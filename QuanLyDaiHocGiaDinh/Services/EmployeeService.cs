@@ -28,6 +28,11 @@ namespace QuanLyDaiHocGiaDinh.Services
             return employeeDao.getEmployeeByAccountId(accountId);
         }
 
+        public Employee getEmployeeByPositionId(int positionId)
+        {
+            return employeeDao.getEmployeeByPositionId(positionId);
+        }
+
         //Tự động lấy Id user hiện tại đang đăng nhập
         public Employee getEmployeeByAccountId()
         {

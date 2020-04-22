@@ -10,5 +10,8 @@ namespace QuanLyDaiHocGiaDinh.IDao
     interface IDepartment
     {
         Department getDepartmentById(int id);
+        Department CreateDepartment(Department department);
+        void DeleteDepartment(int department);
+        void UpdateDepartment(Department department);
     }
 }

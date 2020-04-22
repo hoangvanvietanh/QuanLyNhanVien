@@ -118,6 +118,18 @@
     <Compile Include="Views\AdminChangePassword.Designer.cs">
       <DependentUpon>AdminChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AdminCreateDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminCreateDepartment.Designer.cs">
+      <DependentUpon>AdminCreateDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminCreatePosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminCreatePosition.Designer.cs">
+      <DependentUpon>AdminCreatePosition.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdminCreateTeachers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,18 @@
     </Compile>
     <Compile Include="Views\AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminUpdateDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminUpdateDepartment.Designer.cs">
+      <DependentUpon>AdminUpdateDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminUpdatePosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminUpdatePosition.Designer.cs">
+      <DependentUpon>AdminUpdatePosition.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminUpdateTeachers.cs">
       <SubType>Form</SubType>
@@ -197,6 +221,12 @@
     <EmbeddedResource Include="Views\AdminChangePassword.resx">
       <DependentUpon>AdminChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminCreateDepartment.resx">
+      <DependentUpon>AdminCreateDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminCreatePosition.resx">
+      <DependentUpon>AdminCreatePosition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminCreateTeachers.resx">
       <DependentUpon>AdminCreateTeachers.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +235,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminUpdateDepartment.resx">
+      <DependentUpon>AdminUpdateDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminUpdatePosition.resx">
+      <DependentUpon>AdminUpdatePosition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminUpdateTeachers.resx">
       <DependentUpon>AdminUpdateTeachers.cs</DependentUpon>
@@ -306,6 +342,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-dai-hoc-gia-dinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearheaderandfooter.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listbullets.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_edit.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_deletecircled.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_deletecircled1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearheaderandfooter1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearheaderandfooter2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_edit1.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

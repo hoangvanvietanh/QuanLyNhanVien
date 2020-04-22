@@ -24,5 +24,23 @@ namespace QuanLyDaiHocGiaDinh.Services
         {
             return department.getDepartmentById(getPositionById(id).DepartmentId);
         }
+
+        //Thêm chức vụ
+        public Position createPosition(Position position)
+        {
+            return pos.CreatePosition(position);
+        }
+
+        //Cập nhật chức vụ
+        public void updatePosition(Position position)
+        {
+            pos.UpdatePosition(position);
+        }
+
+        //Xóa chức vụ
+        public void deletePosition(int position)
+        {
+            pos.DeletePosition(position);
+        }
     }
 }
