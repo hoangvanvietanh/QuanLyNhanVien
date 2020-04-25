@@ -186,6 +186,8 @@
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.Root1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.lblPhongBan = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
@@ -984,7 +986,7 @@
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
             this.splitContainerControl2.Size = new System.Drawing.Size(832, 567);
-            this.splitContainerControl2.SplitterPosition = 717;
+            this.splitContainerControl2.SplitterPosition = 402;
             this.splitContainerControl2.TabIndex = 1;
             // 
             // groupImployee
@@ -999,7 +1001,7 @@
             this.groupImployee.Location = new System.Drawing.Point(0, 0);
             this.groupImployee.Margin = new System.Windows.Forms.Padding(0);
             this.groupImployee.Name = "groupImployee";
-            this.groupImployee.Size = new System.Drawing.Size(717, 567);
+            this.groupImployee.Size = new System.Drawing.Size(402, 567);
             this.groupImployee.TabIndex = 0;
             this.groupImployee.Text = "IMPLOYEE IMFORMATION";
             this.groupImployee.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -1010,7 +1012,7 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(2, 432);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(713, 133);
+            this.groupControl4.Size = new System.Drawing.Size(398, 133);
             this.groupControl4.TabIndex = 3;
             this.groupControl4.Text = "Diff";
             // 
@@ -1074,7 +1076,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(2, 301);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(713, 131);
+            this.groupControl3.Size = new System.Drawing.Size(398, 131);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "Contact";
             // 
@@ -1164,7 +1166,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(2, 178);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(713, 123);
+            this.groupControl2.Size = new System.Drawing.Size(398, 123);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Address";
             // 
@@ -1300,7 +1302,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(2, 39);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(713, 139);
+            this.groupControl1.Size = new System.Drawing.Size(398, 139);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Info";
             // 
@@ -1476,12 +1478,14 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl3);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(110, 567);
+            this.splitContainerControl3.Size = new System.Drawing.Size(425, 567);
             this.splitContainerControl3.SplitterPosition = 282;
             this.splitContainerControl3.TabIndex = 0;
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.lblPhongBan);
+            this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Controls.Add(this.lblEmployeeId);
             this.panelControl2.Controls.Add(this.lblPositition);
             this.panelControl2.Controls.Add(this.labelControl1);
@@ -1492,14 +1496,14 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(110, 282);
+            this.panelControl2.Size = new System.Drawing.Size(425, 282);
             this.panelControl2.TabIndex = 0;
             // 
             // lblEmployeeId
             // 
             this.lblEmployeeId.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeId.Appearance.Options.UseFont = true;
-            this.lblEmployeeId.Location = new System.Drawing.Point(306, 101);
+            this.lblEmployeeId.Location = new System.Drawing.Point(308, 100);
             this.lblEmployeeId.Name = "lblEmployeeId";
             this.lblEmployeeId.Size = new System.Drawing.Size(18, 16);
             this.lblEmployeeId.TabIndex = 53;
@@ -1509,7 +1513,7 @@
             // 
             this.lblPositition.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPositition.Appearance.Options.UseFont = true;
-            this.lblPositition.Location = new System.Drawing.Point(283, 122);
+            this.lblPositition.Location = new System.Drawing.Point(274, 127);
             this.lblPositition.Name = "lblPositition";
             this.lblPositition.Size = new System.Drawing.Size(60, 16);
             this.lblPositition.TabIndex = 52;
@@ -1519,7 +1523,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(207, 101);
+            this.labelControl1.Location = new System.Drawing.Point(209, 100);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(95, 16);
             this.labelControl1.TabIndex = 51;
@@ -1543,7 +1547,7 @@
             // 
             this.label.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.Appearance.Options.UseFont = true;
-            this.label.Location = new System.Drawing.Point(207, 122);
+            this.label.Location = new System.Drawing.Point(209, 126);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(65, 16);
             this.label.TabIndex = 49;
@@ -1563,7 +1567,7 @@
             // 
             this.picEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.picEmployee.Location = new System.Drawing.Point(18, 39);
+            this.picEmployee.Location = new System.Drawing.Point(19, 39);
             this.picEmployee.MenuManager = this.ribbonControl;
             this.picEmployee.Name = "picEmployee";
             this.picEmployee.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -1581,7 +1585,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(110, 280);
+            this.panelControl3.Size = new System.Drawing.Size(425, 280);
             this.panelControl3.TabIndex = 0;
             // 
             // employeesLabelControl
@@ -1731,6 +1735,26 @@
             this.layoutControlGroup10.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup10.Name = "autoGeneratedGroup0";
             this.layoutControlGroup10.Size = new System.Drawing.Size(112, 76);
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(209, 151);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(81, 16);
+            this.labelControl2.TabIndex = 54;
+            this.labelControl2.Text = "Phòng ban : ";
+            // 
+            // lblPhongBan
+            // 
+            this.lblPhongBan.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhongBan.Appearance.Options.UseFont = true;
+            this.lblPhongBan.Location = new System.Drawing.Point(296, 151);
+            this.lblPhongBan.Name = "lblPhongBan";
+            this.lblPhongBan.Size = new System.Drawing.Size(78, 16);
+            this.lblPhongBan.TabIndex = 55;
+            this.lblPhongBan.Text = "Department";
             // 
             // UserHome
             // 
@@ -1991,5 +2015,7 @@
         private DevExpress.XtraLayout.LayoutControlItem ItemForHireDate;
         private DevExpress.XtraLayout.LayoutControlItem ItemForBirthDate;
         private DevExpress.XtraLayout.LayoutControlItem ItemForFullName;
+        private DevExpress.XtraEditors.LabelControl lblPhongBan;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }
