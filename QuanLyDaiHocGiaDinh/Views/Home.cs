@@ -123,6 +123,7 @@ namespace QuanLyDaiHocGiaDinh
         {
             HomeForgotPassword home = new HomeForgotPassword(homeController.getAccountLoggedIn());
             home.ShowDialog();
+            ///Open
         }
 
     }
