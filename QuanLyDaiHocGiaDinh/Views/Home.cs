@@ -26,8 +26,7 @@ namespace QuanLyDaiHocGiaDinh
             InitializeComponent();
             txtUserName.Select();
             setVisibleFormAldreadyLogin(false);
-        }
-
+        }       
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -97,6 +96,7 @@ namespace QuanLyDaiHocGiaDinh
             txtUserName.Visible = status;
             btnLogin.Visible = status;
             btnExit.Visible = status;
+            btnQuenMatKhau.Visible = status;
         }
 
         private void openFormWithRole(string role)
@@ -123,6 +123,7 @@ namespace QuanLyDaiHocGiaDinh
         {
             HomeForgotPassword home = new HomeForgotPassword(homeController.getAccountLoggedIn());
             home.ShowDialog();
+            ///Open
         }
 
     }

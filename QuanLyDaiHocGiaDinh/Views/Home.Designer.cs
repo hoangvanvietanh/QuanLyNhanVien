@@ -81,7 +81,7 @@
             this.btnQuenMatKhau.Name = "btnQuenMatKhau";
             this.btnQuenMatKhau.Size = new System.Drawing.Size(201, 23);
             this.btnQuenMatKhau.TabIndex = 9;
-            this.btnQuenMatKhau.Text = "Quên mật khẩu ...";
+            this.btnQuenMatKhau.Text = "Quên mật khẩu ?";
             this.btnQuenMatKhau.Click += new System.EventHandler(this.btnQuenMatKhau_Click);
             // 
             // btnComback
