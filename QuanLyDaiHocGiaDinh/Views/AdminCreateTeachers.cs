@@ -29,6 +29,8 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void AdminCreateTeachers_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'giaDinhUniversityDataSet.Departments' table. You can move, or remove it, as needed.
+            this.departmentsTableAdapter.Fill(this.giaDinhUniversityDataSet.Departments);
             // TODO: This line of code loads data into the 'giaDinhUniversityDataSet.Position' table. You can move, or remove it, as needed.
             this.positionTableAdapter.Fill(this.giaDinhUniversityDataSet.Position);
 
