@@ -29,7 +29,8 @@ namespace QuanLyDaiHocGiaDinh.Views
         public HomeForgotPassword(Account account)
         {
             InitializeComponent();
-          //  this._account = account;
+            //  this._account = account;
+           
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -95,6 +96,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                 HomeForgotPassword home = new HomeForgotPassword(account);
                 home.ShowDialog();
                 this.Close();
+               
             }    
         }
         private void btnSave_Click(object sender, EventArgs e)
@@ -116,9 +118,12 @@ namespace QuanLyDaiHocGiaDinh.Views
                 accountServices.updateAccount(_account);
                 XtraMessageBox.Show("Đổi Password thành công");
                 this.Close();
+                Home _home = new Home();
+                _home.ShowDialog();
             }    
         }
 
+        
         private void setVisibleCheckEmail(bool status)
         {
             lblEmail.Visible = status;
@@ -142,7 +147,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                 MailMessage mail = new MailMessage();
                 //   MessageBox.Show(employee.Email);
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("nguyenvanthuong0201@gmail.com");
+                mail.From = new MailAddress("giadinh.gdu@gmail.com");
                 mail.To.Add(txtEmailForgotPassword.Text);
                 mail.Subject = "Khôi phục mật khẩu";
                 mail.IsBodyHtml = true;

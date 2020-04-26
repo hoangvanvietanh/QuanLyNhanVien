@@ -126,58 +126,65 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void pictureEmployeeEdit_MouseClick(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)  /// click chuột chọn ảnh từ OpenFileDialog
-            {
-
-                OpenFileDialog ofd = new OpenFileDialog();
-                ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
-                if (ofd.ShowDialog() == DialogResult.OK)
+            try 
+            { 
+                if (e.Button == MouseButtons.Left)  /// click chuột chọn ảnh từ OpenFileDialog
                 {
-                    strFilePath = ofd.FileName;
-                    pictureEmployeeEdit.Image = new Bitmap(strFilePath);
-                }
 
-
-                if (strFilePath == "")
-                {
-                    /*if (ImageByArray.Length != 0)
-                        ImageByArray = new byte[] { };*/
-                    XtraMessageBox.Show("Vui lòng chọn hình đại diện ^^");
-
+                    OpenFileDialog ofd = new OpenFileDialog();
                     ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
                     if (ofd.ShowDialog() == DialogResult.OK)
                     {
                         strFilePath = ofd.FileName;
                         pictureEmployeeEdit.Image = new Bitmap(strFilePath);
                     }
-                    Image temp = new Bitmap(strFilePath);
-                    MemoryStream strm = new MemoryStream();
-                    temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    ImageByArray = strm.ToArray();
-                }
+
+
+                    if (strFilePath == "")
+                    {
+                        /*if (ImageByArray.Length != 0)
+                            ImageByArray = new byte[] { };*/
+                        XtraMessageBox.Show("Vui lòng chọn hình đại diện ^^");
+
+                        ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
+                        if (ofd.ShowDialog() == DialogResult.OK)
+                        {
+                            strFilePath = ofd.FileName;
+                            pictureEmployeeEdit.Image = new Bitmap(strFilePath);
+                        }
+                        Image temp = new Bitmap(strFilePath);
+                        MemoryStream strm = new MemoryStream();
+                        temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        ImageByArray = strm.ToArray();
+                    }
+                    else
+                    {
+                        Image temp = new Bitmap(strFilePath);
+                        MemoryStream strm = new MemoryStream();
+                        temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        ImageByArray = strm.ToArray();
+                    }
+                }    
                 else
                 {
-                    Image temp = new Bitmap(strFilePath);
-                    MemoryStream strm = new MemoryStream();
-                    temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    ImageByArray = strm.ToArray();
-                }
-            }    
-            else
-            {
-                ///// Chọn ảnh từ Camera
-                DevExpress.XtraEditors.Camera.TakePictureDialog dialog = new DevExpress.XtraEditors.Camera.TakePictureDialog();
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    System.Drawing.Image image = dialog.Image;
-                    using (var stream = new MemoryStream())
+                    ///// Chọn ảnh từ Camera
+                    DevExpress.XtraEditors.Camera.TakePictureDialog dialog = new DevExpress.XtraEditors.Camera.TakePictureDialog();
+                    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
-                        image.Save(stream, ImageFormat.Jpeg);
-                        ImageByArray = stream.ToArray();
-                        pictureEmployeeEdit.EditValue = stream.ToArray();
+                        System.Drawing.Image image = dialog.Image;
+                        using (var stream = new MemoryStream())
+                        {
+                            image.Save(stream, ImageFormat.Jpeg);
+                            ImageByArray = stream.ToArray();
+                            pictureEmployeeEdit.EditValue = stream.ToArray();
+                        }
                     }
                 }
-            }    
+            }
+            catch (Exception)
+            {
+                
+            }
         }
     }
 }

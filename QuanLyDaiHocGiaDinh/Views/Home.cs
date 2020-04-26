@@ -17,11 +17,11 @@ using System.Windows.Forms;
 
 namespace QuanLyDaiHocGiaDinh
 {
-    public partial class UserHome : DevExpress.XtraEditors.XtraForm
+    public partial class Home : DevExpress.XtraEditors.XtraForm
     {
         private string userName = "My friend";
         HomeController homeController = new HomeController();
-        public UserHome()
+        public Home()
         {
             InitializeComponent();
             txtUserName.Select();
@@ -125,6 +125,6 @@ namespace QuanLyDaiHocGiaDinh
             home.ShowDialog();
             ///Open
         }
-
+        
     }
 }
