@@ -13,47 +13,53 @@ using QuanLyDaiHocGiaDinh.Services;
 using QuanLyDaiHocGiaDinh.Controller;
 using QuanLyDaiHocGiaDinh.Model;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
     public partial class UserHome : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         private Account _account;
-        EmployeeService employeeService;
-        private Position _position = new Position(); 
+        private EmployeeService employeeService;
+        private Position _position = new Position();
         private PositionServices positionServices = new PositionServices();
-    
-        
+        private Department _department = new Department();
+        private DepartmentServices departmentServices = new DepartmentServices();
 
         public UserHome(Account account)
         {
             InitializeComponent();
-         
+
             this._account = account;
             employeeService = new EmployeeService(account);
             Employee employee = new Employee();
+
             employee = employeeService.getEmployeeByAccountId(_account.AccountId); //lấy employee đang đăng nhập
             showEmployee(employee);
+
             _position = positionServices.getPositionById((int)employee.PositionId);
             ShowPosition(_position);
+
+            _department = departmentServices.getDepartmentById((int)_position.DepartmentId);
+            ShowDepartment(_department);
 
             setVisibleScheduleRibbonPage(false);
             //  this.p_selectAllEmployeeTableAdapter.Fill(this.giaDinhUniversityDataSet.p_selectAllEmployee);
             this.scheduleTableAdapter.Fill(this.giaDinhUniversityDataSet.Schedule, this._account.AccountId);
 
             //Ví dụ để lấy employee đang đăng nhập
-          
+
             // employee.FullName = "Duy Hieu";
             // employee.FirstName = "Việt Nè";
             //employeeService.updateEmployee(employee);//ví dụ về cập nhật 
-         //   MessageBox.Show(employee.Position.PositionName);
+            //   MessageBox.Show(employee.Position.PositionName);
             //Position position = new Position();   ///show PositionName
-           // position = employeeService.getEmployeeByAccountId();
+            // position = employeeService.getEmployeeByAccountId();
             //ShowPosition(position);
 
-             Console.WriteLine(employeeService.getEmployeeByAccountId().FullName);
+            Console.WriteLine(employeeService.getEmployeeByAccountId().FullName);
             ////////////
-         //   dataLayoutControl1.DataSource = new QuanLyDaiHocGiaDinh.Model.LinQDataContext().Accounts;
+            //   dataLayoutControl1.DataSource = new QuanLyDaiHocGiaDinh.Model.LinQDataContext().Accounts;
         }
 
         void navBarControl_ActiveGroupChanged(object sender, DevExpress.XtraNavBar.NavBarGroupEventArgs e)
@@ -99,14 +105,14 @@ namespace QuanLyDaiHocGiaDinh.Views
             homeRibbonPage.Visible = status;
         }
 
-        
+
 
         private void btnUpdate_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             UserHomeUpdate userHomeUpdate = new UserHomeUpdate(_account);
             userHomeUpdate.ShowDialog();
             this.Close();
-         
+
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -122,7 +128,7 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-      
+
             this.Close();
         }
         public void showEmployee(Employee employee)
@@ -141,7 +147,8 @@ namespace QuanLyDaiHocGiaDinh.Views
             BirthDateDateEdit.Text = employee.BirthDate.ToString();
             lblEmployeeId.Text = employee.EmployeeId.ToString();
             WardTextEdit.Text = employee.Ward;
-        //  lblPositition.Text = employee.Position.PositionName;
+
+            //  lblPositition.Text = employee.Position.PositionName;
             //    picEmployee.Image = employee.Image;
             //  byte[] ImageArray = (byte[]);
             // picEmployee.Image = (byte[]) employee.Image.ToArray();
@@ -149,14 +156,19 @@ namespace QuanLyDaiHocGiaDinh.Views
 
 
             byte[] Arraybyte = (byte[])employee.Image.ToArray();// load picture từ database
-             MemoryStream memoryStream = new MemoryStream(Arraybyte);
-             picEmployee.Image = Image.FromStream(memoryStream);
+            MemoryStream memoryStream = new MemoryStream(Arraybyte);
+            picEmployee.Image = Image.FromStream(memoryStream);
 
         }
         public void ShowPosition(Position position)
         {
-             lblPositition.Text = position.PositionName;
+            lblPositition.Text = position.PositionName;
+        }
+        public void ShowDepartment(Department department)
+        {
+            lblPhongBan.Text = department.DepartmentName;
         }
 
+       
     }
 }

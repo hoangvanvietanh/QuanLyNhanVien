@@ -17,17 +17,16 @@ using System.Windows.Forms;
 
 namespace QuanLyDaiHocGiaDinh
 {
-    public partial class UserHome : DevExpress.XtraEditors.XtraForm
+    public partial class Home : DevExpress.XtraEditors.XtraForm
     {
         private string userName = "My friend";
         HomeController homeController = new HomeController();
-        public UserHome()
+        public Home()
         {
             InitializeComponent();
             txtUserName.Select();
             setVisibleFormAldreadyLogin(false);
-        }
-
+        }       
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -97,6 +96,7 @@ namespace QuanLyDaiHocGiaDinh
             txtUserName.Visible = status;
             btnLogin.Visible = status;
             btnExit.Visible = status;
+            btnQuenMatKhau.Visible = status;
         }
 
         private void openFormWithRole(string role)
@@ -123,7 +123,8 @@ namespace QuanLyDaiHocGiaDinh
         {
             HomeForgotPassword home = new HomeForgotPassword(homeController.getAccountLoggedIn());
             home.ShowDialog();
+            ///Open
         }
-
+        
     }
 }

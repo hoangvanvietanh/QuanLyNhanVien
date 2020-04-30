@@ -132,6 +132,7 @@
             // 
             this.txtMatKhauMoi.Location = new System.Drawing.Point(132, 96);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
+            this.txtMatKhauMoi.Properties.PasswordChar = '*';
             this.txtMatKhauMoi.Size = new System.Drawing.Size(163, 20);
             this.txtMatKhauMoi.TabIndex = 16;
             this.txtMatKhauMoi.Visible = false;
@@ -149,6 +150,7 @@
             // 
             this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(132, 142);
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
+            this.txtNhapLaiMatKhau.Properties.PasswordChar = '*';
             this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(166, 20);
             this.txtNhapLaiMatKhau.TabIndex = 18;
             this.txtNhapLaiMatKhau.Visible = false;

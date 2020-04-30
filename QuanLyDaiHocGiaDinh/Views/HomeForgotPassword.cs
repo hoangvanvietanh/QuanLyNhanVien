@@ -29,7 +29,8 @@ namespace QuanLyDaiHocGiaDinh.Views
         public HomeForgotPassword(Account account)
         {
             InitializeComponent();
-          //  this._account = account;
+            //  this._account = account;
+           
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -91,8 +92,11 @@ namespace QuanLyDaiHocGiaDinh.Views
             }    
             else
             {
-                lblThongBao.Text = "Mã nhập không chính sát,vui lòng nhập Email và gửi lại";
-                txtEmailForgotPassword.Text = "";
+                MessageBox.Show("Mã nhập không chính sát,vui lòng nhập Email và gửi lại");
+                HomeForgotPassword home = new HomeForgotPassword(account);
+                home.ShowDialog();
+                this.Close();
+               
             }    
         }
         private void btnSave_Click(object sender, EventArgs e)
@@ -102,14 +106,24 @@ namespace QuanLyDaiHocGiaDinh.Views
             else if (txtMatKhauMoi.Text.Trim() != txtNhapLaiMatKhau.Text.Trim()) XtraMessageBox.Show("Mật khẩu chưa trùng nhau");
             else
             {
+                accountServices.GetAllAccounts().ForEach(account =>
+                {
+                    if (account.UserName.Trim().CompareTo(txtEmailForgotPassword.Text.Trim()) == 0)
+                    {
+                        _account = account;
+                    }
+                });
                 _account.Password = txtMatKhauMoi.Text;
-                MessageBox.Show(_account.Password);
+           //     MessageBox.Show(_account.Password);
                 accountServices.updateAccount(_account);
                 XtraMessageBox.Show("Đổi Password thành công");
                 this.Close();
+                Home _home = new Home();
+                _home.ShowDialog();
             }    
         }
 
+        
         private void setVisibleCheckEmail(bool status)
         {
             lblEmail.Visible = status;
@@ -133,7 +147,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                 MailMessage mail = new MailMessage();
                 //   MessageBox.Show(employee.Email);
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("nguyenvanthuong0201@gmail.com");
+                mail.From = new MailAddress("giadinh.gdu@gmail.com");
                 mail.To.Add(txtEmailForgotPassword.Text);
                 mail.Subject = "Khôi phục mật khẩu";
                 mail.IsBodyHtml = true;
@@ -162,7 +176,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                 "<head>" +
                     "<title>Email</title>" +
                 "</head>" +
-                "<body style=\"font-family:'Century Gothic'\">" +
+                "<body style=\"font-family:'Century Gothic'\",\"background-color:'#6d695c'\">" +
                     "<h1>" + "Mã kích hoạt tài khoảng" + "</h1>" +
                     "<h2 style=\"font-size:14px;\">" +
                         //   "Full Name : " + employee.FullName + "<br />" +

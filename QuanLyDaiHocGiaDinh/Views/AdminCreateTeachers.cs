@@ -46,7 +46,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                 strFilePath = ofd.FileName;
                 ImagePictureEdit.Image = new Bitmap(strFilePath);
             }
-
+            try { 
             if (strFilePath == "")
             {
                 /*if (ImageByArray.Length != 0)
@@ -70,6 +70,11 @@ namespace QuanLyDaiHocGiaDinh.Views
                 MemoryStream strm = new MemoryStream();
                 temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
                 ImageByArray = strm.ToArray();
+            }
+            }
+            catch (Exception)
+            {
+
             }
         }
 
