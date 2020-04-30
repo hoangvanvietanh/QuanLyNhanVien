@@ -42,6 +42,8 @@ namespace QuanLyDaiHocGiaDinh.Model {
         
         private global::System.Data.DataRelation relationFK_Employees_Accounts;
         
+        private global::System.Data.DataRelation relationFK__Appointme__Accou__35BCFE0A;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -323,6 +325,7 @@ namespace QuanLyDaiHocGiaDinh.Model {
             this.relationFK_Employees_Position = this.Relations["FK_Employees_Position"];
             this.relationFK_Position_Departments = this.Relations["FK_Position_Departments"];
             this.relationFK_Employees_Accounts = this.Relations["FK_Employees_Accounts"];
+            this.relationFK__Appointme__Accou__35BCFE0A = this.Relations["FK__Appointme__Accou__35BCFE0A"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -357,6 +360,10 @@ namespace QuanLyDaiHocGiaDinh.Model {
                         this.tableAccounts.AccountIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableEmployees.AccountIdColumn}, false);
             this.Relations.Add(this.relationFK_Employees_Accounts);
+            this.relationFK__Appointme__Accou__35BCFE0A = new global::System.Data.DataRelation("FK__Appointme__Accou__35BCFE0A", new global::System.Data.DataColumn[] {
+                        this.tableAccounts.AccountIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableSchedule.AccountIdColumn}, false);
+            this.Relations.Add(this.relationFK__Appointme__Accou__35BCFE0A);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -505,7 +512,7 @@ namespace QuanLyDaiHocGiaDinh.Model {
             
             private global::System.Data.DataColumn columnTimeZoneId;
             
-            private global::System.Data.DataColumn columnCustomField1;
+            private global::System.Data.DataColumn columnApprovalStatus;
             
             private global::System.Data.DataColumn columnAccountId;
             
@@ -668,9 +675,9 @@ namespace QuanLyDaiHocGiaDinh.Model {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CustomField1Column {
+            public global::System.Data.DataColumn ApprovalStatusColumn {
                 get {
-                    return this.columnCustomField1;
+                    return this.columnApprovalStatus;
                 }
             }
             
@@ -750,8 +757,8 @@ namespace QuanLyDaiHocGiaDinh.Model {
                         string ReminderInfo, 
                         string RecurrenceInfo, 
                         string TimeZoneId, 
-                        string CustomField1, 
-                        int AccountId, 
+                        string ApprovalStatus, 
+                        AccountsRow parentAccountsRowByFK__Appointme__Accou__35BCFE0A, 
                         string DepartmentsList, 
                         string PositionList) {
                 ScheduleRow rowScheduleRow = ((ScheduleRow)(this.NewRow()));
@@ -771,10 +778,13 @@ namespace QuanLyDaiHocGiaDinh.Model {
                         ReminderInfo,
                         RecurrenceInfo,
                         TimeZoneId,
-                        CustomField1,
-                        AccountId,
+                        ApprovalStatus,
+                        null,
                         DepartmentsList,
                         PositionList};
+                if ((parentAccountsRowByFK__Appointme__Accou__35BCFE0A != null)) {
+                    columnValuesArray[16] = parentAccountsRowByFK__Appointme__Accou__35BCFE0A[0];
+                }
                 rowScheduleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowScheduleRow);
                 return rowScheduleRow;
@@ -819,7 +829,7 @@ namespace QuanLyDaiHocGiaDinh.Model {
                 this.columnReminderInfo = base.Columns["ReminderInfo"];
                 this.columnRecurrenceInfo = base.Columns["RecurrenceInfo"];
                 this.columnTimeZoneId = base.Columns["TimeZoneId"];
-                this.columnCustomField1 = base.Columns["CustomField1"];
+                this.columnApprovalStatus = base.Columns["ApprovalStatus"];
                 this.columnAccountId = base.Columns["AccountId"];
                 this.columnDepartmentsList = base.Columns["DepartmentsList"];
                 this.columnPositionList = base.Columns["PositionList"];
@@ -858,8 +868,8 @@ namespace QuanLyDaiHocGiaDinh.Model {
                 base.Columns.Add(this.columnRecurrenceInfo);
                 this.columnTimeZoneId = new global::System.Data.DataColumn("TimeZoneId", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTimeZoneId);
-                this.columnCustomField1 = new global::System.Data.DataColumn("CustomField1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCustomField1);
+                this.columnApprovalStatus = new global::System.Data.DataColumn("ApprovalStatus", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnApprovalStatus);
                 this.columnAccountId = new global::System.Data.DataColumn("AccountId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAccountId);
                 this.columnDepartmentsList = new global::System.Data.DataColumn("DepartmentsList", typeof(string), null, global::System.Data.MappingType.Element);
@@ -881,7 +891,7 @@ namespace QuanLyDaiHocGiaDinh.Model {
                 this.columnReminderInfo.MaxLength = 2147483647;
                 this.columnRecurrenceInfo.MaxLength = 2147483647;
                 this.columnTimeZoneId.MaxLength = 2147483647;
-                this.columnCustomField1.MaxLength = 2147483647;
+                this.columnApprovalStatus.MaxLength = 100;
                 this.columnDepartmentsList.MaxLength = 200;
                 this.columnPositionList.MaxLength = 200;
             }
@@ -3142,17 +3152,17 @@ namespace QuanLyDaiHocGiaDinh.Model {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string CustomField1 {
+            public string ApprovalStatus {
                 get {
                     try {
-                        return ((string)(this[this.tableSchedule.CustomField1Column]));
+                        return ((string)(this[this.tableSchedule.ApprovalStatusColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CustomField1\' in table \'Schedule\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ApprovalStatus\' in table \'Schedule\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSchedule.CustomField1Column] = value;
+                    this[this.tableSchedule.ApprovalStatusColumn] = value;
                 }
             }
             
@@ -3201,6 +3211,17 @@ namespace QuanLyDaiHocGiaDinh.Model {
                 }
                 set {
                     this[this.tableSchedule.PositionListColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public AccountsRow AccountsRow {
+                get {
+                    return ((AccountsRow)(this.GetParentRow(this.Table.ParentRelations["FK__Appointme__Accou__35BCFE0A"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Appointme__Accou__35BCFE0A"]);
                 }
             }
             
@@ -3374,14 +3395,14 @@ namespace QuanLyDaiHocGiaDinh.Model {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsCustomField1Null() {
-                return this.IsNull(this.tableSchedule.CustomField1Column);
+            public bool IsApprovalStatusNull() {
+                return this.IsNull(this.tableSchedule.ApprovalStatusColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetCustomField1Null() {
-                this[this.tableSchedule.CustomField1Column] = global::System.Convert.DBNull;
+            public void SetApprovalStatusNull() {
+                this[this.tableSchedule.ApprovalStatusColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3538,6 +3559,17 @@ namespace QuanLyDaiHocGiaDinh.Model {
                 }
                 else {
                     return ((EmployeesRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Employees_Accounts"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ScheduleRow[] GetScheduleRows() {
+                if ((this.Table.ChildRelations["FK__Appointme__Accou__35BCFE0A"] == null)) {
+                    return new ScheduleRow[0];
+                }
+                else {
+                    return ((ScheduleRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Appointme__Accou__35BCFE0A"])));
                 }
             }
         }
@@ -4946,14 +4978,15 @@ namespace QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ReminderInfo", "ReminderInfo");
             tableMapping.ColumnMappings.Add("RecurrenceInfo", "RecurrenceInfo");
             tableMapping.ColumnMappings.Add("TimeZoneId", "TimeZoneId");
-            tableMapping.ColumnMappings.Add("CustomField1", "CustomField1");
+            tableMapping.ColumnMappings.Add("CustomField1", "ApprovalStatus");
             tableMapping.ColumnMappings.Add("AccountId", "AccountId");
             tableMapping.ColumnMappings.Add("DepartmentsList", "DepartmentsList");
             tableMapping.ColumnMappings.Add("PositionList", "PositionList");
+            tableMapping.ColumnMappings.Add("ApprovalStatus", "ApprovalStatus");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Schedule] WHERE (([UniqueID] = @Original_UniqueID) AND ((@IsNull_Type = 1 AND [Type] IS NULL) OR ([Type] = @Original_Type)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ((@IsNull_AllDay = 1 AND [AllDay] IS NULL) OR ([AllDay] = @Original_AllDay)) AND ((@IsNull_Subject = 1 AND [Subject] IS NULL) OR ([Subject] = @Original_Subject)) AND ((@IsNull_Location = 1 AND [Location] IS NULL) OR ([Location] = @Original_Location)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_Label = 1 AND [Label] IS NULL) OR ([Label] = @Original_Label)) AND ((@IsNull_ResourceID = 1 AND [ResourceID] IS NULL) OR ([ResourceID] = @Original_ResourceID)) AND ((@IsNull_AccountId = 1 AND [AccountId] IS NULL) OR ([AccountId] = @Original_AccountId)) AND ((@IsNull_DepartmentsList = 1 AND [DepartmentsList] IS NULL) OR ([DepartmentsList] = @Original_DepartmentsList)) AND ((@IsNull_PositionList = 1 AND [PositionList] IS NULL) OR ([PositionList] = @Original_PositionList)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Schedule] WHERE (([UniqueID] = @Original_UniqueID) AND ((@IsNull_Type = 1 AND [Type] IS NULL) OR ([Type] = @Original_Type)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ((@IsNull_AllDay = 1 AND [AllDay] IS NULL) OR ([AllDay] = @Original_AllDay)) AND ((@IsNull_Subject = 1 AND [Subject] IS NULL) OR ([Subject] = @Original_Subject)) AND ((@IsNull_Location = 1 AND [Location] IS NULL) OR ([Location] = @Original_Location)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_Label = 1 AND [Label] IS NULL) OR ([Label] = @Original_Label)) AND ((@IsNull_ResourceID = 1 AND [ResourceID] IS NULL) OR ([ResourceID] = @Original_ResourceID)) AND ((@IsNull_ApprovalStatus = 1 AND [ApprovalStatus] IS NULL) OR ([ApprovalStatus] = @Original_ApprovalStatus)) AND ((@IsNull_AccountId = 1 AND [AccountId] IS NULL) OR ([AccountId] = @Original_AccountId)) AND ((@IsNull_DepartmentsList = 1 AND [DepartmentsList] IS NULL) OR ([DepartmentsList] = @Original_DepartmentsList)) AND ((@IsNull_PositionList = 1 AND [PositionList] IS NULL) OR ([PositionList] = @Original_PositionList)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UniqueID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UniqueID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4974,6 +5007,8 @@ namespace QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Label", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Label", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ResourceID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ResourceID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ResourceID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ResourceID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ApprovalStatus", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ApprovalStatus", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ApprovalStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ApprovalStatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AccountId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AccountId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AccountId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AccountId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepartmentsList", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentsList", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4982,8 +5017,8 @@ namespace QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PositionList", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PositionList", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Schedule] ([Type], [StartDate], [EndDate], [AllDay], [Subject], [Location], [Description], [Status], [Label], [ResourceID], [ResourceIDs], [ReminderInfo], [RecurrenceInfo], [TimeZoneId], [CustomField1], [AccountId], [DepartmentsList], [PositionList]) VALUES (@Type, @StartDate, @EndDate, @AllDay, @Subject, @Location, @Description, @Status, @Label, @ResourceID, @ResourceIDs, @ReminderInfo, @RecurrenceInfo, @TimeZoneId, @CustomField1, @AccountId, @DepartmentsList, @PositionList);
-SELECT UniqueID, Type, StartDate, EndDate, AllDay, Subject, Location, Description, Status, Label, ResourceID, ResourceIDs, ReminderInfo, RecurrenceInfo, TimeZoneId, CustomField1, AccountId, DepartmentsList, PositionList FROM Schedule WHERE (UniqueID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Schedule] ([Type], [StartDate], [EndDate], [AllDay], [Subject], [Location], [Description], [Status], [Label], [ResourceID], [ResourceIDs], [ReminderInfo], [RecurrenceInfo], [TimeZoneId], [ApprovalStatus], [AccountId], [DepartmentsList], [PositionList]) VALUES (@Type, @StartDate, @EndDate, @AllDay, @Subject, @Location, @Description, @Status, @Label, @ResourceID, @ResourceIDs, @ReminderInfo, @RecurrenceInfo, @TimeZoneId, @ApprovalStatus, @AccountId, @DepartmentsList, @PositionList);
+SELECT UniqueID, Type, StartDate, EndDate, AllDay, Subject, Location, Description, Status, Label, ResourceID, ResourceIDs, ReminderInfo, RecurrenceInfo, TimeZoneId, ApprovalStatus, AccountId, DepartmentsList, PositionList FROM Schedule WHERE (UniqueID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4999,7 +5034,7 @@ SELECT UniqueID, Type, StartDate, EndDate, AllDay, Subject, Location, Descriptio
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReminderInfo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReminderInfo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RecurrenceInfo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RecurrenceInfo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TimeZoneId", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TimeZoneId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustomField1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustomField1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ApprovalStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ApprovalStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AccountId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AccountId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartmentsList", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentsList", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PositionList", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PositionList", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5009,26 +5044,28 @@ SELECT UniqueID, Type, StartDate, EndDate, AllDay, Subject, Location, Descriptio
                 "ate, [AllDay] = @AllDay, [Subject] = @Subject, [Location] = @Location, [Descript" +
                 "ion] = @Description, [Status] = @Status, [Label] = @Label, [ResourceID] = @Resou" +
                 "rceID, [ResourceIDs] = @ResourceIDs, [ReminderInfo] = @ReminderInfo, [Recurrence" +
-                "Info] = @RecurrenceInfo, [TimeZoneId] = @TimeZoneId, [CustomField1] = @CustomFie" +
-                "ld1, [AccountId] = @AccountId, [DepartmentsList] = @DepartmentsList, [PositionLi" +
-                "st] = @PositionList WHERE (([UniqueID] = @Original_UniqueID) AND ((@IsNull_Type " +
-                "= 1 AND [Type] IS NULL) OR ([Type] = @Original_Type)) AND ((@IsNull_StartDate = " +
-                "1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull" +
-                "_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ((@I" +
-                "sNull_AllDay = 1 AND [AllDay] IS NULL) OR ([AllDay] = @Original_AllDay)) AND ((@" +
-                "IsNull_Subject = 1 AND [Subject] IS NULL) OR ([Subject] = @Original_Subject)) AN" +
-                "D ((@IsNull_Location = 1 AND [Location] IS NULL) OR ([Location] = @Original_Loca" +
-                "tion)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_S" +
-                "tatus)) AND ((@IsNull_Label = 1 AND [Label] IS NULL) OR ([Label] = @Original_Lab" +
-                "el)) AND ((@IsNull_ResourceID = 1 AND [ResourceID] IS NULL) OR ([ResourceID] = @" +
-                "Original_ResourceID)) AND ((@IsNull_AccountId = 1 AND [AccountId] IS NULL) OR ([" +
-                "AccountId] = @Original_AccountId)) AND ((@IsNull_DepartmentsList = 1 AND [Depart" +
-                "mentsList] IS NULL) OR ([DepartmentsList] = @Original_DepartmentsList)) AND ((@I" +
-                "sNull_PositionList = 1 AND [PositionList] IS NULL) OR ([PositionList] = @Origina" +
-                "l_PositionList)));\r\nSELECT UniqueID, Type, StartDate, EndDate, AllDay, Subject, " +
-                "Location, Description, Status, Label, ResourceID, ResourceIDs, ReminderInfo, Rec" +
-                "urrenceInfo, TimeZoneId, CustomField1, AccountId, DepartmentsList, PositionList " +
-                "FROM Schedule WHERE (UniqueID = @UniqueID)";
+                "Info] = @RecurrenceInfo, [TimeZoneId] = @TimeZoneId, [ApprovalStatus] = @Approva" +
+                "lStatus, [AccountId] = @AccountId, [DepartmentsList] = @DepartmentsList, [Positi" +
+                "onList] = @PositionList WHERE (([UniqueID] = @Original_UniqueID) AND ((@IsNull_T" +
+                "ype = 1 AND [Type] IS NULL) OR ([Type] = @Original_Type)) AND ((@IsNull_StartDat" +
+                "e = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@Is" +
+                "Null_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND " +
+                "((@IsNull_AllDay = 1 AND [AllDay] IS NULL) OR ([AllDay] = @Original_AllDay)) AND" +
+                " ((@IsNull_Subject = 1 AND [Subject] IS NULL) OR ([Subject] = @Original_Subject)" +
+                ") AND ((@IsNull_Location = 1 AND [Location] IS NULL) OR ([Location] = @Original_" +
+                "Location)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Origin" +
+                "al_Status)) AND ((@IsNull_Label = 1 AND [Label] IS NULL) OR ([Label] = @Original" +
+                "_Label)) AND ((@IsNull_ResourceID = 1 AND [ResourceID] IS NULL) OR ([ResourceID]" +
+                " = @Original_ResourceID)) AND ((@IsNull_ApprovalStatus = 1 AND [ApprovalStatus] " +
+                "IS NULL) OR ([ApprovalStatus] = @Original_ApprovalStatus)) AND ((@IsNull_Account" +
+                "Id = 1 AND [AccountId] IS NULL) OR ([AccountId] = @Original_AccountId)) AND ((@I" +
+                "sNull_DepartmentsList = 1 AND [DepartmentsList] IS NULL) OR ([DepartmentsList] =" +
+                " @Original_DepartmentsList)) AND ((@IsNull_PositionList = 1 AND [PositionList] I" +
+                "S NULL) OR ([PositionList] = @Original_PositionList)));\r\nSELECT UniqueID, Type, " +
+                "StartDate, EndDate, AllDay, Subject, Location, Description, Status, Label, Resou" +
+                "rceID, ResourceIDs, ReminderInfo, RecurrenceInfo, TimeZoneId, ApprovalStatus, Ac" +
+                "countId, DepartmentsList, PositionList FROM Schedule WHERE (UniqueID = @UniqueID" +
+                ")";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StartDate", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5044,7 +5081,7 @@ SELECT UniqueID, Type, StartDate, EndDate, AllDay, Subject, Location, Descriptio
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReminderInfo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReminderInfo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RecurrenceInfo", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RecurrenceInfo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TimeZoneId", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TimeZoneId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CustomField1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CustomField1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ApprovalStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ApprovalStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AccountId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AccountId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DepartmentsList", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentsList", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PositionList", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PositionList", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5067,6 +5104,8 @@ SELECT UniqueID, Type, StartDate, EndDate, AllDay, Subject, Location, Descriptio
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Label", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Label", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ResourceID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ResourceID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ResourceID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ResourceID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ApprovalStatus", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ApprovalStatus", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ApprovalStatus", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ApprovalStatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AccountId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AccountId", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AccountId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AccountId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepartmentsList", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmentsList", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -5086,14 +5125,18 @@ SELECT UniqueID, Type, StartDate, EndDate, AllDay, Subject, Location, Descriptio
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        UniqueID, Type, StartDate, EndDate, AllDay, Subject, Location, Description, Status, Label, ResourceID, ResourceIDs, ReminderInfo, RecurrenceInfo, TimeZoneId, CustomField1, AccountId, DepartmentsList, PositionList
+            this._commandCollection[0].CommandText = @"SELECT        UniqueID, Type, StartDate, EndDate, AllDay, Subject, Location, Description, Status, Label, ResourceID, ResourceIDs, ReminderInfo, RecurrenceInfo, TimeZoneId, ApprovalStatus, AccountId, DepartmentsList, PositionList
 FROM            Schedule
 WHERE        (AccountId = @AccountId)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AccountId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AccountId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT AccountId, AllDay, ApprovalStatus, DepartmentsList, Description, EndDate, Label, Location, PositionList, RecurrenceInfo, ReminderInfo, ResourceID, ResourceIDs, StartDate, Status, Subject, TimeZoneId, Type, UniqueID FROM Schedule WHERE (AccountId IS NULL)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5135,6 +5178,30 @@ WHERE        (AccountId = @AccountId)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(GiaDinhUniversityDataSet.ScheduleDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual GiaDinhUniversityDataSet.ScheduleDataTable GetDataBy() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            GiaDinhUniversityDataSet.ScheduleDataTable dataTable = new GiaDinhUniversityDataSet.ScheduleDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(GiaDinhUniversityDataSet.ScheduleDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
@@ -5165,7 +5232,7 @@ WHERE        (AccountId = @AccountId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_UniqueID, global::System.Nullable<int> Original_Type, global::System.Nullable<global::System.DateTime> Original_StartDate, global::System.Nullable<global::System.DateTime> Original_EndDate, global::System.Nullable<bool> Original_AllDay, string Original_Subject, string Original_Location, global::System.Nullable<int> Original_Status, global::System.Nullable<int> Original_Label, global::System.Nullable<int> Original_ResourceID, global::System.Nullable<int> Original_AccountId, string Original_DepartmentsList, string Original_PositionList) {
+        public virtual int Delete(int Original_UniqueID, global::System.Nullable<int> Original_Type, global::System.Nullable<global::System.DateTime> Original_StartDate, global::System.Nullable<global::System.DateTime> Original_EndDate, global::System.Nullable<bool> Original_AllDay, string Original_Subject, string Original_Location, global::System.Nullable<int> Original_Status, global::System.Nullable<int> Original_Label, global::System.Nullable<int> Original_ResourceID, string Original_ApprovalStatus, global::System.Nullable<int> Original_AccountId, string Original_DepartmentsList, string Original_PositionList) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_UniqueID));
             if ((Original_Type.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -5239,29 +5306,37 @@ WHERE        (AccountId = @AccountId)";
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_AccountId.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_AccountId.Value));
-            }
-            else {
+            if ((Original_ApprovalStatus == null)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            if ((Original_DepartmentsList == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_ApprovalStatus));
+            }
+            if ((Original_AccountId.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_AccountId.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_DepartmentsList));
-            }
-            if ((Original_PositionList == null)) {
+            if ((Original_DepartmentsList == null)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_PositionList));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_DepartmentsList));
+            }
+            if ((Original_PositionList == null)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_PositionList));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5298,7 +5373,7 @@ WHERE        (AccountId = @AccountId)";
                     string ReminderInfo, 
                     string RecurrenceInfo, 
                     string TimeZoneId, 
-                    string CustomField1, 
+                    string ApprovalStatus, 
                     global::System.Nullable<int> AccountId, 
                     string DepartmentsList, 
                     string PositionList) {
@@ -5386,11 +5461,11 @@ WHERE        (AccountId = @AccountId)";
             else {
                 this.Adapter.InsertCommand.Parameters[13].Value = ((string)(TimeZoneId));
             }
-            if ((CustomField1 == null)) {
+            if ((ApprovalStatus == null)) {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(CustomField1));
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(ApprovalStatus));
             }
             if ((AccountId.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[15].Value = ((int)(AccountId.Value));
@@ -5445,7 +5520,7 @@ WHERE        (AccountId = @AccountId)";
                     string ReminderInfo, 
                     string RecurrenceInfo, 
                     string TimeZoneId, 
-                    string CustomField1, 
+                    string ApprovalStatus, 
                     global::System.Nullable<int> AccountId, 
                     string DepartmentsList, 
                     string PositionList, 
@@ -5459,6 +5534,7 @@ WHERE        (AccountId = @AccountId)";
                     global::System.Nullable<int> Original_Status, 
                     global::System.Nullable<int> Original_Label, 
                     global::System.Nullable<int> Original_ResourceID, 
+                    string Original_ApprovalStatus, 
                     global::System.Nullable<int> Original_AccountId, 
                     string Original_DepartmentsList, 
                     string Original_PositionList, 
@@ -5547,11 +5623,11 @@ WHERE        (AccountId = @AccountId)";
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(TimeZoneId));
             }
-            if ((CustomField1 == null)) {
+            if ((ApprovalStatus == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(CustomField1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(ApprovalStatus));
             }
             if ((AccountId.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(AccountId.Value));
@@ -5644,31 +5720,39 @@ WHERE        (AccountId = @AccountId)";
                 this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
-            if ((Original_AccountId.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_AccountId.Value));
-            }
-            else {
+            if ((Original_ApprovalStatus == null)) {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
-            if ((Original_DepartmentsList == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_ApprovalStatus));
+            }
+            if ((Original_AccountId.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_AccountId.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_DepartmentsList));
-            }
-            if ((Original_PositionList == null)) {
+            if ((Original_DepartmentsList == null)) {
                 this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_PositionList));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_DepartmentsList));
             }
-            this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(UniqueID));
+            if ((Original_PositionList == null)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_PositionList));
+            }
+            this.Adapter.UpdateCommand.Parameters[45].Value = ((int)(UniqueID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5704,7 +5788,7 @@ WHERE        (AccountId = @AccountId)";
                     string ReminderInfo, 
                     string RecurrenceInfo, 
                     string TimeZoneId, 
-                    string CustomField1, 
+                    string ApprovalStatus, 
                     global::System.Nullable<int> AccountId, 
                     string DepartmentsList, 
                     string PositionList, 
@@ -5718,10 +5802,11 @@ WHERE        (AccountId = @AccountId)";
                     global::System.Nullable<int> Original_Status, 
                     global::System.Nullable<int> Original_Label, 
                     global::System.Nullable<int> Original_ResourceID, 
+                    string Original_ApprovalStatus, 
                     global::System.Nullable<int> Original_AccountId, 
                     string Original_DepartmentsList, 
                     string Original_PositionList) {
-            return this.Update(Type, StartDate, EndDate, AllDay, Subject, Location, Description, Status, Label, ResourceID, ResourceIDs, ReminderInfo, RecurrenceInfo, TimeZoneId, CustomField1, AccountId, DepartmentsList, PositionList, Original_UniqueID, Original_Type, Original_StartDate, Original_EndDate, Original_AllDay, Original_Subject, Original_Location, Original_Status, Original_Label, Original_ResourceID, Original_AccountId, Original_DepartmentsList, Original_PositionList, Original_UniqueID);
+            return this.Update(Type, StartDate, EndDate, AllDay, Subject, Location, Description, Status, Label, ResourceID, ResourceIDs, ReminderInfo, RecurrenceInfo, TimeZoneId, ApprovalStatus, AccountId, DepartmentsList, PositionList, Original_UniqueID, Original_Type, Original_StartDate, Original_EndDate, Original_AllDay, Original_Subject, Original_Location, Original_Status, Original_Label, Original_ResourceID, Original_ApprovalStatus, Original_AccountId, Original_DepartmentsList, Original_PositionList, Original_UniqueID);
         }
     }
     

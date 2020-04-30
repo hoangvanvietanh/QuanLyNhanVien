@@ -65,7 +65,7 @@
       <Column Name="ReminderInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="RecurrenceInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="TimeZoneId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="CustomField1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ApprovalStatus" Storage="_CustomField1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="AccountId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DepartmentsList" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="PositionList" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />

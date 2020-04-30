@@ -1216,8 +1216,8 @@ namespace QuanLyDaiHocGiaDinh.Model
     partial void OnRecurrenceInfoChanged();
     partial void OnTimeZoneIdChanging(string value);
     partial void OnTimeZoneIdChanged();
-    partial void OnCustomField1Changing(string value);
-    partial void OnCustomField1Changed();
+    partial void OnApprovalStatusChanging(string value);
+    partial void OnApprovalStatusChanged();
     partial void OnAccountIdChanging(System.Nullable<int> value);
     partial void OnAccountIdChanged();
     partial void OnDepartmentsListChanging(string value);
@@ -1532,8 +1532,8 @@ namespace QuanLyDaiHocGiaDinh.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomField1", DbType="NVarChar(MAX)")]
-		public string CustomField1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CustomField1", DbType="NVarChar(100)")]
+		public string ApprovalStatus
 		{
 			get
 			{
@@ -1543,11 +1543,11 @@ namespace QuanLyDaiHocGiaDinh.Model
 			{
 				if ((this._CustomField1 != value))
 				{
-					this.OnCustomField1Changing(value);
+					this.OnApprovalStatusChanging(value);
 					this.SendPropertyChanging();
 					this._CustomField1 = value;
-					this.SendPropertyChanged("CustomField1");
-					this.OnCustomField1Changed();
+					this.SendPropertyChanged("ApprovalStatus");
+					this.OnApprovalStatusChanged();
 				}
 			}
 		}

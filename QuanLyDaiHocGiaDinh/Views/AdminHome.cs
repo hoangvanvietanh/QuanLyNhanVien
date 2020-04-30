@@ -99,6 +99,8 @@ namespace QuanLyDaiHocGiaDinh.Views
             this.accountsTableAdapter.Fill(this.giaDinhUniversityDataSet.Accounts);
             // TODO: This line of code loads data into the 'giaDinhUniversityDataSet.p_selectAllEmployee' table. You can move, or remove it, as needed.
             this.p_selectAllEmployeeTableAdapter.Fill(this.giaDinhUniversityDataSet.p_selectAllEmployee);
+
+            this.scheduleTableAdapter.FillBy(this.giaDinhUniversityDataSet.Schedule);
         }
 
         //Default Skin
@@ -394,6 +396,28 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void gridViewPositon_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
+
+        }
+
+        private void schedulerDataStorage_AppointmentsChanged(object sender, PersistentObjectsEventArgs e)
+        {
+            scheduleTableAdapter.Update(giaDinhUniversityDataSet);
+            giaDinhUniversityDataSet.AcceptChanges();
+        }
+
+        private void schedulerControl1_EditAppointmentFormShowing(object sender, AppointmentFormEventArgs e)
+        {
+            DevExpress.XtraScheduler.SchedulerControl scheduler = ((DevExpress.XtraScheduler.SchedulerControl)(sender));
+            QuanLyDaiHocGiaDinh.Views.OutlookAppointmentForm1 form = new QuanLyDaiHocGiaDinh.Views.OutlookAppointmentForm1(scheduler, e.Appointment, e.OpenRecurrenceForm);
+            try
+            {
+                e.DialogResult = form.ShowDialog();
+                e.Handled = true;
+            }
+            finally
+            {
+                form.Dispose();
+            }
 
         }
     }

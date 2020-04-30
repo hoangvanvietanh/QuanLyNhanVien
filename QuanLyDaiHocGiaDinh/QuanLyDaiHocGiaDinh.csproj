@@ -200,6 +200,12 @@
     <Compile Include="Views\OutlookAppointmentForm.Designer.cs">
       <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\OutlookAppointmentForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\OutlookAppointmentForm1.Designer.cs">
+      <DependentUpon>OutlookAppointmentForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\OutlookAppointmentForm.ru.resx">
       <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OutlookAppointmentForm1.de.resx">
+      <DependentUpon>OutlookAppointmentForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OutlookAppointmentForm1.es.resx">
+      <DependentUpon>OutlookAppointmentForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OutlookAppointmentForm1.ja.resx">
+      <DependentUpon>OutlookAppointmentForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OutlookAppointmentForm1.resx">
+      <DependentUpon>OutlookAppointmentForm1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OutlookAppointmentForm1.ru.resx">
+      <DependentUpon>OutlookAppointmentForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserHome.resx">
       <DependentUpon>UserHome.cs</DependentUpon>
