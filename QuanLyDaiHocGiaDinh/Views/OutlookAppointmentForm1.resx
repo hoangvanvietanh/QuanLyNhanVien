@@ -123,6 +123,21 @@
   <data name="bvPrint.AccessibleName" xml:space="preserve">
     <value>bvPrint</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="appointmentBackstageControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="appointmentBackstageControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="appointmentBackstageControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 271</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="appointmentBackstageControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;appointmentBackstageControl.Name" xml:space="preserve">
     <value>appointmentBackstageControl</value>
   </data>
@@ -135,14 +150,12 @@
   <data name="&gt;&gt;appointmentBackstageControl.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bvPrint.Location" type="System.Drawing.Point, System.Drawing">
     <value>132, 62</value>
   </data>
   <data name="bvPrint.Size" type="System.Drawing.Size, System.Drawing">
     <value>343, 271</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="bvPrint.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -841,6 +854,12 @@
   <data name="ribbonControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="rpgActions.Text" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="rpgOptions.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
   <data name="rpAppointment.Text" xml:space="preserve">
     <value>Appointment</value>
   </data>
@@ -863,38 +882,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ribbonControl1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="appointmentBackstageControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="appointmentBackstageControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="appointmentBackstageControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 271</value>
-  </data>
-  <data name="appointmentBackstageControl.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;appointmentBackstageControl.Name" xml:space="preserve">
-    <value>appointmentBackstageControl</value>
-  </data>
-  <data name="&gt;&gt;appointmentBackstageControl.Type" xml:space="preserve">
-    <value>DevExpress.XtraScheduler.Design.AppointmentBackstageControl, DevExpress.XtraScheduler.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;appointmentBackstageControl.Parent" xml:space="preserve">
-    <value>bvPrint</value>
-  </data>
-  <data name="&gt;&gt;appointmentBackstageControl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="rpgActions.Text" xml:space="preserve">
-    <value>Actions</value>
-  </data>
-  <data name="rpgOptions.Text" xml:space="preserve">
-    <value>Options</value>
+    <value>5</value>
   </data>
   <data name="lblStartTime.AccessibleName" xml:space="preserve">
     <value>Start time</value>
@@ -1142,87 +1130,6 @@
   <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;edtTimeZone.Name" xml:space="preserve">
-    <value>edtTimeZone</value>
-  </data>
-  <data name="&gt;&gt;edtTimeZone.Type" xml:space="preserve">
-    <value>DevExpress.XtraScheduler.UI.TimeZoneEdit, DevExpress.XtraScheduler.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;edtTimeZone.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;edtTimeZone.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblResource.Name" xml:space="preserve">
-    <value>lblResource</value>
-  </data>
-  <data name="&gt;&gt;lblResource.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;lblResource.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;lblResource.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;edtResource.Name" xml:space="preserve">
-    <value>edtResource</value>
-  </data>
-  <data name="&gt;&gt;edtResource.Type" xml:space="preserve">
-    <value>DevExpress.XtraScheduler.UI.AppointmentResourceEdit, DevExpress.XtraScheduler.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;edtResource.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;edtResource.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;edtResources.Name" xml:space="preserve">
-    <value>edtResources</value>
-  </data>
-  <data name="&gt;&gt;edtResources.Type" xml:space="preserve">
-    <value>DevExpress.XtraScheduler.UI.AppointmentResourcesEdit, DevExpress.XtraScheduler.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;edtResources.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;edtResources.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;chkAllDay.Name" xml:space="preserve">
-    <value>chkAllDay</value>
-  </data>
-  <data name="&gt;&gt;chkAllDay.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;chkAllDay.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;chkAllDay.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>545, 42</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 82</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="edtTimeZone.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 62</value>
   </data>
@@ -1364,6 +1271,27 @@
   <data name="&gt;&gt;chkAllDay.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>545, 42</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 82</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.PanelControl, DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="tbSubject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -1393,66 +1321,6 @@
   </data>
   <data name="&gt;&gt;tbSubject.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="&gt;&gt;tbProgress.Name" xml:space="preserve">
-    <value>tbProgress</value>
-  </data>
-  <data name="&gt;&gt;tbProgress.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.TrackBarControl, DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;tbProgress.Parent" xml:space="preserve">
-    <value>progressPanel</value>
-  </data>
-  <data name="&gt;&gt;tbProgress.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblPercentCompleteValue.Name" xml:space="preserve">
-    <value>lblPercentCompleteValue</value>
-  </data>
-  <data name="&gt;&gt;lblPercentCompleteValue.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;lblPercentCompleteValue.Parent" xml:space="preserve">
-    <value>progressPanel</value>
-  </data>
-  <data name="&gt;&gt;lblPercentCompleteValue.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lblPercentComplete.Name" xml:space="preserve">
-    <value>lblPercentComplete</value>
-  </data>
-  <data name="&gt;&gt;lblPercentComplete.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;lblPercentComplete.Parent" xml:space="preserve">
-    <value>progressPanel</value>
-  </data>
-  <data name="&gt;&gt;lblPercentComplete.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="progressPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="progressPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 337</value>
-  </data>
-  <data name="progressPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>755, 51</value>
-  </data>
-  <data name="progressPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;progressPanel.Name" xml:space="preserve">
-    <value>progressPanel</value>
-  </data>
-  <data name="&gt;&gt;progressPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;progressPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;progressPanel.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="tbProgress.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -1543,6 +1411,30 @@
   </data>
   <data name="&gt;&gt;lblPercentComplete.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="progressPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="progressPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 337</value>
+  </data>
+  <data name="progressPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>755, 51</value>
+  </data>
+  <data name="progressPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;progressPanel.Name" xml:space="preserve">
+    <value>progressPanel</value>
+  </data>
+  <data name="&gt;&gt;progressPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;progressPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;progressPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="lblSubject.AccessibleName" xml:space="preserve">
     <value>Subject</value>
@@ -1643,13 +1535,13 @@
   <data name="comboBoxEditApprovalStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>548, 159</value>
   </data>
-  <data name="comboBoxEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v19.1">
+  <data name="comboBoxEditApprovalStatus.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v19.1">
     <value>Combo</value>
   </data>
-  <data name="comboBoxEdit1.Properties.Items" xml:space="preserve">
+  <data name="comboBoxEditApprovalStatus.Properties.Items" xml:space="preserve">
     <value>Chờ duyệt</value>
   </data>
-  <data name="comboBoxEdit1.Properties.Items1" xml:space="preserve">
+  <data name="comboBoxEditApprovalStatus.Properties.Items1" xml:space="preserve">
     <value>Đã công khai</value>
   </data>
   <data name="comboBoxEditApprovalStatus.Size" type="System.Drawing.Size, System.Drawing">
@@ -1703,7 +1595,7 @@
   <data name="checkedComboBoxEditPosition.Location" type="System.Drawing.Point, System.Drawing">
     <value>94, 160</value>
   </data>
-  <data name="checkedComboBoxEdit2.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v19.1">
+  <data name="checkedComboBoxEditPosition.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v19.1">
     <value>Combo</value>
   </data>
   <metadata name="positionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -1736,7 +1628,7 @@
   <data name="checkedComboBoxEditDepartments.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 134</value>
   </data>
-  <data name="checkedComboBoxEdit1.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v19.1">
+  <data name="checkedComboBoxEditDepartments.Properties.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v19.1">
     <value>Combo</value>
   </data>
   <metadata name="departmentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -1836,11 +1728,8 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
-  <metadata name="giaDinhUniversityDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -1863,7 +1752,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="departmentsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>407, 17</value>
@@ -1871,6 +1760,60 @@
   <metadata name="positionTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
+  <data name="scheduleId.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="scheduleId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>742, 50</value>
+  </data>
+  <data name="scheduleId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 13</value>
+  </data>
+  <data name="scheduleId.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="scheduleId.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;scheduleId.Name" xml:space="preserve">
+    <value>scheduleId</value>
+  </data>
+  <data name="&gt;&gt;scheduleId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;scheduleId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;scheduleId.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="scheduleDepartmentTemp.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="scheduleDepartmentTemp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>603, 76</value>
+  </data>
+  <data name="scheduleDepartmentTemp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 13</value>
+  </data>
+  <data name="scheduleDepartmentTemp.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="scheduleDepartmentTemp.Text" xml:space="preserve">
+    <value>nothing</value>
+  </data>
+  <data name="&gt;&gt;scheduleDepartmentTemp.Name" xml:space="preserve">
+    <value>scheduleDepartmentTemp</value>
+  </data>
+  <data name="&gt;&gt;scheduleDepartmentTemp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;scheduleDepartmentTemp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;scheduleDepartmentTemp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

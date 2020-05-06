@@ -11,7 +11,6 @@ namespace QuanLyDaiHocGiaDinh.Views
         /// </summary>
         private void InitializeComponent()
         {
-            //this.components = new System.ComponentModel.Container();
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OutlookAppointmentForm1));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -75,6 +74,8 @@ namespace QuanLyDaiHocGiaDinh.Views
             this.panel3 = new System.Windows.Forms.Panel();
             this.departmentsTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.DepartmentsTableAdapter();
             this.positionTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.PositionTableAdapter();
+            this.scheduleId = new System.Windows.Forms.Label();
+            this.scheduleDepartmentTemp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -566,10 +567,10 @@ namespace QuanLyDaiHocGiaDinh.Views
             this.comboBoxEditApprovalStatus.Name = "comboBoxEditApprovalStatus";
             this.comboBoxEditApprovalStatus.Properties.AllowFocused = false;
             this.comboBoxEditApprovalStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEdit1.Properties.Buttons"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("comboBoxEditApprovalStatus.Properties.Buttons"))))});
             this.comboBoxEditApprovalStatus.Properties.Items.AddRange(new object[] {
-            resources.GetString("comboBoxEdit1.Properties.Items"),
-            resources.GetString("comboBoxEdit1.Properties.Items1")});
+            resources.GetString("comboBoxEditApprovalStatus.Properties.Items"),
+            resources.GetString("comboBoxEditApprovalStatus.Properties.Items1")});
             // 
             // labelControl3
             // 
@@ -582,7 +583,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             this.checkedComboBoxEditPosition.MenuManager = this.ribbonControl1;
             this.checkedComboBoxEditPosition.Name = "checkedComboBoxEditPosition";
             this.checkedComboBoxEditPosition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("checkedComboBoxEdit2.Properties.Buttons"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("checkedComboBoxEditPosition.Properties.Buttons"))))});
             this.checkedComboBoxEditPosition.Properties.DataSource = this.positionBindingSource;
             this.checkedComboBoxEditPosition.Properties.DisplayMember = "PositionName";
             this.checkedComboBoxEditPosition.Properties.ValueMember = "PositionId";
@@ -603,7 +604,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             this.checkedComboBoxEditDepartments.MenuManager = this.ribbonControl1;
             this.checkedComboBoxEditDepartments.Name = "checkedComboBoxEditDepartments";
             this.checkedComboBoxEditDepartments.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("checkedComboBoxEdit1.Properties.Buttons"))))});
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("checkedComboBoxEditDepartments.Properties.Buttons"))))});
             this.checkedComboBoxEditDepartments.Properties.DataSource = this.departmentsBindingSource;
             this.checkedComboBoxEditDepartments.Properties.DisplayMember = "DepartmentName";
             this.checkedComboBoxEditDepartments.Properties.ValueMember = "DepartmentId";
@@ -638,11 +639,23 @@ namespace QuanLyDaiHocGiaDinh.Views
             // 
             this.positionTableAdapter.ClearBeforeFill = true;
             // 
+            // scheduleId
+            // 
+            resources.ApplyResources(this.scheduleId, "scheduleId");
+            this.scheduleId.Name = "scheduleId";
+            // 
+            // scheduleDepartmentTemp
+            // 
+            resources.ApplyResources(this.scheduleDepartmentTemp, "scheduleDepartmentTemp");
+            this.scheduleDepartmentTemp.Name = "scheduleDepartmentTemp";
+            // 
             // OutlookAppointmentForm1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.scheduleDepartmentTemp);
+            this.Controls.Add(this.scheduleId);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.progressPanel);
             this.Controls.Add(this.panel2);
@@ -758,5 +771,7 @@ namespace QuanLyDaiHocGiaDinh.Views
         private Model.GiaDinhUniversityDataSetTableAdapters.PositionTableAdapter positionTableAdapter;
         private DevExpress.XtraEditors.ComboBoxEdit comboBoxEditApprovalStatus;
         protected DevExpress.XtraEditors.LabelControl labelControl3;
+        private System.Windows.Forms.Label scheduleId;
+        private System.Windows.Forms.Label scheduleDepartmentTemp;
     }
 }

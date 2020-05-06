@@ -48,6 +48,12 @@ namespace QuanLyDaiHocGiaDinh.Model
     partial void InsertAccount(Account instance);
     partial void UpdateAccount(Account instance);
     partial void DeleteAccount(Account instance);
+    partial void InsertSchedulePosition(SchedulePosition instance);
+    partial void UpdateSchedulePosition(SchedulePosition instance);
+    partial void DeleteSchedulePosition(SchedulePosition instance);
+    partial void InsertScheduleDepartment(ScheduleDepartment instance);
+    partial void UpdateScheduleDepartment(ScheduleDepartment instance);
+    partial void DeleteScheduleDepartment(ScheduleDepartment instance);
     #endregion
 		
 		public LinQDataContext() : 
@@ -128,6 +134,22 @@ namespace QuanLyDaiHocGiaDinh.Model
 			}
 		}
 		
+		public System.Data.Linq.Table<SchedulePosition> SchedulePositions
+		{
+			get
+			{
+				return this.GetTable<SchedulePosition>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ScheduleDepartment> ScheduleDepartments
+		{
+			get
+			{
+				return this.GetTable<ScheduleDepartment>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.p_selectAllEmployee")]
 		public ISingleResult<p_selectAllEmployeeResult> p_selectAllEmployee()
 		{
@@ -154,6 +176,13 @@ namespace QuanLyDaiHocGiaDinh.Model
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), accountId);
 			return ((ISingleResult<p_selectEmployeeByAccountIdResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.getLastIdUniqueSchedule")]
+		public ISingleResult<getLastIdUniqueScheduleResult> getLastIdUniqueSchedule()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<getLastIdUniqueScheduleResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -351,6 +380,8 @@ namespace QuanLyDaiHocGiaDinh.Model
 		
 		private EntitySet<Position> _Positions;
 		
+		private EntitySet<ScheduleDepartment> _ScheduleDepartments;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -364,6 +395,7 @@ namespace QuanLyDaiHocGiaDinh.Model
 		public Department()
 		{
 			this._Positions = new EntitySet<Position>(new Action<Position>(this.attach_Positions), new Action<Position>(this.detach_Positions));
+			this._ScheduleDepartments = new EntitySet<ScheduleDepartment>(new Action<ScheduleDepartment>(this.attach_ScheduleDepartments), new Action<ScheduleDepartment>(this.detach_ScheduleDepartments));
 			OnCreated();
 		}
 		
@@ -420,6 +452,19 @@ namespace QuanLyDaiHocGiaDinh.Model
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Department_ScheduleDepartment", Storage="_ScheduleDepartments", ThisKey="DepartmentId", OtherKey="idDepartment")]
+		public EntitySet<ScheduleDepartment> ScheduleDepartments
+		{
+			get
+			{
+				return this._ScheduleDepartments;
+			}
+			set
+			{
+				this._ScheduleDepartments.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -447,6 +492,18 @@ namespace QuanLyDaiHocGiaDinh.Model
 		}
 		
 		private void detach_Positions(Position entity)
+		{
+			this.SendPropertyChanging();
+			entity.Department = null;
+		}
+		
+		private void attach_ScheduleDepartments(ScheduleDepartment entity)
+		{
+			this.SendPropertyChanging();
+			entity.Department = this;
+		}
+		
+		private void detach_ScheduleDepartments(ScheduleDepartment entity)
 		{
 			this.SendPropertyChanging();
 			entity.Department = null;
@@ -971,6 +1028,8 @@ namespace QuanLyDaiHocGiaDinh.Model
 		
 		private EntitySet<Employee> _Employees;
 		
+		private EntitySet<SchedulePosition> _SchedulePositions;
+		
 		private EntityRef<Department> _Department;
 		
     #region Extensibility Method Definitions
@@ -988,6 +1047,7 @@ namespace QuanLyDaiHocGiaDinh.Model
 		public Position()
 		{
 			this._Employees = new EntitySet<Employee>(new Action<Employee>(this.attach_Employees), new Action<Employee>(this.detach_Employees));
+			this._SchedulePositions = new EntitySet<SchedulePosition>(new Action<SchedulePosition>(this.attach_SchedulePositions), new Action<SchedulePosition>(this.detach_SchedulePositions));
 			this._Department = default(EntityRef<Department>);
 			OnCreated();
 		}
@@ -1069,6 +1129,19 @@ namespace QuanLyDaiHocGiaDinh.Model
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Position_SchedulePosition", Storage="_SchedulePositions", ThisKey="PositionId", OtherKey="idPosition")]
+		public EntitySet<SchedulePosition> SchedulePositions
+		{
+			get
+			{
+				return this._SchedulePositions;
+			}
+			set
+			{
+				this._SchedulePositions.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Department_Position", Storage="_Department", ThisKey="DepartmentId", OtherKey="DepartmentId", IsForeignKey=true)]
 		public Department Department
 		{
@@ -1134,6 +1207,18 @@ namespace QuanLyDaiHocGiaDinh.Model
 			this.SendPropertyChanging();
 			entity.Position = null;
 		}
+		
+		private void attach_SchedulePositions(SchedulePosition entity)
+		{
+			this.SendPropertyChanging();
+			entity.Position = this;
+		}
+		
+		private void detach_SchedulePositions(SchedulePosition entity)
+		{
+			this.SendPropertyChanging();
+			entity.Position = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Schedule")]
@@ -1179,6 +1264,10 @@ namespace QuanLyDaiHocGiaDinh.Model
 		private string _DepartmentsList;
 		
 		private string _PositionList;
+		
+		private EntitySet<SchedulePosition> _SchedulePositions;
+		
+		private EntitySet<ScheduleDepartment> _ScheduleDepartments;
 		
 		private EntityRef<Account> _Account;
 		
@@ -1228,6 +1317,8 @@ namespace QuanLyDaiHocGiaDinh.Model
 		
 		public Schedule()
 		{
+			this._SchedulePositions = new EntitySet<SchedulePosition>(new Action<SchedulePosition>(this.attach_SchedulePositions), new Action<SchedulePosition>(this.detach_SchedulePositions));
+			this._ScheduleDepartments = new EntitySet<ScheduleDepartment>(new Action<ScheduleDepartment>(this.attach_ScheduleDepartments), new Action<ScheduleDepartment>(this.detach_ScheduleDepartments));
 			this._Account = default(EntityRef<Account>);
 			OnCreated();
 		}
@@ -1616,6 +1707,32 @@ namespace QuanLyDaiHocGiaDinh.Model
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Schedule_SchedulePosition", Storage="_SchedulePositions", ThisKey="UniqueID", OtherKey="idSchedule")]
+		public EntitySet<SchedulePosition> SchedulePositions
+		{
+			get
+			{
+				return this._SchedulePositions;
+			}
+			set
+			{
+				this._SchedulePositions.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Schedule_ScheduleDepartment", Storage="_ScheduleDepartments", ThisKey="UniqueID", OtherKey="idSchedule")]
+		public EntitySet<ScheduleDepartment> ScheduleDepartments
+		{
+			get
+			{
+				return this._ScheduleDepartments;
+			}
+			set
+			{
+				this._ScheduleDepartments.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Account_Schedule", Storage="_Account", ThisKey="AccountId", OtherKey="AccountId", IsForeignKey=true)]
 		public Account Account
 		{
@@ -1668,6 +1785,30 @@ namespace QuanLyDaiHocGiaDinh.Model
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_SchedulePositions(SchedulePosition entity)
+		{
+			this.SendPropertyChanging();
+			entity.Schedule = this;
+		}
+		
+		private void detach_SchedulePositions(SchedulePosition entity)
+		{
+			this.SendPropertyChanging();
+			entity.Schedule = null;
+		}
+		
+		private void attach_ScheduleDepartments(ScheduleDepartment entity)
+		{
+			this.SendPropertyChanging();
+			entity.Schedule = this;
+		}
+		
+		private void detach_ScheduleDepartments(ScheduleDepartment entity)
+		{
+			this.SendPropertyChanging();
+			entity.Schedule = null;
 		}
 	}
 	
@@ -1858,6 +1999,342 @@ namespace QuanLyDaiHocGiaDinh.Model
 		{
 			this.SendPropertyChanging();
 			entity.Account = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SchedulePosition")]
+	public partial class SchedulePosition : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idSchedule;
+		
+		private int _idPosition;
+		
+		private EntityRef<Position> _Position;
+		
+		private EntityRef<Schedule> _Schedule;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidScheduleChanging(int value);
+    partial void OnidScheduleChanged();
+    partial void OnidPositionChanging(int value);
+    partial void OnidPositionChanged();
+    #endregion
+		
+		public SchedulePosition()
+		{
+			this._Position = default(EntityRef<Position>);
+			this._Schedule = default(EntityRef<Schedule>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idSchedule", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idSchedule
+		{
+			get
+			{
+				return this._idSchedule;
+			}
+			set
+			{
+				if ((this._idSchedule != value))
+				{
+					if (this._Schedule.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidScheduleChanging(value);
+					this.SendPropertyChanging();
+					this._idSchedule = value;
+					this.SendPropertyChanged("idSchedule");
+					this.OnidScheduleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idPosition", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idPosition
+		{
+			get
+			{
+				return this._idPosition;
+			}
+			set
+			{
+				if ((this._idPosition != value))
+				{
+					if (this._Position.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidPositionChanging(value);
+					this.SendPropertyChanging();
+					this._idPosition = value;
+					this.SendPropertyChanged("idPosition");
+					this.OnidPositionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Position_SchedulePosition", Storage="_Position", ThisKey="idPosition", OtherKey="PositionId", IsForeignKey=true)]
+		public Position Position
+		{
+			get
+			{
+				return this._Position.Entity;
+			}
+			set
+			{
+				Position previousValue = this._Position.Entity;
+				if (((previousValue != value) 
+							|| (this._Position.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Position.Entity = null;
+						previousValue.SchedulePositions.Remove(this);
+					}
+					this._Position.Entity = value;
+					if ((value != null))
+					{
+						value.SchedulePositions.Add(this);
+						this._idPosition = value.PositionId;
+					}
+					else
+					{
+						this._idPosition = default(int);
+					}
+					this.SendPropertyChanged("Position");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Schedule_SchedulePosition", Storage="_Schedule", ThisKey="idSchedule", OtherKey="UniqueID", IsForeignKey=true)]
+		public Schedule Schedule
+		{
+			get
+			{
+				return this._Schedule.Entity;
+			}
+			set
+			{
+				Schedule previousValue = this._Schedule.Entity;
+				if (((previousValue != value) 
+							|| (this._Schedule.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Schedule.Entity = null;
+						previousValue.SchedulePositions.Remove(this);
+					}
+					this._Schedule.Entity = value;
+					if ((value != null))
+					{
+						value.SchedulePositions.Add(this);
+						this._idSchedule = value.UniqueID;
+					}
+					else
+					{
+						this._idSchedule = default(int);
+					}
+					this.SendPropertyChanged("Schedule");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ScheduleDepartment")]
+	public partial class ScheduleDepartment : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idSchedule;
+		
+		private int _idDepartment;
+		
+		private EntityRef<Department> _Department;
+		
+		private EntityRef<Schedule> _Schedule;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidScheduleChanging(int value);
+    partial void OnidScheduleChanged();
+    partial void OnidDepartmentChanging(int value);
+    partial void OnidDepartmentChanged();
+    #endregion
+		
+		public ScheduleDepartment()
+		{
+			this._Department = default(EntityRef<Department>);
+			this._Schedule = default(EntityRef<Schedule>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idSchedule", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idSchedule
+		{
+			get
+			{
+				return this._idSchedule;
+			}
+			set
+			{
+				if ((this._idSchedule != value))
+				{
+					if (this._Schedule.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidScheduleChanging(value);
+					this.SendPropertyChanging();
+					this._idSchedule = value;
+					this.SendPropertyChanged("idSchedule");
+					this.OnidScheduleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idDepartment", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int idDepartment
+		{
+			get
+			{
+				return this._idDepartment;
+			}
+			set
+			{
+				if ((this._idDepartment != value))
+				{
+					if (this._Department.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidDepartmentChanging(value);
+					this.SendPropertyChanging();
+					this._idDepartment = value;
+					this.SendPropertyChanged("idDepartment");
+					this.OnidDepartmentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Department_ScheduleDepartment", Storage="_Department", ThisKey="idDepartment", OtherKey="DepartmentId", IsForeignKey=true)]
+		public Department Department
+		{
+			get
+			{
+				return this._Department.Entity;
+			}
+			set
+			{
+				Department previousValue = this._Department.Entity;
+				if (((previousValue != value) 
+							|| (this._Department.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Department.Entity = null;
+						previousValue.ScheduleDepartments.Remove(this);
+					}
+					this._Department.Entity = value;
+					if ((value != null))
+					{
+						value.ScheduleDepartments.Add(this);
+						this._idDepartment = value.DepartmentId;
+					}
+					else
+					{
+						this._idDepartment = default(int);
+					}
+					this.SendPropertyChanged("Department");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Schedule_ScheduleDepartment", Storage="_Schedule", ThisKey="idSchedule", OtherKey="UniqueID", IsForeignKey=true)]
+		public Schedule Schedule
+		{
+			get
+			{
+				return this._Schedule.Entity;
+			}
+			set
+			{
+				Schedule previousValue = this._Schedule.Entity;
+				if (((previousValue != value) 
+							|| (this._Schedule.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Schedule.Entity = null;
+						previousValue.ScheduleDepartments.Remove(this);
+					}
+					this._Schedule.Entity = value;
+					if ((value != null))
+					{
+						value.ScheduleDepartments.Add(this);
+						this._idSchedule = value.UniqueID;
+					}
+					else
+					{
+						this._idSchedule = default(int);
+					}
+					this.SendPropertyChanged("Schedule");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
@@ -3094,6 +3571,32 @@ namespace QuanLyDaiHocGiaDinh.Model
 				if ((this._EmployeeId != value))
 				{
 					this._EmployeeId = value;
+				}
+			}
+		}
+	}
+	
+	public partial class getLastIdUniqueScheduleResult
+	{
+		
+		private int _UniqueID;
+		
+		public getLastIdUniqueScheduleResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UniqueID", DbType="Int NOT NULL")]
+		public int UniqueID
+		{
+			get
+			{
+				return this._UniqueID;
+			}
+			set
+			{
+				if ((this._UniqueID != value))
+				{
+					this._UniqueID = value;
 				}
 			}
 		}

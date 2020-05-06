@@ -23,6 +23,9 @@ using DevExpress.XtraScheduler.Services;
 using DevExpress.XtraPrinting;
 using DevExpress.Utils.CommonDialogs;
 using CommonDialogsInternal = DevExpress.Utils.CommonDialogs.Internal;
+using QuanLyDaiHocGiaDinh.Services;
+using QuanLyDaiHocGiaDinh.Model;
+using System.Collections.Generic;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -128,6 +131,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             if (appointment.CustomFields["DepartmentsList"] != null)
             {
                 _department = appointment.CustomFields["DepartmentsList"].ToString();
+                scheduleDepartmentTemp.Text = appointment.CustomFields["DepartmentsList"].ToString();
                 //MessageBox.Show(_department);
             }
             checkedComboBoxEditDepartments.EditValue = _department;
@@ -137,16 +141,100 @@ namespace QuanLyDaiHocGiaDinh.Views
                 _position = appointment.CustomFields["PositionList"].ToString();
                 //MessageBox.Show(_position);
             }
+            if (appointment.CustomFields["UniqueID"] != null)
+            {
+                scheduleId.Text = appointment.CustomFields["UniqueID"].ToString();
+                MessageBox.Show(appointment.CustomFields["UniqueID"].ToString());
+            }
+            if (scheduleId.Text.Trim() == "0")
+            {
+                scheduleId.Text = "0";
+            }
             checkedComboBoxEditPosition.EditValue = _position;
             //do nothing
         }
         public virtual bool SaveFormData(Appointment appointment)
         {
+            ScheduleServices scheduleServices = new ScheduleServices();
             appointment.CustomFields["ApprovalStatus"] = comboBoxEditApprovalStatus.SelectedItem.ToString();
             appointment.CustomFields["DepartmentsList"] = checkedComboBoxEditDepartments.EditValue.ToString();
             appointment.CustomFields["PositionList"] = checkedComboBoxEditPosition.EditValue.ToString();
-            //MessageBox.Show(checkedComboBoxEditDepartments.EditValue.ToString() + "--" + checkedComboBoxEditPosition.EditValue.ToString());
-            //MessageBox.Show("okey luu");
+            if ( scheduleId.Text.Trim() == "0")
+            {
+                MessageBox.Show("Them moi");
+                
+                //MessageBox.Show(scheduleServices.getLastScheduleId().ToString());
+                /*
+                String[] listDepartment = checkedComboBoxEditDepartments.EditValue.ToString().Split(',');
+                for (int i = 0; i < listDepartment.Length; i++)
+                {
+                    MessageBox.Show(listDepartment[i]);
+                    ScheduleDepartment schedule = new ScheduleDepartment();
+                    schedule.idSchedule = scheduleServices.getLastScheduleId();
+                    schedule.idDepartment = Int32.Parse(listDepartment[i]);
+                    scheduleServices.createScheduleForDepartment(schedule);
+                }*/
+            }
+            else
+            {
+                if (scheduleDepartmentTemp.Text.Trim() == "nothing")
+                {
+                    String[] listDepartment = checkedComboBoxEditDepartments.EditValue.ToString().Split(',');
+                    for (int i = 0; i < listDepartment.Length; i++)
+                    {
+                        if (listDepartment[i].Trim() != "")
+                        {
+                            ScheduleDepartment schedule = new ScheduleDepartment();
+                            schedule.idSchedule = Int32.Parse(scheduleId.Text);
+                            schedule.idDepartment = Int32.Parse(listDepartment[i]);
+                            scheduleServices.createScheduleForDepartment(schedule);
+                        }
+                    }
+                }
+                else
+                {
+                    String[] listDepartment = checkedComboBoxEditDepartments.EditValue.ToString().Split(',');
+                    String[] listDepartmentTemp = scheduleDepartmentTemp.Text.Split(',');
+                    List<string> listChoose = new List<string>(listDepartment);
+                    List<string> listTemp = new List<string>(listDepartmentTemp);
+
+                    List<string> listDelete = new List<string>(listDepartmentTemp);
+                    List<string> listInsert = new List<string>(listDepartment);
+
+                    listChoose.ForEach(y =>
+                    {
+                        listTemp.ForEach(x =>
+                        {
+                            if (y.Trim() == x.Trim())
+                            {
+                                listInsert.Remove(y);
+                                listDelete.Remove(x);
+                                
+                            }
+                        });
+                    });
+                    
+                    listDelete.ForEach(x =>
+                    {
+                        ScheduleDepartment schedule = new ScheduleDepartment();
+                       schedule.idSchedule = Int32.Parse(scheduleId.Text);
+                        schedule.idDepartment = Int32.Parse(x);
+                        scheduleServices.deleteScheduleDepartment(schedule);
+                    });
+
+                    listInsert.ForEach(x =>
+                    {
+                        ScheduleDepartment schedule = new ScheduleDepartment();
+                        schedule.idSchedule = Int32.Parse(scheduleId.Text);
+                        schedule.idDepartment = Int32.Parse(x);
+                        scheduleServices.createScheduleForDepartment(schedule);
+                    });
+
+                }
+                //MessageBox.Show(checkedComboBoxEditDepartments.EditValue.ToString() + "--" + checkedComboBoxEditPosition.EditValue.ToString());
+                //MessageBox.Show("okey luu");
+            }
+
             return true;
         }
         public virtual bool IsAppointmentChanged(Appointment appointment)
@@ -626,7 +714,26 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void btnSaveAndClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
             OnOkButton();
+            if (scheduleId.Text.Trim() == "0")
+            {
+                ScheduleServices scheduleServices = new ScheduleServices();
+                String[] listDepartment = checkedComboBoxEditDepartments.EditValue.ToString().Split(',');
+                for (int i = 0; i < listDepartment.Length; i++)
+                {
+                    if (listDepartment[i].Trim() != "")
+                    {
+                        ScheduleDepartment schedule = new ScheduleDepartment();
+                        schedule.idSchedule = scheduleServices.getLastScheduleId();
+                        schedule.idDepartment = Int32.Parse(listDepartment[i]);
+                        scheduleServices.createScheduleForDepartment(schedule);
+                    }
+                       
+                    
+                }
+            }
+            
         }
 
         private void barButtonDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

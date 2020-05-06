@@ -1346,6 +1346,7 @@
             this.schedulerDataStorage.Appointments.CustomFieldMappings.Add(new DevExpress.XtraScheduler.AppointmentCustomFieldMapping("DepartmentsList", "DepartmentsList"));
             this.schedulerDataStorage.Appointments.CustomFieldMappings.Add(new DevExpress.XtraScheduler.AppointmentCustomFieldMapping("ApprovalStatus", "ApprovalStatus"));
             this.schedulerDataStorage.Appointments.CustomFieldMappings.Add(new DevExpress.XtraScheduler.AppointmentCustomFieldMapping("PositionList", "PositionList"));
+            this.schedulerDataStorage.Appointments.CustomFieldMappings.Add(new DevExpress.XtraScheduler.AppointmentCustomFieldMapping("UniqueID", "UniqueID"));
             this.schedulerDataStorage.Appointments.DataSource = this.scheduleBindingSource;
             this.schedulerDataStorage.Appointments.Mappings.AllDay = "AllDay";
             this.schedulerDataStorage.Appointments.Mappings.Description = "Description";
@@ -1362,7 +1363,7 @@
             this.schedulerDataStorage.Appointments.Mappings.Type = "Type";
             this.schedulerDataStorage.AppointmentsInserted += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerDataStorage_AppointmentsChanged);
             this.schedulerDataStorage.AppointmentsChanged += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerDataStorage_AppointmentsChanged);
-            this.schedulerDataStorage.AppointmentsDeleted += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerDataStorage_AppointmentsChanged);
+            this.schedulerDataStorage.AppointmentsDeleted += new DevExpress.XtraScheduler.PersistentObjectsEventHandler(this.schedulerDataStorage_AppointmentsDeleted);
             // 
             // scheduleBindingSource
             // 

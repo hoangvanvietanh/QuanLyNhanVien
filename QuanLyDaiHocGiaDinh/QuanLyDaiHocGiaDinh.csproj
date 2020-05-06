@@ -104,14 +104,17 @@
     <Compile Include="DaoImpl\DepartmentDaoImpl.cs" />
     <Compile Include="DaoImpl\EmployeeDaoImpl.cs" />
     <Compile Include="DaoImpl\PositionDaoImpl.cs" />
+    <Compile Include="DaoImpl\ScheduleDepartmentDaoImpl.cs" />
     <Compile Include="IDao\IDepartmentDao.cs" />
     <Compile Include="IDao\IPositionDao.cs" />
+    <Compile Include="IDao\IScheduleDepartmentDao.cs" />
     <Compile Include="Model\GiaDinhUniversityDataSet.cs">
       <DependentUpon>GiaDinhUniversityDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Services\DepartmentServices.cs" />
     <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\PositionServices.cs" />
+    <Compile Include="Services\ScheduleServices.cs" />
     <Compile Include="Views\AdminChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>

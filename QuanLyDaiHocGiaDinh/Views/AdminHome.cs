@@ -401,8 +401,16 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void schedulerDataStorage_AppointmentsChanged(object sender, PersistentObjectsEventArgs e)
         {
-            scheduleTableAdapter.Update(giaDinhUniversityDataSet);
-            giaDinhUniversityDataSet.AcceptChanges();
+            try
+            {
+                
+                scheduleTableAdapter.Update(giaDinhUniversityDataSet);
+                giaDinhUniversityDataSet.AcceptChanges();
+            }
+            catch
+            {
+                
+            }
         }
 
         private void schedulerControl1_EditAppointmentFormShowing(object sender, AppointmentFormEventArgs e)
@@ -419,6 +427,33 @@ namespace QuanLyDaiHocGiaDinh.Views
                 form.Dispose();
             }
 
+        }
+
+        private void schedulerDataStorage_AppointmentsDeleted(object sender, PersistentObjectsEventArgs e)
+        {
+            ScheduleServices scheduleServices = new ScheduleServices();
+            for (int i = 0; i < schedulerControl1.SelectedAppointments.Count; i++)
+            {
+                Appointment apt = schedulerControl1.SelectedAppointments[i];
+                if (apt.CustomFields["UniqueID"] != null && apt.CustomFields["DepartmentsList"] != null)
+                {
+                    int idSchedule = Int32.Parse(apt.CustomFields["UniqueID"].ToString());
+                    String[] listDepartment = apt.CustomFields["DepartmentsList"].ToString().Split(',');
+                    for (int j = 0; j < listDepartment.Length; j++)
+                    {
+                        if (listDepartment[j].Trim() != "")
+                        {
+                            ScheduleDepartment scheduleDepartment = new ScheduleDepartment();
+                            scheduleDepartment.idSchedule = idSchedule;
+                            scheduleDepartment.idDepartment = Int32.Parse(listDepartment[j]);
+                            MessageBox.Show(scheduleDepartment.idSchedule + "--" + scheduleDepartment.idDepartment);
+                            scheduleServices.deleteScheduleDepartment(scheduleDepartment);
+                        }
+                    }
+                }
+            }
+            scheduleTableAdapter.Update(giaDinhUniversityDataSet);
+            giaDinhUniversityDataSet.AcceptChanges();
         }
     }
 }

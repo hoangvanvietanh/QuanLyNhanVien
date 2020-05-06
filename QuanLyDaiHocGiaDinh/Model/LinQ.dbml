@@ -15,6 +15,7 @@
       <Column Name="DepartmentId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="DepartmentName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Association Name="Department_Position" Member="Positions" ThisKey="DepartmentId" OtherKey="DepartmentId" Type="Position" />
+      <Association Name="Department_ScheduleDepartment" Member="ScheduleDepartments" ThisKey="DepartmentId" OtherKey="idDepartment" Type="ScheduleDepartment" />
     </Type>
   </Table>
   <Table Name="dbo.Employees" Member="Employees">
@@ -45,6 +46,7 @@
       <Column Name="PositionName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="DepartmentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Position_Employee" Member="Employees" ThisKey="PositionId" OtherKey="PositionId" Type="Employee" />
+      <Association Name="Position_SchedulePosition" Member="SchedulePositions" ThisKey="PositionId" OtherKey="idPosition" Type="SchedulePosition" />
       <Association Name="Department_Position" Member="Department" ThisKey="DepartmentId" OtherKey="DepartmentId" Type="Department" IsForeignKey="true" />
     </Type>
   </Table>
@@ -69,6 +71,8 @@
       <Column Name="AccountId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DepartmentsList" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
       <Column Name="PositionList" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="Schedule_SchedulePosition" Member="SchedulePositions" ThisKey="UniqueID" OtherKey="idSchedule" Type="SchedulePosition" />
+      <Association Name="Schedule_ScheduleDepartment" Member="ScheduleDepartments" ThisKey="UniqueID" OtherKey="idSchedule" Type="ScheduleDepartment" />
       <Association Name="Account_Schedule" Member="Account" ThisKey="AccountId" OtherKey="AccountId" Type="Account" IsForeignKey="true" />
     </Type>
   </Table>
@@ -80,6 +84,22 @@
       <Column Name="Role" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Association Name="Account_Employee" Member="Employees" ThisKey="AccountId" OtherKey="AccountId" Type="Employee" />
       <Association Name="Account_Schedule" Member="Schedules" ThisKey="AccountId" OtherKey="AccountId" Type="Schedule" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SchedulePosition" Member="SchedulePositions">
+    <Type Name="SchedulePosition">
+      <Column Name="idSchedule" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idPosition" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Position_SchedulePosition" Member="Position" ThisKey="idPosition" OtherKey="PositionId" Type="Position" IsForeignKey="true" />
+      <Association Name="Schedule_SchedulePosition" Member="Schedule" ThisKey="idSchedule" OtherKey="UniqueID" Type="Schedule" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ScheduleDepartment" Member="ScheduleDepartments">
+    <Type Name="ScheduleDepartment">
+      <Column Name="idSchedule" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idDepartment" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Department_ScheduleDepartment" Member="Department" ThisKey="idDepartment" OtherKey="DepartmentId" Type="Department" IsForeignKey="true" />
+      <Association Name="Schedule_ScheduleDepartment" Member="Schedule" ThisKey="idSchedule" OtherKey="UniqueID" Type="Schedule" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.p_selectAllEmployee" Method="p_selectAllEmployee">
@@ -166,6 +186,11 @@
       <Column Name="Role" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
       <Column Name="AccountId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="EmployeeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.getLastIdUniqueSchedule" Method="getLastIdUniqueSchedule">
+    <ElementType Name="getLastIdUniqueScheduleResult">
+      <Column Name="UniqueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
 </Database>
