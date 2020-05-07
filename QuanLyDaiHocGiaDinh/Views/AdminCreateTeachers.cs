@@ -11,6 +11,9 @@ using DevExpress.XtraEditors;
 using QuanLyDaiHocGiaDinh.Model;
 using System.IO;
 using QuanLyDaiHocGiaDinh.Services;
+using System.Drawing.Imaging;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.Utils.Win;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -18,6 +21,10 @@ namespace QuanLyDaiHocGiaDinh.Views
     {
         private AccountServices accountServices = new AccountServices();
         private EmployeeService employeeService = new EmployeeService();
+        private PositionServices positionServices = new PositionServices();
+        private DepartmentServices departmentServices = new DepartmentServices();
+        private Position _position;
+        private Department _deparment;
        
 
         String strFilePath = "";
@@ -25,6 +32,15 @@ namespace QuanLyDaiHocGiaDinh.Views
         public AdminCreateTeachers()
         {
             InitializeComponent();
+            PositionNameTextEdit.Properties.SelectAllItemVisible = false;
+            PositionNameTextEdit.LookAndFeel.StyleChanged += LookAndFeel_StyleChanged;
+            DepartmentNameTextEdit.Properties.SelectAllItemVisible = false;
+            DepartmentNameTextEdit.LookAndFeel.StyleChanged += LookAndFeel_StyleChanged;
+        }
+
+        void LookAndFeel_StyleChanged(object sender, EventArgs e)
+        {
+            subscribe = true;
         }
 
         private void AdminCreateTeachers_Load(object sender, EventArgs e)
@@ -33,51 +49,9 @@ namespace QuanLyDaiHocGiaDinh.Views
             this.departmentsTableAdapter.Fill(this.giaDinhUniversityDataSet.Departments);
             // TODO: This line of code loads data into the 'giaDinhUniversityDataSet.Position' table. You can move, or remove it, as needed.
             this.positionTableAdapter.Fill(this.giaDinhUniversityDataSet.Position);
-
-
+          
+           
         }
-
-        private void ImagePictureEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                strFilePath = ofd.FileName;
-                ImagePictureEdit.Image = new Bitmap(strFilePath);
-            }
-            try { 
-            if (strFilePath == "")
-            {
-                /*if (ImageByArray.Length != 0)
-                    ImageByArray = new byte[] { };*/
-                XtraMessageBox.Show("Vui lòng chọn hình đại diện ^^");
-                
-                ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    strFilePath = ofd.FileName;
-                    ImagePictureEdit.Image = new Bitmap(strFilePath);
-                }
-                Image temp = new Bitmap(strFilePath);
-                MemoryStream strm = new MemoryStream();
-                temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
-                ImageByArray = strm.ToArray();
-            }
-            else
-            {
-                Image temp = new Bitmap(strFilePath);
-                MemoryStream strm = new MemoryStream();
-                temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
-                ImageByArray = strm.ToArray();
-            }
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Account acc = new Account();
@@ -103,11 +77,21 @@ namespace QuanLyDaiHocGiaDinh.Views
             emp.Image = ImageByArray;
             employeeService.createEmployee(emp);
 
+            Position po = new Position();
+            _position = positionServices.getPositionById((int)emp.PositionId);
+            po = _position;
+            po.DepartmentId = Int32.Parse(String.Format("{0}", DepartmentNameTextEdit.EditValue));
+
+            Department dep = new Department();
+            _deparment = departmentServices.getDepartmentById((int)po.DepartmentId);
+            
+            
+            XtraMessageBox.Show(po.DepartmentId.ToString());
+            //dep.DepartmentName = DepartmentNameTextEdit.Text;
+            positionServices.updatePosition(po);
+
             XtraMessageBox.Show("Thêm thành công !!!");
             this.Close();
-
-            
-
         }
 
         private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -115,6 +99,105 @@ namespace QuanLyDaiHocGiaDinh.Views
             this.Close();
         }
 
-     
+        private void ImagePictureEdit_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                if (e.Button == MouseButtons.Left)  /// click chuột chọn ảnh từ OpenFileDialog
+                {
+
+                    OpenFileDialog ofd = new OpenFileDialog();
+                    ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
+                    if (ofd.ShowDialog() == DialogResult.OK)
+                    {
+                        strFilePath = ofd.FileName;
+                        ImagePictureEdit.Image = new Bitmap(strFilePath);
+                    }
+
+
+                    if (strFilePath == "")
+                    {
+                        /*if (ImageByArray.Length != 0)
+                            ImageByArray = new byte[] { };*/
+                        XtraMessageBox.Show("Vui lòng chọn hình đại diện ^^");
+
+                        ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
+                        if (ofd.ShowDialog() == DialogResult.OK)
+                        {
+                            strFilePath = ofd.FileName;
+                            ImagePictureEdit.Image = new Bitmap(strFilePath);
+                        }
+                        Image temp = new Bitmap(strFilePath);
+                        MemoryStream strm = new MemoryStream();
+                        temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        ImageByArray = strm.ToArray();
+                    }
+                    else
+                    {
+                        Image temp = new Bitmap(strFilePath);
+                        MemoryStream strm = new MemoryStream();
+                        temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        ImageByArray = strm.ToArray();
+                    }
+                }
+                else
+                {
+                    ///// Chọn ảnh từ Camera
+                    DevExpress.XtraEditors.Camera.TakePictureDialog dialog = new DevExpress.XtraEditors.Camera.TakePictureDialog();
+                    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        System.Drawing.Image image = dialog.Image;
+                        using (var stream = new MemoryStream())
+                        {
+                            image.Save(stream, ImageFormat.Jpeg);
+                            ImageByArray = stream.ToArray();
+                            ImagePictureEdit.EditValue = stream.ToArray();
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        //Check single for toolbox CheckcomboboxEdit
+        bool subscribe = true;
+        private void PositionNameTextEdit_Popup(object sender, EventArgs e)
+        {
+            if (subscribe) // 1st approach
+            {
+                CheckedListBoxControl list = (sender as IPopupControl).PopupWindow.Controls.OfType<PopupContainerControl>().First().Controls.OfType<CheckedListBoxControl>().First();
+                list.ItemCheck += list_ItemCheck;
+                subscribe = false;
+            }
+        }
+
+        private void DepartmentNameTextEdit_Popup(object sender, EventArgs e)
+        {
+            if (subscribe) // 1st approach
+            {
+                CheckedListBoxControl list = (sender as IPopupControl).PopupWindow.Controls.OfType<PopupContainerControl>().First().Controls.OfType<CheckedListBoxControl>().First();
+                list.ItemCheck += list_ItemCheck;
+                subscribe = false;
+            }
+        }
+
+        void list_ItemCheck(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)
+        {
+            if (e.State == CheckState.Checked)
+            {
+                CheckedListBoxControl list = sender as CheckedListBoxControl;
+                List<CheckedListBoxItem> items = new List<CheckedListBoxItem>();
+                foreach (int index in list.CheckedIndices)
+                {
+                    if (index == e.Index) continue;
+                    items.Add(list.Items[index]);
+                }
+                foreach (CheckedListBoxItem item in items)
+                    item.CheckState = CheckState.Unchecked;
+            }
+        }
     }
 }

@@ -100,7 +100,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             // TODO: This line of code loads data into the 'giaDinhUniversityDataSet.p_selectAllEmployee' table. You can move, or remove it, as needed.
             this.p_selectAllEmployeeTableAdapter.Fill(this.giaDinhUniversityDataSet.p_selectAllEmployee);
 
-            this.scheduleTableAdapter.FillBy(this.giaDinhUniversityDataSet.Schedule);
+            //this.scheduleTableAdapter.FillBy(this.giaDinhUniversityDataSet.Schedule);
         }
 
         //Default Skin
