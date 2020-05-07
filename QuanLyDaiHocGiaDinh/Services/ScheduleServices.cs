@@ -12,6 +12,7 @@ namespace QuanLyDaiHocGiaDinh.Services
     class ScheduleServices
     {
         IScheduleDepartment scheduleDepartmentDao = new ScheduleDepartmentDaoImpl();
+        ISchedulePosition schedulePositionDao = new SchedulePositionDaoImpl();
 
         public void createScheduleForDepartment(ScheduleDepartment schedule)
         {
@@ -26,6 +27,16 @@ namespace QuanLyDaiHocGiaDinh.Services
         public void deleteScheduleDepartment(ScheduleDepartment scheduleDepartment)
         {
             scheduleDepartmentDao.deleteSchdeduleDepartment(scheduleDepartment);
+        }
+
+        public void createSchedulePosition(SchedulePosition schedulePosition)
+        {
+            schedulePositionDao.AddScheduleForPostion(schedulePosition);
+        }
+
+        public void deleteSchedulePosition(SchedulePosition schedulePosition)
+        {
+            schedulePositionDao.DeleteSchedulePostion(schedulePosition);
         }
     }
 }

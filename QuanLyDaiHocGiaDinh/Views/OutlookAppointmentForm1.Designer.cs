@@ -76,6 +76,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             this.positionTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.PositionTableAdapter();
             this.scheduleId = new System.Windows.Forms.Label();
             this.scheduleDepartmentTemp = new System.Windows.Forms.Label();
+            this.schedulePositionTemp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             this.backstageViewControl1.SuspendLayout();
@@ -649,11 +650,17 @@ namespace QuanLyDaiHocGiaDinh.Views
             resources.ApplyResources(this.scheduleDepartmentTemp, "scheduleDepartmentTemp");
             this.scheduleDepartmentTemp.Name = "scheduleDepartmentTemp";
             // 
+            // schedulePositionTemp
+            // 
+            resources.ApplyResources(this.schedulePositionTemp, "schedulePositionTemp");
+            this.schedulePositionTemp.Name = "schedulePositionTemp";
+            // 
             // OutlookAppointmentForm1
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.schedulePositionTemp);
             this.Controls.Add(this.scheduleDepartmentTemp);
             this.Controls.Add(this.scheduleId);
             this.Controls.Add(this.panel3);
@@ -773,5 +780,6 @@ namespace QuanLyDaiHocGiaDinh.Views
         protected DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.Label scheduleId;
         private System.Windows.Forms.Label scheduleDepartmentTemp;
+        private System.Windows.Forms.Label schedulePositionTemp;
     }
 }

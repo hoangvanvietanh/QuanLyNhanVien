@@ -446,8 +446,21 @@ namespace QuanLyDaiHocGiaDinh.Views
                             ScheduleDepartment scheduleDepartment = new ScheduleDepartment();
                             scheduleDepartment.idSchedule = idSchedule;
                             scheduleDepartment.idDepartment = Int32.Parse(listDepartment[j]);
-                            MessageBox.Show(scheduleDepartment.idSchedule + "--" + scheduleDepartment.idDepartment);
+                            //MessageBox.Show(scheduleDepartment.idSchedule + "--" + scheduleDepartment.idDepartment);
                             scheduleServices.deleteScheduleDepartment(scheduleDepartment);
+                        }
+                    }
+
+                    String[] listPosition = apt.CustomFields["PositionList"].ToString().Split(',');
+                    for (int k = 0; k < listPosition.Length; k++)
+                    {
+                        if (listPosition[i].Trim() != "")
+                        {
+                            SchedulePosition schedule = new SchedulePosition();
+                            schedule.idPosition = Int32.Parse(listPosition[k]);
+                            //MessageBox.Show(scheduleServices.getLastScheduleId().ToString());
+                            schedule.idSchedule = idSchedule;
+                            scheduleServices.deleteSchedulePosition(schedule);
                         }
                     }
                 }

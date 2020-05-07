@@ -124,7 +124,6 @@ namespace QuanLyDaiHocGiaDinh.Views
             if (appointment.CustomFields["ApprovalStatus"] != null)
             {
                 _approvalStatus = appointment.CustomFields["ApprovalStatus"].ToString();
-                //MessageBox.Show(_approvalStatus);
             }
             comboBoxEditApprovalStatus.SelectedItem = _approvalStatus;
 
@@ -132,25 +131,24 @@ namespace QuanLyDaiHocGiaDinh.Views
             {
                 _department = appointment.CustomFields["DepartmentsList"].ToString();
                 scheduleDepartmentTemp.Text = appointment.CustomFields["DepartmentsList"].ToString();
-                //MessageBox.Show(_department);
+                checkedComboBoxEditDepartments.EditValue = _department;
             }
-            checkedComboBoxEditDepartments.EditValue = _department;
+
 
             if (appointment.CustomFields["PositionList"] != null)
             {
                 _position = appointment.CustomFields["PositionList"].ToString();
-                //MessageBox.Show(_position);
+                schedulePositionTemp.Text = appointment.CustomFields["PositionList"].ToString();
+                checkedComboBoxEditPosition.EditValue = _position;
             }
             if (appointment.CustomFields["UniqueID"] != null)
             {
                 scheduleId.Text = appointment.CustomFields["UniqueID"].ToString();
-                MessageBox.Show(appointment.CustomFields["UniqueID"].ToString());
             }
             if (scheduleId.Text.Trim() == "0")
             {
                 scheduleId.Text = "0";
             }
-            checkedComboBoxEditPosition.EditValue = _position;
             //do nothing
         }
         public virtual bool SaveFormData(Appointment appointment)
@@ -158,11 +156,12 @@ namespace QuanLyDaiHocGiaDinh.Views
             ScheduleServices scheduleServices = new ScheduleServices();
             appointment.CustomFields["ApprovalStatus"] = comboBoxEditApprovalStatus.SelectedItem.ToString();
             appointment.CustomFields["DepartmentsList"] = checkedComboBoxEditDepartments.EditValue.ToString();
+            //MessageBox.Show("--->"+checkedComboBoxEditPosition.EditValue.ToString());
             appointment.CustomFields["PositionList"] = checkedComboBoxEditPosition.EditValue.ToString();
-            if ( scheduleId.Text.Trim() == "0")
+            if (scheduleId.Text.Trim() == "0")
             {
-                MessageBox.Show("Them moi");
-                
+                //MessageBox.Show("Them moi");
+
                 //MessageBox.Show(scheduleServices.getLastScheduleId().ToString());
                 /*
                 String[] listDepartment = checkedComboBoxEditDepartments.EditValue.ToString().Split(',');
@@ -177,6 +176,66 @@ namespace QuanLyDaiHocGiaDinh.Views
             }
             else
             {
+                if (schedulePositionTemp.Text.Trim() == "nothing")
+                {
+                    String[] listPosition = checkedComboBoxEditPosition.EditValue.ToString().Split(',');
+                    for (int i = 0; i < listPosition.Length; i++)
+                    {
+                        if (listPosition[i].Trim() != "")
+                        {
+                            //MessageBox.Show("--->+"+ listPosition[i]);
+                            SchedulePosition schedule = new SchedulePosition();
+                            schedule.idPosition = Int32.Parse(listPosition[i]);
+                            schedule.idSchedule = Int32.Parse(scheduleId.Text);
+                            scheduleServices.createSchedulePosition(schedule);
+                        }
+                    }
+                }
+                else
+                {
+                    String[] listPosition = checkedComboBoxEditPosition.EditValue.ToString().Split(',');
+                    String[] listpositionTemp = schedulePositionTemp.Text.Split(',');
+                    List<string> listChoose = new List<string>(listPosition);
+                    List<string> listTemp = new List<string>(listpositionTemp);
+
+                    List<string> listDelete = new List<string>(listpositionTemp);
+                    List<string> listInsert = new List<string>(listPosition);
+
+                    listChoose.ForEach(y =>
+                    {
+                        listTemp.ForEach(x =>
+                        {
+                            if (y.Trim() == x.Trim())
+                            {
+                                listInsert.Remove(y);
+                                listDelete.Remove(x);
+
+                            }
+                        });
+                    });
+
+                    listDelete.ForEach(x =>
+                    {
+                        if (x.Trim() != "")
+                        {
+                            SchedulePosition schedule = new SchedulePosition();
+                            schedule.idSchedule = Int32.Parse(scheduleId.Text);
+                            schedule.idPosition = Int32.Parse(x);
+                            scheduleServices.deleteSchedulePosition(schedule);
+                        }
+
+                    });
+
+                    listInsert.ForEach(x =>
+                    {
+                        SchedulePosition schedule = new SchedulePosition();
+                        schedule.idSchedule = Int32.Parse(scheduleId.Text);
+                        schedule.idPosition = Int32.Parse(x);
+                        scheduleServices.createSchedulePosition(schedule);
+                    });
+                }
+
+
                 if (scheduleDepartmentTemp.Text.Trim() == "nothing")
                 {
                     String[] listDepartment = checkedComboBoxEditDepartments.EditValue.ToString().Split(',');
@@ -209,17 +268,21 @@ namespace QuanLyDaiHocGiaDinh.Views
                             {
                                 listInsert.Remove(y);
                                 listDelete.Remove(x);
-                                
+
                             }
                         });
                     });
-                    
+
                     listDelete.ForEach(x =>
                     {
-                        ScheduleDepartment schedule = new ScheduleDepartment();
-                       schedule.idSchedule = Int32.Parse(scheduleId.Text);
-                        schedule.idDepartment = Int32.Parse(x);
-                        scheduleServices.deleteScheduleDepartment(schedule);
+                        if (x.Trim() != "")
+                        {
+                            ScheduleDepartment schedule = new ScheduleDepartment();
+                            schedule.idSchedule = Int32.Parse(scheduleId.Text);
+                            schedule.idDepartment = Int32.Parse(x);
+                            scheduleServices.deleteScheduleDepartment(schedule);
+                        }
+
                     });
 
                     listInsert.ForEach(x =>
@@ -231,10 +294,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                     });
 
                 }
-                //MessageBox.Show(checkedComboBoxEditDepartments.EditValue.ToString() + "--" + checkedComboBoxEditPosition.EditValue.ToString());
-                //MessageBox.Show("okey luu");
             }
-
             return true;
         }
         public virtual bool IsAppointmentChanged(Appointment appointment)
@@ -248,7 +308,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             }
             if (_department == appointment.CustomFields["DepartmentsList"].ToString())
             {
-                
+
                 flag++;
             }
             if (_position == appointment.CustomFields["PositionList"].ToString())
@@ -266,7 +326,6 @@ namespace QuanLyDaiHocGiaDinh.Views
             {
                 return false;
             }
-                
         }
         public virtual void SetMenuManager(DevExpress.Utils.Menu.IDXMenuManager menuManager)
         {
@@ -714,7 +773,7 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void btnSaveAndClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+
             OnOkButton();
             if (scheduleId.Text.Trim() == "0")
             {
@@ -729,11 +788,21 @@ namespace QuanLyDaiHocGiaDinh.Views
                         schedule.idDepartment = Int32.Parse(listDepartment[i]);
                         scheduleServices.createScheduleForDepartment(schedule);
                     }
-                       
-                    
+                }
+
+                String[] listPosition = checkedComboBoxEditPosition.EditValue.ToString().Split(',');
+                for (int i = 0; i < listPosition.Length; i++)
+                {
+                    if (listPosition[i].Trim() != "")
+                    {
+                        SchedulePosition schedule = new SchedulePosition();
+                        schedule.idPosition = Int32.Parse(listPosition[i]);
+                        schedule.idSchedule = scheduleServices.getLastScheduleId();
+                        scheduleServices.createSchedulePosition(schedule);
+                    }
                 }
             }
-            
+
         }
 
         private void barButtonDelete_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
