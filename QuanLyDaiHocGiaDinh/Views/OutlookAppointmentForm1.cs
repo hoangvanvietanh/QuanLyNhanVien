@@ -156,8 +156,9 @@ namespace QuanLyDaiHocGiaDinh.Views
             ScheduleServices scheduleServices = new ScheduleServices();
             appointment.CustomFields["ApprovalStatus"] = comboBoxEditApprovalStatus.SelectedItem.ToString();
             appointment.CustomFields["DepartmentsList"] = checkedComboBoxEditDepartments.EditValue.ToString();
-            //MessageBox.Show("--->"+checkedComboBoxEditPosition.EditValue.ToString());
+            MessageBox.Show("--->"+ checkedComboBoxEditDepartments.EditValue.ToString());
             appointment.CustomFields["PositionList"] = checkedComboBoxEditPosition.EditValue.ToString();
+            
             if (scheduleId.Text.Trim() == "0")
             {
                 //MessageBox.Show("Them moi");
@@ -287,10 +288,14 @@ namespace QuanLyDaiHocGiaDinh.Views
 
                     listInsert.ForEach(x =>
                     {
-                        ScheduleDepartment schedule = new ScheduleDepartment();
-                        schedule.idSchedule = Int32.Parse(scheduleId.Text);
-                        schedule.idDepartment = Int32.Parse(x);
-                        scheduleServices.createScheduleForDepartment(schedule);
+                        if (x.Trim() != "")
+                        {
+                            ScheduleDepartment schedule = new ScheduleDepartment();
+                            schedule.idSchedule = Int32.Parse(scheduleId.Text);
+                            schedule.idDepartment = Int32.Parse(x);
+                            scheduleServices.createScheduleForDepartment(schedule);
+                        }
+                        
                     });
 
                 }

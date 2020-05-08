@@ -45,7 +45,7 @@ namespace QuanLyDaiHocGiaDinh.Views
 
             setVisibleScheduleRibbonPage(false);
             //  this.p_selectAllEmployeeTableAdapter.Fill(this.giaDinhUniversityDataSet.p_selectAllEmployee);
-            this.scheduleTableAdapter.Fill(this.giaDinhUniversityDataSet.Schedule, this._account.AccountId);
+            this.scheduleTableAdapter.Fill(this.giaDinhUniversityDataSet.Schedule, this._account.AccountId, _department.DepartmentId, _position.PositionId);
 
             //Ví dụ để lấy employee đang đăng nhập
 

@@ -6,3 +6,12 @@
     {
     }
 }
+
+namespace QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters
+{
+
+
+    public partial class p_selectAllEmployeeTableAdapter
+    {
+    }
+}
