@@ -331,7 +331,7 @@
             this.ImagePictureEdit.Size = new System.Drawing.Size(168, 147);
             this.ImagePictureEdit.StyleController = this.dataLayoutControlUpdateTeacher;
             this.ImagePictureEdit.TabIndex = 17;
-            this.ImagePictureEdit.Click += new System.EventHandler(this.ImagePictureEdit_EditValueChanged);
+            this.ImagePictureEdit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ImagePictureEdit_MouseClick);
             // 
             // StatusTextEdit
             // 
@@ -389,6 +389,7 @@
             this.DepartmentNameCheckComboBoxEdit.Size = new System.Drawing.Size(804, 22);
             this.DepartmentNameCheckComboBoxEdit.StyleController = this.dataLayoutControlUpdateTeacher;
             this.DepartmentNameCheckComboBoxEdit.TabIndex = 18;
+            this.DepartmentNameCheckComboBoxEdit.Popup += new System.EventHandler(this.DepartmentNameCheckComboBoxEdit_Popup);
             // 
             // departmentsBindingSource
             // 

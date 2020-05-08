@@ -30,9 +30,9 @@
         {
             this.btnDong = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.txtPhongBan = new DevExpress.XtraEditors.TextEdit();
             this.lblPhongBan = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtPhongBan = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhongBan.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,15 +54,6 @@
             this.btnLuu.Text = "OK";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // txtPhongBan
-            // 
-            this.txtPhongBan.Location = new System.Drawing.Point(247, 109);
-            this.txtPhongBan.Name = "txtPhongBan";
-            this.txtPhongBan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtPhongBan.Properties.Appearance.Options.UseFont = true;
-            this.txtPhongBan.Size = new System.Drawing.Size(192, 28);
-            this.txtPhongBan.TabIndex = 12;
-            // 
             // lblPhongBan
             // 
             this.lblPhongBan.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -83,18 +74,27 @@
             this.labelControl1.TabIndex = 10;
             this.labelControl1.Text = "Thêm phòng ban";
             // 
-            // AdminUpdateDepartment2
+            // txtPhongBan
+            // 
+            this.txtPhongBan.Location = new System.Drawing.Point(247, 109);
+            this.txtPhongBan.Name = "txtPhongBan";
+            this.txtPhongBan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtPhongBan.Properties.Appearance.Options.UseFont = true;
+            this.txtPhongBan.Size = new System.Drawing.Size(192, 28);
+            this.txtPhongBan.TabIndex = 12;
+            // 
+            // AdminUpdateDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 262);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.txtPhongBan);
             this.Controls.Add(this.lblPhongBan);
             this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.txtPhongBan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AdminUpdateDepartment2";
+            this.Name = "AdminUpdateDepartment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminUpdateDepartment2";
             ((System.ComponentModel.ISupportInitialize)(this.txtPhongBan.Properties)).EndInit();
@@ -107,8 +107,8 @@
 
         private DevExpress.XtraEditors.SimpleButton btnDong;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
-        private DevExpress.XtraEditors.TextEdit txtPhongBan;
         private DevExpress.XtraEditors.LabelControl lblPhongBan;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txtPhongBan;
     }
 }

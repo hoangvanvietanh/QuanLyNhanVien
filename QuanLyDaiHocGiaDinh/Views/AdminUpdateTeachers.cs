@@ -23,6 +23,7 @@ using DevExpress.XtraEditors.Popup;
 using DevExpress.Utils.Menu;
 using DevExpress.XtraSplashScreen;
 using DevExpress.XtraBars.Ribbon;
+using System.Drawing.Imaging;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -48,6 +49,8 @@ namespace QuanLyDaiHocGiaDinh.Views
             this._account = accountServices.getAccountById((int)_employee.AccountId);
             PositionNameDepartmentNameCheckComboBoxEdit.Properties.SelectAllItemVisible = false;
             PositionNameDepartmentNameCheckComboBoxEdit.LookAndFeel.StyleChanged += LookAndFeel_StyleChanged;
+            DepartmentNameCheckComboBoxEdit.Properties.SelectAllItemVisible = false;
+            DepartmentNameCheckComboBoxEdit.LookAndFeel.StyleChanged += LookAndFeel_StyleChanged;
         }
         void LookAndFeel_StyleChanged(object sender, EventArgs e)
         {
@@ -106,56 +109,72 @@ namespace QuanLyDaiHocGiaDinh.Views
             }
         }
 
-        private void ImagePictureEdit_EditValueChanged(object sender, EventArgs e)
-        {
-
-            //DevExpress.XtraEditors.Camera.TakePictureDialog dialog = new DevExpress.XtraEditors.Camera.TakePictureDialog();
-            //if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            //{
-            //    System.Drawing.Image image = dialog.Image;
-            //    using (var stream = new MemoryStream())
-            //    {
-            //        image.Save(stream, ImageFormat.Jpeg);
-            //        ImageByArray = stream.ToArray();
-            //    }
-            //}
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                strFilePath = ofd.FileName;
-                ImagePictureEdit.Image = new Bitmap(strFilePath);
-            }
-
-            if (strFilePath == "")
-            {
-                /*if (ImageByArray.Length != 0)
-                    ImageByArray = new byte[] { };*/
-                XtraMessageBox.Show("Vui lòng chọn hình đại diện ^^");
-
-                ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    strFilePath = ofd.FileName;
-                    ImagePictureEdit.Image = new Bitmap(strFilePath);
-                }
-                Image temp = new Bitmap(strFilePath);
-                MemoryStream strm = new MemoryStream();
-                temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
-                ImageByArray = strm.ToArray();
-            }
-            else
-            {
-                Image temp = new Bitmap(strFilePath);
-                MemoryStream strm = new MemoryStream();
-                temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
-                ImageByArray = strm.ToArray();
-            }
-        }
-
         private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.Close();
+        }
+
+        private void ImagePictureEdit_MouseClick(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                if (e.Button == MouseButtons.Left)  /// click chuột chọn ảnh từ OpenFileDialog
+                {
+
+                    OpenFileDialog ofd = new OpenFileDialog();
+                    ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
+                    if (ofd.ShowDialog() == DialogResult.OK)
+                    {
+                        strFilePath = ofd.FileName;
+                        ImagePictureEdit.Image = new Bitmap(strFilePath);
+                    }
+
+
+                    if (strFilePath == "")
+                    {
+                        /*if (ImageByArray.Length != 0)
+                            ImageByArray = new byte[] { };*/
+                        XtraMessageBox.Show("Vui lòng chọn hình đại diện ^^");
+
+                        ofd.Filter = "Images(.jpg,.png)|*.png;*.jpg";
+                        if (ofd.ShowDialog() == DialogResult.OK)
+                        {
+                            strFilePath = ofd.FileName;
+                            ImagePictureEdit.Image = new Bitmap(strFilePath);
+                        }
+                        Image temp = new Bitmap(strFilePath);
+                        MemoryStream strm = new MemoryStream();
+                        temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        ImageByArray = strm.ToArray();
+                    }
+                    else
+                    {
+                        Image temp = new Bitmap(strFilePath);
+                        MemoryStream strm = new MemoryStream();
+                        temp.Save(strm, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        ImageByArray = strm.ToArray();
+                    }
+                }
+                else
+                {
+                    ///// Chọn ảnh từ Camera
+                    DevExpress.XtraEditors.Camera.TakePictureDialog dialog = new DevExpress.XtraEditors.Camera.TakePictureDialog();
+                    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        System.Drawing.Image image = dialog.Image;
+                        using (var stream = new MemoryStream())
+                        {
+                            image.Save(stream, ImageFormat.Jpeg);
+                            ImageByArray = stream.ToArray();
+                            ImagePictureEdit.EditValue = stream.ToArray();
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -178,6 +197,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             po = _position;
             po.PositionName = PositionNameDepartmentNameCheckComboBoxEdit.Text;
             Department dep = new Department();
+            dep = _deparment;
             dep.DepartmentName = DepartmentNameCheckComboBoxEdit.Text;
             Account ac = new Account();
             ac = _account;
@@ -185,7 +205,10 @@ namespace QuanLyDaiHocGiaDinh.Views
             emp.Image = ImageByArray;    
             employeeService.updateEmployee(emp);
             accountServices.updateAccount(ac);
-            
+            positionServices.updatePosition(po);
+            departmentServices.updateDepartment(dep);
+
+
             XtraMessageBox.Show("Sửa thành công !!!");
             this.Close();
 
@@ -204,7 +227,17 @@ namespace QuanLyDaiHocGiaDinh.Views
             }
         }
 
-     
+        private void DepartmentNameCheckComboBoxEdit_Popup(object sender, EventArgs e)
+        {
+            if (subscribe) // 1st approach
+            {
+                CheckedListBoxControl list = (sender as IPopupControl).PopupWindow.Controls.OfType<PopupContainerControl>().First().Controls.OfType<CheckedListBoxControl>().First();
+                list.ItemCheck += list_ItemCheck;
+                subscribe = false;
+            }
+        }
+
+
         void list_ItemCheck(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)
         {
             if (e.State == CheckState.Checked)
@@ -220,5 +253,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                     item.CheckState = CheckState.Unchecked;
             }
         }
+
+        
     }
 }
