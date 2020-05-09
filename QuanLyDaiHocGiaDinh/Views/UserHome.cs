@@ -71,7 +71,8 @@ namespace QuanLyDaiHocGiaDinh.Views
             //Position position = new Position();   ///show PositionName
             // position = employeeService.getEmployeeByAccountId();
             //ShowPosition(position);
-
+            schedulerControl1.Start = DateTime.Now;
+            schedulerControl.Start = DateTime.Now;
             Console.WriteLine(employeeService.getEmployeeByAccountId().FullName);
             ////////////
             //   dataLayoutControl1.DataSource = new QuanLyDaiHocGiaDinh.Model.LinQDataContext().Accounts;

@@ -33,6 +33,8 @@ namespace QuanLyDaiHocGiaDinh.Views
             setVisiblePositionRibbonPage(false);
             setVisibleDepartmentRibbonPage(false);
             skins();
+            schedulerControl1.Start = DateTime.Now;
+            schedulerControl2.Start = DateTime.Now;
         }
 
         public AdminHome()

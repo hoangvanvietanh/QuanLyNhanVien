@@ -156,7 +156,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             ScheduleServices scheduleServices = new ScheduleServices();
             appointment.CustomFields["ApprovalStatus"] = comboBoxEditApprovalStatus.SelectedItem.ToString();
             appointment.CustomFields["DepartmentsList"] = checkedComboBoxEditDepartments.EditValue.ToString();
-            MessageBox.Show("--->"+ checkedComboBoxEditDepartments.EditValue.ToString());
+            //MessageBox.Show("--->"+ checkedComboBoxEditDepartments.EditValue.ToString());
             appointment.CustomFields["PositionList"] = checkedComboBoxEditPosition.EditValue.ToString();
             
             if (scheduleId.Text.Trim() == "0")
