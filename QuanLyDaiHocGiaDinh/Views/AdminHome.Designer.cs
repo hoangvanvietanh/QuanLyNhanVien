@@ -33,6 +33,9 @@
             DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler4 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler5 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler6 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemFrame tileItemFrame1 = new DevExpress.XtraEditors.TileItemFrame();
@@ -50,9 +53,6 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement11 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement12 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
-            DevExpress.XtraScheduler.TimeRuler timeRuler4 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler5 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler6 = new DevExpress.XtraScheduler.TimeRuler();
             this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.repositoryItemDuration1 = new DevExpress.XtraScheduler.UI.RepositoryItemDuration();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
@@ -203,6 +203,7 @@
             this.colAccountId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colImage = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.schedulerControl2 = new DevExpress.XtraScheduler.SchedulerControl();
             this.splitterControl3 = new DevExpress.XtraEditors.SplitterControl();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
             this.txtFullNameShow = new DevExpress.XtraEditors.TextEdit();
@@ -344,7 +345,6 @@
             this.departmentsTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.DepartmentsTableAdapter();
             this.scheduleTableAdapter = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSetTableAdapters.ScheduleTableAdapter();
             this.giaDinhUniversityDataSet1 = new QuanLyDaiHocGiaDinh.Model.GiaDinhUniversityDataSet();
-            this.schedulerControl2 = new DevExpress.XtraScheduler.SchedulerControl();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDuration1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
@@ -365,6 +365,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.schedulerControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFullNameShow.Properties)).BeginInit();
@@ -469,7 +470,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaDinhUniversityDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulerControl2)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemSpinEdit1
@@ -1735,6 +1735,26 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(502, 602);
             this.panelControl3.TabIndex = 4;
+            // 
+            // schedulerControl2
+            // 
+            this.schedulerControl2.ActiveViewType = DevExpress.XtraScheduler.SchedulerViewType.FullWeek;
+            this.schedulerControl2.DataStorage = this.schedulerDataStorage;
+            this.schedulerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.schedulerControl2.Location = new System.Drawing.Point(2, 372);
+            this.schedulerControl2.MenuManager = this.ribbonControl;
+            this.schedulerControl2.Name = "schedulerControl2";
+            this.schedulerControl2.OptionsBehavior.TimeRegionValidationInterval = System.TimeSpan.Parse("00:00:01");
+            this.schedulerControl2.Size = new System.Drawing.Size(498, 228);
+            this.schedulerControl2.Start = new System.DateTime(2020, 5, 3, 0, 0, 0, 0);
+            this.schedulerControl2.TabIndex = 4;
+            this.schedulerControl2.Text = "schedulerControl2";
+            this.schedulerControl2.Views.DayView.TimeRulers.Add(timeRuler4);
+            this.schedulerControl2.Views.FullWeekView.Enabled = true;
+            this.schedulerControl2.Views.FullWeekView.ShowWorkTimeOnly = true;
+            this.schedulerControl2.Views.FullWeekView.TimeRulers.Add(timeRuler5);
+            this.schedulerControl2.Views.FullWeekView.WorkTime = new DevExpress.XtraScheduler.WorkTimeInterval(System.TimeSpan.Parse("07:00:00"), System.TimeSpan.Parse("18:00:00"));
+            this.schedulerControl2.Views.WorkWeekView.TimeRulers.Add(timeRuler6);
             // 
             // splitterControl3
             // 
@@ -3322,24 +3342,6 @@
             this.giaDinhUniversityDataSet1.DataSetName = "GiaDinhUniversityDataSet";
             this.giaDinhUniversityDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // schedulerControl2
-            // 
-            this.schedulerControl2.ActiveViewType = DevExpress.XtraScheduler.SchedulerViewType.WorkWeek;
-            this.schedulerControl2.DataStorage = this.schedulerDataStorage;
-            this.schedulerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.schedulerControl2.Location = new System.Drawing.Point(2, 372);
-            this.schedulerControl2.MenuManager = this.ribbonControl;
-            this.schedulerControl2.Name = "schedulerControl2";
-            this.schedulerControl2.OptionsBehavior.TimeRegionValidationInterval = System.TimeSpan.Parse("00:00:00");
-            this.schedulerControl2.Size = new System.Drawing.Size(498, 228);
-            this.schedulerControl2.Start = new System.DateTime(2020, 5, 4, 0, 0, 0, 0);
-            this.schedulerControl2.TabIndex = 4;
-            this.schedulerControl2.Text = "schedulerControl2";
-            this.schedulerControl2.Views.DayView.TimeRulers.Add(timeRuler4);
-            this.schedulerControl2.Views.FullWeekView.Enabled = true;
-            this.schedulerControl2.Views.FullWeekView.TimeRulers.Add(timeRuler5);
-            this.schedulerControl2.Views.WorkWeekView.TimeRulers.Add(timeRuler6);
-            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3376,6 +3378,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridViewEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.schedulerControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtFullNameShow.Properties)).EndInit();
@@ -3480,7 +3483,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaDinhUniversityDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.schedulerControl2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
