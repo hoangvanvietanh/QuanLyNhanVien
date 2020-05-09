@@ -31,6 +31,7 @@ namespace QuanLyDaiHocGiaDinh.Views
         private PositionServices positionServices = new PositionServices();
         private Department _department = new Department();
         private DepartmentServices departmentServices = new DepartmentServices();
+        private bool justSync = false;
         // If modifying these scopes, delete your previously saved credentials
         // at ~/.credentials/calendar-dotnet-quickstart.json
         static string[] Scopes = { CalendarService.Scope.CalendarReadonly };
@@ -47,7 +48,8 @@ namespace QuanLyDaiHocGiaDinh.Views
             this._account = account;
             employeeService = new EmployeeService(account);
             Employee employee = new Employee();
-
+            
+       
             employee = employeeService.getEmployeeByAccountId(_account.AccountId); //lấy employee đang đăng nhập
             showEmployee(employee);
 
@@ -60,7 +62,6 @@ namespace QuanLyDaiHocGiaDinh.Views
             setVisibleScheduleRibbonPage(false);
             //  this.p_selectAllEmployeeTableAdapter.Fill(this.giaDinhUniversityDataSet.p_selectAllEmployee);
             this.scheduleTableAdapter.Fill(this.giaDinhUniversityDataSet.Schedule, this._account.AccountId, _department.DepartmentId, _position.PositionId);
-
             //Ví dụ để lấy employee đang đăng nhập
 
             // employee.FullName = "Duy Hieu";
@@ -100,9 +101,17 @@ namespace QuanLyDaiHocGiaDinh.Views
         {
             try
             {
-                Console.WriteLine("----------------------------------------------------->");
-                scheduleTableAdapter.Update(giaDinhUniversityDataSet);
-                giaDinhUniversityDataSet.AcceptChanges();
+                //ScheduleServices scheduleServices = new ScheduleServices();
+                //scheduleServices.getLastScheduleId();
+                // int ids =  Int32.Parse(giaDinhUniversityDataSet.Schedule.Count.ToString());
+                //Console.WriteLine("----------------------------------------------------->" + giaDinhUniversityDataSet.Tables[0].Rows[ids]["UniqueID"].ToString());
+                //MessageBox.Show("2");
+                if (justSync == false)
+                {
+                    justSync = true;
+                    scheduleTableAdapter.Update(giaDinhUniversityDataSet);
+                    giaDinhUniversityDataSet.AcceptChanges();
+                }
             }
             catch
             {
@@ -217,6 +226,9 @@ namespace QuanLyDaiHocGiaDinh.Views
                 MessageBox.Show(ex.Message);
             }
 
+            //giaDinhUniversityDataSet.Schedule.AccountIdColumn.DefaultValue = 6;
+            //scheduleTableAdapter.Adapter.UpdateCommand.Parameters.AddWithValue("@AccountId", 6);
+
             await UpdateCalendarListUI();
             this.allowEventLoad = true;
             UpdateBbiAvailability();
@@ -280,8 +292,30 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void BbiSynchronize_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            justSync = true;
             this.dxGoogleCalendarSync.Synchronize();
         }
 
+        private void dxGoogleCalendarSync_AppointmentValuesRequested(object sender, DevExpress.XtraScheduler.GoogleCalendar.ObjectValuesRequestedEventArgs e)
+        {
+            //MessageBox.Show("okey===============>" + e.Appointment.CustomFields["AccountId"] + e.Appointment.Description);
+            e.Appointment.CustomFields["AccountId"] = this._account.AccountId;
+            //scheduleTableAdapter.Update(giaDinhUniversityDataSet);
+            //giaDinhUniversityDataSet.AcceptChanges();
+        }
+
+        private void dxGoogleCalendarSync_FilterAppointments(object sender, DevExpress.XtraScheduler.GoogleCalendar.FilterAppointmentsEventArgs e)
+        {
+            if (e.Appointment != null)
+            {
+                e.Appointment.CustomFields["AccountId"] = this._account.AccountId;
+            }
+             
+        }
+
+        private void dxGoogleCalendarSync_ConflictDetected(object sender, DevExpress.XtraScheduler.GoogleCalendar.ConflictDetectedEventArgs e)
+        {
+
+        }
     }
 }

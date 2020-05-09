@@ -1424,6 +1424,7 @@
             this.navBarControl.Size = new System.Drawing.Size(165, 376);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
+            this.navBarControl.Visible = false;
             this.navBarControl.ActiveGroupChanged += new DevExpress.XtraNavBar.NavBarGroupEventHandler(this.navBarControl_ActiveGroupChanged);
             // 
             // employeesNavBarGroup
@@ -1564,8 +1565,6 @@
             this.colEmployeeId.MinWidth = 21;
             this.colEmployeeId.Name = "colEmployeeId";
             this.colEmployeeId.OptionsColumn.AllowFocus = false;
-            this.colEmployeeId.Visible = true;
-            this.colEmployeeId.VisibleIndex = 10;
             this.colEmployeeId.Width = 81;
             // 
             // colFullName
@@ -1576,7 +1575,7 @@
             this.colFullName.OptionsColumn.AllowFocus = false;
             this.colFullName.Visible = true;
             this.colFullName.VisibleIndex = 1;
-            this.colFullName.Width = 81;
+            this.colFullName.Width = 168;
             // 
             // colFirstName
             // 
@@ -1584,9 +1583,7 @@
             this.colFirstName.MinWidth = 21;
             this.colFirstName.Name = "colFirstName";
             this.colFirstName.OptionsColumn.AllowFocus = false;
-            this.colFirstName.Visible = true;
-            this.colFirstName.VisibleIndex = 2;
-            this.colFirstName.Width = 81;
+            this.colFirstName.Width = 89;
             // 
             // colLastName
             // 
@@ -1594,9 +1591,7 @@
             this.colLastName.MinWidth = 21;
             this.colLastName.Name = "colLastName";
             this.colLastName.OptionsColumn.AllowFocus = false;
-            this.colLastName.Visible = true;
-            this.colLastName.VisibleIndex = 3;
-            this.colLastName.Width = 81;
+            this.colLastName.Width = 89;
             // 
             // colBirthDate
             // 
@@ -1605,8 +1600,8 @@
             this.colBirthDate.Name = "colBirthDate";
             this.colBirthDate.OptionsColumn.AllowFocus = false;
             this.colBirthDate.Visible = true;
-            this.colBirthDate.VisibleIndex = 4;
-            this.colBirthDate.Width = 81;
+            this.colBirthDate.VisibleIndex = 2;
+            this.colBirthDate.Width = 76;
             // 
             // colAddress
             // 
@@ -1614,7 +1609,9 @@
             this.colAddress.MinWidth = 21;
             this.colAddress.Name = "colAddress";
             this.colAddress.OptionsColumn.AllowFocus = false;
-            this.colAddress.Width = 81;
+            this.colAddress.Visible = true;
+            this.colAddress.VisibleIndex = 5;
+            this.colAddress.Width = 65;
             // 
             // colWard
             // 
@@ -1622,7 +1619,8 @@
             this.colWard.MinWidth = 21;
             this.colWard.Name = "colWard";
             this.colWard.OptionsColumn.AllowFocus = false;
-            this.colWard.Width = 81;
+            this.colWard.Visible = true;
+            this.colWard.VisibleIndex = 6;
             // 
             // colDistrict
             // 
@@ -1630,7 +1628,9 @@
             this.colDistrict.MinWidth = 21;
             this.colDistrict.Name = "colDistrict";
             this.colDistrict.OptionsColumn.AllowFocus = false;
-            this.colDistrict.Width = 81;
+            this.colDistrict.Visible = true;
+            this.colDistrict.VisibleIndex = 7;
+            this.colDistrict.Width = 65;
             // 
             // colCity
             // 
@@ -1638,7 +1638,9 @@
             this.colCity.MinWidth = 21;
             this.colCity.Name = "colCity";
             this.colCity.OptionsColumn.AllowFocus = false;
-            this.colCity.Width = 81;
+            this.colCity.Visible = true;
+            this.colCity.VisibleIndex = 8;
+            this.colCity.Width = 65;
             // 
             // colPhoneNumber
             // 
@@ -1647,8 +1649,8 @@
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.OptionsColumn.AllowFocus = false;
             this.colPhoneNumber.Visible = true;
-            this.colPhoneNumber.VisibleIndex = 5;
-            this.colPhoneNumber.Width = 81;
+            this.colPhoneNumber.VisibleIndex = 3;
+            this.colPhoneNumber.Width = 105;
             // 
             // colEmail
             // 
@@ -1657,8 +1659,8 @@
             this.colEmail.Name = "colEmail";
             this.colEmail.OptionsColumn.AllowFocus = false;
             this.colEmail.Visible = true;
-            this.colEmail.VisibleIndex = 6;
-            this.colEmail.Width = 81;
+            this.colEmail.VisibleIndex = 4;
+            this.colEmail.Width = 72;
             // 
             // colStatus
             // 
@@ -1667,8 +1669,8 @@
             this.colStatus.Name = "colStatus";
             this.colStatus.OptionsColumn.AllowFocus = false;
             this.colStatus.Visible = true;
-            this.colStatus.VisibleIndex = 7;
-            this.colStatus.Width = 81;
+            this.colStatus.VisibleIndex = 9;
+            this.colStatus.Width = 72;
             // 
             // colHireDate
             // 
@@ -1677,8 +1679,8 @@
             this.colHireDate.Name = "colHireDate";
             this.colHireDate.OptionsColumn.AllowFocus = false;
             this.colHireDate.Visible = true;
-            this.colHireDate.VisibleIndex = 9;
-            this.colHireDate.Width = 81;
+            this.colHireDate.VisibleIndex = 11;
+            this.colHireDate.Width = 86;
             // 
             // colPositionName
             // 
@@ -1687,8 +1689,8 @@
             this.colPositionName.Name = "colPositionName";
             this.colPositionName.OptionsColumn.AllowFocus = false;
             this.colPositionName.Visible = true;
-            this.colPositionName.VisibleIndex = 8;
-            this.colPositionName.Width = 81;
+            this.colPositionName.VisibleIndex = 10;
+            this.colPositionName.Width = 80;
             // 
             // colDepartmentName
             // 
@@ -1704,8 +1706,6 @@
             // 
             this.colAccountId.FieldName = "AccountId";
             this.colAccountId.Name = "colAccountId";
-            this.colAccountId.Visible = true;
-            this.colAccountId.VisibleIndex = 11;
             // 
             // colImage
             // 
@@ -1715,7 +1715,7 @@
             this.colImage.OptionsColumn.AllowFocus = false;
             this.colImage.Visible = true;
             this.colImage.VisibleIndex = 0;
-            this.colImage.Width = 81;
+            this.colImage.Width = 87;
             // 
             // panelControl3
             // 

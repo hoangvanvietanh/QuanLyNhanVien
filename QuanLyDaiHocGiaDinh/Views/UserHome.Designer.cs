@@ -121,7 +121,6 @@
             this.navigatorRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.NavigatorRibbonPageGroup();
             this.arrangeRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.ArrangeRibbonPageGroup();
             this.groupByRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.GroupByRibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.viewScheduleRibbonPage = new DevExpress.XtraScheduler.UI.ViewRibbonPage();
             this.activeViewRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.ActiveViewRibbonPageGroup();
             this.timeScaleRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.TimeScaleRibbonPageGroup();
@@ -754,13 +753,16 @@
             // 
             this.bbiSynchronize.Caption = "Sync";
             this.bbiSynchronize.Id = 103;
+            this.bbiSynchronize.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("bbiSynchronize.ImageOptions.SvgImage")));
             this.bbiSynchronize.Name = "bbiSynchronize";
             // 
             // beiCalendarList
             // 
             this.beiCalendarList.Caption = "Calendar";
             this.beiCalendarList.Edit = this.ricbCalendarList;
+            this.beiCalendarList.EditWidth = 150;
             this.beiCalendarList.Id = 104;
+            this.beiCalendarList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("beiCalendarList.ImageOptions.SvgImage")));
             this.beiCalendarList.Name = "beiCalendarList";
             // 
             // ricbCalendarList
@@ -786,7 +788,7 @@
             this.schedulerControl.MenuManager = this.ribbonControl;
             this.schedulerControl.Name = "schedulerControl";
             this.schedulerControl.OptionsBehavior.TimeRegionValidationInterval = System.TimeSpan.Parse("00:00:01");
-            this.schedulerControl.Size = new System.Drawing.Size(573, 563);
+            this.schedulerControl.Size = new System.Drawing.Size(624, 563);
             this.schedulerControl.Start = new System.DateTime(2020, 4, 10, 0, 0, 0, 0);
             this.schedulerControl.TabIndex = 0;
             this.schedulerControl.Text = "schedulerControl1";
@@ -906,7 +908,7 @@
             this.nothing.ItemLinks.Add(this.beiCalendarList);
             this.nothing.ItemLinks.Add(this.bbiSynchronize);
             this.nothing.Name = "nothing";
-            this.nothing.Text = "ribbonPageGroup4";
+            this.nothing.Text = "Google Calendar";
             // 
             // homeScheduleRibbonPage
             // 
@@ -914,8 +916,7 @@
             this.appointmentRibbonPageGroup1,
             this.navigatorRibbonPageGroup1,
             this.arrangeRibbonPageGroup1,
-            this.groupByRibbonPageGroup1,
-            this.ribbonPageGroup2});
+            this.groupByRibbonPageGroup1});
             this.homeScheduleRibbonPage.Name = "homeScheduleRibbonPage";
             // 
             // appointmentRibbonPageGroup1
@@ -951,12 +952,6 @@
             this.groupByRibbonPageGroup1.ItemLinks.Add(this.groupByDateItem1);
             this.groupByRibbonPageGroup1.ItemLinks.Add(this.groupByResourceItem1);
             this.groupByRibbonPageGroup1.Name = "groupByRibbonPageGroup1";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnSynCalendar);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "Google";
             // 
             // viewScheduleRibbonPage
             // 
@@ -1019,11 +1014,12 @@
             this.customersNavBarGroup});
             this.navBarControl.Location = new System.Drawing.Point(0, 155);
             this.navBarControl.Name = "navBarControl";
-            this.navBarControl.OptionsNavPane.ExpandedWidth = 165;
+            this.navBarControl.OptionsNavPane.ExpandedWidth = 114;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(165, 563);
+            this.navBarControl.Size = new System.Drawing.Size(114, 563);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
+            this.navBarControl.Visible = false;
             this.navBarControl.ActiveGroupChanged += new DevExpress.XtraNavBar.NavBarGroupEventHandler(this.navBarControl_ActiveGroupChanged);
             // 
             // employeesNavBarGroup
@@ -1044,14 +1040,14 @@
             this.navigationFrame.Controls.Add(this.employeesNavigationPage);
             this.navigationFrame.Controls.Add(this.customersNavigationPage);
             this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationFrame.Location = new System.Drawing.Point(165, 155);
+            this.navigationFrame.Location = new System.Drawing.Point(114, 155);
             this.navigationFrame.Name = "navigationFrame";
             this.navigationFrame.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.employeesNavigationPage,
             this.customersNavigationPage});
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.SelectedPage = this.employeesNavigationPage;
-            this.navigationFrame.Size = new System.Drawing.Size(832, 563);
+            this.navigationFrame.Size = new System.Drawing.Size(883, 563);
             this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame";
             // 
@@ -1060,11 +1056,11 @@
             this.employeesNavigationPage.Controls.Add(this.splitContainerControl2);
             this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
-            this.employeesNavigationPage.Size = new System.Drawing.Size(832, 563);
+            this.employeesNavigationPage.Size = new System.Drawing.Size(883, 563);
             // 
             // splitContainerControl2
             // 
-            this.splitContainerControl2.Appearance.BackColor = System.Drawing.Color.White;
+            this.splitContainerControl2.Appearance.BackColor = System.Drawing.Color.Black;
             this.splitContainerControl2.Appearance.Options.UseBackColor = true;
             this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl2.Location = new System.Drawing.Point(0, 0);
@@ -1073,8 +1069,8 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(832, 563);
-            this.splitContainerControl2.SplitterPosition = 402;
+            this.splitContainerControl2.Size = new System.Drawing.Size(883, 563);
+            this.splitContainerControl2.SplitterPosition = 658;
             this.splitContainerControl2.TabIndex = 1;
             // 
             // groupImployee
@@ -1089,7 +1085,7 @@
             this.groupImployee.Location = new System.Drawing.Point(0, 0);
             this.groupImployee.Margin = new System.Windows.Forms.Padding(0);
             this.groupImployee.Name = "groupImployee";
-            this.groupImployee.Size = new System.Drawing.Size(402, 563);
+            this.groupImployee.Size = new System.Drawing.Size(658, 563);
             this.groupImployee.TabIndex = 0;
             this.groupImployee.Text = "IMPLOYEE IMFORMATION";
             this.groupImployee.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -1100,7 +1096,7 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(0, 429);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(402, 134);
+            this.groupControl4.Size = new System.Drawing.Size(658, 134);
             this.groupControl4.TabIndex = 3;
             this.groupControl4.Text = "Diff";
             // 
@@ -1164,7 +1160,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(0, 298);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(402, 131);
+            this.groupControl3.Size = new System.Drawing.Size(658, 131);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "Contact";
             // 
@@ -1254,7 +1250,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(0, 175);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(402, 123);
+            this.groupControl2.Size = new System.Drawing.Size(658, 123);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Address";
             // 
@@ -1390,7 +1386,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 36);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(402, 139);
+            this.groupControl1.Size = new System.Drawing.Size(658, 139);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Info";
             // 
@@ -1556,7 +1552,7 @@
             // 
             // splitContainerControl3
             // 
-            this.splitContainerControl3.Appearance.BackColor = System.Drawing.Color.White;
+            this.splitContainerControl3.Appearance.BackColor = System.Drawing.Color.Black;
             this.splitContainerControl3.Appearance.Options.UseBackColor = true;
             this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl3.Horizontal = false;
@@ -1566,7 +1562,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl3);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(418, 563);
+            this.splitContainerControl3.Size = new System.Drawing.Size(213, 563);
             this.splitContainerControl3.SplitterPosition = 282;
             this.splitContainerControl3.TabIndex = 0;
             // 
@@ -1584,7 +1580,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(418, 282);
+            this.panelControl2.Size = new System.Drawing.Size(213, 282);
             this.panelControl2.TabIndex = 0;
             // 
             // lblPhongBan
@@ -1693,7 +1689,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(418, 269);
+            this.panelControl3.Size = new System.Drawing.Size(213, 269);
             this.panelControl3.TabIndex = 0;
             // 
             // employeesLabelControl
@@ -1709,7 +1705,7 @@
             this.employeesLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeesLabelControl.Location = new System.Drawing.Point(0, 0);
             this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(832, 563);
+            this.employeesLabelControl.Size = new System.Drawing.Size(883, 563);
             this.employeesLabelControl.TabIndex = 0;
             this.employeesLabelControl.Text = "Trang chủ";
             // 
@@ -1718,7 +1714,7 @@
             this.customersNavigationPage.Controls.Add(this.splitContainerControl1);
             this.customersNavigationPage.Controls.Add(this.customersLabelControl);
             this.customersNavigationPage.Name = "customersNavigationPage";
-            this.customersNavigationPage.Size = new System.Drawing.Size(832, 563);
+            this.customersNavigationPage.Size = new System.Drawing.Size(883, 563);
             // 
             // splitContainerControl1
             // 
@@ -1730,7 +1726,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.dateNavigator1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(832, 563);
+            this.splitContainerControl1.Size = new System.Drawing.Size(883, 563);
             this.splitContainerControl1.SplitterPosition = 247;
             this.splitContainerControl1.TabIndex = 2;
             // 
@@ -1763,7 +1759,7 @@
             this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
             this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(832, 563);
+            this.customersLabelControl.Size = new System.Drawing.Size(883, 563);
             this.customersLabelControl.TabIndex = 1;
             this.customersLabelControl.Text = "Lịch trình";
             // 
@@ -1849,6 +1845,9 @@
             this.dxGoogleCalendarSync.CalendarId = null;
             this.dxGoogleCalendarSync.CalendarService = null;
             this.dxGoogleCalendarSync.Storage = this.schedulerDataStorage;
+            this.dxGoogleCalendarSync.ConflictDetected += new DevExpress.XtraScheduler.GoogleCalendar.ConflictDetectedEventHandler(this.dxGoogleCalendarSync_ConflictDetected);
+            this.dxGoogleCalendarSync.AppointmentValuesRequested += new DevExpress.XtraScheduler.GoogleCalendar.AppointmentValuesRequestedEventHandler(this.dxGoogleCalendarSync_AppointmentValuesRequested);
+            this.dxGoogleCalendarSync.FilterAppointments += new System.EventHandler<DevExpress.XtraScheduler.GoogleCalendar.FilterAppointmentsEventArgs>(this.dxGoogleCalendarSync_FilterAppointments);
             // 
             // repositoryItemTextEdit1
             // 
@@ -2142,7 +2141,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem btnSynCalendar;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem bbiSynchronize;
         private DevExpress.XtraBars.BarEditItem beiCalendarList;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox ricbCalendarList;
