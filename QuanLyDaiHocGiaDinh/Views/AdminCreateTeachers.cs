@@ -23,8 +23,7 @@ namespace QuanLyDaiHocGiaDinh.Views
         private EmployeeService employeeService = new EmployeeService();
         private PositionServices positionServices = new PositionServices();
         private DepartmentServices departmentServices = new DepartmentServices();
-        private Position _position;
-        private Department _deparment;
+
        
 
         String strFilePath = "";
@@ -32,10 +31,9 @@ namespace QuanLyDaiHocGiaDinh.Views
         public AdminCreateTeachers()
         {
             InitializeComponent();
+            HireDateDateEdit.DateTime = DateTime.Now;
             PositionNameTextEdit.Properties.SelectAllItemVisible = false;
             PositionNameTextEdit.LookAndFeel.StyleChanged += LookAndFeel_StyleChanged;
-            DepartmentNameTextEdit.Properties.SelectAllItemVisible = false;
-            DepartmentNameTextEdit.LookAndFeel.StyleChanged += LookAndFeel_StyleChanged;
         }
 
         void LookAndFeel_StyleChanged(object sender, EventArgs e)
@@ -57,8 +55,8 @@ namespace QuanLyDaiHocGiaDinh.Views
             Account acc = new Account();
             acc.UserName = EmailTextEdit.Text.Trim();
             acc.Password = EmailTextEdit.Text.Trim();
-            acc.Role = RoleTextEdit.Text; 
-            
+            acc.Role = RoleTextEdit.SelectedItem.ToString();
+
             Employee emp = new Employee();
             emp.AccountId = accountServices.createAccount(acc).AccountId;
             emp.FullName = FullNameTextEdit.Text;
@@ -76,19 +74,6 @@ namespace QuanLyDaiHocGiaDinh.Views
             emp.PositionId = Int32.Parse(String.Format("{0}", PositionNameTextEdit.EditValue));
             emp.Image = ImageByArray;
             employeeService.createEmployee(emp);
-
-            Position po = new Position();
-            _position = positionServices.getPositionById((int)emp.PositionId);
-            po = _position;
-            po.DepartmentId = Int32.Parse(String.Format("{0}", DepartmentNameTextEdit.EditValue));
-
-            Department dep = new Department();
-            _deparment = departmentServices.getDepartmentById((int)po.DepartmentId);
-            
-            
-            XtraMessageBox.Show(po.DepartmentId.ToString());
-            //dep.DepartmentName = DepartmentNameTextEdit.Text;
-            positionServices.updatePosition(po);
 
             XtraMessageBox.Show("Thêm thành công !!!");
             this.Close();
@@ -174,16 +159,6 @@ namespace QuanLyDaiHocGiaDinh.Views
             }
         }
 
-        private void DepartmentNameTextEdit_Popup(object sender, EventArgs e)
-        {
-            if (subscribe) // 1st approach
-            {
-                CheckedListBoxControl list = (sender as IPopupControl).PopupWindow.Controls.OfType<PopupContainerControl>().First().Controls.OfType<CheckedListBoxControl>().First();
-                list.ItemCheck += list_ItemCheck;
-                subscribe = false;
-            }
-        }
-
         void list_ItemCheck(object sender, DevExpress.XtraEditors.Controls.ItemCheckEventArgs e)
         {
             if (e.State == CheckState.Checked)
@@ -198,6 +173,16 @@ namespace QuanLyDaiHocGiaDinh.Views
                 foreach (CheckedListBoxItem item in items)
                     item.CheckState = CheckState.Unchecked;
             }
+        }
+
+        private void FirstNameTextEdit_EditValueChanged(object sender, EventArgs e)
+        {
+             FullNameTextEdit.Text = LastNameTextEdit.Text + FirstNameTextEdit.Text;
+        }
+
+        private void LastNameTextEdit_EditValueChanged(object sender, EventArgs e)
+        { 
+            FullNameTextEdit.Text = LastNameTextEdit.Text + FirstNameTextEdit.Text;
         }
     }
 }

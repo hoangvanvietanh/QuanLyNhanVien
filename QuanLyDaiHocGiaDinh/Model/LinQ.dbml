@@ -26,7 +26,7 @@
       <Column Name="FullName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Column Name="BirthDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="Address" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="Ward" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Ward" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="District" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="City" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="PhoneNumber" Type="System.String" DbType="NChar(20)" CanBeNull="true" />

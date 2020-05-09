@@ -717,7 +717,7 @@ namespace QuanLyDaiHocGiaDinh.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ward", DbType="NVarChar(10)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ward", DbType="NVarChar(100)")]
 		public string Ward
 		{
 			get

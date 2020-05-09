@@ -44,6 +44,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             setVisibleScheduleRibbonPage(false);
             setVisiblePositionRibbonPage(false);
             setVisibleDepartmentRibbonPage(false);
+
             skins();
         }
 
@@ -223,9 +224,17 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void btnThongTinCaNhan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            AdminInforTeachers adminInforTeachers = new AdminInforTeachers(employeeService.getEmployeeByAccountId(_account.AccountId));
-            adminInforTeachers.showInfoAdmin();
-            adminInforTeachers.ShowDialog();
+            
+            if (_account.UserName.Trim().Equals("admin"))
+            {
+                
+            }
+            else
+            {
+                AdminInforTeachers adminInforTeachers = new AdminInforTeachers(employeeService.getEmployeeByAccountId(_account.AccountId));
+                adminInforTeachers.showInfoAdmin();
+                adminInforTeachers.ShowDialog();
+            }
         }
 
         private void btnTaoMoiGiangVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -258,7 +267,6 @@ namespace QuanLyDaiHocGiaDinh.Views
             adminUpdateTeachers.updateTeacher(fullName,firstName,lastName,birthDate,address,ward,district,city,phoneNumber,email,status,hireDate,positionName, departmentName, ImageArray);
             adminUpdateTeachers.ShowDialog();
             load_allGridView();
-
         }
 
         //Xóa giảng viên
@@ -276,7 +284,8 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void gridViewEmployee_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
-            if(gridViewEmployee.Columns.View.GetFocusedRowCellValue("FullName") == null)
+
+            if (gridViewEmployee.Columns.View.GetFocusedRowCellValue("FullName") == null)
             {
                 btnSuaGiangVien.Enabled = false;
                 btnXoaGiangVien.Enabled = false;
@@ -302,6 +311,11 @@ namespace QuanLyDaiHocGiaDinh.Views
                     pictureEditShow.Image = Image.FromStream(new MemoryStream(ImageArray));
                 }
             }
+        }
+
+        private void GridViewEmployee_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void gridViewAccount_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
@@ -469,6 +483,12 @@ namespace QuanLyDaiHocGiaDinh.Views
             }
             scheduleTableAdapter.Update(giaDinhUniversityDataSet);
             giaDinhUniversityDataSet.AcceptChanges();
+        }
+
+        private void ribbonControl_Click(object sender, EventArgs e)
+        {
+            btnXoaGiangVien.Enabled = false;
+            btnSuaGiangVien.Enabled = false;
         }
     }
 }
