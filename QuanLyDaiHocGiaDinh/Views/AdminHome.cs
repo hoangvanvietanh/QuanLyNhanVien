@@ -585,5 +585,11 @@ namespace QuanLyDaiHocGiaDinh.Views
             }
             return false;
         }
+
+        private void btnAbout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
+        }
     }
 }

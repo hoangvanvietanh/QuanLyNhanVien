@@ -63,6 +63,16 @@ namespace QuanLyDaiHocGiaDinh.Properties {
         /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage about {
+            get {
+                object obj = ResourceManager.GetObject("about", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage actions_addcircled {
             get {
                 object obj = ResourceManager.GetObject("actions_addcircled", resourceCulture);

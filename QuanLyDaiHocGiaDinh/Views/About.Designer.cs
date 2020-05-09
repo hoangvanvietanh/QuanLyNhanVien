@@ -30,6 +30,7 @@
         {
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.btnOK = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -52,14 +53,26 @@
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Chúc các bạn có một ngày tốt lành ^^";
             // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(154, 212);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(94, 29);
+            this.btnOK.TabIndex = 2;
+            this.btnOK.Text = "OK";
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 284);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "About";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -70,5 +83,6 @@
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.SimpleButton btnOK;
     }
 }

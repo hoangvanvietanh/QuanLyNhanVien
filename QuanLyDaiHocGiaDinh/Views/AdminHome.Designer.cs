@@ -132,6 +132,7 @@
             this.btnXoaPhongBan = new DevExpress.XtraBars.BarButtonItem();
             this.btnXuatFileEmployee = new DevExpress.XtraBars.BarButtonItem();
             this.btnXuatFileAccount = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAbout = new DevExpress.XtraBars.BarButtonItem();
             this.positionRibbonPageCategory = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.positionHomeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -168,6 +169,7 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.employeeAboutRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.calendarToolsRibbonPageCategory1 = new DevExpress.XtraScheduler.UI.CalendarToolsRibbonPageCategory();
             this.schedulerControl1 = new DevExpress.XtraScheduler.SchedulerControl();
@@ -588,10 +590,11 @@
             this.btnSuaPhongBan,
             this.btnXoaPhongBan,
             this.btnXuatFileEmployee,
-            this.btnXuatFileAccount});
+            this.btnXuatFileAccount,
+            this.btnAbout});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 166;
+            this.ribbonControl.MaxItemId = 167;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -1066,6 +1069,14 @@
             this.btnXuatFileAccount.Name = "btnXuatFileAccount";
             this.btnXuatFileAccount.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXuatFileAccount_ItemClick);
             // 
+            // btnAbout
+            // 
+            this.btnAbout.Caption = "About";
+            this.btnAbout.Id = 166;
+            this.btnAbout.ImageOptions.SvgImage = global::QuanLyDaiHocGiaDinh.Properties.Resources.about;
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAbout_ItemClick);
+            // 
             // positionRibbonPageCategory
             // 
             this.positionRibbonPageCategory.Name = "positionRibbonPageCategory";
@@ -1333,8 +1344,15 @@
             // 
             // employeeAboutRibbonPage
             // 
+            this.employeeAboutRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2});
             this.employeeAboutRibbonPage.Name = "employeeAboutRibbonPage";
             this.employeeAboutRibbonPage.Text = "About";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnAbout);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonStatusBar
             // 
@@ -3896,5 +3914,7 @@
         private DevExpress.XtraBars.BarButtonItem btnXuatFileAccount;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.BarButtonItem btnAbout;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
     }
 }
