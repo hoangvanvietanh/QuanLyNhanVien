@@ -57,8 +57,8 @@
       <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
       <Column Name="EndDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
       <Column Name="AllDay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Subject" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Label" Type="System.Int32" DbType="Int" CanBeNull="true" />

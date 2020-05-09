@@ -94,6 +94,13 @@
             this.barListItem1 = new DevExpress.XtraBars.BarListItem();
             this.barWorkspaceMenuItem1 = new DevExpress.XtraBars.BarWorkspaceMenuItem();
             this.workspaceManager1 = new DevExpress.Utils.WorkspaceManager(this.components);
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSynCalendar = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSynchronize = new DevExpress.XtraBars.BarButtonItem();
+            this.beiCalendarList = new DevExpress.XtraBars.BarEditItem();
+            this.ricbCalendarList = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.calendarToolsRibbonPageCategory1 = new DevExpress.XtraScheduler.UI.CalendarToolsRibbonPageCategory();
             this.schedulerControl = new DevExpress.XtraScheduler.SchedulerControl();
             this.schedulerDataStorage = new DevExpress.XtraScheduler.SchedulerDataStorage(this.components);
@@ -108,11 +115,13 @@
             this.fileScheduleRibbonPage = new DevExpress.XtraScheduler.UI.FileRibbonPage();
             this.commonRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.CommonRibbonPageGroup();
             this.printRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.PrintRibbonPageGroup();
+            this.nothing = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.homeScheduleRibbonPage = new DevExpress.XtraScheduler.UI.HomeRibbonPage();
             this.appointmentRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.AppointmentRibbonPageGroup();
             this.navigatorRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.NavigatorRibbonPageGroup();
             this.arrangeRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.ArrangeRibbonPageGroup();
             this.groupByRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.GroupByRibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.viewScheduleRibbonPage = new DevExpress.XtraScheduler.UI.ViewRibbonPage();
             this.activeViewRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.ActiveViewRibbonPageGroup();
             this.timeScaleRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.TimeScaleRibbonPageGroup();
@@ -168,6 +177,8 @@
             this.ItemForFullName = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.lblPhongBan = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.lblEmployeeId = new DevExpress.XtraEditors.LabelControl();
             this.lblPositition = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -186,12 +197,15 @@
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.Root1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup10 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.lblPhongBan = new DevExpress.XtraEditors.LabelControl();
+            this.dxGoogleCalendarSync = new DevExpress.XtraScheduler.GoogleCalendar.DXGoogleCalendarSync(this.components);
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTimeEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
+            this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDuration1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ricbCalendarList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerDataStorage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).BeginInit();
@@ -270,6 +284,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -332,9 +349,15 @@
             this.skinPaletteRibbonGalleryBarItem1,
             this.ribbonGalleryBarItem1,
             this.barListItem1,
-            this.barWorkspaceMenuItem1});
+            this.barWorkspaceMenuItem1,
+            this.barButtonItem3,
+            this.barButtonItem4,
+            this.barButtonItem5,
+            this.btnSynCalendar,
+            this.bbiSynchronize,
+            this.beiCalendarList});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 97;
+            this.ribbonControl.MaxItemId = 105;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -346,10 +369,11 @@
             this.viewScheduleRibbonPage});
             this.ribbonControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemSpinEdit1,
-            this.repositoryItemDuration1});
+            this.repositoryItemDuration1,
+            this.ricbCalendarList});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(997, 143);
+            this.ribbonControl.Size = new System.Drawing.Size(997, 155);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -697,6 +721,55 @@
             this.workspaceManager1.TargetControl = this;
             this.workspaceManager1.TransitionType = pushTransition1;
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Hint = "Đồng bộ Google Lịch";
+            this.barButtonItem3.Id = 97;
+            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "barButtonItem4";
+            this.barButtonItem4.Id = 98;
+            this.barButtonItem4.Name = "barButtonItem4";
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "Đồng bộ Google Lịch";
+            this.barButtonItem5.Id = 99;
+            this.barButtonItem5.Name = "barButtonItem5";
+            // 
+            // btnSynCalendar
+            // 
+            this.btnSynCalendar.Caption = "Đồng bộ Google Lịch";
+            this.btnSynCalendar.Hint = "Đồng bộ Google Lịch";
+            this.btnSynCalendar.Id = 102;
+            this.btnSynCalendar.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSynCalendar.ImageOptions.SvgImage")));
+            this.btnSynCalendar.Name = "btnSynCalendar";
+            this.btnSynCalendar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSynCalendar_ItemClick);
+            // 
+            // bbiSynchronize
+            // 
+            this.bbiSynchronize.Caption = "Sync";
+            this.bbiSynchronize.Id = 103;
+            this.bbiSynchronize.Name = "bbiSynchronize";
+            // 
+            // beiCalendarList
+            // 
+            this.beiCalendarList.Caption = "Calendar";
+            this.beiCalendarList.Edit = this.ricbCalendarList;
+            this.beiCalendarList.Id = 104;
+            this.beiCalendarList.Name = "beiCalendarList";
+            // 
+            // ricbCalendarList
+            // 
+            this.ricbCalendarList.AutoHeight = false;
+            this.ricbCalendarList.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ricbCalendarList.Name = "ricbCalendarList";
+            // 
             // calendarToolsRibbonPageCategory1
             // 
             this.calendarToolsRibbonPageCategory1.Control = this.schedulerControl;
@@ -713,7 +786,7 @@
             this.schedulerControl.MenuManager = this.ribbonControl;
             this.schedulerControl.Name = "schedulerControl";
             this.schedulerControl.OptionsBehavior.TimeRegionValidationInterval = System.TimeSpan.Parse("00:00:01");
-            this.schedulerControl.Size = new System.Drawing.Size(580, 567);
+            this.schedulerControl.Size = new System.Drawing.Size(573, 563);
             this.schedulerControl.Start = new System.DateTime(2020, 4, 10, 0, 0, 0, 0);
             this.schedulerControl.TabIndex = 0;
             this.schedulerControl.Text = "schedulerControl1";
@@ -811,7 +884,8 @@
             // 
             this.fileScheduleRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.commonRibbonPageGroup1,
-            this.printRibbonPageGroup1});
+            this.printRibbonPageGroup1,
+            this.nothing});
             this.fileScheduleRibbonPage.Name = "fileScheduleRibbonPage";
             // 
             // commonRibbonPageGroup1
@@ -827,13 +901,21 @@
             this.printRibbonPageGroup1.ItemLinks.Add(this.printPageSetupItem1);
             this.printRibbonPageGroup1.Name = "printRibbonPageGroup1";
             // 
+            // nothing
+            // 
+            this.nothing.ItemLinks.Add(this.beiCalendarList);
+            this.nothing.ItemLinks.Add(this.bbiSynchronize);
+            this.nothing.Name = "nothing";
+            this.nothing.Text = "ribbonPageGroup4";
+            // 
             // homeScheduleRibbonPage
             // 
             this.homeScheduleRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.appointmentRibbonPageGroup1,
             this.navigatorRibbonPageGroup1,
             this.arrangeRibbonPageGroup1,
-            this.groupByRibbonPageGroup1});
+            this.groupByRibbonPageGroup1,
+            this.ribbonPageGroup2});
             this.homeScheduleRibbonPage.Name = "homeScheduleRibbonPage";
             // 
             // appointmentRibbonPageGroup1
@@ -869,6 +951,12 @@
             this.groupByRibbonPageGroup1.ItemLinks.Add(this.groupByDateItem1);
             this.groupByRibbonPageGroup1.ItemLinks.Add(this.groupByResourceItem1);
             this.groupByRibbonPageGroup1.Name = "groupByRibbonPageGroup1";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnSynCalendar);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "Google";
             // 
             // viewScheduleRibbonPage
             // 
@@ -907,18 +995,18 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 756);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 765);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(997, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(997, 22);
             // 
             // officeNavigationBar
             // 
             this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar.Location = new System.Drawing.Point(0, 710);
+            this.officeNavigationBar.Location = new System.Drawing.Point(0, 718);
             this.officeNavigationBar.Name = "officeNavigationBar";
             this.officeNavigationBar.NavigationClient = this.navBarControl;
-            this.officeNavigationBar.Size = new System.Drawing.Size(997, 46);
+            this.officeNavigationBar.Size = new System.Drawing.Size(997, 47);
             this.officeNavigationBar.TabIndex = 1;
             this.officeNavigationBar.Text = "officeNavigationBar";
             // 
@@ -929,11 +1017,11 @@
             this.navBarControl.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.employeesNavBarGroup,
             this.customersNavBarGroup});
-            this.navBarControl.Location = new System.Drawing.Point(0, 143);
+            this.navBarControl.Location = new System.Drawing.Point(0, 155);
             this.navBarControl.Name = "navBarControl";
             this.navBarControl.OptionsNavPane.ExpandedWidth = 165;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(165, 567);
+            this.navBarControl.Size = new System.Drawing.Size(165, 563);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
             this.navBarControl.ActiveGroupChanged += new DevExpress.XtraNavBar.NavBarGroupEventHandler(this.navBarControl_ActiveGroupChanged);
@@ -956,14 +1044,14 @@
             this.navigationFrame.Controls.Add(this.employeesNavigationPage);
             this.navigationFrame.Controls.Add(this.customersNavigationPage);
             this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationFrame.Location = new System.Drawing.Point(165, 143);
+            this.navigationFrame.Location = new System.Drawing.Point(165, 155);
             this.navigationFrame.Name = "navigationFrame";
             this.navigationFrame.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.employeesNavigationPage,
             this.customersNavigationPage});
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrame.SelectedPage = this.employeesNavigationPage;
-            this.navigationFrame.Size = new System.Drawing.Size(832, 567);
+            this.navigationFrame.Size = new System.Drawing.Size(832, 563);
             this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame";
             // 
@@ -972,7 +1060,7 @@
             this.employeesNavigationPage.Controls.Add(this.splitContainerControl2);
             this.employeesNavigationPage.Controls.Add(this.employeesLabelControl);
             this.employeesNavigationPage.Name = "employeesNavigationPage";
-            this.employeesNavigationPage.Size = new System.Drawing.Size(832, 567);
+            this.employeesNavigationPage.Size = new System.Drawing.Size(832, 563);
             // 
             // splitContainerControl2
             // 
@@ -985,7 +1073,7 @@
             this.splitContainerControl2.Panel1.Text = "Panel1";
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.Size = new System.Drawing.Size(832, 567);
+            this.splitContainerControl2.Size = new System.Drawing.Size(832, 563);
             this.splitContainerControl2.SplitterPosition = 402;
             this.splitContainerControl2.TabIndex = 1;
             // 
@@ -1001,7 +1089,7 @@
             this.groupImployee.Location = new System.Drawing.Point(0, 0);
             this.groupImployee.Margin = new System.Windows.Forms.Padding(0);
             this.groupImployee.Name = "groupImployee";
-            this.groupImployee.Size = new System.Drawing.Size(402, 567);
+            this.groupImployee.Size = new System.Drawing.Size(402, 563);
             this.groupImployee.TabIndex = 0;
             this.groupImployee.Text = "IMPLOYEE IMFORMATION";
             this.groupImployee.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -1010,9 +1098,9 @@
             // 
             this.groupControl4.Controls.Add(this.dataLayoutControl4);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl4.Location = new System.Drawing.Point(2, 432);
+            this.groupControl4.Location = new System.Drawing.Point(0, 429);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(398, 133);
+            this.groupControl4.Size = new System.Drawing.Size(402, 134);
             this.groupControl4.TabIndex = 3;
             this.groupControl4.Text = "Diff";
             // 
@@ -1074,9 +1162,9 @@
             // 
             this.groupControl3.Controls.Add(this.dataLayoutControl3);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(2, 301);
+            this.groupControl3.Location = new System.Drawing.Point(0, 298);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(398, 131);
+            this.groupControl3.Size = new System.Drawing.Size(402, 131);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "Contact";
             // 
@@ -1164,9 +1252,9 @@
             // 
             this.groupControl2.Controls.Add(this.dataLayoutControl2);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl2.Location = new System.Drawing.Point(2, 178);
+            this.groupControl2.Location = new System.Drawing.Point(0, 175);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(398, 123);
+            this.groupControl2.Size = new System.Drawing.Size(402, 123);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Address";
             // 
@@ -1300,9 +1388,9 @@
             // 
             this.groupControl1.Controls.Add(this.dataLayoutControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl1.Location = new System.Drawing.Point(2, 39);
+            this.groupControl1.Location = new System.Drawing.Point(0, 36);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(398, 139);
+            this.groupControl1.Size = new System.Drawing.Size(402, 139);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Info";
             // 
@@ -1478,7 +1566,7 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl3);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(425, 567);
+            this.splitContainerControl3.Size = new System.Drawing.Size(418, 563);
             this.splitContainerControl3.SplitterPosition = 282;
             this.splitContainerControl3.TabIndex = 0;
             // 
@@ -1496,8 +1584,28 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(425, 282);
+            this.panelControl2.Size = new System.Drawing.Size(418, 282);
             this.panelControl2.TabIndex = 0;
+            // 
+            // lblPhongBan
+            // 
+            this.lblPhongBan.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhongBan.Appearance.Options.UseFont = true;
+            this.lblPhongBan.Location = new System.Drawing.Point(296, 151);
+            this.lblPhongBan.Name = "lblPhongBan";
+            this.lblPhongBan.Size = new System.Drawing.Size(78, 16);
+            this.lblPhongBan.TabIndex = 55;
+            this.lblPhongBan.Text = "Department";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(209, 151);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(81, 16);
+            this.labelControl2.TabIndex = 54;
+            this.labelControl2.Text = "Phòng ban : ";
             // 
             // lblEmployeeId
             // 
@@ -1585,7 +1693,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(425, 280);
+            this.panelControl3.Size = new System.Drawing.Size(418, 269);
             this.panelControl3.TabIndex = 0;
             // 
             // employeesLabelControl
@@ -1601,7 +1709,7 @@
             this.employeesLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employeesLabelControl.Location = new System.Drawing.Point(0, 0);
             this.employeesLabelControl.Name = "employeesLabelControl";
-            this.employeesLabelControl.Size = new System.Drawing.Size(832, 567);
+            this.employeesLabelControl.Size = new System.Drawing.Size(832, 563);
             this.employeesLabelControl.TabIndex = 0;
             this.employeesLabelControl.Text = "Trang chủ";
             // 
@@ -1610,7 +1718,7 @@
             this.customersNavigationPage.Controls.Add(this.splitContainerControl1);
             this.customersNavigationPage.Controls.Add(this.customersLabelControl);
             this.customersNavigationPage.Name = "customersNavigationPage";
-            this.customersNavigationPage.Size = new System.Drawing.Size(832, 567);
+            this.customersNavigationPage.Size = new System.Drawing.Size(832, 563);
             // 
             // splitContainerControl1
             // 
@@ -1622,7 +1730,7 @@
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.dateNavigator1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(832, 567);
+            this.splitContainerControl1.Size = new System.Drawing.Size(832, 563);
             this.splitContainerControl1.SplitterPosition = 247;
             this.splitContainerControl1.TabIndex = 2;
             // 
@@ -1639,7 +1747,7 @@
             this.dateNavigator1.Location = new System.Drawing.Point(0, 0);
             this.dateNavigator1.Name = "dateNavigator1";
             this.dateNavigator1.SchedulerControl = this.schedulerControl;
-            this.dateNavigator1.Size = new System.Drawing.Size(247, 567);
+            this.dateNavigator1.Size = new System.Drawing.Size(247, 563);
             this.dateNavigator1.TabIndex = 0;
             // 
             // customersLabelControl
@@ -1655,7 +1763,7 @@
             this.customersLabelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customersLabelControl.Location = new System.Drawing.Point(0, 0);
             this.customersLabelControl.Name = "customersLabelControl";
-            this.customersLabelControl.Size = new System.Drawing.Size(832, 567);
+            this.customersLabelControl.Size = new System.Drawing.Size(832, 563);
             this.customersLabelControl.TabIndex = 1;
             this.customersLabelControl.Text = "Lịch trình";
             // 
@@ -1736,25 +1844,33 @@
             this.layoutControlGroup10.Name = "autoGeneratedGroup0";
             this.layoutControlGroup10.Size = new System.Drawing.Size(112, 76);
             // 
-            // labelControl2
+            // dxGoogleCalendarSync
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(209, 151);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(81, 16);
-            this.labelControl2.TabIndex = 54;
-            this.labelControl2.Text = "Phòng ban : ";
+            this.dxGoogleCalendarSync.CalendarId = null;
+            this.dxGoogleCalendarSync.CalendarService = null;
+            this.dxGoogleCalendarSync.Storage = this.schedulerDataStorage;
             // 
-            // lblPhongBan
+            // repositoryItemTextEdit1
             // 
-            this.lblPhongBan.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhongBan.Appearance.Options.UseFont = true;
-            this.lblPhongBan.Location = new System.Drawing.Point(296, 151);
-            this.lblPhongBan.Name = "lblPhongBan";
-            this.lblPhongBan.Size = new System.Drawing.Size(78, 16);
-            this.lblPhongBan.TabIndex = 55;
-            this.lblPhongBan.Text = "Department";
+            this.repositoryItemTextEdit1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repositoryItemTextEdit1.Appearance.Options.UseFont = true;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
+            // repositoryItemTimeEdit1
+            // 
+            this.repositoryItemTimeEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemTimeEdit1.Name = "repositoryItemTimeEdit1";
+            // 
+            // repositoryItemPictureEdit1
+            // 
+            this.repositoryItemPictureEdit1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.repositoryItemPictureEdit1.Appearance.Options.UseBackColor = true;
+            this.repositoryItemPictureEdit1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
+            this.repositoryItemPictureEdit1.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.repositoryItemPictureEdit1.ShowMenu = false;
+            this.repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze;
             // 
             // UserHome
             // 
@@ -1778,6 +1894,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpinEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDuration1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ricbCalendarList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.schedulerDataStorage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scheduleBindingSource)).EndInit();
@@ -1857,6 +1974,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2017,5 +2137,18 @@
         private DevExpress.XtraLayout.LayoutControlItem ItemForFullName;
         private DevExpress.XtraEditors.LabelControl lblPhongBan;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraScheduler.GoogleCalendar.DXGoogleCalendarSync dxGoogleCalendarSync;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem btnSynCalendar;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem bbiSynchronize;
+        private DevExpress.XtraBars.BarEditItem beiCalendarList;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox ricbCalendarList;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup nothing;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit repositoryItemTimeEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
     }
 }

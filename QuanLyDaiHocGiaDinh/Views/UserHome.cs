@@ -14,6 +14,12 @@ using QuanLyDaiHocGiaDinh.Controller;
 using QuanLyDaiHocGiaDinh.Model;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Calendar.v3;
+using Google.Apis.Calendar.v3.Data;
+using Google.Apis.Services;
+using Google.Apis.Util.Store;
+using System.Threading;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -25,11 +31,19 @@ namespace QuanLyDaiHocGiaDinh.Views
         private PositionServices positionServices = new PositionServices();
         private Department _department = new Department();
         private DepartmentServices departmentServices = new DepartmentServices();
+        // If modifying these scopes, delete your previously saved credentials
+        // at ~/.credentials/calendar-dotnet-quickstart.json
+        static string[] Scopes = { CalendarService.Scope.CalendarReadonly };
+        UserCredential credential;
+        CalendarService service;
+        bool allowEventLoad;
+        CalendarList calendarList;
+        string activeCalendarId;
 
         public UserHome(Account account)
         {
             InitializeComponent();
-
+            DateTime now = DateTime.Now;
             this._account = account;
             employeeService = new EmployeeService(account);
             Employee employee = new Employee();
@@ -84,8 +98,17 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void schedulerDataStorage_AppointmentsChanged(object sender, PersistentObjectsEventArgs e)
         {
-            scheduleTableAdapter.Update(giaDinhUniversityDataSet);
-            giaDinhUniversityDataSet.AcceptChanges();
+            try
+            {
+                Console.WriteLine("----------------------------------------------------->");
+                scheduleTableAdapter.Update(giaDinhUniversityDataSet);
+                giaDinhUniversityDataSet.AcceptChanges();
+            }
+            catch
+            {
+                
+            }
+           
         }
 
         private void schedulerControl_InitNewAppointment(object sender, AppointmentEventArgs e)
@@ -169,6 +192,96 @@ namespace QuanLyDaiHocGiaDinh.Views
             lblPhongBan.Text = department.DepartmentName;
         }
 
-       
+        private void btnSynCalendar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+        }
+
+        #region Authorization
+        async protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            try
+            {
+                this.credential = await AuthorizeToGoogle();
+                this.service = new CalendarService(new BaseClientService.Initializer()
+                {
+                    HttpClientInitializer = this.credential,
+                    ApplicationName = "GoogleCalendarSyncSample"
+                });
+                this.dxGoogleCalendarSync.CalendarService = this.service;
+                this.allowEventLoad = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            await UpdateCalendarListUI();
+            this.allowEventLoad = true;
+            UpdateBbiAvailability();
+            ricbCalendarList.SelectedIndexChanged += RicbCalendarList_SelectedIndexChanged;
+            bbiSynchronize.ItemClick += BbiSynchronize_ItemClick;
+        }
+
+        async Task<UserCredential> AuthorizeToGoogle()
+        {
+            using (FileStream stream = new FileStream("../../Config/credentials.json", FileMode.Open, FileAccess.Read))
+            {
+                string credPath = Environment.GetFolderPath(
+                    Environment.SpecialFolder.Personal);
+                credPath = Path.Combine(credPath, ".credentials/GoogleSchedulerSync.json");
+                return await GoogleWebAuthorizationBroker.AuthorizeAsync(
+                    GoogleClientSecrets.Load(stream).Secrets,
+                    new String[] { CalendarService.Scope.Calendar },
+                    "user",
+                    CancellationToken.None,
+                    new FileDataStore(credPath, true));
+            }
+        }
+        #endregion
+
+
+        async Task UpdateCalendarListUI()
+        {
+            CalendarListResource.ListRequest listRequest = this.service.CalendarList.List();
+            this.calendarList = await listRequest.ExecuteAsync();
+            this.ricbCalendarList.Items.Clear();
+            foreach (CalendarListEntry item in this.calendarList.Items)
+                this.ricbCalendarList.Items.Add(item.Summary);
+            if (!String.IsNullOrEmpty(this.activeCalendarId))
+            {
+                CalendarListEntry itemToSelect = this.calendarList.Items.FirstOrDefault(x => x.Id == this.activeCalendarId);
+                this.dxGoogleCalendarSync.CalendarId = this.activeCalendarId;
+                if (this.ricbCalendarList.Items.Contains(itemToSelect.Summary))
+                {
+                    this.beiCalendarList.EditValue = itemToSelect.Summary;
+                }
+                else
+                    this.activeCalendarId = String.Empty;
+            }
+            UpdateBbiAvailability();
+        }
+
+        void UpdateBbiAvailability()
+        {
+            this.bbiSynchronize.Enabled = !String.IsNullOrEmpty(this.activeCalendarId) && this.allowEventLoad;
+        }
+
+        private void RicbCalendarList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBoxEdit edit = (ComboBoxEdit)sender;
+            string selectedCalendarSummary = (string)edit.SelectedItem;
+            CalendarListEntry selectedCalendar = this.calendarList.Items.FirstOrDefault(x => x.Summary == selectedCalendarSummary);
+            this.activeCalendarId = selectedCalendar.Id;
+            this.dxGoogleCalendarSync.CalendarId = selectedCalendar.Id;
+            UpdateBbiAvailability();
+        }
+
+        private void BbiSynchronize_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.dxGoogleCalendarSync.Synchronize();
+        }
+
     }
 }

@@ -52,7 +52,7 @@
         <elementListCompartment Id="d116cd30-0bcd-461c-894c-cd650545e285" absoluteBounds="0.76500000000000012, 4.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.65625 : 4.125); (2.65625 : 3.62824625651042); (3.91666666666667 : 3.62824625651042 : JumpStart); (4.08333333333333 : 3.62824625651042 : JumpEnd); (6.125 : 3.62824625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.65625 : 4.125); (2.65625 : 3.62824625651042); (6.125 : 3.62824625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinQDataContext/Account/Account_Employee" />
       <nodes>
         <classShapeMoniker Id="5e8f81a3-fda2-4ebc-805f-cd54b8a4f413" />

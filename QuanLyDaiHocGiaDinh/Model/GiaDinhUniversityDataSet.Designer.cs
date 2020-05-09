@@ -982,8 +982,8 @@ namespace QuanLyDaiHocGiaDinh.Model {
                 this.columnUniqueID.AllowDBNull = false;
                 this.columnUniqueID.ReadOnly = true;
                 this.columnUniqueID.Unique = true;
-                this.columnSubject.MaxLength = 50;
-                this.columnLocation.MaxLength = 50;
+                this.columnSubject.MaxLength = 2147483647;
+                this.columnLocation.MaxLength = 2147483647;
                 this.columnDescription.MaxLength = 2147483647;
                 this.columnResourceIDs.MaxLength = 2147483647;
                 this.columnReminderInfo.MaxLength = 2147483647;

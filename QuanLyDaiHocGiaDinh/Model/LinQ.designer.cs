@@ -1423,7 +1423,7 @@ namespace QuanLyDaiHocGiaDinh.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Subject", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Subject", DbType="NVarChar(MAX)")]
 		public string Subject
 		{
 			get
@@ -1443,7 +1443,7 @@ namespace QuanLyDaiHocGiaDinh.Model
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location", DbType="NVarChar(MAX)")]
 		public string Location
 		{
 			get
