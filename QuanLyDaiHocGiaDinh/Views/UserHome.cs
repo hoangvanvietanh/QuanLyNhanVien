@@ -20,6 +20,7 @@ using Google.Apis.Calendar.v3.Data;
 using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using System.Threading;
+using System.Diagnostics;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -317,6 +318,26 @@ namespace QuanLyDaiHocGiaDinh.Views
         private void dxGoogleCalendarSync_ConflictDetected(object sender, DevExpress.XtraScheduler.GoogleCalendar.ConflictDetectedEventArgs e)
         {
 
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://mail.google.com/");
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.facebook.com");
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.instagram.com/?hl=vi");
         }
     }
 }

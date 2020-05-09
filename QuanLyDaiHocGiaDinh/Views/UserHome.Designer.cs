@@ -104,6 +104,7 @@
             this.bbiSynchronize = new DevExpress.XtraBars.BarButtonItem();
             this.beiCalendarList = new DevExpress.XtraBars.BarEditItem();
             this.ricbCalendarList = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.calendarToolsRibbonPageCategory1 = new DevExpress.XtraScheduler.UI.CalendarToolsRibbonPageCategory();
             this.schedulerControl = new DevExpress.XtraScheduler.SchedulerControl();
             this.schedulerDataStorage = new DevExpress.XtraScheduler.SchedulerDataStorage(this.components);
@@ -115,6 +116,7 @@
             this.homeRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.fileScheduleRibbonPage = new DevExpress.XtraScheduler.UI.FileRibbonPage();
             this.commonRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.CommonRibbonPageGroup();
             this.printRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.PrintRibbonPageGroup();
@@ -179,12 +181,14 @@
             this.ItemForFullName = new DevExpress.XtraLayout.LayoutControlItem();
             this.splitContainerControl3 = new DevExpress.XtraEditors.SplitContainerControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.lblPhongBan = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.lblEmployeeId = new DevExpress.XtraEditors.LabelControl();
             this.lblPositition = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.label = new DevExpress.XtraEditors.LabelControl();
             this.lblEmloyee = new DevExpress.XtraEditors.LabelControl();
             this.picEmployee = new DevExpress.XtraEditors.PictureEdit();
@@ -360,9 +364,10 @@
             this.barButtonItem5,
             this.btnSynCalendar,
             this.bbiSynchronize,
-            this.beiCalendarList});
+            this.beiCalendarList,
+            this.barButtonItem6});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 105;
+            this.ribbonControl.MaxItemId = 106;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -778,6 +783,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ricbCalendarList.Name = "ricbCalendarList";
             // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Caption = "Đăng Xuất";
+            this.barButtonItem6.Id = 105;
+            this.barButtonItem6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem6.ImageOptions.SvgImage")));
+            this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+            // 
             // calendarToolsRibbonPageCategory1
             // 
             this.calendarToolsRibbonPageCategory1.Control = this.schedulerControl;
@@ -870,7 +883,8 @@
             // 
             this.homeRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
-            this.ribbonPageGroup3});
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup2});
             this.homeRibbonPage.Name = "homeRibbonPage";
             this.homeRibbonPage.Text = "Home";
             // 
@@ -887,6 +901,13 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "View";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.Alignment = DevExpress.XtraBars.Ribbon.RibbonPageGroupAlignment.Far;
+            this.ribbonPageGroup2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ribbonPageGroup2.ImageOptions.SvgImage")));
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem6);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // fileScheduleRibbonPage
             // 
@@ -1076,7 +1097,7 @@
             this.splitContainerControl2.Panel2.Controls.Add(this.splitContainerControl3);
             this.splitContainerControl2.Panel2.Text = "Panel2";
             this.splitContainerControl2.Size = new System.Drawing.Size(883, 563);
-            this.splitContainerControl2.SplitterPosition = 657;
+            this.splitContainerControl2.SplitterPosition = 387;
             this.splitContainerControl2.TabIndex = 1;
             // 
             // groupImployee
@@ -1091,7 +1112,7 @@
             this.groupImployee.Location = new System.Drawing.Point(0, 0);
             this.groupImployee.Margin = new System.Windows.Forms.Padding(0);
             this.groupImployee.Name = "groupImployee";
-            this.groupImployee.Size = new System.Drawing.Size(657, 563);
+            this.groupImployee.Size = new System.Drawing.Size(387, 563);
             this.groupImployee.TabIndex = 0;
             this.groupImployee.Text = "IMPLOYEE IMFORMATION";
             this.groupImployee.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
@@ -1102,7 +1123,7 @@
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(0, 429);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(657, 134);
+            this.groupControl4.Size = new System.Drawing.Size(387, 134);
             this.groupControl4.TabIndex = 3;
             this.groupControl4.Text = "Diff";
             // 
@@ -1166,7 +1187,7 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(0, 298);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(657, 131);
+            this.groupControl3.Size = new System.Drawing.Size(387, 131);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "Contact";
             // 
@@ -1256,7 +1277,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(0, 175);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(657, 123);
+            this.groupControl2.Size = new System.Drawing.Size(387, 123);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Address";
             // 
@@ -1392,7 +1413,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 36);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(657, 139);
+            this.groupControl1.Size = new System.Drawing.Size(387, 139);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Info";
             // 
@@ -1568,26 +1589,58 @@
             this.splitContainerControl3.Panel1.Text = "Panel1";
             this.splitContainerControl3.Panel2.Controls.Add(this.panelControl3);
             this.splitContainerControl3.Panel2.Text = "Panel2";
-            this.splitContainerControl3.Size = new System.Drawing.Size(214, 563);
+            this.splitContainerControl3.Size = new System.Drawing.Size(484, 563);
             this.splitContainerControl3.SplitterPosition = 282;
             this.splitContainerControl3.TabIndex = 0;
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.simpleButton3);
+            this.panelControl2.Controls.Add(this.simpleButton1);
+            this.panelControl2.Controls.Add(this.simpleButton2);
             this.panelControl2.Controls.Add(this.lblPhongBan);
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Controls.Add(this.lblEmployeeId);
             this.panelControl2.Controls.Add(this.lblPositition);
             this.panelControl2.Controls.Add(this.labelControl1);
-            this.panelControl2.Controls.Add(this.btnLogout);
             this.panelControl2.Controls.Add(this.label);
             this.panelControl2.Controls.Add(this.lblEmloyee);
             this.panelControl2.Controls.Add(this.picEmployee);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(214, 282);
+            this.panelControl2.Size = new System.Drawing.Size(484, 282);
             this.panelControl2.TabIndex = 0;
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.simpleButton3.Location = new System.Drawing.Point(213, 218);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(32, 28);
+            this.simpleButton3.TabIndex = 62;
+            this.simpleButton3.Text = "simpleButton3";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(262, 218);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(29, 28);
+            this.simpleButton1.TabIndex = 61;
+            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(309, 219);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(29, 28);
+            this.simpleButton2.TabIndex = 60;
+            this.simpleButton2.Text = "simpleButton2";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // lblPhongBan
             // 
@@ -1639,20 +1692,6 @@
             this.labelControl1.TabIndex = 51;
             this.labelControl1.Text = "Mã nhân viên: ";
             // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLogout.BackColor = System.Drawing.Color.DimGray;
-            this.btnLogout.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.Location = new System.Drawing.Point(209, 216);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(116, 37);
-            this.btnLogout.TabIndex = 0;
-            this.btnLogout.Text = "Thoát";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
             // label
             // 
             this.label.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1696,7 +1735,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(214, 269);
+            this.panelControl3.Size = new System.Drawing.Size(484, 269);
             this.panelControl3.TabIndex = 0;
             // 
             // schedulerControl1
@@ -1708,7 +1747,7 @@
             this.schedulerControl1.MenuManager = this.ribbonControl;
             this.schedulerControl1.Name = "schedulerControl1";
             this.schedulerControl1.OptionsBehavior.TimeRegionValidationInterval = System.TimeSpan.Parse("00:00:01");
-            this.schedulerControl1.Size = new System.Drawing.Size(210, 265);
+            this.schedulerControl1.Size = new System.Drawing.Size(480, 265);
             this.schedulerControl1.Start = new System.DateTime(2020, 5, 3, 0, 0, 0, 0);
             this.schedulerControl1.TabIndex = 0;
             this.schedulerControl1.Text = "schedulerControl1";
@@ -2102,7 +2141,6 @@
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl3;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private System.Windows.Forms.Button btnLogout;
         private DevExpress.XtraBars.BarButtonItem btnUpdate;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraEditors.GroupControl groupImployee;
@@ -2180,5 +2218,10 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit repositoryItemTimeEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
         private DevExpress.XtraScheduler.SchedulerControl schedulerControl1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }
