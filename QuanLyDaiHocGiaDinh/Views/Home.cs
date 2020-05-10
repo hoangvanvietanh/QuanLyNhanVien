@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using DevExpress.XtraSplashScreen;
+using Newtonsoft.Json;
 using QuanLyDaiHocGiaDinh.Controller;
 using QuanLyDaiHocGiaDinh.Model;
 using QuanLyDaiHocGiaDinh.Services;
@@ -101,22 +102,28 @@ namespace QuanLyDaiHocGiaDinh
 
         private void openFormWithRole(string role)
         {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
             if (String.Compare(role.Trim(), "employee", true) == 0)
             {
                 Views.UserHome userHome = new Views.UserHome(homeController.getAccountLoggedIn());
+                SplashScreenManager.CloseForm();
                 userHome.ShowDialog();
                 isLoginAdready(true, userName);
             }
             else if (String.Compare(role.Trim(), "manage", true) == 0)
             {
                 AdminHome adminHome = new AdminHome(homeController.getAccountLoggedIn());
+                SplashScreenManager.CloseForm();
                 adminHome.ShowDialog();
                 isLoginAdready(true, userName);
             }
             else
             {
+                SplashScreenManager.CloseForm();
                 laNotice.Text = "Sai tài khoản hoặc mật khẩu";
             }
+            
         }
 
         private void btnQuenMatKhau_Click(object sender, EventArgs e)

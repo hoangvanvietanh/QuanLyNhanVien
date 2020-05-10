@@ -14,6 +14,7 @@ using QuanLyDaiHocGiaDinh.Services;
 using System.Drawing.Imaging;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.Utils.Win;
+using DevExpress.XtraSplashScreen;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -52,6 +53,9 @@ namespace QuanLyDaiHocGiaDinh.Views
         }
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
+
             Account acc = new Account();
             acc.UserName = EmailTextEdit.Text.Trim();
             acc.Password = EmailTextEdit.Text.Trim();
@@ -74,7 +78,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             emp.PositionId = Int32.Parse(String.Format("{0}", PositionNameTextEdit.EditValue));
             emp.Image = ImageByArray;
             employeeService.createEmployee(emp);
-
+            SplashScreenManager.CloseForm();
             XtraMessageBox.Show("Thêm thành công !!!");
             this.Close();
         }

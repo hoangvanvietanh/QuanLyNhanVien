@@ -12,6 +12,7 @@ using QuanLyDaiHocGiaDinh.Services;
 using QuanLyDaiHocGiaDinh.Model;
 using System.Net.Mail;
 using System.Net;
+using DevExpress.XtraSplashScreen;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -37,6 +38,7 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void btnChangePasswordSave_Click(object sender, EventArgs e)
         {
+            
             //Account account = new Account();
             // MessageBox.Show(_account.Password + "---" + txtPassword.Text);
             // account = accountServices.getAccountByEmployeeId();
@@ -48,10 +50,13 @@ namespace QuanLyDaiHocGiaDinh.Views
             else if (_account.Password.Trim() != txtPassword.Text.Trim()) XtraMessageBox.Show("Pass cũ không chính sát");
             else
             {
+                SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+                SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
                 _account.Password = txtNewPassword.Text;
                 accountServices.updateAccount(_account);
                 XtraMessageBox.Show("Đổi Password thành công");
                 Sendgmail();
+                SplashScreenManager.CloseForm();
                 this.Close();
             }
 

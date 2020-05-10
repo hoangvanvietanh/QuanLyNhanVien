@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QuanLyDaiHocGiaDinh.Services;
 using QuanLyDaiHocGiaDinh.Model;
+using DevExpress.XtraSplashScreen;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -28,10 +29,13 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
+
             Department dep = new Department();
             dep.DepartmentName = txtPhongBan.Text;
             departmentServices.createDepartment(dep);
-
+            SplashScreenManager.CloseForm();
             XtraMessageBox.Show("Thêm thành công !!!");
             this.Close();
         }

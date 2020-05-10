@@ -179,6 +179,9 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
+
             Employee emp = new Employee();
             emp = _employee;
             emp.FullName = FullNameTextEdit.Text;
@@ -208,7 +211,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             positionServices.updatePosition(po);
             departmentServices.updateDepartment(dep);
 
-
+            SplashScreenManager.CloseForm();
             XtraMessageBox.Show("Sửa thành công !!!");
             this.Close();
 

@@ -13,6 +13,7 @@ using QuanLyDaiHocGiaDinh.Controller;
 using QuanLyDaiHocGiaDinh.Services;
 using System.Net.Mail;
 using System.Net;
+using DevExpress.XtraSplashScreen;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -60,6 +61,9 @@ namespace QuanLyDaiHocGiaDinh.Views
         }
         private void btnTiepTuc_Click(object sender, EventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
+
             string username = Login(txtEmailForgotPassword.Text);
 
             //accountServices.getRoleByAccountId();
@@ -73,11 +77,12 @@ namespace QuanLyDaiHocGiaDinh.Views
                 Sendgmail();
                 btnTiepTuc.Visible = false;
                 btnTiepTuc1.Visible = true;
-             
+                SplashScreenManager.CloseForm();
             }
             else
             {
                 MessageBox.Show("Emmail không tồn tại");
+                SplashScreenManager.CloseForm();
             }
         }
         private void btnTiepTuc1_Click(object sender, EventArgs e)
@@ -101,11 +106,14 @@ namespace QuanLyDaiHocGiaDinh.Views
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             if (txtMatKhauMoi.Text.Trim() == "") XtraMessageBox.Show("Bạn Chưa nhập mật khẩu mới");
             else if (txtNhapLaiMatKhau.Text.Trim() == "") XtraMessageBox.Show("Bạn chưa nhập lại mật khẩu");
             else if (txtMatKhauMoi.Text.Trim() != txtNhapLaiMatKhau.Text.Trim()) XtraMessageBox.Show("Mật khẩu chưa trùng nhau");
             else
             {
+                SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+                SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
                 accountServices.GetAllAccounts().ForEach(account =>
                 {
                     if (account.UserName.Trim().CompareTo(txtEmailForgotPassword.Text.Trim()) == 0)
@@ -119,6 +127,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                 XtraMessageBox.Show("Đổi Password thành công");
                 this.Close();
                 Home _home = new Home();
+                SplashScreenManager.CloseForm();
                 _home.ShowDialog();
             }    
         }

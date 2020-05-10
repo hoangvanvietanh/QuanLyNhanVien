@@ -12,6 +12,7 @@ using QuanLyDaiHocGiaDinh.Services;
 using QuanLyDaiHocGiaDinh.Model;
 using DevExpress.Utils.Win;
 using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraSplashScreen;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -37,11 +38,14 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
+
             Position po = new Position();
             po.PositionName = txtChucVu.Text;
             po.DepartmentId = Int32.Parse(String.Format("{0}", txtPhongBan.EditValue));
             positionService.createPosition(po);
-
+            SplashScreenManager.CloseForm();
             XtraMessageBox.Show("Thêm thành công !!!");
             this.Close();
         }

@@ -13,6 +13,7 @@ using QuanLyDaiHocGiaDinh.Model;
 using QuanLyDaiHocGiaDinh.Services;
 using DevExpress.XtraEditors.Camera;
 using System.Drawing.Imaging;
+using DevExpress.XtraSplashScreen;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -63,6 +64,8 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
             Employee employee = new Employee();
             employee = employeeService.getEmployeeByAccountId(_account.AccountId);
               
@@ -84,6 +87,7 @@ namespace QuanLyDaiHocGiaDinh.Views
 
             XtraMessageBox.Show("Update successful");
             UserHome userHome = new UserHome(_account);
+            SplashScreenManager.CloseForm();
             userHome.ShowDialog();
             this.Close();
        

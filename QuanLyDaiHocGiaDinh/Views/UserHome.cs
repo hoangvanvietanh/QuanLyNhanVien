@@ -21,6 +21,7 @@ using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using System.Threading;
 using System.Diagnostics;
+using DevExpress.XtraSplashScreen;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -294,8 +295,11 @@ namespace QuanLyDaiHocGiaDinh.Views
 
         private void BbiSynchronize_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
             justSync = true;
             this.dxGoogleCalendarSync.Synchronize();
+            SplashScreenManager.CloseForm();
         }
 
         private void dxGoogleCalendarSync_AppointmentValuesRequested(object sender, DevExpress.XtraScheduler.GoogleCalendar.ObjectValuesRequestedEventArgs e)
@@ -304,6 +308,7 @@ namespace QuanLyDaiHocGiaDinh.Views
             e.Appointment.CustomFields["AccountId"] = this._account.AccountId;
             //scheduleTableAdapter.Update(giaDinhUniversityDataSet);
             //giaDinhUniversityDataSet.AcceptChanges();
+            
         }
 
         private void dxGoogleCalendarSync_FilterAppointments(object sender, DevExpress.XtraScheduler.GoogleCalendar.FilterAppointmentsEventArgs e)

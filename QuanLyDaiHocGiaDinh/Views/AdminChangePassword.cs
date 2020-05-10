@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QuanLyDaiHocGiaDinh.Model;
 using QuanLyDaiHocGiaDinh.Services;
+using DevExpress.XtraSplashScreen;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -64,10 +65,16 @@ namespace QuanLyDaiHocGiaDinh.Views
                             }
                             else
                             {
+                                SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+                                SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
+
                                 Account acc = new Account();
                                 acc = _account;
                                 acc.Password = txtPasswordNewChange.Text;
                                 accountServices.updateAccount(acc);
+
+                                SplashScreenManager.CloseForm();
+
                                 XtraMessageBox.Show("Đổi mật khẩu thành công !!!");
                                 this.Close();
                             }
