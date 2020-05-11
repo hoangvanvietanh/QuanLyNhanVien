@@ -6891,7 +6891,8 @@ SELECT AccountId, UserName, Password, Role FROM Accounts WHERE (AccountId = @Acc
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        AccountId, UserName, Password, Role\r\nFROM            Accounts";
+            this._commandCollection[0].CommandText = "SELECT AccountId, UserName, Password, Role\r\nFROM     Accounts\r\nWHERE  (UserName <" +
+                "> \'admin\')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

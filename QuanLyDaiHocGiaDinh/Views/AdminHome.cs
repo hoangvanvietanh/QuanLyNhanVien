@@ -15,6 +15,7 @@ using System.IO;
 using DevExpress.XtraPrinting;
 using DevExpress.Export;
 using DevExpress.Export.Xl;
+using DevExpress.XtraSplashScreen;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -189,6 +190,7 @@ namespace QuanLyDaiHocGiaDinh.Views
         {
             //addButtonPage(2);
             navigationFrame.SelectedPageIndex = 2;
+            
         }
 
        
@@ -202,7 +204,7 @@ namespace QuanLyDaiHocGiaDinh.Views
         }
         
         private void btnQuanLyGiangVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {      
+        {   
             navigationFrame.SelectedPageIndex = 0;
         }
 
@@ -315,11 +317,6 @@ namespace QuanLyDaiHocGiaDinh.Views
             }
         }
 
-        private void GridViewEmployee_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         private void gridViewAccount_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
         {
             string id = gridViewAccount.Columns.View.GetFocusedRowCellValue("AccountId").ToString();
@@ -332,13 +329,15 @@ namespace QuanLyDaiHocGiaDinh.Views
             txtEmail.Text = emp.Email;
             txtPhoneNumber.Text = emp.PhoneNumber;
             txtStatus.Text = emp.Status;
-            byte[] ImageArray = (byte[])emp.Image.ToArray();
-            if (ImageArray.Length == 0)
+
+            if (emp.Image  == null)
             {
+
                 picInfo.Image = null;
             }
             else
             {
+                byte[] ImageArray = (byte[])emp.Image.ToArray();
                 picInfo.Image = Image.FromStream(new MemoryStream(ImageArray));
             }
         }
@@ -487,15 +486,12 @@ namespace QuanLyDaiHocGiaDinh.Views
             giaDinhUniversityDataSet.AcceptChanges();
         }
 
-        private void ribbonControl_Click(object sender, EventArgs e)
-        {
-            btnXoaGiangVien.Enabled = false;
-            btnSuaGiangVien.Enabled = false;
-        }
-
         //Xuất File Excel Employee
         private void btnXuatFileExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
+            SplashScreenManager.CloseForm();
             ExportExcelEmployee("");
         }
 
@@ -503,33 +499,26 @@ namespace QuanLyDaiHocGiaDinh.Views
         {
             try
             {
-                if (gridViewEmployee.FocusedRowHandle < 0)
+                var dialog = new SaveFileDialog();
+                dialog.Title = @"Export file excel";
+                dialog.FileName = filename;
+                dialog.Filter = @"Microsoft Excel|.xlsx";
+
+                if (dialog.ShowDialog() == DialogResult.OK)
                 {
+                    gridViewEmployee.ColumnPanelRowHeight = 40;
+                    gridViewEmployee.OptionsPrint.AutoWidth = AutoSize;
+                    gridViewEmployee.OptionsPrint.ShowPrintExportProgress = true;
+                    gridViewEmployee.OptionsPrint.AllowCancelPrintExport = true;
+                    XlsxExportOptionsEx options = new XlsxExportOptionsEx();
+                    options.TextExportMode = TextExportMode.Text;
+                    options.LayoutMode = DevExpress.Export.LayoutMode.Table;
+                    options.ExportMode = XlsxExportMode.SingleFile;
+                    options.SheetName = @"Sheet1";
 
-                }
-                else
-                {
-                    var dialog = new SaveFileDialog();
-                    dialog.Title = @"Export file excel";
-                    dialog.FileName = filename;
-                    dialog.Filter = @"Microsoft Excel|.xlsx";
-
-                    if (dialog.ShowDialog() == DialogResult.OK)
-                    {
-                        gridViewEmployee.ColumnPanelRowHeight = 40;
-                        gridViewEmployee.OptionsPrint.AutoWidth = AutoSize;
-                        gridViewEmployee.OptionsPrint.ShowPrintExportProgress = true;
-                        gridViewEmployee.OptionsPrint.AllowCancelPrintExport = true;
-                        XlsxExportOptionsEx options = new XlsxExportOptionsEx();
-                        options.TextExportMode = TextExportMode.Text;
-                        options.LayoutMode = DevExpress.Export.LayoutMode.Table;
-                        options.ExportMode = XlsxExportMode.SingleFile;
-                        options.SheetName = @"Sheet1";
-
-                        ExportSettings.DefaultExportType = ExportType.Default;
-                        gridViewEmployee.ExportToXlsx(dialog.FileName, options);
-                        XtraMessageBox.Show("Thành Công !!!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    ExportSettings.DefaultExportType = ExportType.Default;
+                    gridViewEmployee.ExportToXlsx(dialog.FileName, options);
+                    XtraMessageBox.Show("Thành Công !!!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception e)
@@ -543,40 +532,37 @@ namespace QuanLyDaiHocGiaDinh.Views
         //Xuất File Excel Account
         private void btnXuatFileAccount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
+            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
+            SplashScreenManager.CloseForm();
             ExportExcelAccount("");
+
         }
 
         private bool ExportExcelAccount(string filename)
         {
             try
             {
-                if (gridViewAccount.FocusedRowHandle < 0)
+                var dialog = new SaveFileDialog();
+                dialog.Title = @"Export file excel";
+                dialog.FileName = filename;
+                dialog.Filter = @"Microsoft Excel|.xlsx";
+
+                if (dialog.ShowDialog() == DialogResult.OK)
                 {
+                    gridViewAccount.ColumnPanelRowHeight = 40;
+                    gridViewAccount.OptionsPrint.AutoWidth = AutoSize;
+                    gridViewAccount.OptionsPrint.ShowPrintExportProgress = true;
+                    gridViewAccount.OptionsPrint.AllowCancelPrintExport = true;
+                    XlsxExportOptionsEx options = new XlsxExportOptionsEx();
+                    options.TextExportMode = TextExportMode.Text;
+                    options.LayoutMode = DevExpress.Export.LayoutMode.Table;
+                    options.ExportMode = XlsxExportMode.SingleFile;
+                    options.SheetName = @"Sheet1";
 
-                }
-                else
-                {
-                    var dialog = new SaveFileDialog();
-                    dialog.Title = @"Export file excel";
-                    dialog.FileName = filename;
-                    dialog.Filter = @"Microsoft Excel|.xlsx";
-
-                    if (dialog.ShowDialog() == DialogResult.OK)
-                    {
-                        gridViewAccount.ColumnPanelRowHeight = 40;
-                        gridViewAccount.OptionsPrint.AutoWidth = AutoSize;
-                        gridViewAccount.OptionsPrint.ShowPrintExportProgress = true;
-                        gridViewAccount.OptionsPrint.AllowCancelPrintExport = true;
-                        XlsxExportOptionsEx options = new XlsxExportOptionsEx();
-                        options.TextExportMode = TextExportMode.Text;
-                        options.LayoutMode = DevExpress.Export.LayoutMode.Table;
-                        options.ExportMode = XlsxExportMode.SingleFile;
-                        options.SheetName = @"Sheet1";
-
-                        ExportSettings.DefaultExportType = ExportType.Default;
-                        gridViewAccount.ExportToXlsx(dialog.FileName, options);
-                        XtraMessageBox.Show("Thành Công !!!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    ExportSettings.DefaultExportType = ExportType.Default;
+                    gridViewAccount.ExportToXlsx(dialog.FileName, options);
+                    XtraMessageBox.Show("Thành Công !!!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception e)
