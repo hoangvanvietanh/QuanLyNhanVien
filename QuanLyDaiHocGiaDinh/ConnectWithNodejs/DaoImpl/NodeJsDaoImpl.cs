@@ -22,7 +22,7 @@ namespace QuanLyDaiHocGiaDinh.ConnectWithNodejs.DaoImpl
             //Console.WriteLine("------------------------>" + emp.Account.UserName);
             var json = new JavaScriptSerializer().Serialize(setAddEmployee(emp)).ToString();
             //create the constructor with post type and few data
-            MyWebRequest myRequest = new MyWebRequest("https://gdu-services.herokuapp.com/Ma_so_Xu_ly=Them_nhan_vien_moi_mssql", "POST", json.ToString());
+            MyWebRequest myRequest = new MyWebRequest("https://thongbaogdu-server.herokuapp.com/Ma_so_Xu_ly=Them_nhan_vien_moi_mssql", "POST", json.ToString());
             //show the response string on the console screen.
             Console.WriteLine(myRequest.GetResponse());
         }
