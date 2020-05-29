@@ -32,7 +32,7 @@ namespace QuanLyDaiHocGiaDinh.Views
         {
             this._account = account;
             InitializeComponent();
-            navigationFrame.SelectedPageIndex = 3;
+            navigationFrame.SelectedPageIndex = 0;
             setVisibleScheduleRibbonPage(false);
             setVisiblePositionRibbonPage(false);
             setVisibleDepartmentRibbonPage(false);
@@ -44,7 +44,7 @@ namespace QuanLyDaiHocGiaDinh.Views
         public AdminHome()
         {
             InitializeComponent();
-            navigationFrame.SelectedPageIndex = 3;
+            navigationFrame.SelectedPageIndex = 0;
             setVisibleScheduleRibbonPage(false);
             setVisiblePositionRibbonPage(false);
             setVisibleDepartmentRibbonPage(false);
@@ -75,7 +75,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                 setVisibleEmployeeRibbonPage(false);
                 setVisiblePositionRibbonPage(true);
                 setVisibleDepartmentRibbonPage(false);
-                navigationFrame.SelectedPageIndex = 5;
+                navigationFrame.SelectedPageIndex = 4;
             }
             else if (navigationFrame.SelectedPageIndex == 3)
             {
@@ -83,7 +83,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                 setVisibleEmployeeRibbonPage(false);
                 setVisiblePositionRibbonPage(false);
                 setVisibleDepartmentRibbonPage(true);
-                navigationFrame.SelectedPageIndex = 6;
+                navigationFrame.SelectedPageIndex = 5;
             }
 
         }
@@ -189,11 +189,8 @@ namespace QuanLyDaiHocGiaDinh.Views
         private void btnDanhSachTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //addButtonPage(2);
-            navigationFrame.SelectedPageIndex = 2;
-            
+            navigationFrame.SelectedPageIndex = 2;  
         }
-
-       
 
         //Phương thức click button chuyển page trong 1 nav
         public void addButtonPage(int index)
@@ -217,7 +214,7 @@ namespace QuanLyDaiHocGiaDinh.Views
         //Show cardView Employee
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            navigationFrame.SelectedPageIndex = 4;
+            navigationFrame.SelectedPageIndex = 3;
         }
 
         private void btnChangePass_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -489,9 +486,6 @@ namespace QuanLyDaiHocGiaDinh.Views
         //Xuất File Excel Employee
         private void btnXuatFileExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
-            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
-            SplashScreenManager.CloseForm();
             ExportExcelEmployee("");
         }
 
@@ -532,11 +526,7 @@ namespace QuanLyDaiHocGiaDinh.Views
         //Xuất File Excel Account
         private void btnXuatFileAccount_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
-            SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
-            SplashScreenManager.CloseForm();
             ExportExcelAccount("");
-
         }
 
         private bool ExportExcelAccount(string filename)
