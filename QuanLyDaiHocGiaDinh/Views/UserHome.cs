@@ -22,6 +22,7 @@ using Google.Apis.Util.Store;
 using System.Threading;
 using System.Diagnostics;
 using DevExpress.XtraSplashScreen;
+using QuanLyDaiHocGiaDinh.ConnectWithNodejs.Services;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -109,12 +110,17 @@ namespace QuanLyDaiHocGiaDinh.Views
                 // int ids =  Int32.Parse(giaDinhUniversityDataSet.Schedule.Count.ToString());
                 //Console.WriteLine("----------------------------------------------------->" + giaDinhUniversityDataSet.Tables[0].Rows[ids]["UniqueID"].ToString());
                 //MessageBox.Show("2");
-                if (justSync == false)
-                {
-                    justSync = true;
+                //if (justSync == false)
+                //{
+                    //justSync = true;
                     scheduleTableAdapter.Update(giaDinhUniversityDataSet);
                     giaDinhUniversityDataSet.AcceptChanges();
-                }
+
+                    ScheduleServices scheduleServices = new ScheduleServices();
+                    NodeJSServices nodeJSServices = new NodeJSServices();
+                    nodeJSServices.addScheduleToNodejs(scheduleServices.getLastSchedule(), _account.UserName);
+                    MessageBox.Show("Thêm thành công ---->");
+                //}
             }
             catch
             {

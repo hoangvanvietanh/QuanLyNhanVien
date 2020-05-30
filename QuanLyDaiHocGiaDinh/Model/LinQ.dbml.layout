@@ -85,7 +85,7 @@
         <classShapeMoniker Id="de65c33f-ad8a-40bf-b4fe-7ad77ea378d8" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.25 : 5.98599812825521); (6.5 : 5.98599812825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.25 : 5.98599812825521); (5.41666666666667 : 5.98599812825521 : JumpStart); (5.58333333333333 : 5.98599812825521 : JumpEnd); (6.5 : 5.98599812825521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/LinQDataContext/Schedule/Schedule_SchedulePosition" />
       <nodes>
         <classShapeMoniker Id="4c20932d-5f7b-4580-9f65-712af6d2039f" />

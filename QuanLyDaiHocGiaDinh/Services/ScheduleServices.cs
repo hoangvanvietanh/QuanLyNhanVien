@@ -13,7 +13,13 @@ namespace QuanLyDaiHocGiaDinh.Services
     {
         IScheduleDepartment scheduleDepartmentDao = new ScheduleDepartmentDaoImpl();
         ISchedulePosition schedulePositionDao = new SchedulePositionDaoImpl();
+        ISchedule scheduleDao = new ScheduleDaoImpl();
 
+
+        public Schedule getLastSchedule()
+        {
+            return scheduleDao.getLastSchedule();
+        }
         public void createScheduleForDepartment(ScheduleDepartment schedule)
         {
             scheduleDepartmentDao.AddScheduleForDepartment(schedule);

@@ -17,5 +17,10 @@ namespace QuanLyDaiHocGiaDinh.ConnectWithNodejs.Services
         {
             nodeJSDao.addEmployee(emlployee);
         }
+
+        public void addScheduleToNodejs(Schedule schedule, String email)
+        {
+            nodeJSDao.addSchedule(schedule, email);
+        }
     }
 }

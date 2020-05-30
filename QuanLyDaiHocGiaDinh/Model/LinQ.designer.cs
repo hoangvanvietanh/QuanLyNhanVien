@@ -184,6 +184,13 @@ namespace QuanLyDaiHocGiaDinh.Model
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<getLastIdUniqueScheduleResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.getLastSchedule")]
+		public ISingleResult<getLastScheduleResult> getLastSchedule()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<getLastScheduleResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Resources")]
@@ -3597,6 +3604,356 @@ namespace QuanLyDaiHocGiaDinh.Model
 				if ((this._UniqueID != value))
 				{
 					this._UniqueID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class getLastScheduleResult
+	{
+		
+		private int _UniqueID;
+		
+		private System.Nullable<int> _Type;
+		
+		private System.Nullable<System.DateTime> _StartDate;
+		
+		private System.Nullable<System.DateTime> _EndDate;
+		
+		private System.Nullable<bool> _AllDay;
+		
+		private string _Subject;
+		
+		private string _Location;
+		
+		private string _Description;
+		
+		private System.Nullable<int> _Status;
+		
+		private System.Nullable<int> _Label;
+		
+		private System.Nullable<int> _ResourceID;
+		
+		private string _ResourceIDs;
+		
+		private string _ReminderInfo;
+		
+		private string _RecurrenceInfo;
+		
+		private string _TimeZoneId;
+		
+		private string _ApprovalStatus;
+		
+		private System.Nullable<int> _AccountId;
+		
+		private string _DepartmentsList;
+		
+		private string _PositionList;
+		
+		public getLastScheduleResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UniqueID", DbType="Int NOT NULL")]
+		public int UniqueID
+		{
+			get
+			{
+				return this._UniqueID;
+			}
+			set
+			{
+				if ((this._UniqueID != value))
+				{
+					this._UniqueID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type", DbType="Int")]
+		public System.Nullable<int> Type
+		{
+			get
+			{
+				return this._Type;
+			}
+			set
+			{
+				if ((this._Type != value))
+				{
+					this._Type = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StartDate", DbType="SmallDateTime")]
+		public System.Nullable<System.DateTime> StartDate
+		{
+			get
+			{
+				return this._StartDate;
+			}
+			set
+			{
+				if ((this._StartDate != value))
+				{
+					this._StartDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EndDate", DbType="SmallDateTime")]
+		public System.Nullable<System.DateTime> EndDate
+		{
+			get
+			{
+				return this._EndDate;
+			}
+			set
+			{
+				if ((this._EndDate != value))
+				{
+					this._EndDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AllDay", DbType="Bit")]
+		public System.Nullable<bool> AllDay
+		{
+			get
+			{
+				return this._AllDay;
+			}
+			set
+			{
+				if ((this._AllDay != value))
+				{
+					this._AllDay = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Subject", DbType="NVarChar(MAX)")]
+		public string Subject
+		{
+			get
+			{
+				return this._Subject;
+			}
+			set
+			{
+				if ((this._Subject != value))
+				{
+					this._Subject = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Location", DbType="NVarChar(MAX)")]
+		public string Location
+		{
+			get
+			{
+				return this._Location;
+			}
+			set
+			{
+				if ((this._Location != value))
+				{
+					this._Location = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this._Description = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Int")]
+		public System.Nullable<int> Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this._Status = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Label", DbType="Int")]
+		public System.Nullable<int> Label
+		{
+			get
+			{
+				return this._Label;
+			}
+			set
+			{
+				if ((this._Label != value))
+				{
+					this._Label = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ResourceID", DbType="Int")]
+		public System.Nullable<int> ResourceID
+		{
+			get
+			{
+				return this._ResourceID;
+			}
+			set
+			{
+				if ((this._ResourceID != value))
+				{
+					this._ResourceID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ResourceIDs", DbType="NVarChar(MAX)")]
+		public string ResourceIDs
+		{
+			get
+			{
+				return this._ResourceIDs;
+			}
+			set
+			{
+				if ((this._ResourceIDs != value))
+				{
+					this._ResourceIDs = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReminderInfo", DbType="NVarChar(MAX)")]
+		public string ReminderInfo
+		{
+			get
+			{
+				return this._ReminderInfo;
+			}
+			set
+			{
+				if ((this._ReminderInfo != value))
+				{
+					this._ReminderInfo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecurrenceInfo", DbType="NVarChar(MAX)")]
+		public string RecurrenceInfo
+		{
+			get
+			{
+				return this._RecurrenceInfo;
+			}
+			set
+			{
+				if ((this._RecurrenceInfo != value))
+				{
+					this._RecurrenceInfo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TimeZoneId", DbType="NVarChar(MAX)")]
+		public string TimeZoneId
+		{
+			get
+			{
+				return this._TimeZoneId;
+			}
+			set
+			{
+				if ((this._TimeZoneId != value))
+				{
+					this._TimeZoneId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ApprovalStatus", DbType="NVarChar(100)")]
+		public string ApprovalStatus
+		{
+			get
+			{
+				return this._ApprovalStatus;
+			}
+			set
+			{
+				if ((this._ApprovalStatus != value))
+				{
+					this._ApprovalStatus = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccountId", DbType="Int")]
+		public System.Nullable<int> AccountId
+		{
+			get
+			{
+				return this._AccountId;
+			}
+			set
+			{
+				if ((this._AccountId != value))
+				{
+					this._AccountId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartmentsList", DbType="NVarChar(200)")]
+		public string DepartmentsList
+		{
+			get
+			{
+				return this._DepartmentsList;
+			}
+			set
+			{
+				if ((this._DepartmentsList != value))
+				{
+					this._DepartmentsList = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PositionList", DbType="NVarChar(200)")]
+		public string PositionList
+		{
+			get
+			{
+				return this._PositionList;
+			}
+			set
+			{
+				if ((this._PositionList != value))
+				{
+					this._PositionList = value;
 				}
 			}
 		}

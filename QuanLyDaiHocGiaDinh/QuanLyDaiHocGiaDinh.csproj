@@ -126,10 +126,12 @@
     <Compile Include="DaoImpl\DepartmentDaoImpl.cs" />
     <Compile Include="DaoImpl\EmployeeDaoImpl.cs" />
     <Compile Include="DaoImpl\PositionDaoImpl.cs" />
+    <Compile Include="DaoImpl\ScheduleDaoImpl.cs" />
     <Compile Include="DaoImpl\ScheduleDepartmentDaoImpl.cs" />
     <Compile Include="DaoImpl\SchedulePositionDaoImpl.cs" />
     <Compile Include="IDao\IDepartmentDao.cs" />
     <Compile Include="IDao\IPositionDao.cs" />
+    <Compile Include="IDao\IScheduleDao.cs" />
     <Compile Include="IDao\IScheduleDepartmentDao.cs" />
     <Compile Include="IDao\ISchedulePositionDao.cs" />
     <Compile Include="Model\GiaDinhUniversityDataSet.cs">

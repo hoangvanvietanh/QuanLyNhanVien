@@ -10,5 +10,7 @@ namespace QuanLyDaiHocGiaDinh.ConnectWithNodejs.IDao
     interface INodeJS
     {
         void addEmployee(Employee employee);
+
+        void addSchedule(Schedule schedule, String email);
     }
 }

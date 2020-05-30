@@ -16,6 +16,7 @@ using DevExpress.XtraPrinting;
 using DevExpress.Export;
 using DevExpress.Export.Xl;
 using DevExpress.XtraSplashScreen;
+using QuanLyDaiHocGiaDinh.ConnectWithNodejs.Services;
 
 namespace QuanLyDaiHocGiaDinh.Views
 {
@@ -417,7 +418,6 @@ namespace QuanLyDaiHocGiaDinh.Views
         {
             try
             {
-                
                 scheduleTableAdapter.Update(giaDinhUniversityDataSet);
                 giaDinhUniversityDataSet.AcceptChanges();
             }
