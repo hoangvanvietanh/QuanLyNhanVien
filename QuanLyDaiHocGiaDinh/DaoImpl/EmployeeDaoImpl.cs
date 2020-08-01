@@ -165,6 +165,8 @@ namespace QuanLyDaiHocGiaDinh.Dao
 
         public Employee setEmployeeFromResult(Employee employeeDB,dynamic employeeUpdate)
         {
+            employeeDB.AccountId = employeeUpdate.AccountId;
+            employeeDB.EmployeeId = employeeUpdate.EmployeeId;
             employeeDB.FirstName = employeeUpdate.FirstName;
             employeeDB.LastName = employeeUpdate.LastName;
             employeeDB.FullName = employeeUpdate.FullName;

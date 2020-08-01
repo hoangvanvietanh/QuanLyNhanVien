@@ -66,9 +66,10 @@ namespace QuanLyDaiHocGiaDinh.Views
         {
             SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
             SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
+            Employee emp = employeeService.getEmployeeByAccountId(_account.AccountId);
             Employee employee = new Employee();
-            employee = employeeService.getEmployeeByAccountId(_account.AccountId);
-              
+            employee.EmployeeId = emp.EmployeeId;
+            employee.AccountId = emp.AccountId;
             employee.Address = AddressTextEdit.Text;
             employee.BirthDate = BirthDateDateEdit.DateTime;
             employee.City = CityTextEdit.Text;
@@ -78,12 +79,12 @@ namespace QuanLyDaiHocGiaDinh.Views
             employee.FullName = FullNameTextEdit.Text;
             employee.LastName = LastNameTextEdit.Text;
             employee.PhoneNumber =PhoneNumberTextEdit.Text;
+            employee.PositionId = emp.PositionId;
             employee.Status = StatusTextEdit.Text;
             employee.Ward = WardTextEdit.Text;
-
             employee.Image = ImageByArray;
           
-            employeeService.updateEmployee(employee);
+             employeeService.updateEmployee(employee);
 
             XtraMessageBox.Show("Update successful");
             UserHome userHome = new UserHome(_account);
