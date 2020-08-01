@@ -64,15 +64,9 @@ namespace QuanLyDaiHocGiaDinh.Dao
 
         public String getRoleAccount(int id)
         {
-            String role = "";
-            accounts.ForEach(ac => {
-
-                if (ac.AccountId == id)
-                {
-                    role = ac.Role;
-                }
-            });
-            return role;
+            db = new LinQDataContext();
+            var result = db.getAccountById(id).FirstOrDefault();
+            return result.Role;
         }
 
         //Lấy account bằng employeeId
@@ -101,15 +95,50 @@ namespace QuanLyDaiHocGiaDinh.Dao
 
         public Account getAccountById(int id)
         {
-            Account account = new Account();
-            accounts.ForEach(ac =>
+            db = new LinQDataContext();
+            var result = db.getAccountById(id).FirstOrDefault();
+            if (result != null)
             {
-                if (ac.AccountId == id)
-                {
-                    account = ac;
-                }
-            });
-            return account;
+                Account account = new Account();
+                account.AccountId = result.AccountId;
+                account.Password = result.Password;
+                account.Role = result.Role;
+                account.UserName = result.UserName;
+                return account;
+            }
+            return null;
+        }
+
+        public Account getAccountByUserName(string username)
+        {
+            db = new LinQDataContext();
+            var result = db.getAccountByUserName(username).FirstOrDefault();
+            if (result != null)
+            {
+                Account account = new Account();
+                account.AccountId = result.AccountId;
+                account.Password = result.Password;
+                account.Role = result.Role;
+                account.UserName = result.UserName;
+                return account;
+            }
+            return null;
+        }
+
+        public Account userLogin(string username, string password)
+        {
+            db = new LinQDataContext();
+            var result = db.userLogin(username, password).FirstOrDefault();
+            if (result != null)
+            {
+                Account account = new Account();
+                account.AccountId = result.AccountId;
+                account.Password = result.Password;
+                account.Role = result.Role;
+                account.UserName = result.UserName;
+                return account;
+            }
+            return  null;
         }
     }
 }

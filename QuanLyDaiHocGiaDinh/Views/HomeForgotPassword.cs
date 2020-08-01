@@ -33,6 +33,12 @@ namespace QuanLyDaiHocGiaDinh.Views
             //  this._account = account;
            
         }
+        public HomeForgotPassword()
+        {
+            InitializeComponent();
+            //  this._account = account;
+
+        }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -44,7 +50,14 @@ namespace QuanLyDaiHocGiaDinh.Views
            
             string accountRole = "";
             bool isCorrect = false;
-            accountServices.GetAllAccounts().ForEach(x =>
+            Account ac = accountServices.getAccountByUserName(user);
+            if (ac != null)
+            {
+                this.account = ac;
+                accountRole = ac.UserName;
+                isCorrect = true;
+            }
+            /*accountServices.GetAllAccounts().ForEach(x =>
             {
                 if (String.Compare(x.UserName.Trim(), user.Trim(), true) == 0)
                 {
@@ -52,7 +65,7 @@ namespace QuanLyDaiHocGiaDinh.Views
                         accountRole = x.UserName;
                         account = x;      
                 }
-            });
+            });*/
             if (isCorrect == true)
             {
                 return accountRole;
@@ -114,13 +127,20 @@ namespace QuanLyDaiHocGiaDinh.Views
             {
                 SplashScreenManager.ShowForm(this, typeof(WaitForm), true, true, false);
                 SplashScreenManager.Default.SetWaitFormCaption("Chờ tí nhé.....");
+                
+                Account ac = accountServices.getAccountByUserName(txtEmailForgotPassword.Text);
+                if (ac != null)
+                {
+                    _account = ac;
+                }
+                /*
                 accountServices.GetAllAccounts().ForEach(account =>
                 {
                     if (account.UserName.Trim().CompareTo(txtEmailForgotPassword.Text.Trim()) == 0)
                     {
                         _account = account;
                     }
-                });
+                });*/
                 _account.Password = txtMatKhauMoi.Text;
            //     MessageBox.Show(_account.Password);
                 accountServices.updateAccount(_account);

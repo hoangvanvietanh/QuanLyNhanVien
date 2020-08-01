@@ -65,6 +65,7 @@ namespace QuanLyDaiHocGiaDinh.Dao
         //Lấy nhân viên theo accountId
         public Employee getEmployeeByAccountId(int accountId)
         {
+            /*
             Employee employee = new Employee();
             employees.ForEach(emp =>
             {
@@ -74,13 +75,23 @@ namespace QuanLyDaiHocGiaDinh.Dao
                     employee = emp;                
                 }
             });
-            return employee;
-            
+            return employee;*/
+            db = new LinQDataContext();
+            var result = db.getEmployeeByAccountId(accountId).FirstOrDefault();
+            if (result != null)
+            {
+                Employee employee = new Employee();
+                return setEmployeeFromResult(employee, result);
+            }
+            return null;
+
+
         }
 
         //Lấy nhân viên theo positionId
         public Employee getEmployeeByPositionId(int positionId)
         {
+            /*
             Employee employee = new Employee();
             employees.ForEach(emp =>
             {
@@ -90,7 +101,15 @@ namespace QuanLyDaiHocGiaDinh.Dao
                     employee = emp;
                 }
             });
-            return employee;
+            return employee;*/
+            db = new LinQDataContext();
+            var result = db.getEmployeesByPosition(positionId).FirstOrDefault();
+            if (result != null)
+            {
+                Employee employee = new Employee();
+                return setEmployeeFromResult(employee,result);
+            }
+            return null;
 
         }
 
@@ -126,6 +145,25 @@ namespace QuanLyDaiHocGiaDinh.Dao
 
         //Ánh xạ nhân viên update qua nhân viên trên linq để update
         public Employee setEmployeeUpdate(Employee employeeDB,Employee employeeUpdate)
+        {
+            employeeDB.FirstName = employeeUpdate.FirstName;
+            employeeDB.LastName = employeeUpdate.LastName;
+            employeeDB.FullName = employeeUpdate.FullName;
+            employeeDB.BirthDate = employeeUpdate.BirthDate;
+            employeeDB.Address = employeeUpdate.Address;
+            employeeDB.Ward = employeeUpdate.Ward;
+            employeeDB.District = employeeUpdate.District;
+            employeeDB.City = employeeUpdate.City;
+            employeeDB.PhoneNumber = employeeUpdate.PhoneNumber;
+            employeeDB.Status = employeeUpdate.Status;
+            employeeDB.PositionId = employeeUpdate.PositionId;
+            employeeDB.Email = employeeUpdate.Email;
+            employeeDB.Image = employeeUpdate.Image;
+            
+            return employeeDB;
+        }
+
+        public Employee setEmployeeFromResult(Employee employeeDB,dynamic employeeUpdate)
         {
             employeeDB.FirstName = employeeUpdate.FirstName;
             employeeDB.LastName = employeeUpdate.LastName;

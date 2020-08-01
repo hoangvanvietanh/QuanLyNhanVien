@@ -53,5 +53,14 @@ namespace QuanLyDaiHocGiaDinh.Services
             return accountDao.getAccountById(id);
         }
 
+        public Account userLogin(string username, string password)
+        {
+            return accountDao.userLogin(username, password);
+        }
+
+        public Account getAccountByUserName(string username)
+        {
+            return accountDao.getAccountByUserName(username);
+        }
     }
 }

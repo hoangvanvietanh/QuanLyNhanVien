@@ -17,5 +17,8 @@ namespace QuanLyDaiHocGiaDinh.Interface
         List<Account> GetAllAccounts();
 
         Account getAccountById(int id);
+
+        Account userLogin(string username, string password);
+        Account getAccountByUserName(string username);
     }
 }

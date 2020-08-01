@@ -128,7 +128,8 @@ namespace QuanLyDaiHocGiaDinh
 
         private void btnQuenMatKhau_Click(object sender, EventArgs e)
         {
-            HomeForgotPassword home = new HomeForgotPassword(homeController.getAccountLoggedIn());
+            //HomeForgotPassword home = new HomeForgotPassword(homeController.getAccountLoggedIn());
+            HomeForgotPassword home = new HomeForgotPassword();
             home.ShowDialog();
             ///Open
         }

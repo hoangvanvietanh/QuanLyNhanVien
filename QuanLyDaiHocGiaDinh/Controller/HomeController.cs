@@ -22,7 +22,14 @@ namespace QuanLyDaiHocGiaDinh.Controller
         {
             string accountRole = "";
             bool isCorrect = false;
-            accountServices.GetAllAccounts().ForEach(x =>
+            Account ac =  accountServices.userLogin(user, password);
+            if (ac != null)
+            {
+                this.account = ac;
+                accountRole = ac.Role;
+                isCorrect = true;
+            }
+            /*accountServices.GetAllAccounts().ForEach(x =>
             {
                 if (String.Compare(x.UserName.Trim(), user.Trim(), true) == 0)
                 {
@@ -33,7 +40,7 @@ namespace QuanLyDaiHocGiaDinh.Controller
                         account = x;
                     }
                 }
-            });
+            });*/
             if (isCorrect == true)
             {
                 return accountRole;
