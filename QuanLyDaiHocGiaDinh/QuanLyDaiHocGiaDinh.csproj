@@ -114,6 +114,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\AppSetting.cs" />
+    <Compile Include="Config\SqlHelper.cs" />
     <Compile Include="ConnectWithNodejs\DaoImpl\NodeJSDaoImpl.cs" />
     <Compile Include="ConnectWithNodejs\IDao\INodeJSDao.cs" />
     <Compile Include="ConnectWithNodejs\Model\MongoAccount.cs" />
@@ -200,6 +202,12 @@
     </Compile>
     <Compile Include="Views\AdminUpdateTeachers.Designer.cs">
       <DependentUpon>AdminUpdateTeachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConnectSqlServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConnectSqlServer.Designer.cs">
+      <DependentUpon>ConnectSqlServer.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.cs">
       <SubType>Form</SubType>
@@ -294,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminUpdateTeachers.resx">
       <DependentUpon>AdminUpdateTeachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConnectSqlServer.resx">
+      <DependentUpon>ConnectSqlServer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

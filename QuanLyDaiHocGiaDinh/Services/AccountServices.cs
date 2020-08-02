@@ -14,10 +14,10 @@ namespace QuanLyDaiHocGiaDinh.Services
         IAccount accountDao = new AccountDaoImpl();
 
         //Lấy tất cả account
-        public List<Account> GetAllAccounts()
+       /* public List<Account> GetAllAccounts()
         {
             return accountDao.GetAllAccounts();
-        }
+        }*/
 
         //Lấy account bằng employeeId
         public Account getAccountByEmployeeId(int employeeId)

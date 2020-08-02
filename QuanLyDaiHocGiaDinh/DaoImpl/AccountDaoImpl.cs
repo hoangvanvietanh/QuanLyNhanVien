@@ -12,17 +12,18 @@ namespace QuanLyDaiHocGiaDinh.Dao
     class AccountDaoImpl : IAccount
     {
         private LinQDataContext db;
-        private List<Account> accounts;
+        //private List<Account> accounts;
 
         //Lấy database từ cơ sở dữ liệu
         public AccountDaoImpl()
         {
+            /*
             db = new LinQDataContext();
             using (db)
             {
                 var account = from x in db.Accounts select x;
-                accounts =  account.ToList();
-            }
+                //accounts =  account.ToList();
+            }*/
         }
 
         //Tạo tài khoản
@@ -57,10 +58,10 @@ namespace QuanLyDaiHocGiaDinh.Dao
         }
 
         //Lấy danh sách accounts
-        public List<Account> GetAllAccounts()
+       /* public List<Account> GetAllAccounts()
         {
             return accounts;
-        }
+        }*/
 
         public String getRoleAccount(int id)
         {

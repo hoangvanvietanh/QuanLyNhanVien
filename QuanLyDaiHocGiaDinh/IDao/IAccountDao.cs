@@ -14,7 +14,7 @@ namespace QuanLyDaiHocGiaDinh.Interface
         void UpdateAccount(Account account);
         String getRoleAccount(int id);
         Account getAccountByEmployeeId(int employeeId);
-        List<Account> GetAllAccounts();
+       // List<Account> GetAllAccounts();
 
         Account getAccountById(int id);
 

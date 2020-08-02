@@ -39,6 +39,7 @@
             this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
+            this.chooseServer = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             this.panelLogin.SuspendLayout();
@@ -60,6 +61,7 @@
             // 
             // panelLogin
             // 
+            this.panelLogin.Controls.Add(this.chooseServer);
             this.panelLogin.Controls.Add(this.btnQuenMatKhau);
             this.panelLogin.Controls.Add(this.btnComback);
             this.panelLogin.Controls.Add(this.btnLogout);
@@ -157,6 +159,15 @@
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // chooseServer
+            // 
+            this.chooseServer.Location = new System.Drawing.Point(98, 340);
+            this.chooseServer.Name = "chooseServer";
+            this.chooseServer.Size = new System.Drawing.Size(201, 23);
+            this.chooseServer.TabIndex = 10;
+            this.chooseServer.Text = "Chọn server";
+            this.chooseServer.Click += new System.EventHandler(this.chooseServer_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +200,7 @@
         private DevExpress.XtraEditors.SimpleButton btnLogout;
         private DevExpress.XtraEditors.SimpleButton btnComback;
         private DevExpress.XtraEditors.SimpleButton btnQuenMatKhau;
+        private DevExpress.XtraEditors.SimpleButton chooseServer;
     }
 }
 

@@ -133,6 +133,11 @@ namespace QuanLyDaiHocGiaDinh
             home.ShowDialog();
             ///Open
         }
-        
+
+        private void chooseServer_Click(object sender, EventArgs e)
+        {
+            ConnectSqlServer connectSqlServer = new ConnectSqlServer();
+            connectSqlServer.Show();
+        }
     }
 }
