@@ -127,6 +127,17 @@ namespace QuanLyDaiHocGiaDinh.Dao
 
         public Account userLogin(string username, string password)
         {
+            /*
+            Account account = new Account();
+            accounts.ForEach(ac =>
+            {
+            if (ac.UserName.Trim() == username.Trim() && ac.Password.Trim() == password.Trim())
+                {
+                    account = ac;
+                }
+            });
+            return account;*/
+            
             db = new LinQDataContext();
             var result = db.userLogin(username, password).FirstOrDefault();
             if (result != null)

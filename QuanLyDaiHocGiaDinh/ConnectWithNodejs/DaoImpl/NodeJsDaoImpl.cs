@@ -35,7 +35,7 @@ namespace QuanLyDaiHocGiaDinh.ConnectWithNodejs.DaoImpl
             //Console.WriteLine("------------------------>" + emp.Account.UserName);
             var json = new JavaScriptSerializer().Serialize(setAddEmployee(emp)).ToString();
             //create the constructor with post type and few data
-            MyWebRequest myRequest = new MyWebRequest("https://thongbaogdu-server.herokuapp.com/Ma_so_Xu_ly=Them_nhan_vien_moi_mssql", "POST", json.ToString());
+            MyWebRequest myRequest = new MyWebRequest("https://quanlynhanviengdu.herokuapp.com/ma_so_xu_ly=VAThem_nhan_vien_moi_mssql", "POST", json.ToString());
             //show the response string on the console screen.
             Console.WriteLine(myRequest.GetResponse());
         }
@@ -46,7 +46,7 @@ namespace QuanLyDaiHocGiaDinh.ConnectWithNodejs.DaoImpl
             //Console.WriteLine("------------------------>" + emp.Account.UserName);
             var json = new JavaScriptSerializer().Serialize(emailAndSchedule).ToString();
             //create the constructor with post type and few data
-            MyWebRequest myRequest = new MyWebRequest("https://thongbaogdu-server.herokuapp.com/Ma_so_Xu_ly=Them_Lich_bieu", "POST", json.ToString());
+            MyWebRequest myRequest = new MyWebRequest("https://quanlynhanviengdu.herokuapp.com/ma_so_xu_ly=VAThem_Lich_bieu", "POST", json.ToString());
             //show the response string on the console screen.
             Console.WriteLine(myRequest.GetResponse());
         }

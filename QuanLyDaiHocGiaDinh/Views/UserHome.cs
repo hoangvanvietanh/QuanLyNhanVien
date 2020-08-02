@@ -118,8 +118,11 @@ namespace QuanLyDaiHocGiaDinh.Views
 
                     ScheduleServices scheduleServices = new ScheduleServices();
                     NodeJSServices nodeJSServices = new NodeJSServices();
-                    nodeJSServices.addScheduleToNodejs(scheduleServices.getLastSchedule(), _account.UserName);
-                    MessageBox.Show("Thêm thành công ---->");
+                    Schedule schedule = scheduleServices.getLastSchedule(this._account);
+                if (schedule != null)
+                {
+                    nodeJSServices.addScheduleToNodejs(schedule, _account.UserName);
+                }
                 //}
             }
             catch

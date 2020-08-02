@@ -9,6 +9,6 @@ namespace QuanLyDaiHocGiaDinh.IDao
 {
     interface ISchedule
     {
-        Schedule getLastSchedule();
+        Schedule getLastSchedule(Account account);
     }
 }

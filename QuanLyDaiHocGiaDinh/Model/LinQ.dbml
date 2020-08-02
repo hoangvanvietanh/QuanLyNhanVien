@@ -286,4 +286,28 @@
       <Column Name="Image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.getLastedScheduleByAccountID" Method="getLastedScheduleByAccountID">
+    <Parameter Name="AccountId" Parameter="accountId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="getLastedScheduleByAccountIDResult">
+      <Column Name="UniqueID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="AllDay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Label" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResourceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResourceIDs" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReminderInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RecurrenceInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TimeZoneId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ApprovalStatus" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AccountId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DepartmentsList" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PositionList" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

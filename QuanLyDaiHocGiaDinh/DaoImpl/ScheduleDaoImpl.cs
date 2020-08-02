@@ -11,13 +11,12 @@ namespace QuanLyDaiHocGiaDinh.DaoImpl
     class ScheduleDaoImpl : ISchedule
     {
         private LinQDataContext db;
-        public Schedule getLastSchedule()
+        public Schedule getLastSchedule(Account account)
         {
             Schedule schedule = new Schedule();
             db = new LinQDataContext();
-            var list = db.getLastSchedule().ToList();
-
-            list.ForEach(x =>
+            var x = db.getLastedScheduleByAccountID(account.AccountId).FirstOrDefault();
+            if (x != null)
             {
                 schedule.UniqueID = x.UniqueID;
                 schedule.Type = x.Type;
@@ -33,8 +32,12 @@ namespace QuanLyDaiHocGiaDinh.DaoImpl
                 schedule.AccountId = x.AccountId;
                 schedule.DepartmentsList = x.DepartmentsList;
                 schedule.PositionList = x.PositionList;
-            });
-            return schedule;
+                return schedule;
+            }
+            
+                
+            
+            return null;
         }
     }
 }

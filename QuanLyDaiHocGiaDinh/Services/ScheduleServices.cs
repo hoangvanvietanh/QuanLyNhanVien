@@ -16,9 +16,9 @@ namespace QuanLyDaiHocGiaDinh.Services
         ISchedule scheduleDao = new ScheduleDaoImpl();
 
 
-        public Schedule getLastSchedule()
+        public Schedule getLastSchedule(Account account)
         {
-            return scheduleDao.getLastSchedule();
+            return scheduleDao.getLastSchedule(account);
         }
         public void createScheduleForDepartment(ScheduleDepartment schedule)
         {
